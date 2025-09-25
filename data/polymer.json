@@ -1,0 +1,350 @@
+[
+    {
+        "name": "Degree of Polymerization",
+        "formula": "\\text{DP} = \\frac{M_n}{M_0}",
+        "description": "The degree of polymerization (DP) is the average number of repeating units in a polymer chain.",
+        "variables": {
+            "DP": "Degree of polymerization (dimensionless)",
+            "M_n": "Number-average molecular weight of the polymer (g/mol)",
+            "M_0": "Molecular weight of the repeating unit (g/mol)"
+        }
+    },
+    {
+        "name": "Number-Average Molecular Weight",
+        "formula": "M_n = \\frac{\\sum N_i M_i}{\\sum N_i}",
+        "description": "Calculates the number-average molecular weight of a polymer sample from the number of molecules in each fraction and their corresponding molecular weights.",
+        "variables": {
+            "M_n": "Number-average molecular weight (g/mol)",
+            "N_i": "Number of molecules of type i",
+            "M_i": "Molecular weight of species i (g/mol)"
+        }
+    },
+    {
+        "name": "Weight-Average Molecular Weight",
+        "formula": "M_w = \\frac{\\sum w_i M_i}{\\sum w_i}",
+        "description": "Calculates the weight-average molecular weight of a polymer sample using the weight fraction of each component.",
+        "variables": {
+            "M_w": "Weight-average molecular weight (g/mol)",
+            "w_i": "Weight fraction of species i",
+            "M_i": "Molecular weight of species i (g/mol)"
+        }
+    },
+    {
+        "name": "Polydispersity Index",
+        "formula": "\\text{PDI} = \\frac{M_w}{M_n}",
+        "description": "Indicates the breadth of the molecular weight distribution of a polymer sample. A value of 1 means all chains are the same length (monodisperse).",
+        "variables": {
+            "PDI": "Polydispersity index (dimensionless)",
+            "M_w": "Weight-average molecular weight (g/mol)",
+            "M_n": "Number-average molecular weight (g/mol)"
+        }
+    },
+    {
+        "name": "Molecular Weight of a polymer(MW)",
+        "formula": "MW = DP \\times MW_{repeat \\ unit}",
+        "description": "Molecular weight of a polymer",
+        "variables": {
+            "MW": "Molecular weight Of Polymer",
+            "DP": "Degree of polymerization",
+            "MW_{repeat \\ unit}": "Molecular Weight of Repeat Unit"
+        }
+    },
+    {
+        "name": "Rate of Initiation",
+        "formula": "R_i = 2 f k_d [I]",
+        "description": "The rate at which free radicals are generated from the initiator in a chain-growth polymerization.",
+        "variables": {
+            "R_i": "Rate of initiation (mol·L^{-1}·s^{-1})",
+            "f": "Initiator efficiency (fraction of radicals that actually start chains)",
+            "k_d": "Initiator decomposition rate constant (s^{-1})",
+            "[I]": "Initiator concentration (mol·L^{-1})"
+        }
+    },
+    {
+        "name": "Rate of Propagation",
+        "formula": "R_p = k_p [M][R^{\\bullet}]",
+        "description": "The rate at which monomer molecules add to the growing polymer chain.",
+        "variables": {
+            "R_p": "Rate of propagation (mol·L^{-1}·s^{-1})",
+            "k_p": "Propagation rate constant (L·mol^{-1}·s^{-1})",
+            "[M]": "Monomer concentration (mol·L^{-1})",
+            "[R^{\\bullet}]": "Active radical concentration (mol·L^{-1})"
+        }
+    },
+    {
+        "name": "Rate of Termination (by Combination)",
+        "formula": "R_t = 2 k_t [R^{\\bullet}]^2",
+        "description": "The rate at which active polymer radicals terminate by combination or disproportionation.",
+        "variables": {
+            "R_t": "Rate of termination (mol·L^{-1}·s^{-1})",
+            "k_t": "Termination rate constant (L·mol^{-1}·s^{-1})",
+            "[R^{\\bullet}]": "Active radical concentration (mol·L^{-1})"
+        }
+    },
+    {
+        "name": "Steady-State Radical Concentration",
+        "formula": "[R^{\\bullet}] = \\sqrt{\\frac{R_i}{k_t}}",
+        "description": "Under steady-state conditions, the concentration of radicals is determined by the balance of initiation and termination.",
+        "variables": {
+            "[R^{\\bullet}]": "Active radical concentration (mol·L^{-1})",
+            "R_i": "Rate of initiation (mol·L^{-1}·s^{-1})",
+            "k_t": "Termination rate constant (L·mol^{-1}·s^{-1})"
+        }
+    },
+    {
+        "name": "Overall Rate of Polymerization",
+        "formula": "R_p = k_p [M] \\sqrt{\\frac{R_i}{k_t}}",
+        "description": "Combines propagation and steady-state radical concentration to give the overall rate of polymerization.",
+        "variables": {
+            "R_p": "Rate of polymerization (mol·L^{-1}·s^{-1})",
+            "k_p": "Propagation rate constant (L·mol^{-1}·s^{-1})",
+            "[M]": "Monomer concentration (mol·L^{-1})",
+            "R_i": "Rate of initiation (mol·L^{-1}·s^{-1})",
+            "k_t": "Termination rate constant (L·mol^{-1}·s^{-1})"
+        }
+    },
+    {
+        "name": "Degree of Polymerization (Kinetic)",
+        "formula": "\\text{DP}_n = \\frac{k_p [M]}{2 k_t [R^{\\bullet}]}",
+        "description": "Average number of monomer units added per growing chain under steady-state conditions.",
+        "variables": {
+            "DP_n": "Number-average degree of polymerization (dimensionless)",
+            "k_p": "Propagation rate constant (L·mol^{-1}·s^{-1})",
+            "[M]": "Monomer concentration (mol·L^{-1})",
+            "k_t": "Termination rate constant (L·mol^{-1}·s^{-1})",
+            "[R^{\\bullet}]": "Active radical concentration (mol·L^{-1})"
+        }
+    },
+    {
+        "name": "Shear Stress in Flow Channel",
+        "formula": "\\tau = \\frac{\\Delta P}{2L} R",
+        "description": "Relates the shear stress at the wall of a cylindrical die or tube to the pressure drop during polymer melt flow.",
+        "variables": {
+            "\\tau": "Shear stress at the wall (Pa)",
+            "\\Delta P": "Pressure drop across the length L of the channel (Pa)",
+            "L": "Length of the flow channel (m)",
+            "R": "Radius of the channel (m)"
+        }
+    },
+    {
+        "name": "Shear Rate in Capillary",
+        "formula": "\\dot{\\gamma} = \\frac{4Q}{\\pi R^{3}}",
+        "description": "Apparent shear rate in a capillary rheometer used to characterise polymer melts.",
+        "variables": {
+            "\\dot{\\gamma}": "Apparent shear rate (s^{-1})",
+            "Q": "Volumetric flow rate (m^{3}/s)",
+            "R": "Radius of the capillary (m)"
+        }
+    },
+    {
+        "name": "Apparent Viscosity",
+        "formula": "\\eta_{\\text{app}} = \\frac{\\tau}{\\dot{\\gamma}}",
+        "description": "The apparent (or effective) viscosity of a polymer melt under specified shear conditions.",
+        "variables": {
+            "\\eta_{\\text{app}}": "Apparent viscosity (Pa·s)",
+            "\\tau": "Shear stress (Pa)",
+            "\\dot{\\gamma}": "Shear rate (s^{-1})"
+        }
+    },
+    {
+        "name": "Power-Law Model for Non-Newtonian Melt",
+        "formula": "\\tau = K \\dot{\\gamma}^{n}",
+        "description": "Empirical power-law expression describing non-Newtonian behaviour of polymer melts.",
+        "variables": {
+            "\\tau": "Shear stress (Pa)",
+            "K": "Consistency index (Pa·s^{n})",
+            "\\dot{\\gamma}": "Shear rate (s^{-1})",
+            "n": "Flow behaviour index (dimensionless; n<1 for shear-thinning)"
+        }
+    },
+    {
+        "name": "Draw Ratio (Fiber Spinning)",
+        "formula": "\\text{DR} = \\frac{V_{\\text{take-up}}}{V_{\\text{extrusion}}}",
+        "description": "Indicates how much the fiber is stretched during spinning or film drawing.",
+        "variables": {
+            "DR": "Draw ratio (dimensionless)",
+            "V_{\\text{take-up}}": "Take-up (or winding) velocity (m/s)",
+            "V_{\\text{extrusion}}": "Extrusion velocity at the die exit (m/s)"
+        }
+    },
+    {
+        "name": "Melt Flow Index (Conceptual)",
+        "formula": "\\text{MFI} = \\frac{m}{t}",
+        "description": "Mass of polymer melt (m) extruded in time t under standard load; widely used to compare processability of thermoplastics.",
+        "variables": {
+            "MFI": "Melt flow index (g/10 min)",
+            "m": "Mass of polymer extruded (g)",
+            "t": "Time interval (min)"
+        }
+    },
+    {
+        "name": "Tensile Stress",
+        "formula": "\\sigma = \\frac{F}{A}",
+        "description": "Stress in a polymer specimen under tensile load.",
+        "variables": {
+            "\\sigma": "Tensile stress (Pa)",
+            "F": "Applied force (N)",
+            "A": "Cross-sectional area (m^{2})"
+        }
+    },
+    {
+        "name": "Tensile Strain",
+        "formula": "\\varepsilon = \\frac{\\Delta L}{L_{0}}",
+        "description": "Engineering strain in a polymer specimen under tensile load.",
+        "variables": {
+            "\\varepsilon": "Tensile strain (dimensionless)",
+            "\\Delta L": "Change in length (m)",
+            "L_{0}": "Original length (m)"
+        }
+    },
+    {
+        "name": "Hooke's Law (Elastic Region)",
+        "formula": "\\sigma = E \\varepsilon",
+        "description": "Relationship between stress and strain in the linear-elastic region of a polymer sample.",
+        "variables": {
+            "\\sigma": "Stress (Pa)",
+            "E": "Young's modulus (Pa)",
+            "\\varepsilon": "Strain (dimensionless)"
+        }
+    },
+    {
+        "name": "Shear Stress",
+        "formula": "\\tau = G \\gamma",
+        "description": "Relationship between shear stress and shear strain for a polymer sample in the elastic region.",
+        "variables": {
+            "\\tau": "Shear stress (Pa)",
+            "G": "Shear modulus (Pa)",
+            "\\gamma": "Shear strain (dimensionless)"
+        }
+    },
+    {
+        "name": "Poisson's Ratio",
+        "formula": "\\nu = -\\frac{\\varepsilon_{\\text{lateral}}}{\\varepsilon_{\\text{axial}}}",
+        "description": "Ratio of lateral contraction strain to axial extension strain in a stretched polymer.",
+        "variables": {
+            "\\nu": "Poisson's ratio (dimensionless)",
+            "\\varepsilon_{\\text{lateral}}": "Lateral (transverse) strain (dimensionless)",
+            "\\varepsilon_{\\text{axial}}": "Axial (longitudinal) strain (dimensionless)"
+        }
+    },
+    {
+        "name": "Creep Compliance",
+        "formula": "J(t) = \\frac{\\varepsilon(t)}{\\sigma_{0}}",
+        "description": "Time-dependent compliance of a polymer under a constant stress (creep behaviour).",
+        "variables": {
+            "J(t)": "Creep compliance at time t (Pa^{-1})",
+            "\\varepsilon(t)": "Strain at time t (dimensionless)",
+            "\\sigma_{0}": "Applied constant stress (Pa)"
+        }
+    },
+    {
+        "name": "Stress Relaxation Modulus",
+        "formula": "G(t) = \\frac{\\sigma(t)}{\\varepsilon_{0}}",
+        "description": "Time-dependent relaxation modulus of a polymer held at constant strain.",
+        "variables": {
+            "G(t)": "Relaxation modulus at time t (Pa)",
+            "\\sigma(t)": "Stress at time t (Pa)",
+            "\\varepsilon_{0}": "Initial strain (dimensionless)"
+        }
+    },
+    {
+        "name": "True Stress",
+        "formula": "\\sigma_{t} = \\sigma \\,(1 + \\varepsilon)",
+        "description": "Conversion from engineering stress to true stress in a polymer specimen undergoing tensile deformation.",
+        "variables": {
+            "\\sigma_{t}": "True stress (Pa)",
+            "\\sigma": "Engineering (nominal) stress (Pa)",
+            "\\varepsilon": "Engineering strain (dimensionless)"
+        }
+    },
+    {
+        "name": "Newtonian Viscosity",
+        "formula": "\\tau = \\eta \\frac{du}{dy}",
+        "description": "Shear stress–shear rate relationship for a Newtonian polymer melt.",
+        "variables": {
+            "\\tau": "Shear stress (Pa)",
+            "\\eta": "Viscosity (Pa·s)",
+            "\\frac{du}{dy}": "Shear rate (s^{-1})"
+        }
+    },
+    {
+        "name": "Power Law Model (Non-Newtonian)",
+        "formula": "\\tau = K \\left(\\frac{du}{dy}\\right)^{n}",
+        "description": "Generalised model for shear stress in non-Newtonian (pseudoplastic or dilatant) polymer melts.",
+        "variables": {
+            "\\tau": "Shear stress (Pa)",
+            "K": "Consistency index (Pa·s^{n})",
+            "\\frac{du}{dy}": "Shear rate (s^{-1})",
+            "n": "Flow behaviour index (dimensionless)"
+        }
+    },
+    {
+        "name": "Apparent Viscosity (Power Law Fluid)",
+        "formula": "\\eta_{\\text{app}} = K \\left(\\frac{du}{dy}\\right)^{n-1}",
+        "description": "Effective viscosity of a non-Newtonian polymer melt at a given shear rate.",
+        "variables": {
+            "\\eta_{\\text{app}}": "Apparent viscosity (Pa·s)",
+            "K": "Consistency index (Pa·s^{n})",
+            "\\frac{du}{dy}": "Shear rate (s^{-1})",
+            "n": "Flow behaviour index (dimensionless)"
+        }
+    },
+    {
+        "name": "Maxwell Model (Stress Relaxation)",
+        "formula": "\\sigma(t) = \\sigma_{0} e^{-t/\\tau}",
+        "description": "Stress relaxation in a Maxwell viscoelastic element under constant strain.",
+        "variables": {
+            "\\sigma(t)": "Stress at time t (Pa)",
+            "\\sigma_{0}": "Initial stress (Pa)",
+            "t": "Time (s)",
+            "\\tau": "Relaxation time (s)"
+        }
+    },
+    {
+        "name": "Maxwell Model (Constitutive Equation)",
+        "formula": "\\frac{d\\sigma}{dt} + \\frac{\\sigma}{\\tau} = E \\frac{d\\varepsilon}{dt}",
+        "description": "Differential form of Maxwell model relating stress and strain rate.",
+        "variables": {
+            "\\sigma": "Stress (Pa)",
+            "t": "Time (s)",
+            "\\tau": "Relaxation time (s)",
+            "E": "Elastic modulus (Pa)",
+            "\\varepsilon": "Strain (dimensionless)"
+        }
+    },
+    {
+        "name": "Kelvin-Voigt Model (Creep)",
+        "formula": "\\varepsilon(t) = \\frac{\\sigma_{0}}{E} \\left(1 - e^{-Et/\\eta}\\right)",
+        "description": "Time-dependent strain (creep) in a Kelvin-Voigt viscoelastic element under constant stress.",
+        "variables": {
+            "\\varepsilon(t)": "Strain at time t (dimensionless)",
+            "\\sigma_{0}": "Applied constant stress (Pa)",
+            "E": "Elastic modulus (Pa)",
+            "t": "Time (s)",
+            "\\eta": "Viscosity (Pa·s)"
+        }
+    },
+    {
+        "name": "Storage and Loss Moduli (Oscillatory Rheology)",
+        "formula": "G'(\\omega) = \\omega \\int_{0}^{\\infty} G(t) \\sin(\\omega t) dt \\\\ , \\\\ G''(\\omega) = \\omega \\int_{0}^{\\infty} G(t) \\cos(\\omega t) dt",
+        "description": "Expressions for the storage modulus (elastic response) and loss modulus (viscous response) in dynamic mechanical analysis.",
+        "variables": {
+            "G'(\\omega)": "Storage modulus at frequency \\omega (Pa)",
+            "G''(\\omega)": "Loss modulus at frequency \\omega (Pa)",
+            "\\omega": "Angular frequency (rad/s)",
+            "G(t)": "Relaxation modulus as a function of time (Pa)",
+            "t": "Time (s)"
+        }
+    },
+    {
+        "name": "Complex Viscosity",
+        "formula": "\\eta^{*}(\\omega) = \\sqrt{ \\left(\\frac{G''(\\omega)}{\\omega}\\right)^{2} + \\left(\\frac{G'(\\omega)}{\\omega}\\right)^{2} }",
+        "description": "Magnitude of the complex viscosity from oscillatory measurements.",
+        "variables": {
+            "\\eta^{*}(\\omega)": "Complex viscosity (Pa·s)",
+            "G'(\\omega)": "Storage modulus (Pa)",
+            "G''(\\omega)": "Loss modulus (Pa)",
+            "\\omega": "Angular frequency (rad/s)"
+        }
+    }
+]

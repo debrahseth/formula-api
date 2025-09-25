@@ -1,0 +1,682 @@
+[
+    {
+        "name": "General Copy Shortcut",
+        "formula": "Ctrl + C",
+        "variables": {
+            "Ctrl": "Control key",
+            "C": "C key"
+        },
+        "description": "Copies selected text, images, or data to the clipboard for pasting elsewhere.",
+        "example": {
+            "problem": "\\text{Highlight a paragraph in a text editor and use the copy shortcut to duplicate it.}",
+            "solution": "\\text{Press } \\text{Ctrl + C} \\text{ to copy the highlighted paragraph to the clipboard, then paste it using } \\text{Ctrl + V}."
+        }
+    },
+    {
+        "name": "General Paste Shortcut",
+        "formula": "Ctrl + V",
+        "variables": {
+            "Ctrl": "Control key",
+            "V": "V key"
+        },
+        "description": "Pastes the contents of the clipboard at the cursor's location.",
+        "example": {
+            "problem": "\\text{Paste a copied image into an email body.}",
+            "solution": "\\text{After copying the image with } \\texttt{Ctrl + C}, \\text{ place the cursor in the email body and press } \\texttt{Ctrl + V} \\text{ to paste the image.}"
+        }
+    },
+    {
+        "name": "General Undo Shortcut",
+        "formula": "Ctrl + Z",
+        "variables": {
+            "Ctrl": "Control key",
+            "Z": "Z key"
+        },
+        "description": "Reverses the last action performed in most applications.",
+        "example": {
+            "problem": "\\text{Accidentally delete a sentence in a document and want to restore it.}",
+            "solution": "\\text{Press } \\texttt{Ctrl + Z} \\text{ to undo the deletion and restore the sentence.}"
+        }
+    },
+    {
+        "name": "Excel SUM Function",
+        "formula": "=SUM(range)",
+        "variables": {
+            "range": "A range of cells (e.g., A1:A10)"
+        },
+        "description": "Calculates the sum of values in a specified range of cells in Excel.",
+        "example": {
+            "problem": "\\text{Calculate the total sales for cells } A1 \\text{ to } A5 \\text{ containing values } 100, 200, 150, 300, \\text{ and } 250 \\text{ in Excel.}",
+            "solution": "\\begin{aligned}\n\\text{Enter } &= \\texttt{SUM(A1:A5)} \\text{ in a cell.} \\\\\n&= 100 + 200 + 150 + 300 + 250 \\\\\n&= \\boxed{1000}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Excel AutoFill Shortcut",
+        "formula": "Ctrl + D",
+        "variables": {
+            "Ctrl": "Control key",
+            "D": "D key"
+        },
+        "description": "Fills the selected cell(s) with the content of the cell above it in Excel.",
+        "example": {
+            "problem": "\\text{Copy a formula in cell } B1 \\text{ to cells } B2 \\text{ to } B5 \\text{ in Excel.}",
+            "solution": "\\text{Select cells } B1 \\text{ to } B5, \\text{ then press } \\texttt{Ctrl + D} \\text{ to fill the formula from } B1 \\text{ into } B2:B5."
+        }
+    },
+    {
+        "name": "Excel Insert Row Shortcut",
+        "formula": "Ctrl + Shift + +",
+        "variables": {
+            "Ctrl": "Control key",
+            "Shift": "Shift key",
+            "+": "Plus key"
+        },
+        "description": "Inserts a new row above the selected row in Excel.",
+        "example": {
+            "problem": "\\text{Insert a new row above row } 3 \\text{ in an Excel spreadsheet.}",
+            "solution": "\\text{Select row } 3 \\text{ by clicking its number, then press } \\texttt{Ctrl + Shift + +} \\text{ to insert a new row above it.}"
+        }
+    },
+    {
+        "name": "Word Bold Text Shortcut",
+        "formula": "Ctrl + B",
+        "variables": {
+            "Ctrl": "Control key",
+            "B": "B key"
+        },
+        "description": "Applies bold formatting to selected text in Microsoft Word.",
+        "example": {
+            "problem": "\\text{Make the title 'Annual Report' bold in a Word document.}",
+            "solution": "\\text{Highlight 'Annual Report' and press } \\texttt{Ctrl + B} \\text{ to apply bold formatting.}"
+        }
+    },
+    {
+        "name": "Word Find Shortcut",
+        "formula": "Ctrl + F",
+        "variables": {
+            "Ctrl": "Control key",
+            "F": "F key"
+        },
+        "description": "Opens the Find dialog box to search for text in a Word document.",
+        "example": {
+            "problem": "\\text{Search for the word 'technology' in a Word document.}",
+            "solution": "\\text{Press } \\texttt{Ctrl + F}, \\text{ type 'technology' in the search box, and press Enter to find its occurrences.}"
+        }
+    },
+    {
+        "name": "Word Insert Hyperlink Shortcut",
+        "formula": "Ctrl + K",
+        "variables": {
+            "Ctrl": "Control key",
+            "K": "K key"
+        },
+        "description": "Opens the Insert Hyperlink dialog box to add a hyperlink to selected text in Word.",
+        "example": {
+            "problem": "\\text{Add a hyperlink to the text 'Visit Website' linking to } \\texttt{https://example.com} \\text{ in a Word document.}",
+            "solution": "\\text{Highlight 'Visit Website', press } \\texttt{Ctrl + K}, \\text{ enter } \\texttt{https://example.com} \\text{ in the dialog box, and click OK.}"
+        }
+    },
+    {
+        "name": "PowerPoint New Slide Shortcut",
+        "formula": "Ctrl + M",
+        "variables": {
+            "Ctrl": "Control key",
+            "M": "M key"
+        },
+        "description": "Inserts a new slide in a PowerPoint presentation.",
+        "example": {
+            "problem": "\\text{Add a new slide to a PowerPoint presentation after the current slide.}",
+            "solution": "\\text{Press } \\texttt{Ctrl + M} \\text{ to insert a new slide with the default layout.}"
+        }
+    },
+    {
+        "name": "PowerPoint Start Slideshow Shortcut",
+        "formula": "F5",
+        "variables": {
+            "F5": "F5 function key"
+        },
+        "description": "Starts the slideshow from the first slide in PowerPoint.",
+        "example": {
+            "problem": "\\text{Start a PowerPoint presentation from the beginning.}",
+            "solution": "\\text{Press } \\texttt{F5} \\text{ to begin the slideshow from the first slide.}"
+        }
+    },
+    {
+        "name": "PowerPoint Duplicate Slide Shortcut",
+        "formula": "Ctrl + D",
+        "variables": {
+            "Ctrl": "Control key",
+            "D": "D key"
+        },
+        "description": "Duplicates the selected slide in PowerPoint.",
+        "example": {
+            "problem": "\\text{Duplicate the currently selected slide in a PowerPoint presentation.}",
+            "solution": "\\text{Select the slide in the slide pane and press } \\texttt{Ctrl + D} \\text{ to create a duplicate.}"
+        }
+    },
+    {
+        "name": "Excel VLOOKUP Function",
+        "formula": "=VLOOKUP(lookup\\ value, table\\ array, col\\ index\\ num, [range\\ lookup])",
+        "variables": {
+            "lookup value": "The value to search for",
+            "table array": "The range of cells containing the data",
+            "col index num": "The column number in the range containing the return value",
+            "range lookup": "TRUE for approximate match, FALSE for exact match"
+        },
+        "description": "Searches for a value in the first column of a range and returns a value in the same row from another column in Excel.",
+        "example": {
+            "problem": "\\text{In an Excel table with product IDs in column } A \\text{ and prices in column } B, \\text{ find the price of product ID 'P003' where } A2:A5 \\text{ contains } \\{'P001', 'P002', 'P003', 'P004'\\} \\text{ and } B2:B5 \\text{ contains } \\{10, 20, 30, 40\\}.}",
+            "solution": "\\begin{aligned}\n\\text{Enter } &= \\texttt{VLOOKUP(\"P003\", A2:B5, 2, FALSE)} \\text{ in a cell.} \\\\\n\\text{Looks up 'P003' in } A2:A5, \\text{ returns value from column } 2. \\\\\n&= \\boxed{30}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Word Page Break Shortcut",
+        "formula": "Ctrl + Enter",
+        "variables": {
+            "Ctrl": "Control key",
+            "Enter": "Enter key"
+        },
+        "description": "Inserts a manual page break in a Word document.",
+        "example": {
+            "problem": "\\text{Insert a page break after a section in a Word document.}",
+            "solution": "\\text{Place the cursor at the end of the section and press } \\texttt{Ctrl + Enter} \\text{ to start a new page.}"
+        }
+    },
+    {
+        "name": "PowerPoint Align Objects Shortcut",
+        "formula": "Alt + H, G, A",
+        "variables": {
+            "Alt": "Alt key",
+            "H": "H key (Home tab)",
+            "G": "G key (Arrange menu)",
+            "A": "A key (Align options)"
+        },
+        "description": "Opens the alignment options for selected objects in PowerPoint.",
+        "example": {
+            "problem": "\\text{Align two text boxes to the left in a PowerPoint slide.}",
+            "solution": "\\text{Select both text boxes, press } \\texttt{Alt + H, G, A}, \\text{ then select 'Align Left' from the menu.}"
+        }
+    },
+    {
+        "name": "General Cut Shortcut",
+        "formula": "Ctrl + X",
+        "variables": {
+            "Ctrl": "Control key",
+            "X": "X key"
+        },
+        "description": "Cuts (removes) the selected text, image, or data and places it on the clipboard.",
+        "example": {
+            "problem": "\\text{Move a sentence from one paragraph to another in a Word document.}",
+            "solution": "\\text{Highlight the sentence, press } \\texttt{Ctrl + X}, \\text{ place the cursor elsewhere, then press } \\texttt{Ctrl + V}.}"
+        }
+    },
+    {
+        "name": "General Save Shortcut",
+        "formula": "Ctrl + S",
+        "variables": {
+            "Ctrl": "Control key",
+            "S": "S key"
+        },
+        "description": "Saves the current document, spreadsheet, or presentation.",
+        "example": {
+            "problem": "\\text{Save changes made to a Word document.}",
+            "solution": "\\text{Press } \\texttt{Ctrl + S} \\text{ to save the file immediately.}"
+        }
+    },
+    {
+        "name": "General Select All Shortcut",
+        "formula": "Ctrl + A",
+        "variables": {
+            "Ctrl": "Control key",
+            "A": "A key"
+        },
+        "description": "Selects all content in the active document or window.",
+        "example": {
+            "problem": "\\text{Highlight all text in a document to change its font.}",
+            "solution": "\\text{Press } \\texttt{Ctrl + A} \\text{ to select all content.}"
+        }
+    },
+    {
+        "name": "Excel AVERAGE Function",
+        "formula": "=AVERAGE(range)",
+        "variables": {
+            "range": "Cells containing numeric values"
+        },
+        "description": "Calculates the average (arithmetic mean) of numbers in a range.",
+        "example": {
+            "problem": "\\text{Find the average of scores } 80, 90, 70, 100, 60 \\text{ in cells A1:A5.}",
+            "solution": "\\text{Enter } =\\texttt{AVERAGE(A1:A5)} \\text{ which equals } \\boxed{80}."
+        }
+    },
+    {
+        "name": "Excel IF Function",
+        "formula": "=IF(condition, value\\ if\\ true, value\\ if\\ false)",
+        "variables": {
+            "condition": "Logical test",
+            "value if true": "Returned if condition is TRUE",
+            "value if false": "Returned if condition is FALSE"
+        },
+        "description": "Performs a logical test and returns one value if TRUE, another if FALSE.",
+        "example": {
+            "problem": "\\text{Check if the score in cell B2 is a passing grade (>=50).}",
+            "solution": "\\text{Enter } =\\texttt{IF(B2>=50, \"Pass\", \"Fail\")}."
+        }
+    },
+    {
+        "name": "Excel CONCAT Function",
+        "formula": "=CONCAT(text1, text2, ...)",
+        "variables": {
+            "text1": "First text or cell",
+            "text2": "Second text or cell"
+        },
+        "description": "Joins multiple text strings into a single string.",
+        "example": {
+            "problem": "\\text{Combine first name in cell A2 with last name in cell B2.}",
+            "solution": "\\text{Enter } =\\texttt{CONCAT(A2, \" \", B2)}."
+        }
+    },
+    {
+        "name": "Word Italic Shortcut",
+        "formula": "Ctrl + I",
+        "variables": {
+            "Ctrl": "Control key",
+            "I": "I key"
+        },
+        "description": "Applies italic formatting to selected text in Word.",
+        "example": {
+            "problem": "\\text{Italicize the word 'technology' in a Word document.}",
+            "solution": "\\text{Highlight 'technology' and press } \\texttt{Ctrl + I}."
+        }
+    },
+    {
+        "name": "Word Underline Shortcut",
+        "formula": "Ctrl + U",
+        "variables": {
+            "Ctrl": "Control key",
+            "U": "U key"
+        },
+        "description": "Applies underline formatting to selected text in Word.",
+        "example": {
+            "problem": "\\text{Underline the title 'Summary Report'.}",
+            "solution": "\\text{Highlight 'Summary Report' and press } \\texttt{Ctrl + U}."
+        }
+    },
+    {
+        "name": "Word Save As Shortcut",
+        "formula": "F12",
+        "variables": {
+            "F12": "F12 function key"
+        },
+        "description": "Opens the Save As dialog box to save the document under a new name or format.",
+        "example": {
+            "problem": "\\text{Save a Word file as a PDF copy.}",
+            "solution": "\\text{Press } \\texttt{F12}, \\text{ choose PDF format, and click Save.}"
+        }
+    },
+    {
+        "name": "PowerPoint End Slideshow Shortcut",
+        "formula": "Esc",
+        "variables": {
+            "Esc": "Escape key"
+        },
+        "description": "Ends the PowerPoint slideshow presentation.",
+        "example": {
+            "problem": "\\text{Exit a running slideshow at any time.}",
+            "solution": "\\text{Press } \\texttt{Esc} \\text{ to return to editing mode.}"
+        }
+    },
+    {
+        "name": "PowerPoint Start Slideshow from Current Slide",
+        "formula": "Shift + F5",
+        "variables": {
+            "Shift": "Shift key",
+            "F5": "F5 function key"
+        },
+        "description": "Starts the slideshow from the currently selected slide.",
+        "example": {
+            "problem": "\\text{Present a slideshow starting from slide 5 instead of the beginning.}",
+            "solution": "\\text{Select slide 5 and press } \\texttt{Shift + F5}."
+        }
+    },
+    {
+        "name": "PowerPoint Group Objects Shortcut",
+        "formula": "Ctrl + G",
+        "variables": {
+            "Ctrl": "Control key",
+            "G": "G key"
+        },
+        "description": "Groups multiple selected objects in PowerPoint.",
+        "example": {
+            "problem": "\\text{Group two images together so they move as one.}",
+            "solution": "\\text{Select both images and press } \\texttt{Ctrl + G}."
+        }
+    },
+    {
+        "name": "Excel INDEX Function",
+        "formula": "=INDEX(array, row\\ num, [column\\ num])",
+        "variables": {
+            "array": "Range of cells or array constant",
+            "row num": "Row number to return",
+            "column num": "Column number to return (optional)"
+        },
+        "description": "Returns the value of a cell in a table based on row and column numbers.",
+        "example": {
+            "problem": "\\text{Find the value in the 2nd row and 3rd column of the range A1:C3 where A1:C3 contains numbers 1–9.}",
+            "solution": "\\text{Enter } =\\texttt{INDEX(A1:C3, 2, 3)} \\text{ which returns } \\boxed{6}."
+        }
+    },
+    {
+        "name": "Excel MATCH Function",
+        "formula": "=MATCH(lookup\\ value, lookup\\ array, [match\\ type])",
+        "variables": {
+            "lookup value": "Value to search for",
+            "lookup array": "Range of cells to search",
+            "match type": "1 = less than, 0 = exact match, -1 = greater than"
+        },
+        "description": "Returns the relative position of a value in a range.",
+        "example": {
+            "problem": "\\text{Find the position of 'P003' in the list A1:A5 containing P001, P002, P003, P004, P005.}",
+            "solution": "\\text{Enter } =\\texttt{MATCH(\"P003\", A1:A5, 0)} \\text{ which returns } \\boxed{3}."
+        }
+    },
+    {
+        "name": "Excel LEN Function",
+        "formula": "=LEN(text)",
+        "variables": {
+            "text": "The text string or cell reference"
+        },
+        "description": "Returns the number of characters in a text string, including spaces.",
+        "example": {
+            "problem": "\\text{Count the number of characters in the word 'Technology'.}",
+            "solution": "\\text{Enter } =\\texttt{LEN(\"Technology\")} \\text{ which equals } \\boxed{10}."
+        }
+    },
+    {
+        "name": "Excel TRIM Function",
+        "formula": "=TRIM(text)",
+        "variables": {
+            "text": "Text string or cell reference"
+        },
+        "description": "Removes all extra spaces from a text string, leaving only single spaces between words.",
+        "example": {
+            "problem": "\\text{Clean up text in A1 that contains '  Data   Science  '.}",
+            "solution": "\\text{Enter } =\\texttt{TRIM(A1)} \\text{ which results in 'Data Science'.}"
+        }
+    },
+    {
+        "name": "Excel PMT Function",
+        "formula": "=PMT(rate, nper, pv, [fv], [type])",
+        "variables": {
+            "rate": "Interest rate per period",
+            "nper": "Number of payment periods",
+            "pv": "Present value (loan amount)",
+            "fv": "Future value (optional)",
+            "type": "0 = end of period, 1 = beginning (optional)"
+        },
+        "description": "Calculates the payment for a loan based on constant interest rate and number of periods.",
+        "example": {
+            "problem": "\\text{Calculate monthly payment for a $10,000 loan at 5% annual interest over 5 years.}",
+            "solution": "\\text{Enter } =\\texttt{PMT(5\\%/12, 60, -10000)} \\text{ which gives } \\approx \\boxed{-188.71}."
+        }
+    },
+    {
+        "name": "Word Track Changes Shortcut",
+        "formula": "Ctrl + Shift + E",
+        "variables": {
+            "Ctrl": "Control key",
+            "Shift": "Shift key",
+            "E": "E key"
+        },
+        "description": "Turns Track Changes on or off to monitor edits in a Word document.",
+        "example": {
+            "problem": "\\text{Enable Track Changes while editing a contract.}",
+            "solution": "\\text{Press } \\texttt{Ctrl + Shift + E} \\text{ to toggle Track Changes.}"
+        }
+    },
+    {
+        "name": "Word Show/Hide Formatting Marks Shortcut",
+        "formula": "Ctrl + Shift + 8",
+        "variables": {
+            "Ctrl": "Control key",
+            "Shift": "Shift key",
+            "8": "Number 8 key"
+        },
+        "description": "Displays or hides non-printing characters such as spaces, paragraph marks, and tabs.",
+        "example": {
+            "problem": "\\text{Reveal hidden paragraph breaks in a Word document.}",
+            "solution": "\\text{Press } \\texttt{Ctrl + Shift + 8} \\text{ to show formatting marks.}"
+        }
+    },
+    {
+        "name": "Word Format Painter Shortcut",
+        "formula": "Ctrl + Shift + C / Ctrl + Shift + V",
+        "variables": {
+            "Ctrl": "Control key",
+            "Shift": "Shift key",
+            "C": "C key (copy format)",
+            "V": "V key (apply format)"
+        },
+        "description": "Copies formatting from selected text and applies it to other text.",
+        "example": {
+            "problem": "\\text{Copy bold + italic formatting from one heading and apply it to another.}",
+            "solution": "\\text{Highlight the formatted text, press } \\texttt{Ctrl + Shift + C}, \\text{ then highlight the target text and press } \\texttt{Ctrl + Shift + V}."
+        }
+    },
+    {
+        "name": "PowerPoint Reuse Slides Shortcut",
+        "formula": "Alt + H, I, S",
+        "variables": {
+            "Alt": "Alt key",
+            "H": "Home tab",
+            "I": "Insert menu",
+            "S": "Reuse Slides option"
+        },
+        "description": "Opens the Reuse Slides pane to insert slides from another presentation.",
+        "example": {
+            "problem": "\\text{Insert slides from another PowerPoint file into the current presentation.}",
+            "solution": "\\text{Press } \\texttt{Alt + H, I, S} \\text{ and select the file to import slides.}"
+        }
+    },
+    {
+        "name": "PowerPoint Ungroup Objects Shortcut",
+        "formula": "Ctrl + Shift + G",
+        "variables": {
+            "Ctrl": "Control key",
+            "Shift": "Shift key",
+            "G": "G key"
+        },
+        "description": "Ungroups grouped objects so they can be edited individually.",
+        "example": {
+            "problem": "\\text{Break apart a grouped chart and text box.}",
+            "solution": "\\text{Select the group and press } \\texttt{Ctrl + Shift + G}."
+        }
+    },
+    {
+        "name": "PowerPoint Insert Screenshot Shortcut",
+        "formula": "Alt + N, S, C",
+        "variables": {
+            "Alt": "Alt key",
+            "N": "Insert tab",
+            "S": "Screenshot option",
+            "C": "Screen Clipping"
+        },
+        "description": "Inserts a screenshot or screen clipping into a slide.",
+        "example": {
+            "problem": "\\text{Capture part of the desktop and insert it into a presentation.}",
+            "solution": "\\text{Press } \\texttt{Alt + N, S, C}, \\text{ then select the area to capture.}"
+        }
+    },
+    {
+        "name": "General Task Manager Shortcut",
+        "formula": "Ctrl + Shift + Esc",
+        "variables": {
+            "Ctrl": "Control key",
+            "Shift": "Shift key",
+            "Esc": "Escape key"
+        },
+        "description": "Opens Task Manager directly in Windows to monitor applications and processes.",
+        "example": {
+            "problem": "\\text{Quickly check CPU usage of a running program.}",
+            "solution": "\\text{Press } \\texttt{Ctrl + Shift + Esc} \\text{ to open Task Manager.}"
+        }
+    },
+    {
+        "name": "General Switch Applications Shortcut",
+        "formula": "Alt + Tab",
+        "variables": {
+            "Alt": "Alt key",
+            "Tab": "Tab key"
+        },
+        "description": "Switches between open applications in Windows.",
+        "example": {
+            "problem": "\\text{Move from a Word document to a browser without using the mouse.}",
+            "solution": "\\text{Hold } \\texttt{Alt} \\text{ and press } \\texttt{Tab} \\text{ to cycle through apps.}"
+        }
+    },
+    {
+        "name": "General Lock Computer Shortcut",
+        "formula": "Windows + L",
+        "variables": {
+            "Windows": "Windows key",
+            "L": "L key"
+        },
+        "description": "Locks the computer and returns to the sign-in screen.",
+        "example": {
+            "problem": "\\text{Secure your PC before stepping away.}",
+            "solution": "\\text{Press } \\texttt{Windows + L} \\text{ to lock the computer.}"
+        }
+    },
+    {
+        "name": "General Screenshot Shortcut",
+        "formula": "Windows + Shift + S",
+        "variables": {
+            "Windows": "Windows key",
+            "Shift": "Shift key",
+            "S": "S key"
+        },
+        "description": "Opens Snip & Sketch tool to capture part of the screen.",
+        "example": {
+            "problem": "\\text{Capture only a section of your desktop screen.}",
+            "solution": "\\text{Press } \\texttt{Windows + Shift + S}, \\text{ drag over the area to capture, and it is copied to clipboard.}"
+        }
+    },
+    {
+        "name": "General File Explorer Shortcut",
+        "formula": "Windows + E",
+        "variables": {
+            "Windows": "Windows key",
+            "E": "E key"
+        },
+        "description": "Opens File Explorer to browse files and folders.",
+        "example": {
+            "problem": "\\text{Quickly open the Documents folder.}",
+            "solution": "\\text{Press } \\texttt{Windows + E} \\text{ to open File Explorer.}"
+        }
+    },
+    {
+        "name": "General Run Dialog Shortcut",
+        "formula": "Windows + R",
+        "variables": {
+            "Windows": "Windows key",
+            "R": "R key"
+        },
+        "description": "Opens the Run dialog box to execute commands or open programs quickly.",
+        "example": {
+            "problem": "\\text{Open Notepad without searching manually.}",
+            "solution": "\\text{Press } \\texttt{Windows + R}, \\text{ type 'notepad', and press Enter.}"
+        }
+    },
+    {
+        "name": "General Minimize All Windows Shortcut",
+        "formula": "Windows + D",
+        "variables": {
+            "Windows": "Windows key",
+            "D": "D key"
+        },
+        "description": "Shows the desktop by minimizing all open windows.",
+        "example": {
+            "problem": "\\text{Quickly access a file saved on the desktop while many windows are open.}",
+            "solution": "\\text{Press } \\texttt{Windows + D} \\text{ to minimize all and show the desktop.}"
+        }
+    },
+    {
+        "name": "General Virtual Desktop Shortcut",
+        "formula": "Windows + Ctrl + D",
+        "variables": {
+            "Windows": "Windows key",
+            "Ctrl": "Control key",
+            "D": "D key"
+        },
+        "description": "Creates a new virtual desktop in Windows.",
+        "example": {
+            "problem": "\\text{Set up a separate workspace for studying while keeping your main desktop clean.}",
+            "solution": "\\text{Press } \\texttt{Windows + Ctrl + D} \\text{ to add a new virtual desktop.}"
+        }
+    },
+    {
+        "name": "General Close Current Window Shortcut",
+        "formula": "Alt + F4",
+        "variables": {
+            "Alt": "Alt key",
+            "F4": "F4 function key"
+        },
+        "description": "Closes the current application window.",
+        "example": {
+            "problem": "\\text{Exit a browser window without using the mouse.}",
+            "solution": "\\text{Press } \\texttt{Alt + F4}."
+        }
+    },
+    {
+        "name": "Excel XLOOKUP Function",
+        "formula": "=XLOOKUP(lookup\\ value, lookup\\ array, return\\ array, [if\\ not\\ found], [match\\ mode], [search\\ mode])",
+        "variables": {
+            "\\text{lookup value}": "The value to search for",
+            "\\text{lookup array}": "Range to search in",
+            "\\text{return array}": "Range to return results from",
+            "\\text{if not found}": "Value returned if not found (optional)",
+            "\\text{match mode}": "0=Exact, -1=Exact or next smaller, 1=Exact or next larger (optional)",
+            "\\text{search mode}": "1=First-to-last, -1=Last-to-first (optional)"
+        },
+        "description": "Performs a powerful lookup to find values across a range, replacing VLOOKUP and HLOOKUP.",
+        "example": {
+            "problem": "\\text{Find the price of product ID 'P003' where IDs are in A2:A5 and prices in B2:B5.}",
+            "solution": "\\text{Enter } =\\texttt{XLOOKUP(\"P003\", A2:A5, B2:B5)} \\text{ which returns } \\boxed{30}."
+        }
+    },
+    {
+        "name": "Excel INDEX + MATCH Combination",
+        "formula": "=INDEX(return\\ range, MATCH(lookup\\ value, lookup\\ range, 0))",
+        "variables": {
+            "\\text{return range}": "The range to return values from",
+            "\\text{lookup value}": "The value to search for",
+            "\\text{lookup range}": "Range to search within"
+        },
+        "description": "Combines INDEX and MATCH for flexible lookups, often used as a VLOOKUP alternative.",
+        "example": {
+            "problem": "\\text{Get the price of 'P003' where A2:A5 contains IDs and B2:B5 contains prices.}",
+            "solution": "\\text{Enter } =\\texttt{INDEX(B2:B5, MATCH(\"P003\", A2:A5, 0))} \\text{ which returns } \\boxed{30}."
+        }
+    },
+    {
+        "name": "Excel PROPER Function",
+        "formula": "=PROPER(text)",
+        "variables": {
+            "text": "Text or cell reference"
+        },
+        "description": "Capitalizes the first letter of each word in a text string.",
+        "example": {
+            "problem": "\\text{Format the text 'introduction to information technology' properly.}",
+            "solution": "\\text{Enter } =\\texttt{PROPER(\"introduction to information technology\")} \\text{ which results in 'Introduction To Information Technology'.}"
+        }
+    },
+    {
+        "name": "Excel TODAY Function",
+        "formula": "=TODAY()",
+        "variables": {},
+        "description": "Returns the current date.",
+        "example": {
+            "problem": "\\text{Display today's date in a report header.}",
+            "solution": "\\text{Enter } =\\texttt{TODAY()}."
+        }
+    }
+]

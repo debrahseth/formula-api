@@ -1,0 +1,483 @@
+[
+    {
+        "name": "Properties of Real Numbers",
+        "formula": "\\forall a, b, c \\in \\mathbb{R}: \\quad a + b = b + a, \\quad ab = ba, \\quad (a + b) + c = a + (b + c), \\quad a(b + c) = ab + ac",
+        "variables": {
+            "a, b, c": "Real numbers"
+        },
+        "description": "The real number system satisfies commutative, associative, and distributive laws.",
+        "example": {
+            "problem": "\\text{Verify the distributive law for } a = 2, b = 3, c = 4.",
+            "solution": "\\begin{aligned}\n\\text{Left side: } a(b + c) &= 2(3 + 4) = 2 \\cdot 7 = 14 \\\\\n\\text{Right side: } ab + ac &= 2 \\cdot 3 + 2 \\cdot 4 = 6 + 8 = 14 \\\\\n\\text{Since } 14 &= 14, \\text{ the distributive law holds.} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Triangle Inequality",
+        "formula": "|a + b| \\leq |a| + |b|",
+        "variables": {
+            "a, b": "Real numbers"
+        },
+        "description": "The absolute value of a sum is less than or equal to the sum of absolute values.",
+        "example": {
+            "problem": "\\text{Verify for } a = 3, b = -5.",
+            "solution": "\\begin{aligned}\n\\text{Left side: } |a + b| &= |3 + (-5)| = |-2| = 2 \\\\\n\\text{Right side: } |a| + |b| &= |3| + |-5| = 3 + 5 = 8 \\\\\n\\text{Since } 2 \\leq 8, \\text{ the triangle inequality holds.} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Absolute Value Function",
+        "formula": "|x| = \\begin{cases} x & \\text{if } x \\geq 0 \\\\ -x & \\text{if } x < 0 \\end{cases}",
+        "variables": {
+            "x": "Real variable"
+        },
+        "description": "The absolute value represents the distance from zero on the real number line.",
+        "example": {
+            "problem": "\\text{Find } |-7|.",
+            "solution": "\\begin{aligned}\n\\text{Since } -7 < 0, \\text{ we use } |x| = -x \\text{ for } x < 0: \\\\\n|-7| &= -(-7) = 7\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Absolute Value Inequality",
+        "formula": "|x| < a \\iff -a < x < a, \\quad |x| > a \\iff x < -a \\text{ or } x > a",
+        "variables": {
+            "a": "Positive real number"
+        },
+        "description": "Inequalities involving absolute values describe intervals on the real line.",
+        "example": {
+            "problem": "\\text{Solve } |x| > 2.",
+            "solution": "\\begin{aligned}\n\\text{For } |x| > 2, \\text{ we have: } \\\\\nx < -2 \\quad \\text{or} \\quad x > 2 \\\\\n\\text{Solution set: } (-\\infty, -2) \\cup (2, \\infty)\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Interval Notation",
+        "formula": "\\text{Open interval: } (a, b) = \\{ x \\in \\mathbb{R} : a < x < b \\} \\\\ \\text{Closed interval: } [a, b] = \\{ x \\in \\mathbb{R} : a \\leq x \\leq b \\}",
+        "variables": {
+            "a, b": "Endpoints with } a < b"
+        },
+        "description": "Intervals describe subsets of the real line, with open intervals excluding endpoints and closed intervals including them.",
+        "example": {
+            "problem": "\\text{Write } 0 < x \\leq 5 \\text{ in interval notation.}",
+            "solution": "\\begin{aligned}\n0 < x \\leq 5 \\text{ means } x \\text{ is greater than } 0 \\text{ and less than or equal to } 5 \\\\\n\\text{In interval notation: } (0, 5]\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Delta Neighborhood",
+        "formula": "N_{\\delta}(a) = \\{ x \\in \\mathbb{R} : |x - a| < \\delta \\}, \\quad \\delta > 0",
+        "variables": {
+            "a": "Center point",
+            "\\delta": "Radius"
+        },
+        "description": "A δ-neighborhood is the set of points within distance δ of a.",
+        "example": {
+            "problem": "\\text{Find } N_2(5).",
+            "solution": "\\begin{aligned}\nN_2(5) &= \\{ x \\in \\mathbb{R} : |x - 5| < 2 \\} \\\\\n|x - 5| < 2 &\\implies -2 < x - 5 < 2 \\\\\n&\\implies 3 < x < 7 \\\\\n\\text{Thus, } N_2(5) &= (3, 7)\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Deleted Neighborhood",
+        "formula": "N_{\\delta}(a) \\setminus \\{a\\} = \\{ x \\in \\mathbb{R} : 0 < |x - a| < \\delta \\}",
+        "variables": {
+            "a": "Point",
+            "\\delta": "Radius"
+        },
+        "description": "A deleted neighborhood excludes the center point, including only points within δ distance but not a itself.",
+        "example": {
+            "problem": "\\text{Find the deleted neighborhood of } 3 \\text{ with } \\delta = 1.",
+            "solution": "\\begin{aligned}\nN_1(3) \\setminus \\{3\\} &= \\{ x : 0 < |x - 3| < 1 \\} \\\\\n0 < |x - 3| < 1 &\\implies 0 < |x - 3| < 1 \\implies 2 < x < 4, \\ x \\neq 3 \\\\\n\\text{Thus: } (2, 4) \\setminus \\{3\\}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Open Set",
+        "formula": "S \\subseteq \\mathbb{R} \\text{ is open if } \\forall x \\in S, \\exists \\delta > 0 : N_{\\delta}(x) \\subseteq S",
+        "variables": {
+            "S": "Subset of real line"
+        },
+        "description": "An open set contains no boundary points, meaning every point has a neighborhood fully contained in the set.",
+        "example": {
+            "problem": "\\text{Is } (0, 1) \\text{ open?}",
+            "solution": "\\begin{aligned}\n\\text{For any } x \\in (0, 1), \\text{ choose } \\delta = \\min(x, 1 - x) \\\\\nN_{\\delta}(x) = (x - \\delta, x + \\delta) \\subseteq (0, 1) \\text{ since } 0 < x - \\delta < x + \\delta < 1 \\\\\n\\text{Thus, } (0, 1) \\text{ is open.} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Closed Set",
+        "formula": "S \\subseteq \\mathbb{R} \\text{ is closed if it contains all its limit points.}",
+        "variables": {
+            "S": "Subset of real line"
+        },
+        "description": "Closed sets contain their boundaries, including all points where sequences in the set converge.",
+        "example": {
+            "problem": "\\text{Is } [0, 1] \\text{ closed?}",
+            "solution": "\\begin{aligned}\n\\text{Limit points of } [0, 1] \\text{ are points in } [0, 1], \\text{ since any sequence in } [0, 1] \\text{ converges to a point in } [0, 1] \\\\\n\\text{Boundary points } 0 \\text{ and } 1 \\text{ are in } [0, 1] \\\\\n\\text{Thus, } [0, 1] \\text{ is closed.} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Limit of a Function",
+        "formula": "\\lim_{x \\to a} f(x) = L \\iff \\forall \\varepsilon > 0, \\exists \\delta > 0 : 0 < |x - a| < \\delta \\implies |f(x) - L| < \\varepsilon",
+        "variables": {
+            "a": "Point",
+            "L": "Limit value"
+        },
+        "description": "The epsilon-delta definition of a limit describes how function values approach L as x approaches a.",
+        "example": {
+            "problem": "\\text{Find } \\lim_{x \\to 2} (3x + 1).",
+            "solution": "\\begin{aligned}\n\\text{Let } f(x) = 3x + 1, \\text{ evaluate at } x = 2: \\\\\nf(2) &= 3 \\cdot 2 + 1 = 7 \\\\\n\\text{To verify with } \\varepsilon-\\delta: \\text{ Choose } \\delta = \\frac{\\varepsilon}{3} \\\\\n|f(x) - 7| = |3x + 1 - 7| = |3x - 6| = 3|x - 2| < 3\\delta = \\varepsilon \\text{ when } |x - 2| < \\delta \\\\\n\\text{Thus, } \\lim_{x \\to 2} (3x + 1) = 7\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Limit at Infinity",
+        "formula": "\\lim_{x \\to \\infty} f(x) = L \\iff \\forall \\varepsilon > 0, \\exists M > 0 : x > M \\implies |f(x) - L| < \\varepsilon",
+        "variables": {
+            "L": "Limit value"
+        },
+        "description": "Defines function behavior as x grows arbitrarily large.",
+        "example": {
+            "problem": "\\text{Find } \\lim_{x \\to \\infty} \\frac{1}{x}.",
+            "solution": "\\begin{aligned}\n\\text{As } x \\to \\infty, \\frac{1}{x} \\text{ gets smaller: } \\\\\n\\left| \\frac{1}{x} - 0 \\right| = \\frac{1}{x} < \\varepsilon \\text{ if } x > \\frac{1}{\\varepsilon} \\\\\n\\text{Choose } M = \\frac{1}{\\varepsilon}, \\text{ so for } x > M, \\left| \\frac{1}{x} \\right| < \\varepsilon \\\\\n\\text{Thus, } \\lim_{x \\to \\infty} \\frac{1}{x} = 0\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Cluster Point",
+        "formula": "x_0 \\text{ is a cluster point of } S \\text{ if } \\forall \\delta > 0, (N_{\\delta}(x_0) \\cap S) \\setminus \\{x_0\\} \\neq \\emptyset",
+        "variables": {
+            "S": "Subset of real line",
+            "x_0": "Point in closure"
+        },
+        "description": "Cluster points are limit points of a set, where every neighborhood contains other points of the set.",
+        "example": {
+            "problem": "\\text{Find cluster points of } (0, 1).",
+            "solution": "\\begin{aligned}\n\\text{A point } x_0 \\text{ is a cluster point if every } N_{\\delta}(x_0) \\text{ contains points of } (0, 1) \\text{ other than } x_0 \\\\\n\\text{For } x_0 \\in (0, 1), \\text{ e.g., } x_0 = 0.5, N_{\\delta}(0.5) \\subseteq (0, 1) \\text{ for small } \\delta, \\text{ and contains other points} \\\\\n\\text{For } x_0 = 0 \\text{ or } 1, N_{\\delta}(0) \\cap (0, 1) = (0, \\delta) \\neq \\emptyset \\\\\n\\text{Thus, cluster points are } [0, 1]\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Isolated Point",
+        "formula": "x_0 \\in S \\text{ is isolated if } \\exists \\delta > 0 : N_{\\delta}(x_0) \\cap S = \\{x_0\\}",
+        "variables": {
+            "x_0": "Point",
+            "S": "Set"
+        },
+        "description": "An isolated point has no other points of the set in some neighborhood around it.",
+        "example": {
+            "problem": "\\text{Is } 5 \\text{ an isolated point of } \\{5\\}?",
+            "solution": "\\begin{aligned}\n\\text{For } S = \\{5\\}, \\text{ take } \\delta = 1: \\\\\nN_1(5) = (4, 6) \\cap \\{5\\} = \\{5\\} \\\\\n\\text{No other points of } S \\text{ are in } (4, 6), \\text{ so } 5 \\text{ is isolated.} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Bounded Set",
+        "formula": "S \\subseteq \\mathbb{R} \\text{ is bounded if } \\exists M > 0 : |x| < M \\ \\forall x \\in S",
+        "variables": {
+            "S": "Subset of real numbers"
+        },
+        "description": "A set is bounded if it lies within some finite interval.",
+        "example": {
+            "problem": "\\text{Is } (0, 1) \\text{ bounded?}",
+            "solution": "\\begin{aligned}\n\\text{For } x \\in (0, 1), \\text{ we have } 0 < x < 1 \\\\\n\\text{Choose } M = 1: |x| < 1 \\leq M \\text{ for all } x \\in (0, 1) \\\\\n\\text{Thus, } (0, 1) \\text{ is bounded.} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Bolzano-Weierstrass Theorem",
+        "formula": "\\text{Every bounded infinite subset of } \\mathbb{R} \\text{ has a cluster point.}",
+        "variables": {
+            "S": "Bounded infinite subset of real numbers"
+        },
+        "description": "Key theorem in real analysis about accumulation points of bounded infinite sets.",
+        "example": {
+            "problem": "\\text{Does } \\{1/n : n = 1, 2, \\dots\\} \\text{ have a cluster point?}",
+            "solution": "\\begin{aligned}\nS = \\{1, \\frac{1}{2}, \\frac{1}{3}, \\dots\\} \\text{ is bounded since } 0 < \\frac{1}{n} \\leq 1 \\\\\n\\text{For } x_0 = 0, \\text{ every } N_{\\delta}(0) = (-\\delta, \\delta) \\text{ contains } \\frac{1}{n} \\text{ for large } n \\\\\n\\text{Thus, } 0 \\text{ is a cluster point.} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Function Definition",
+        "formula": "f : A \\to B, \\quad f(x) = y",
+        "variables": {
+            "A": "Domain",
+            "B": "Codomain",
+            "f(x)": "Function value"
+        },
+        "description": "A function maps each input from the domain to exactly one output in the codomain.",
+        "example": {
+            "problem": "\\text{Define } f(x) = x^2 \\text{ for } x \\in \\mathbb{R}.",
+            "solution": "\\begin{aligned}\n\\text{Domain: } \\mathbb{R} \\\\\n\\text{Codomain: } \\mathbb{R} \\\\\n\\text{Range: } [0, \\infty) \\text{ since } x^2 \\geq 0 \\text{ for all } x \\in \\mathbb{R} \\\\\n\\text{For example, } f(-2) = (-2)^2 = 4, \\ f(0) = 0\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Even and Odd Functions",
+        "formula": "\\text{Even: } f(-x) = f(x), \\quad \\text{Odd: } f(-x) = -f(x)",
+        "variables": {
+            "f(x)": "Function"
+        },
+        "description": "Even functions are symmetric about the y-axis, odd functions are symmetric about the origin.",
+        "example": {
+            "problem": "\\text{Is } f(x) = x^3 \\text{ odd?}",
+            "solution": "\\begin{aligned}\n\\text{Check: } f(-x) = (-x)^3 = -x^3 = -f(x) \\\\\n\\text{Since } f(-x) = -f(x), \\text{ the function is odd.} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Periodic Function",
+        "formula": "f(x + T) = f(x), \\quad \\forall x",
+        "variables": {
+            "T": "Period"
+        },
+        "description": "A function repeats its values after fixed intervals called the period.",
+        "example": {
+            "problem": "\\text{Find the period of } \\sin(x).",
+            "solution": "\\begin{aligned}\n\\sin(x + T) = \\sin(x) \\text{ requires } x + T = x + 2\\pi k \\text{ for integer } k \\\\\n\\text{Smallest } T = 2\\pi \\\\\n\\text{Thus, the period is } 2\\pi\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Monotonicity",
+        "formula": "\\text{Increasing: } x_1 < x_2 \\implies f(x_1) \\leq f(x_2), \\quad \\text{Decreasing: } x_1 < x_2 \\implies f(x_1) \\geq f(x_2)",
+        "variables": {
+            "f(x)": "Function"
+        },
+        "description": "Monotonic functions either preserve or reverse the order of inputs.",
+        "example": {
+            "problem": "\\text{Is } f(x) = 2x \\text{ increasing?}",
+            "solution": "\\begin{aligned}\n\\text{For } x_1 < x_2, \\text{ compare } f(x_1) = 2x_1 \\text{ and } f(x_2) = 2x_2 \\\\\n\\text{Since } x_1 < x_2 \\implies 2x_1 < 2x_2, \\text{ so } f(x_1) < f(x_2) \\\\\n\\text{Thus, } f(x) \\text{ is strictly increasing.} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Local Extrema",
+        "formula": "f(x_0) \\text{ is a local max if } \\exists \\delta > 0 : f(x_0) \\geq f(x), \\ \\forall x \\in N_{\\delta}(x_0)",
+        "variables": {
+            "f(x)": "Function",
+            "x_0": "Candidate point"
+        },
+        "description": "Local maxima and minima are points where the function achieves higher or lower values in a neighborhood.",
+        "example": {
+            "problem": "\\text{Does } f(x) = -x^2 \\text{ have a local max?}",
+            "solution": "\\begin{aligned}\nf'(x) = -2x, \\text{ set } f'(x) = 0 \\implies x = 0 \\\\\nf''(x) = -2 < 0 \\text{ (concave down, so local max)} \\\\\nf(0) = 0, \\text{ for } x \\in N_{\\delta}(0), \\ -x^2 \\leq 0 \\\\\n\\text{Thus, } x = 0 \\text{ is a local max with } f(0) = 0\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Continuity",
+        "formula": "f \\text{ is continuous at } a \\iff \\lim_{x \\to a} f(x) = f(a)",
+        "variables": {
+            "f(x)": "Function",
+            "a": "Point"
+        },
+        "description": "A function is continuous if its limit at a point equals its value at that point.",
+        "example": {
+            "problem": "\\text{Is } f(x) = x^2 \\text{ continuous at } x = 1?",
+            "solution": "\\begin{aligned}\n\\lim_{x \\to 1} x^2 = 1^2 = 1 \\\\\nf(1) = 1^2 = 1 \\\\\n\\text{Since } \\lim_{x \\to 1} f(x) = f(1), \\text{ the function is continuous at } x = 1 \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Differentiation from First Principles",
+        "formula": "f'(x) = \\lim_{h \\to 0} \\frac{f(x + h) - f(x)}{h}",
+        "variables": {
+            "f(x)": "Function",
+            "h": "Increment"
+        },
+        "description": "The derivative is defined as the limit of the difference quotient.",
+        "example": {
+            "problem": "\\text{Find the derivative of } x^2 \\text{ from first principles.}",
+            "solution": "\\begin{aligned}\nf(x) = x^2, \\ f(x + h) = (x + h)^2 = x^2 + 2xh + h^2 \\\\\n\\frac{f(x + h) - f(x)}{h} &= \\frac{(x^2 + 2xh + h^2) - x^2}{h} = \\frac{2xh + h^2}{h} = 2x + h \\\\\n\\lim_{h \\to 0} (2x + h) &= 2x \\\\\n\\text{Thus, } f'(x) = 2x\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Power Rule",
+        "formula": "\\frac{d}{dx} (x^n) = n x^{n-1}",
+        "variables": {
+            "n": "Real exponent"
+        },
+        "description": "The power rule provides a formula for differentiating power functions.",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx} (x^5).",
+            "solution": "\\begin{aligned}\n\\text{Using the power rule with } n = 5: \\\\\n\\frac{d}{dx} (x^5) &= 5 x^{5-1} = 5 x^4\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Trigonometric Derivatives",
+        "formula": "\\frac{d}{dx} (\\sin x) = \\cos x, \\quad \\frac{d}{dx} (\\cos x) = -\\sin x, \\quad \\frac{d}{dx} (\\tan x) = \\sec^2 x",
+        "variables": {
+            "x": "Angle variable"
+        },
+        "description": "Standard derivatives of basic trigonometric functions.",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx} (\\tan x).",
+            "solution": "\\begin{aligned}\n\\text{Using the formula: } \\\\\n\\frac{d}{dx} (\\tan x) &= \\sec^2 x\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Inverse Trigonometric Derivatives",
+        "formula": "\\frac{d}{dx} (\\sin^{-1} x) = \\frac{1}{\\sqrt{1 - x^2}}, \\quad \\frac{d}{dx} (\\cos^{-1} x) = -\\frac{1}{\\sqrt{1 - x^2}}, \\quad \\frac{d}{dx} (\\tan^{-1} x) = \\frac{1}{1 + x^2}",
+        "variables": {
+            "x": "Variable with } |x| < 1 \\text{ for } \\sin^{-1} \\text{ and } \\cos^{-1}"
+        },
+        "description": "Derivatives of inverse trigonometric functions.",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx} (\\tan^{-1} x).",
+            "solution": "\\begin{aligned}\n\\text{Using the formula: } \\\\\n\\frac{d}{dx} (\\tan^{-1} x) &= \\frac{1}{1 + x^2}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Hyperbolic Derivatives",
+        "formula": "\\frac{d}{dx} (\\sinh x) = \\cosh x, \\quad \\frac{d}{dx} (\\cosh x) = \\sinh x, \\quad \\frac{d}{dx} (\\tanh x) = \\text{sech}^2 x",
+        "variables": {
+            "x": "Real variable"
+        },
+        "description": "Derivatives of hyperbolic functions, analogous to trigonometric derivatives.",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx} (\\sinh x).",
+            "solution": "\\begin{aligned}\n\\text{Using the formula: } \\\\\n\\frac{d}{dx} (\\sinh x) &= \\cosh x\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Product Rule",
+        "formula": "\\frac{d}{dx} [f(x) g(x)] = f'(x) g(x) + f(x) g'(x)",
+        "variables": {
+            "f, g": "Differentiable functions"
+        },
+        "description": "The product rule gives the derivative of a product of two functions.",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx} (x^2 e^x).",
+            "solution": "\\begin{aligned}\n\\text{Let } f(x) = x^2, \\ g(x) = e^x \\\\\nf'(x) = 2x, \\ g'(x) = e^x \\\\\n\\frac{d}{dx} (x^2 e^x) &= f'(x) g(x) + f(x) g'(x) \\\\\n&= (2x) e^x + x^2 e^x \\\\\n&= e^x (2x + x^2)\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Quotient Rule",
+        "formula": "\\frac{d}{dx} \\left( \\frac{f(x)}{g(x)} \\right) = \\frac{f'(x) g(x) - f(x) g'(x)}{[g(x)]^2}",
+        "variables": {
+            "f, g": "Differentiable functions"
+        },
+        "description": "The quotient rule gives the derivative of a quotient of two functions.",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx} \\left( \\frac{x}{x + 1} \\right).",
+            "solution": "\\begin{aligned}\n\\text{Let } f(x) = x, \\ g(x) = x + 1 \\\\\nf'(x) = 1, \\ g'(x) = 1 \\\\\n\\frac{d}{dx} \\left( \\frac{x}{x + 1} \\right) &= \\frac{f'(x) g(x) - f(x) g'(x)}{[g(x)]^2} \\\\\n&= \\frac{1 \\cdot (x + 1) - x \\cdot 1}{(x + 1)^2} \\\\\n&= \\frac{x + 1 - x}{(x + 1)^2} = \\frac{1}{(x + 1)^2}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Chain Rule",
+        "formula": "\\frac{d}{dx} [f(g(x))] = f'(g(x)) g'(x)",
+        "variables": {
+            "f, g": "Differentiable functions"
+        },
+        "description": "The chain rule gives the derivative of a composite function.",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx} (\\sin(x^2)).",
+            "solution": "\\begin{aligned}\n\\text{Let } u = g(x) = x^2, \\ f(u) = \\sin u \\\\\nf'(u) = \\cos u, \\ g'(x) = 2x \\\\\n\\frac{d}{dx} [f(g(x))] &= f'(g(x)) g'(x) \\\\\n&= \\cos(x^2) \\cdot 2x \\\\\n&= 2x \\cos(x^2)\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Implicit Differentiation",
+        "formula": "\\text{For } F(x, y) = 0, \\quad \\frac{dy}{dx} = -\\frac{\\partial F / \\partial x}{\\partial F / \\partial y}",
+        "variables": {
+            "F(x, y)": "Implicit relation"
+        },
+        "description": "Implicit differentiation finds the derivative of y with respect to x when defined implicitly.",
+        "example": {
+            "problem": "\\text{Find } \\frac{dy}{dx} \\text{ if } x^2 + y^2 = 1.",
+            "solution": "\\begin{aligned}\nF(x, y) = x^2 + y^2 - 1 = 0 \\\\\n\\frac{\\partial F}{\\partial x} = 2x, \\ \\frac{\\partial F}{\\partial y} = 2y \\\\\n\\frac{dy}{dx} &= -\\frac{\\frac{\\partial F}{\\partial x}}{\\frac{\\partial F}{\\partial y}} = -\\frac{2x}{2y} = -\\frac{x}{y}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Higher Order Derivatives",
+        "formula": "f^{(n)}(x) = \\frac{d^n}{dx^n} f(x)",
+        "variables": {
+            "n": "Order of derivative"
+        },
+        "description": "The nth derivative of a function, obtained by differentiating n times.",
+        "example": {
+            "problem": "\\text{For } f(x) = e^x, \\text{ find } f^{(n)}(x).",
+            "solution": "\\begin{aligned}\nf(x) = e^x \\\\\nf'(x) = e^x, \\ f''(x) = e^x, \\ f'''(x) = e^x, \\ \\dots \\\\\n\\text{By induction, } f^{(n)}(x) = e^x \\text{ for all } n\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Leibniz Rule for nth Derivative",
+        "formula": "(fg)^{(n)} = \\sum_{k=0}^n \\binom{n}{k} f^{(k)} g^{(n-k)}",
+        "variables": {
+            "f, g": "Differentiable functions",
+            "n": "Order"
+        },
+        "description": "General rule for the nth derivative of a product of functions.",
+        "example": {
+            "problem": "\\text{Compute the second derivative of } x^2 e^x.",
+            "solution": "\\begin{aligned}\nf(x) = x^2, \\ g(x) = e^x, \\ n = 2 \\\\\nf^{(0)} = x^2, \\ f^{(1)} = 2x, \\ f^{(2)} = 2 \\\\\ng^{(0)} = e^x, \\ g^{(1)} = e^x, \\ g^{(2)} = e^x \\\\\n(fg)^{(2)} &= \\sum_{k=0}^2 \\binom{2}{k} f^{(k)} g^{(2-k)} \\\\\n&= \\binom{2}{0} f^{(0)} g^{(2)} + \\binom{2}{1} f^{(1)} g^{(1)} + \\binom{2}{2} f^{(2)} g^{(0)} \\\\\n&= 1 \\cdot x^2 e^x + 2 \\cdot 2x e^x + 1 \\cdot 2 e^x \\\\\n&= e^x (x^2 + 4x + 2)\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "L'Hospital's Rule",
+        "formula": "\\lim_{x \\to a} \\frac{f(x)}{g(x)} = \\lim_{x \\to a} \\frac{f'(x)}{g'(x)}, \\quad \\text{if } \\lim_{x \\to a} f(x) = 0, \\ \\lim_{x \\to a} g(x) = 0 \\text{ or } \\pm\\infty",
+        "variables": {
+            "f, g": "Differentiable functions"
+        },
+        "description": "Used to evaluate indeterminate forms like 0/0 or ∞/∞.",
+        "example": {
+            "problem": "\\text{Find } \\lim_{x \\to 0} \\frac{\\sin x}{x}.",
+            "solution": "\\begin{aligned}\nf(x) = \\sin x, \\ g(x) = x \\\\\n\\lim_{x \\to 0} f(x) = \\sin 0 = 0, \\ \\lim_{x \\to 0} g(x) = 0 \\text{ (0/0 form)} \\\\\nf'(x) = \\cos x, \\ g'(x) = 1 \\\\\n\\lim_{x \\to 0} \\frac{f'(x)}{g'(x)} = \\frac{\\cos x}{1} = \\cos 0 = 1 \\\\\n\\text{Thus, } \\lim_{x \\to 0} \\frac{\\sin x}{x} = 1\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Indefinite Integral",
+        "formula": "\\int f(x) \\, dx = F(x) + C, \\quad F'(x) = f(x)",
+        "variables": {
+            "f(x)": "Integrable function",
+            "C": "Constant of integration"
+        },
+        "description": "The indefinite integral is the antiderivative of a function.",
+        "example": {
+            "problem": "\\text{Find } \\int 2x \\, dx.",
+            "solution": "\\begin{aligned}\n\\text{Using the power rule: } \\int x^n \\, dx = \\frac{x^{n+1}}{n+1} + C, \\ n \\neq -1 \\\\\n\\int 2x \\, dx = 2 \\int x \\, dx = 2 \\cdot \\frac{x^2}{2} + C = x^2 + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Definite Integral",
+        "formula": "\\int_a^b f(x) \\, dx = F(b) - F(a), \\quad F'(x) = f(x)",
+        "variables": {
+            "a, b": "Limits of integration",
+            "F(x)": "Antiderivative"
+        },
+        "description": "The definite integral represents the signed area under the curve between a and b.",
+        "example": {
+            "problem": "\\text{Find } \\int_0^1 x \\, dx.",
+            "solution": "\\begin{aligned}\n\\text{Antiderivative of } x \\text{ is } F(x) = \\frac{x^2}{2} \\\\\n\\int_0^1 x \\, dx &= F(1) - F(0) \\\\\n&= \\frac{1^2}{2} - \\frac{0^2}{2} = \\frac{1}{2} - 0 = \\frac{1}{2}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integration by Parts",
+        "formula": "\\int u \\, dv = uv - \\int v \\, du",
+        "variables": {
+            "u, v": "Differentiable functions"
+        },
+        "description": "Integration by parts transforms a product integral into a simpler form.",
+        "example": {
+            "problem": "\\text{Find } \\int x e^x \\, dx.",
+            "solution": "\\begin{aligned}\n\\text{Choose } u = x, \\ dv = e^x \\, dx \\\\\n\\text{Then } du = dx, \\ v = \\int e^x \\, dx = e^x \\\\\n\\int x e^x \\, dx &= x e^x - \\int e^x \\, dx \\\\\n&= x e^x - e^x + C \\\\\n&= e^x (x - 1) + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integration by Substitution",
+        "formula": "\\int f(g(x)) g'(x) \\, dx = \\int f(u) \\, du, \\quad u = g(x)",
+        "variables": {
+            "u": "Substitution variable"
+        },
+        "description": "Substitution simplifies integrals by changing variables.",
+        "example": {
+            "problem": "\\text{Find } \\int 2x \\cos(x^2) \\, dx.",
+            "solution": "\\begin{aligned}\n\\text{Let } u = x^2, \\ du = 2x \\, dx \\\\\n\\int 2x \\cos(x^2) \\, dx &= \\int \\cos u \\, du \\\\\n&= \\sin u + C = \\sin(x^2) + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Trigonometric Integrals",
+        "formula": "\\int \\sin x \\, dx = -\\cos x + C, \\quad \\int \\cos x \\, dx = \\sin x + C, \\quad \\int \\sec^2 x \\, dx = \\tan x + C",
+        "variables": {
+            "x": "Variable"
+        },
+        "description": "Standard integrals of basic trigonometric functions.",
+        "example": {
+            "problem": "\\text{Find } \\int \\sin x \\, dx.",
+            "solution": "\\begin{aligned}\n\\text{Using the formula: } \\\\\n\\int \\sin x \\, dx = -\\cos x + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Exponential and Log Integrals",
+        "formula": "\\int e^x \\, dx = e^x + C, \\quad \\int \\frac{1}{x} \\, dx = \\ln |x| + C",
+        "variables": {
+            "x": "Variable"
+        },
+        "description": "Basic integrals involving exponential and logarithmic functions.",
+        "example": {
+            "problem": "\\text{Find } \\int \\frac{1}{x} \\, dx.",
+            "solution": "\\begin{aligned}\n\\text{Using the formula: } \\\\\n\\int \\frac{1}{x} \\, dx = \\ln |x| + C\n\\end{aligned}"
+        }
+    }
+]

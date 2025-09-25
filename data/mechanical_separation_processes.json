@@ -1,0 +1,309 @@
+[
+    {
+        "name": "Rittinger's Law",
+        "formula": "E = K_R \\left( \\frac{1}{D_p} - \\frac{1}{D_f} \\right)",
+        "variables": {
+            "E": "Energy required (kWh/ton)",
+            "K_R": "Rittinger constant",
+            "D_p": "Product size (m)",
+            "D_f": "Feed size (m)"
+        },
+        "description": "Energy for size reduction proportional to new surface area created."
+    },
+    {
+        "name": "Kick's Law",
+        "formula": "E = K_K \\ln \\left( \\frac{D_f}{D_p} \\right)",
+        "variables": {
+            "K_K": "Kick constant"
+        },
+        "description": "Energy proportional to logarithm of size reduction ratio."
+    },
+    {
+        "name": "Bond's Law",
+        "formula": "E = K_B \\left( \\frac{1}{\\sqrt{D_p}} - \\frac{1}{\\sqrt{D_f}} \\right)",
+        "variables": {
+            "K_B": "Bond constant"
+        },
+        "description": "Energy proportional to square root of size reduction."
+    },
+    {
+        "name": "Screen Capacity",
+        "formula": "C = 24 \\sqrt{A} V_b B_w D_m",
+        "variables": {
+            "C": "Capacity (tons/h)",
+            "A": "Aperture (mm)",
+            "V_b": "Bed velocity (m/s)",
+            "B_w": "Width factor",
+            "D_m": "Density factor"
+        },
+        "description": "Basic capacity for screening."
+    },
+    {
+        "name": "Screen Efficiency",
+        "formula": "\\eta = \\frac{R_o (100 - R_u)}{R_i (100 - R_u)} \\times 100",
+        "variables": {
+            "\\eta": "Efficiency (%)",
+            "R_o": "Oversize recovery",
+            "R_u": "Undersize in feed",
+            "R_i": "Feed recovery"
+        },
+        "description": "Effectiveness of screening operation."
+    },
+    {
+        "name": "Filtration Rate",
+        "formula": "\\frac{dV}{dt} = \\frac{A \\Delta P}{\\mu (\\alpha W / A + R_m)}",
+        "variables": {
+            "V": "Volume of filtrate (m³)",
+            "t": "Time (s)",
+            "A": "Filter area (m²)",
+            "\\Delta P": "Pressure drop (Pa)",
+            "\\mu": "Viscosity (Pa s)",
+            "\\alpha": "Specific cake resistance (m/kg)",
+            "W": "Mass of cake (kg)",
+            "R_m": "Medium resistance"
+        },
+        "description": "Darcy's law for constant pressure filtration."
+    },
+    {
+        "name": "Cake Thickness",
+        "formula": "l = \\frac{\\alpha W}{A \\rho_c (1 - \\epsilon)}",
+        "variables": {
+            "l": "Cake thickness (m)",
+            "\\rho_c": "Cake density (kg/m³)",
+            "\\epsilon": "Cake porosity"
+        },
+        "description": "Relation between cake mass and thickness."
+    },
+    {
+        "name": "Sedimentation Velocity",
+        "formula": "v = \\frac{g d^2 (\\rho_p - \\rho_f)}{18 \\mu}",
+        "variables": {
+            "v": "Terminal velocity (m/s)",
+            "g": "Gravity (m/s²)",
+            "d": "Particle diameter (m)",
+            "\\rho_p": "Particle density (kg/m³)",
+            "\\rho_f": "Fluid density (kg/m³)"
+        },
+        "description": "Stokes' law for settling velocity."
+    },
+    {
+        "name": "Centrifugal Sedimentation",
+        "formula": "v = \\frac{\\omega^2 r d^2 (\\rho_p - \\rho_f)}{18 \\mu}",
+        "variables": {
+            "\\omega": "Angular velocity (rad/s)",
+            "r": "Radius (m)"
+        },
+        "description": "Modified Stokes' law for centrifuge."
+    },
+    {
+        "name": "Sigma Theory",
+        "formula": "\\Sigma = \\frac{\\omega^2 r^2 A}{g}",
+        "variables": {
+            "\\Sigma": "Sigma value (m²)",
+            "A": "Equivalent settling area (m²)"
+        },
+        "description": "Effective settling area in centrifuge."
+    },
+    {
+        "name": "Thickener Area",
+        "formula": "A = \\frac{Q_u}{v_s}",
+        "variables": {
+            "Q_u": "Underflow rate (m³/s)",
+            "v_s": "Settling velocity (m/s)"
+        },
+        "description": "Area required for thickener."
+    },
+    {
+        "name": "Clarifier Overflow Rate",
+        "formula": "Q_o / A = v_c",
+        "variables": {
+            "Q_o": "Overflow rate (m³/s)",
+            "v_c": "Critical settling velocity (m/s)"
+        },
+        "description": "Design parameter for clarifiers."
+    },
+    {
+        "name": "Cyclone Efficiency",
+        "formula": "\\eta = 1 - \\exp \\left( -2 (E_u)^{0.5} \\right)",
+        "variables": {
+            "E_u": "Euler number"
+        },
+        "description": "Lapple model for cyclone collection efficiency."
+    },
+    {
+        "name": "Cut Size for Cyclone",
+        "formula": "d_{50} = \\sqrt{ \\frac{9 \\mu D_c}{2 \\pi N \\rho_p v_i (D_c - D_e)} }",
+        "variables": {
+            "d_{50}": "Cut diameter (m)",
+            "D_c": "Cyclone diameter (m)",
+            "N": "Number of effective turns",
+            "v_i": "Inlet velocity (m/s)",
+            "D_e": "Exit diameter (m)"
+        },
+        "description": "Particle size collected at 50% efficiency."
+    },
+    {
+        "name": "Elutriation Velocity",
+        "formula": "v_e = \\sqrt{ \\frac{(\\rho_p - \\rho_f) g d^2}{18 \\mu} }",
+        "variables": {},
+        "description": "Minimum fluidization velocity approximation."
+    },
+    {
+        "name": "Jig Capacity",
+        "formula": "C = 0.5 A \\sqrt{ \\frac{g}{L} }",
+        "variables": {
+            "L": "Stroke length (m)"
+        },
+        "description": "Capacity for jigs in separation."
+    },
+    {
+        "name": "Magnetic Separation Force",
+        "formula": "F_m = V \\chi B \\frac{dB}{dx}",
+        "variables": {
+            "V": "Particle volume (m³)",
+            "\\chi": "Magnetic susceptibility",
+            "B": "Magnetic field (T)"
+        },
+        "description": "Force on magnetic particle."
+    },
+    {
+        "name": "Electrostatic Separation",
+        "formula": "v = \\frac{\\epsilon_0 \\epsilon_r E^2 d}{2 \\mu}",
+        "variables": {
+            "\\epsilon_0": "Permittivity of free space",
+            "\\epsilon_r": "Relative permittivity",
+            "E": "Electric field (V/m)"
+        },
+        "description": "Velocity in electrostatic precipitator."
+    },
+    {
+        "name": "Flotation Rate Constant",
+        "formula": "k = S_b k_b + S_a k_a",
+        "variables": {
+            "S_b": "Bubble surface area",
+            "k_b": "Bubble attachment rate",
+            "S_a": "Air bubble concentration",
+            "k_a": "Attachment constant"
+        },
+        "description": "Overall flotation kinetics."
+    },
+    {
+        "name": "Leaching Rate",
+        "formula": "R = k (C_s - C_b)",
+        "variables": {
+            "R": "Leaching rate (kg/(m² s))",
+            "C_s": "Solid concentration",
+            "C_b": "Bulk concentration"
+        },
+        "description": "Mass transfer controlled leaching."
+    },
+    {
+        "name": "Bond Work Index",
+        "formula": "W_i = \\frac{44.5}{P_1^{0.23} G^{0.82} \\left( \\frac{10}{\\sqrt{P}} - \\frac{10}{\\sqrt{F}} \\right)}",
+        "variables": {
+            "W_i": "Bond work index (kWh/t)",
+            "P_1": "Screen aperture (\\mu m)",
+            "G": "Grindability (g/rev)",
+            "P": "80% passing size of product (\\mu m)",
+            "F": "80% passing size of feed (\\mu m)"
+        },
+        "description": "Measure of ore grindability used in mill design."
+    },
+    {
+        "name": "Autogenous Mill Power",
+        "formula": "P = K D^{2.5} L \\rho_b \\phi (1 - 0.1 / 2^{9 - 9\\phi}) J (1 - \\epsilon)",
+        "variables": {
+            "P": "Power (kW)",
+            "K": "Constant",
+            "D": "Mill diameter (m)",
+            "L": "Mill length (m)",
+            "\\rho_b": "Bulk density (t/m³)",
+            "\\phi": "Fraction of critical speed",
+            "J": "Fractional filling",
+            "\\epsilon": "Porosity"
+        },
+        "description": "Power requirement for autogenous grinding mills."
+    },
+    {
+        "name": "Hydrocyclone Cut Size",
+        "formula": "d_{50} = 12.5 \\left( \\frac{D_c^{0.46}}{Q^{0.6}} \\right) (\\rho_s - \\rho_l)^{0.5}",
+        "variables": {
+            "d_{50}": "Cut size (\\mu m)",
+            "D_c": "Cyclone diameter (cm)",
+            "Q": "Flow rate (m³/h)",
+            "\\rho_s": "Solid density (t/m³)",
+            "\\rho_l": "Liquid density (t/m³)"
+        },
+        "description": "Particle size at 50% partition in hydrocyclone."
+    },
+    {
+        "name": "Concentration Criterion",
+        "formula": "CC = \\frac{\\rho_h - \\rho_m}{\\rho_l - \\rho_m}",
+        "variables": {
+            "CC": "Concentration criterion",
+            "\\rho_h": "Heavy mineral density (kg/m³)",
+            "\\rho_l": "Light mineral density (kg/m³)",
+            "\\rho_m": "Medium density (kg/m³)"
+        },
+        "description": "Measure of ease of gravity separation."
+    },
+    {
+        "name": "Partition Coefficient",
+        "formula": "Y = \\frac{1}{1 + \\exp \\left( \\frac{d_{50} - d}{\\alpha} \\right)}",
+        "variables": {
+            "Y": "Partition coefficient",
+            "d": "Particle size (m)",
+            "\\alpha": "Sharpness parameter"
+        },
+        "description": "Probability of particle reporting to underflow in separation."
+    },
+    {
+        "name": "Flotation Recovery",
+        "formula": "R = \\frac{C c}{F f}",
+        "variables": {
+            "R": "Recovery (%)",
+            "C": "Concentrate mass",
+            "c": "Concentrate grade",
+            "F": "Feed mass",
+            "f": "Feed grade"
+        },
+        "description": "Metal recovery in flotation concentrate."
+    },
+    {
+        "name": "Separation Efficiency",
+        "formula": "SE = R_m - R_g",
+        "variables": {
+            "R_m": "Recovery of mineral (%)",
+            "R_g": "Recovery of gangue (%)"
+        },
+        "description": "Difference between valuable and gangue recoveries."
+    },
+    {
+        "name": "Tromp Curve Ecart Probability",
+        "formula": "Ep = \\frac{d_{75} - d_{25}}{2}",
+        "variables": {
+            "d_{75}": "Size at 75% partition",
+            "d_{25}": "Size at 25% partition"
+        },
+        "description": "Measure of separation sharpness."
+    },
+    {
+        "name": "Dense Medium Viscosity",
+        "formula": "\\mu = \\mu_0 \\exp \\left( \\frac{\\phi}{\\phi_m - \\phi} \\right)",
+        "variables": {
+            "\\mu_0": "Base viscosity",
+            "\\phi": "Volume fraction solids",
+            "\\phi_m": "Maximum packing fraction"
+        },
+        "description": "Viscosity of dense medium suspension."
+    },
+    {
+        "name": "Magnetic Susceptibility Force",
+        "formula": "F = \\frac{1}{2} \\mu_0 \\chi V H \\frac{dH}{dx}",
+        "variables": {
+            "\\mu_0": "Permeability of free space",
+            "H": "Magnetic field strength"
+        },
+        "description": "Modified magnetic force equation."
+    }
+]

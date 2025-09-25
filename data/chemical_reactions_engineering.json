@@ -1,0 +1,1527 @@
+[
+    {
+        "name": "Rate of Disappearance",
+        "formula": "-r_A = -\\frac{1}{V} \\frac{dN_A}{dt}",
+        "variables": {
+            "-r_A": "Rate of disappearance of species A (mol/(m³·s))",
+            "V": "Volume (m³)",
+            "N_A": "Number of moles of A (mol)",
+            "t": "Time (s)"
+        },
+        "description": "Quantifies the rate at which species A is consumed per unit volume in a homogeneous system, used to analyze reaction kinetics in batch or flow reactors.",
+        "example": {
+            "problem": "\\text{Calculate the rate of disappearance of A in a } 0.1 \\, \\text{m}^3 \\text{ reactor where } N_A \\text{ decreases from } 2 \\, \\text{mol} \\text{ to } 1.8 \\, \\text{mol} \\text{ in } 10 \\, \\text{s}.",
+            "solution": "\\begin{aligned}\n-r_A &= -\\frac{1}{V} \\frac{dN_A}{dt} \\\\\n\\frac{dN_A}{dt} &\\approx \\frac{1.8 - 2}{10} = -0.02 \\, \\text{mol/s} \\\\\n-r_A &= -\\frac{1}{0.1} \\cdot (-0.02) \\\\\n&= \\boxed{0.2 \\, \\text{mol/(m}^3\\cdot\\text{s)}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Rate of Disappearance per Unit Weight",
+        "formula": "-r_A' = -\\frac{1}{W} \\frac{dN_A}{dt}",
+        "variables": {
+            "-r_A'": "Rate of disappearance per unit weight (mol/(kg·s))",
+            "W": "Weight of catalyst (kg)",
+            "N_A": "Number of moles of A (mol)",
+            "t": "Time (s)"
+        },
+        "description": "Measures the rate of consumption of species A per unit weight of catalyst in heterogeneous systems, critical for catalytic reactor design.",
+        "example": {
+            "problem": "\\text{Find the rate of disappearance of A per unit weight in a reactor with } 5 \\, \\text{kg} \\text{ catalyst where } N_A \\text{ decreases by } 0.5 \\, \\text{mol} \\text{ in } 20 \\, \\text{s}.",
+            "solution": "\\begin{aligned}\n-r_A' &= -\\frac{1}{W} \\frac{dN_A}{dt} \\\\\n\\frac{dN_A}{dt} &\\approx \\frac{-0.5}{20} = -0.025 \\, \\text{mol/s} \\\\\n-r_A' &= -\\frac{1}{5} \\cdot (-0.025) \\\\\n&= \\boxed{0.005 \\, \\text{mol/(kg·s)}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Rate of Disappearance per Unit Surface Area",
+        "formula": "-r_A'' = -\\frac{1}{S} \\frac{dN_A}{dt}",
+        "variables": {
+            "-r_A''": "Rate of disappearance per unit surface area (mol/(m²·s))",
+            "S": "Surface area (m²)",
+            "N_A": "Number of moles of A (mol)",
+            "t": "Time (s)"
+        },
+        "description": "Expresses the rate of consumption of species A per unit surface area, used in heterogeneous reactions where surface area is a limiting factor.",
+        "example": {
+            "problem": "\\text{Determine the rate of disappearance of A per unit surface area for a } 2 \\, \\text{m}^2 \\text{ catalyst where } N_A \\text{ drops by } 0.1 \\, \\text{mol} \\text{ in } 5 \\, \\text{s}.",
+            "solution": "\\begin{aligned}\n-r_A'' &= -\\frac{1}{S} \\frac{dN_A}{dt} \\\\\n\\frac{dN_A}{dt} &\\approx \\frac{-0.1}{5} = -0.02 \\, \\text{mol/s} \\\\\n-r_A'' &= -\\frac{1}{2} \\cdot (-0.02) \\\\\n&= \\boxed{0.01 \\, \\text{mol/(m}^2\\cdot\\text{s)}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "General Mole Balance Equation",
+        "formula": "F_{j0} - F_j + G_j = \\frac{dN_j}{dt}",
+        "variables": {
+            "F_{j0}": "Molar flow rate of species j into the system (mol/s)",
+            "F_j": "Molar flow rate of species j out of the system (mol/s)",
+            "G_j": "Rate of generation of species j (mol/s)",
+            "N_j": "Number of moles of species j (mol)",
+            "t": "Time (s)"
+        },
+        "description": "Balances the molar flow of species j, accounting for input, output, generation, and accumulation in any reactor system.",
+        "example": {
+            "problem": "\\text{In a batch reactor (} F_{j0} = F_j = 0 \\text{), if } G_j = 0.1 \\, \\text{mol/s} \\text{ for species j, find } \\frac{dN_j}{dt}.",
+            "solution": "\\begin{aligned}\nF_{j0} - F_j + G_j &= \\frac{dN_j}{dt} \\\\\n0 - 0 + 0.1 &= \\frac{dN_j}{dt} \\\\\n\\boxed{\\frac{dN_j}{dt} = 0.1 \\, \\text{mol/s}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integral Form of Mole Balance",
+        "formula": "F_{j0} - F_j + \\int r_j dV = \\frac{dN_j}{dt}",
+        "variables": {
+            "F_{j0}": "Molar flow rate of species j into the system (mol/s)",
+            "F_j": "Molar flow rate of species j out of the system (mol/s)",
+            "r_j": "Rate of reaction for species j (mol/(m³·s))",
+            "V": "Volume (m³)",
+            "N_j": "Number of moles of species j (mol)",
+            "t": "Time (s)"
+        },
+        "description": "Accounts for spatial variation of reaction rate across the reactor volume, used in non-uniform systems like plug flow reactors.",
+        "example": {
+            "problem": "\\text{In a batch reactor (} F_{j0} = F_j = 0 \\text{), if } r_j = 0.05 \\, \\text{mol/(m}^3\\cdot\\text{s)} \\text{ in a } 2 \\, \\text{m}^3 \\text{ reactor, find } \\frac{dN_j}{dt}.",
+            "solution": "\\begin{aligned}\n\\int r_j dV &= \\frac{dN_j}{dt} \\\\\n0.05 \\cdot 2 &= \\frac{dN_j}{dt} \\\\\n\\boxed{\\frac{dN_j}{dt} = 0.1 \\, \\text{mol/s}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Batch Reactor Design Equation",
+        "formula": "r_A V = \\frac{dN_A}{dt}",
+        "variables": {
+            "r_A": "Rate of reaction for species A (mol/(m³·s))",
+            "V": "Volume (m³)",
+            "N_A": "Number of moles of species A (mol)",
+            "t": "Time (s)"
+        },
+        "description": "Relates the reaction rate to the rate of change of moles in a batch reactor, used to determine reaction time or reactor size.",
+        "example": {
+            "problem": "\\text{In a } 0.5 \\, \\text{m}^3 \\text{ batch reactor, if } r_A = -0.2 \\, \\text{mol/(m}^3\\cdot\\text{s)}, \\text{ find } \\frac{dN_A}{dt}.",
+            "solution": "\\begin{aligned}\nr_A V &= \\frac{dN_A}{dt} \\\\\n-0.2 \\cdot 0.5 &= \\frac{dN_A}{dt} \\\\\n\\boxed{\\frac{dN_A}{dt} = -0.1 \\, \\text{mol/s}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Time for Conversion in Batch",
+        "formula": "t = \\int_{N_{A0}}^{N_A} \\frac{dN_A}{r_A V}",
+        "variables": {
+            "t": "Time (s)",
+            "N_{A0}": "Initial moles of species A (mol)",
+            "N_A": "Moles of species A at time t (mol)",
+            "r_A": "Rate of reaction for species A (mol/(m³·s))",
+            "V": "Volume (m³)"
+        },
+        "description": "Calculates the time required to achieve a specific conversion in a batch reactor by integrating the inverse of the reaction rate.",
+        "example": {
+            "problem": "\\text{For a first-order reaction } r_A = -k C_A \\text{ with } k = 0.1 \\, \\text{s}^{-1}, C_{A0} = 1 \\, \\text{mol/m}^3, V = 1 \\, \\text{m}^3, \\text{ find time to reduce } N_A \\text{ from } 1 \\, \\text{mol} \\text{ to } 0.5 \\, \\text{mol}.",
+            "solution": "\\begin{aligned}\nC_A = \\frac{N_A}{V}, \\ r_A = -k \\frac{N_A}{V} \\\\\nt &= \\int_{N_{A0}}^{N_A} \\frac{dN_A}{-k \\frac{N_A}{V} \\cdot V} = \\int_{1}^{0.5} \\frac{dN_A}{-k N_A} \\\\\n&= \\frac{1}{k} \\ln \\left( \\frac{N_{A0}}{N_A} \\right) = \\frac{1}{0.1} \\ln \\left( \\frac{1}{0.5} \\right) \\\\\n&= 10 \\cdot \\ln 2 \\approx \\boxed{6.93 \\, \\text{s}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "CSTR Design Equation",
+        "formula": "F_{A0} - F_A + r_A V = 0",
+        "variables": {
+            "F_{A0}": "Inlet molar flow rate of species A (mol/s)",
+            "F_A": "Outlet molar flow rate of species A (mol/s)",
+            "r_A": "Rate of reaction for species A (mol/(m³·s))",
+            "V": "Volume (m³)"
+        },
+        "description": "Balances molar flow and reaction rate at steady state for a continuous stirred-tank reactor (CSTR), used to size the reactor.",
+        "example": {
+            "problem": "\\text{For a CSTR with } F_{A0} = 10 \\, \\text{mol/s}, F_A = 4 \\, \\text{mol/s}, r_A = -0.5 \\, \\text{mol/(m}^3\\cdot\\text{s)}, \\text{ find the required volume.}",
+            "solution": "\\begin{aligned}\nF_{A0} - F_A + r_A V &= 0 \\\\\n10 - 4 + (-0.5) V &= 0 \\\\\n6 &= 0.5 V \\\\\nV &= \\boxed{12 \\, \\text{m}^3}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Volume for CSTR",
+        "formula": "V = \\frac{F_{A0} - F_A}{-r_A}",
+        "variables": {
+            "V": "Volume (m³)",
+            "F_{A0}": "Inlet molar flow rate of species A (mol/s)",
+            "F_A": "Outlet molar flow rate of species A (mol/s)",
+            "r_A": "Rate of reaction for species A (mol/(m³·s))"
+        },
+        "description": "Rearranged CSTR design equation to directly calculate the reactor volume required for a given conversion.",
+        "example": {
+            "problem": "\\text{Calculate the CSTR volume for } F_{A0} = 20 \\, \\text{mol/s}, F_A = 5 \\, \\text{mol/s}, -r_A = 0.3 \\, \\text{mol/(m}^3\\cdot\\text{s)}.",
+            "solution": "\\begin{aligned}\nV &= \\frac{F_{A0} - F_A}{-r_A} \\\\\n&= \\frac{20 - 5}{0.3} \\\\\n&= \\boxed{50 \\, \\text{m}^3}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "PFR Differential Equation",
+        "formula": "\\frac{dF_j}{dV} = r_j",
+        "variables": {
+            "F_j": "Molar flow rate of species j (mol/s)",
+            "V": "Volume (m³)",
+            "r_j": "Rate of reaction for species j (mol/(m³·s))"
+        },
+        "description": "Describes the change in molar flow rate with respect to reactor volume in a plug flow reactor (PFR), used for reactor sizing.",
+        "example": {
+            "problem": "\\text{For a PFR with } r_j = -0.4 \\, \\text{mol/(m}^3\\cdot\\text{s)}, \\text{ find the change in } F_j \\text{ over } 2 \\, \\text{m}^3.",
+            "solution": "\\begin{aligned}\n\\frac{dF_j}{dV} &= r_j \\\\\n\\Delta F_j &\\approx r_j \\Delta V = -0.4 \\cdot 2 \\\\\n&= \\boxed{-0.8 \\, \\text{mol/s}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "PFR Integral Equation",
+        "formula": "V = \\int_{F_{A0}}^{F_A} \\frac{dF_A}{r_A}",
+        "variables": {
+            "V": "Volume (m³)",
+            "F_{A0}": "Inlet molar flow rate of species A (mol/s)",
+            "F_A": "Outlet molar flow rate of species A (mol/s)",
+            "r_A": "Rate of reaction for species A (mol/(m³·s))"
+        },
+        "description": "Integrates the inverse reaction rate to determine the volume of a plug flow reactor needed for a specific conversion.",
+        "example": {
+            "problem": "\\text{For a first-order reaction } r_A = -k C_A, k = 0.2 \\, \\text{s}^{-1}, C_{A0} = 1 \\, \\text{mol/m}^3, F_{A0} = 10 \\, \\text{mol/s}, \\text{ find } V \\text{ for } F_A = 5 \\, \\text{mol/s}, v_0 = 10 \\, \\text{m}^3/\\text{s}.",
+            "solution": "\\begin{aligned}\nC_A = \\frac{F_A}{v_0}, \\ r_A = -k \\frac{F_A}{v_0} \\\\\nV &= \\int_{F_{A0}}^{F_A} \\frac{dF_A}{-k \\frac{F_A}{v_0}} = \\frac{v_0}{k} \\int_{10}^{5} \\frac{dF_A}{-F_A} \\\\\n&= \\frac{10}{0.2} \\ln \\left( \\frac{10}{5} \\right) = 50 \\cdot \\ln 2 \\\\\n&\\approx \\boxed{34.66 \\, \\text{m}^3}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "PBR Design Equation",
+        "formula": "W = \\int_{F_{A0}}^{F_A} \\frac{dF_A}{r_A'}",
+        "variables": {
+            "W": "Weight of catalyst (kg)",
+            "F_{A0}": "Inlet molar flow rate of species A (mol/s)",
+            "F_A": "Outlet molar flow rate of species A (mol/s)",
+            "r_A'": "Rate of reaction per unit weight of catalyst (mol/(kg·s))"
+        },
+        "description": "Determines the catalyst weight required for a packed bed reactor (PBR) to achieve a desired conversion.",
+        "example": {
+            "problem": "\\text{For a PBR with } r_A' = -0.01 \\, \\text{mol/(kg·s)}, F_{A0} = 8 \\, \\text{mol/s}, F_A = 2 \\, \\text{mol/s}, \\text{ find } W.",
+            "solution": "\\begin{aligned}\nW &= \\int_{8}^{2} \\frac{dF_A}{-0.01} \\\\\n&= \\frac{1}{0.01} (2 - 8) = 100 \\cdot (-6) \\\\\n&= \\boxed{600 \\, \\text{kg}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Conversion Definition Batch",
+        "formula": "X_A = \\frac{N_{A0} - N_A}{N_{A0}}",
+        "variables": {
+            "X_A": "Fractional conversion of species A (dimensionless)",
+            "N_{A0}": "Initial moles of species A (mol)",
+            "N_A": "Remaining moles of species A (mol)"
+        },
+        "description": "Defines the fractional conversion of reactant A in a batch reactor, indicating the extent of reaction.",
+        "example": {
+            "problem": "\\text{Calculate the conversion if } N_{A0} = 10 \\, \\text{mol} \\text{ and } N_A = 3 \\, \\text{mol} \\text{ remain in a batch reactor.}",
+            "solution": "\\begin{aligned}\nX_A &= \\frac{N_{A0} - N_A}{N_{A0}} \\\\\n&= \\frac{10 - 3}{10} \\\\\n&= \\boxed{0.7}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Moles in Terms of Conversion",
+        "formula": "N_A = N_{A0} (1 - X_A)",
+        "variables": {
+            "N_A": "Moles of species A at time t (mol)",
+            "N_{A0}": "Initial moles of species A (mol)",
+            "X_A": "Fractional conversion of species A (dimensionless)"
+        },
+        "description": "Expresses the remaining moles of reactant A in a batch reactor as a function of conversion.",
+        "example": {
+            "problem": "\\text{Find } N_A \\text{ for } N_{A0} = 5 \\, \\text{mol} \\text{ and } X_A = 0.4 \\text{ in a batch reactor.}",
+            "solution": "\\begin{aligned}\nN_A &= N_{A0} (1 - X_A) \\\\\n&= 5 \\cdot (1 - 0.4) \\\\\n&= \\boxed{3 \\, \\text{mol}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Batch Time in Terms of Conversion",
+        "formula": "t = N_{A0} \\int_0^{X_A} \\frac{dX_A}{-r_A V}",
+        "variables": {
+            "t": "Time (s)",
+            "N_{A0}": "Initial moles of species A (mol)",
+            "X_A": "Fractional conversion of species A (dimensionless)",
+            "r_A": "Rate of reaction for species A (mol/(m³·s))",
+            "V": "Volume (m³)"
+        },
+        "description": "Calculates the time required to achieve a specific conversion in a batch reactor, integrating with respect to conversion.",
+        "example": {
+            "problem": "\\text{For a first-order reaction } r_A = -k C_A, k = 0.05 \\, \\text{s}^{-1}, C_{A0} = 2 \\, \\text{mol/m}^3, V = 1 \\, \\text{m}^3, N_{A0} = 2 \\, \\text{mol}, \\text{ find } t \\text{ for } X_A = 0.5.",
+            "solution": "\\begin{aligned}\nC_A = \\frac{N_A}{V} = \\frac{N_{A0} (1 - X_A)}{V}, \\ r_A = -k \\frac{N_{A0} (1 - X_A)}{V} \\\\\nt &= N_{A0} \\int_0^{0.5} \\frac{dX_A}{- \\left( -k \\frac{N_{A0} (1 - X_A)}{V} \\right) V} \\\\\n&= \\int_0^{0.5} \\frac{dX_A}{k (1 - X_A)} = \\frac{1}{k} [ -\\ln (1 - X_A) ]_0^{0.5} \\\\\n&= \\frac{1}{0.05} \\cdot ( -\\ln 0.5 ) = 20 \\cdot \\ln 2 \\\\\n&\\approx \\boxed{13.86 \\, \\text{s}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Conversion Definition Flow",
+        "formula": "X_A = \\frac{F_{A0} - F_A}{F_{A0}}",
+        "variables": {
+            "X_A": "Fractional conversion of species A (dimensionless)",
+            "F_{A0}": "Inlet molar flow rate of species A (mol/s)",
+            "F_A": "Outlet molar flow rate of species A (mol/s)"
+        },
+        "description": "Defines the fractional conversion of reactant A in flow reactors like CSTR or PFR, based on molar flow rates.",
+        "example": {
+            "problem": "\\text{Calculate } X_A \\text{ for a flow reactor with } F_{A0} = 15 \\, \\text{mol/s}, F_A = 6 \\, \\text{mol/s}.",
+            "solution": "\\begin{aligned}\nX_A &= \\frac{F_{A0} - F_A}{F_{A0}} \\\\\n&= \\frac{15 - 6}{15} \\\\\n&= \\boxed{0.6}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Flow Rate in Terms of Conversion",
+        "formula": "F_A = F_{A0} (1 - X_A)",
+        "variables": {
+            "F_A": "Outlet molar flow rate of species A (mol/s)",
+            "F_{A0}": "Inlet molar flow rate of species A (mol/s)",
+            "X_A": "Fractional conversion of species A (dimensionless)"
+        },
+        "description": "Expresses the outlet molar flow rate of reactant A in terms of conversion in a flow reactor.",
+        "example": {
+            "problem": "\\text{Find } F_A \\text{ for } F_{A0} = 12 \\, \\text{mol/s}, X_A = 0.25 \\text{ in a flow reactor.}",
+            "solution": "\\begin{aligned}\nF_A &= F_{A0} (1 - X_A) \\\\\n&= 12 \\cdot (1 - 0.25) \\\\\n&= \\boxed{9 \\, \\text{mol/s}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "CSTR Volume in Terms of Conversion",
+        "formula": "V = \\frac{F_{A0} X_A}{-r_A}",
+        "variables": {
+            "V": "Volume (m³)",
+            "F_{A0}": "Inlet molar flow rate of species A (mol/s)",
+            "X_A": "Fractional conversion of species A (dimensionless)",
+            "r_A": "Rate of reaction for species A (mol/(m³·s))"
+        },
+        "description": "Calculates the volume of a CSTR needed to achieve a specific conversion, derived from the steady-state mole balance.",
+        "example": {
+            "problem": "\\text{For a CSTR with } F_{A0} = 10 \\, \\text{mol/s}, X_A = 0.4, -r_A = 0.2 \\, \\text{mol/(m}^3\\cdot\\text{s)}, \\text{ find } V.",
+            "solution": "\\begin{aligned}\nV &= \\frac{F_{A0} X_A}{-r_A} \\\\\n&= \\frac{10 \\cdot 0.4}{0.2} \\\\\n&= \\boxed{20 \\, \\text{m}^3}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "PFR Volume in Terms of Conversion",
+        "formula": "V = F_{A0} \\int_0^{X_A} \\frac{dX_A}{-r_A}",
+        "variables": {
+            "V": "Volume (m³)",
+            "F_{A0}": "Inlet molar flow rate of species A (mol/s)",
+            "X_A": "Fractional conversion of species A (dimensionless)",
+            "r_A": "Rate of reaction for species A (mol/(m³·s))"
+        },
+        "description": "Determines the volume of a plug flow reactor required to achieve a specific conversion by integrating with respect to conversion.",
+        "example": {
+            "problem": "\\text{For a first-order reaction } r_A = -k C_A, k = 0.1 \\, \\text{s}^{-1}, C_{A0} = 1 \\, \\text{mol/m}^3, F_{A0} = 10 \\, \\text{mol/s}, v_0 = 10 \\, \\text{m}^3/\\text{s}, \\text{ find } V \\text{ for } X_A = 0.5.",
+            "solution": "\\begin{aligned}\nC_A = \\frac{F_{A0} (1 - X_A)}{v_0}, \\ r_A = -k \\frac{F_{A0} (1 - X_A)}{v_0} \\\\\nV &= F_{A0} \\int_0^{0.5} \\frac{dX_A}{- \\left( -k \\frac{F_{A0} (1 - X_A)}{v_0} \\right)} \\\\\n&= \\frac{v_0}{k} \\int_0^{0.5} \\frac{dX_A}{1 - X_A} \\\\\n&= \\frac{10}{0.1} \\cdot [ -\\ln (1 - X_A) ]_0^{0.5} \\\\\n&= 100 \\cdot \\ln 2 \\approx \\boxed{69.31 \\, \\text{m}^3}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "PBR Weight in Terms of Conversion",
+        "formula": "W = F_{A0} \\int_0^{X_A} \\frac{dX_A}{-r_A'}",
+        "variables": {
+            "W": "Weight of catalyst (kg)",
+            "F_{A0}": "Inlet molar flow rate of species A (mol/s)",
+            "X_A": "Fractional conversion of species A (dimensionless)",
+            "r_A'": "Rate of reaction per unit weight of catalyst (mol/(kg·s))"
+        },
+        "description": "Calculates the catalyst weight needed in a packed bed reactor to achieve a specific conversion.",
+        "example": {
+            "problem": "\\text{For a PBR with } r_A' = -0.02 \\, \\text{mol/(kg·s)}, F_{A0} = 5 \\, \\text{mol/s}, \\text{ find } W \\text{ for } X_A = 0.6.",
+            "solution": "\\begin{aligned}\nW &= F_{A0} \\int_0^{0.6} \\frac{dX_A}{-(-0.02)} \\\\\n&= 5 \\cdot \\frac{1}{0.02} \\cdot [ X_A ]_0^{0.6} \\\\\n&= 250 \\cdot 0.6 \\\\\n&= \\boxed{150 \\, \\text{kg}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Relative Rates",
+        "formula": "\\frac{r_B}{b} = \\frac{r_A}{a}",
+        "variables": {
+            "r_A": "Rate of reaction for species A (mol/(m³·s))",
+            "r_B": "Rate of reaction for species B (mol/(m³·s))",
+            "a": "Stoichiometric coefficient of species A (dimensionless)",
+            "b": "Stoichiometric coefficient of species B (dimensionless)"
+        },
+        "description": "Relates the reaction rates of species A and B based on their stoichiometric coefficients in the reaction aA + bB → products.",
+        "example": {
+            "problem": "\\text{For the reaction } 2A + 3B \\to C, \\text{ if } r_A = -0.4 \\, \\text{mol/(m}^3\\cdot\\text{s)}, \\text{ find } r_B.",
+            "solution": "\\begin{aligned}\n\\frac{r_B}{b} &= \\frac{r_A}{a} \\\\\n\\frac{r_B}{3} &= \\frac{-0.4}{2} \\\\\nr_B &= 3 \\cdot (-0.2) \\\\\n&= \\boxed{-0.6 \\, \\text{mol/(m}^3\\cdot\\text{s)}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Power Law Rate",
+        "formula": "-r_A = k C_A^\\alpha C_B^\\beta",
+        "variables": {
+            "-r_A": "Rate of disappearance of species A (mol/(m³·s))",
+            "k": "Rate constant (units vary with reaction order)",
+            "C_A": "Concentration of species A (mol/m³)",
+            "C_B": "Concentration of species B (mol/m³)",
+            "\\alpha": "Reaction order with respect to A (dimensionless)",
+            "\\beta": "Reaction order with respect to B (dimensionless)"
+        },
+        "description": "Expresses the reaction rate as a function of reactant concentrations and reaction orders, used to model reaction kinetics.",
+        "example": {
+            "problem": "\\text{For } -r_A = k C_A^2 C_B, k = 0.01 \\, \\text{m}^6/(\\text{mol}^2\\cdot\\text{s)}, C_A = 2 \\, \\text{mol/m}^3, C_B = 3 \\, \\text{mol/m}^3, \\text{ find } -r_A.",
+            "solution": "\\begin{aligned}\n-r_A &= k C_A^2 C_B \\\\\n&= 0.01 \\cdot 2^2 \\cdot 3 \\\\\n&= 0.01 \\cdot 4 \\cdot 3 \\\\\n&= \\boxed{0.12 \\, \\text{mol/(m}^3\\cdot\\text{s)}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Arrhenius Equation",
+        "formula": "k = A e^{-E_A / RT}",
+        "variables": {
+            "k": "Rate constant (units vary with reaction order)",
+            "A": "Pre-exponential factor (same units as k)",
+            "E_A": "Activation energy (J/mol)",
+            "R": "Gas constant (8.314 J/(mol·K))",
+            "T": "Absolute temperature (K)"
+        },
+        "description": "Describes the temperature dependence of the reaction rate constant, used to predict reaction rates at different temperatures.",
+        "example": {
+            "problem": "\\text{Calculate } k \\text{ for } A = 10^5 \\, \\text{s}^{-1}, E_A = 50 \\, \\text{kJ/mol}, T = 300 \\, \\text{K}, R = 8.314 \\, \\text{J/(mol·K)}.",
+            "solution": "\\begin{aligned}\nk &= A e^{-E_A / RT} \\\\\n&= 10^5 \\cdot e^{-50000 / (8.314 \\cdot 300)} \\\\\n&= 10^5 \\cdot e^{-20.028} \\\\\n&\\approx 10^5 \\cdot 2.03 \\times 10^{-9} \\\\\n&= \\boxed{2.03 \\times 10^{-4} \\, \\text{s}^{-1}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Concentration in Constant Density",
+        "formula": "C_A = C_{A0} (1 - X_A)",
+        "variables": {
+            "C_A": "Concentration of species A (mol/m³)",
+            "C_{A0}": "Initial concentration of species A (mol/m³)",
+            "X_A": "Fractional conversion of species A (dimensionless)"
+        },
+        "description": "Relates the concentration of reactant A to its initial concentration and conversion in constant-density systems.",
+        "example": {
+            "problem": "\\text{Find } C_A \\text{ for } C_{A0} = 1.5 \\, \\text{mol/m}^3, X_A = 0.2 \\text{ in a constant-density system.}",
+            "solution": "\\begin{aligned}\nC_A &= C_{A0} (1 - X_A) \\\\\n&= 1.5 \\cdot (1 - 0.2) \\\\\n&= \\boxed{1.2 \\, \\text{mol/m}^3}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Levenspiel Plot Function",
+        "formula": "\\frac{F_{A0}}{-r_A} = f(X_A)",
+        "variables": {
+            "F_{A0}": "Inlet molar flow rate of species A (mol/s)",
+            "-r_A": "Rate of disappearance of species A (mol/(m³·s))",
+            "X_A": "Fractional conversion of species A (dimensionless)"
+        },
+        "description": "Used to graphically determine reactor volume by plotting the inverse rate versus conversion for flow reactors.",
+        "example": {
+            "problem": "\\text{For } -r_A = k C_A, k = 0.1 \\, \\text{s}^{-1}, C_{A0} = 1 \\, \\text{mol/m}^3, F_{A0} = 10 \\, \\text{mol/s}, v_0 = 10 \\, \\text{m}^3/\\text{s}, \\text{ find } \\frac{F_{A0}}{-r_A} \\text{ at } X_A = 0.5.",
+            "solution": "\\begin{aligned}\nC_A &= C_{A0} (1 - X_A) = 1 \\cdot (1 - 0.5) = 0.5 \\, \\text{mol/m}^3 \\\\\n-r_A &= 0.1 \\cdot 0.5 = 0.05 \\, \\text{mol/(m}^3\\cdot\\text{s)} \\\\\n\\frac{F_{A0}}{-r_A} &= \\frac{10}{0.05} \\\\\n&= \\boxed{200 \\, \\text{m}^3}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Space Time",
+        "formula": "\\tau = \\frac{V}{v_0}",
+        "variables": {
+            "\\tau": "Space time (s)",
+            "V": "Reactor volume (m³)",
+            "v_0": "Volumetric flow rate at inlet (m³/s)"
+        },
+        "description": "Represents the time required to process one reactor volume of feed at inlet conditions, used in flow reactor analysis.",
+        "example": {
+            "problem": "\\text{Calculate } \\tau \\text{ for a reactor with } V = 5 \\, \\text{m}^3, v_0 = 0.2 \\, \\text{m}^3/\\text{s}.",
+            "solution": "\\begin{aligned}\n\\tau &= \\frac{V}{v_0} \\\\\n&= \\frac{5}{0.2} \\\\\n&= \\boxed{25 \\, \\text{s}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Space Velocity",
+        "formula": "SV = \\frac{1}{\\tau} = \\frac{v_0}{V}",
+        "variables": {
+            "SV": "Space velocity (s^{-1})",
+            "v_0": "Volumetric flow rate at inlet (m³/s)",
+            "V": "Reactor volume (m³)"
+        },
+        "description": "The reciprocal of space time, indicating the number of reactor volumes processed per unit time.",
+        "example": {
+            "problem": "\\text{Find } SV \\text{ for } V = 4 \\, \\text{m}^3, v_0 = 0.5 \\, \\text{m}^3/\\text{s}.",
+            "solution": "\\begin{aligned}\nSV &= \\frac{v_0}{V} \\\\\n&= \\frac{0.5}{4} \\\\\n&= \\boxed{0.125 \\, \\text{s}^{-1}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "LHSV",
+        "formula": "LHSV = \\frac{v_{liq}}{V}",
+        "variables": {
+            "LHSV": "Liquid hourly space velocity (h^{-1})",
+            "v_{liq}": "Liquid volumetric flow rate (m³/h)",
+            "V": "Reactor volume (m³)"
+        },
+        "description": "Measures the liquid volumetric flow rate per unit reactor volume per hour, used in liquid-phase reactor design.",
+        "example": {
+            "problem": "\\text{Calculate } LHSV \\text{ for } v_{liq} = 2 \\, \\text{m}^3/\\text{h}, V = 10 \\, \\text{m}^3.",
+            "solution": "\\begin{aligned}\nLHSV &= \\frac{v_{liq}}{V} \\\\\n&= \\frac{2}{10} \\\\\n&= \\boxed{0.2 \\, \\text{h}^{-1}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "GHSV",
+        "formula": "GHSV = \\frac{v_{STP}}{V}",
+        "variables": {
+            "GHSV": "Gas hourly space velocity (h^{-1})",
+            "v_{STP}": "Gas volumetric flow rate at standard temperature and pressure (m³/h)",
+            "V": "Reactor volume (m³)"
+        },
+        "description": "Measures the gas volumetric flow rate at STP per unit reactor volume per hour, used in gas-phase reactor design.",
+        "example": {
+            "problem": "\\text{Find } GHSV \\text{ for } v_{STP} = 100 \\, \\text{m}^3/\\text{h}, V = 20 \\, \\text{m}^3.",
+            "solution": "\\begin{aligned}\nGHSV &= \\frac{v_{STP}}{V} \\\\\n&= \\frac{100}{20} \\\\\n&= \\boxed{5 \\, \\text{h}^{-1}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Stoichiometric Relation",
+        "formula": "-\\frac{r_A}{a} = -\\frac{r_B}{b} = \\frac{r_C}{c} = \\frac{r_D}{d}",
+        "variables": {
+            "r_A": "Rate of reaction for species A (mol/(m³·s))",
+            "r_B": "Rate of reaction for species B (mol/(m³·s))",
+            "r_C": "Rate of formation of species C (mol/(m³·s))",
+            "r_D": "Rate of formation of species D (mol/(m³·s))",
+            "a": "Stoichiometric coefficient of A (dimensionless)",
+            "b": "Stoichiometric coefficient of B (dimensionless)",
+            "c": "Stoichiometric coefficient of C (dimensionless)",
+            "d": "Stoichiometric coefficient of D (dimensionless)"
+        },
+        "description": "Relates the rates of consumption and formation of species in the reaction aA + bB → cC + dD based on stoichiometry.",
+        "example": {
+            "problem": "\\text{For } A + 2B \\to 3C, \\text{ if } r_A = -0.5 \\, \\text{mol/(m}^3\\cdot\\text{s)}, \\text{ find } r_C.",
+            "solution": "\\begin{aligned}\n-\\frac{r_A}{a} &= \\frac{r_C}{c} \\\\\n-\\frac{-0.5}{1} &= \\frac{r_C}{3} \\\\\nr_C &= 0.5 \\cdot 3 \\\\\n&= \\boxed{1.5 \\, \\text{mol/(m}^3\\cdot\\text{s)}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Moles Consumed Batch",
+        "formula": "N_A = N_{A0} (1 - X_A)",
+        "variables": {
+            "N_A": "Moles of species A at time t (mol)",
+            "N_{A0}": "Initial moles of species A (mol)",
+            "X_A": "Fractional conversion of species A (dimensionless)"
+        },
+        "description": "Calculates the remaining moles of the limiting reactant A in a batch reactor based on conversion.",
+        "example": {
+            "problem": "\\text{In a batch reactor, if } N_{A0} = 8 \\, \\text{mol} \\text{ and } X_A = 0.3, \\text{ find } N_A.",
+            "solution": "\\begin{aligned}\nN_A &= N_{A0} (1 - X_A) \\\\\n&= 8 \\cdot (1 - 0.3) \\\\\n&= \\boxed{5.6 \\, \\text{mol}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Moles B Consumed Batch",
+        "formula": "N_B = N_{B0} - \\frac{b}{a} N_{A0} X_A",
+        "variables": {
+            "N_B": "Moles of species B at time t (mol)",
+            "N_{B0}": "Initial moles of species B (mol)",
+            "b": "Stoichiometric coefficient of B (dimensionless)",
+            "a": "Stoichiometric coefficient of A (dimensionless)",
+            "N_{A0}": "Initial moles of species A (mol)",
+            "X_A": "Fractional conversion of species A (dimensionless)"
+        },
+        "description": "Determines the moles of reactant B remaining in a batch reactor, accounting for its stoichiometric consumption relative to A.",
+        "example": {
+            "problem": "\\text{For } 2A + B \\to C, \\text{ with } N_{A0} = 4 \\, \\text{mol}, N_{B0} = 3 \\, \\text{mol}, X_A = 0.5, \\text{ find } N_B.",
+            "solution": "\\begin{aligned}\nN_B &= N_{B0} - \\frac{b}{a} N_{A0} X_A \\\\\n&= 3 - \\frac{1}{2} \\cdot 4 \\cdot 0.5 \\\\\n&= 3 - 1 \\\\\n&= \\boxed{2 \\, \\text{mol}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Moles C Produced Batch",
+        "formula": "N_C = N_{C0} + \\frac{c}{a} N_{A0} X_A",
+        "variables": {
+            "N_C": "Moles of species C at time t (mol)",
+            "N_{C0}": "Initial moles of species C (mol)",
+            "c": "Stoichiometric coefficient of C (dimensionless)",
+            "a": "Stoichiometric coefficient of A (dimensionless)",
+            "N_{A0}": "Initial moles of species A (mol)",
+            "X_A": "Fractional conversion of species A (dimensionless)"
+        },
+        "description": "Calculates the moles of product C produced in a batch reactor based on the conversion of limiting reactant A.",
+        "example": {
+            "problem": "\\text{For } A + B \\to 2C, \\text{ with } N_{A0} = 5 \\, \\text{mol}, N_{C0} = 0 \\, \\text{mol}, X_A = 0.4, \\text{ find } N_C.",
+            "solution": "\\begin{aligned}\nN_C &= N_{C0} + \\frac{c}{a} N_{A0} X_A \\\\\n&= 0 + \\frac{2}{1} \\cdot 5 \\cdot 0.4 \\\\\n&= \\boxed{4 \\, \\text{mol}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Theta Definition",
+        "formula": "\\theta_i = \\frac{N_{i0}}{N_{A0}}",
+        "variables": {
+            "\\theta_i": "Initial molar ratio of species i to A (dimensionless)",
+            "N_{i0}": "Initial moles of species i (mol)",
+            "N_{A0}": "Initial moles of species A (mol)"
+        },
+        "description": "Defines the initial molar ratio of species i to the limiting reactant A, used in stoichiometric calculations.",
+        "example": {
+            "problem": "\\text{For a batch reactor with } N_{B0} = 6 \\, \\text{mol}, N_{A0} = 2 \\, \\text{mol}, \\text{ calculate } \\theta_B.",
+            "solution": "\\begin{aligned}\n\\theta_B &= \\frac{N_{B0}}{N_{A0}} \\\\\n&= \\frac{6}{2} \\\\\n&= \\boxed{3}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Concentration with Theta",
+        "formula": "C_B = C_{A0} (\\theta_B - \\frac{b}{a} X_A)",
+        "variables": {
+            "C_B": "Concentration of species B (mol/m³)",
+            "C_{A0}": "Initial concentration of species A (mol/m³)",
+            "\\theta_B": "Initial molar ratio of B to A (dimensionless)",
+            "b": "Stoichiometric coefficient of B (dimensionless)",
+            "a": "Stoichiometric coefficient of A (dimensionless)",
+            "X_A": "Fractional conversion of species A (dimensionless)"
+        },
+        "description": "Expresses the concentration of reactant B in a constant-density system, accounting for its consumption relative to A.",
+        "example": {
+            "problem": "\\text{For } 2A + B \\to C, \\text{ with } C_{A0} = 1 \\, \\text{mol/m}^3, \\theta_B = 2, X_A = 0.3, \\text{ find } C_B.",
+            "solution": "\\begin{aligned}\nC_B &= C_{A0} \\left( \\theta_B - \\frac{b}{a} X_A \\right) \\\\\n&= 1 \\cdot \\left( 2 - \\frac{1}{2} \\cdot 0.3 \\right) \\\\\n&= 1 \\cdot (2 - 0.15) \\\\\n&= \\boxed{1.85 \\, \\text{mol/m}^3}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Flow Rate Consumed",
+        "formula": "F_B = F_{A0} (\\theta_B - \\frac{b}{a} X_A)",
+        "variables": {
+            "F_B": "Molar flow rate of species B (mol/s)",
+            "F_{A0}": "Inlet molar flow rate of species A (mol/s)",
+            "\\theta_B": "Initial molar ratio of B to A (dimensionless)",
+            "b": "Stoichiometric coefficient of B (dimensionless)",
+            "a": "Stoichiometric coefficient of A (dimensionless)",
+            "X_A": "Fractional conversion of species A (dimensionless)"
+        },
+        "description": "Calculates the molar flow rate of reactant B in a flow reactor, accounting for its consumption based on stoichiometry.",
+        "example": {
+            "problem": "\\text{For } A + 2B \\to C, \\text{ with } F_{A0} = 10 \\, \\text{mol/s}, \\theta_B = 3, X_A = 0.4, \\text{ find } F_B.",
+            "solution": "\\begin{aligned}\nF_B &= F_{A0} \\left( \\theta_B - \\frac{b}{a} X_A \\right) \\\\\n&= 10 \\cdot \\left( 3 - \\frac{2}{1} \\cdot 0.4 \\right) \\\\\n&= 10 \\cdot (3 - 0.8) \\\\\n&= \\boxed{22 \\, \\text{mol/s}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "First Order Batch Time",
+        "formula": "t = -\\frac{1}{k} \\ln(1 - X_A)",
+        "variables": {
+            "t": "Time (s)",
+            "k": "Rate constant (s^{-1})",
+            "X_A": "Fractional conversion of species A (dimensionless)"
+        },
+        "description": "Calculates the time required for a first-order reaction in a batch reactor to achieve a specific conversion, assuming constant density.",
+        "example": {
+            "problem": "\\text{For a first-order reaction with } k = 0.02 \\, \\text{s}^{-1}, \\text{ find } t \\text{ for } X_A = 0.5.",
+            "solution": "\\begin{aligned}\nt &= -\\frac{1}{k} \\ln(1 - X_A) \\\\\n&= -\\frac{1}{0.02} \\cdot \\ln(1 - 0.5) \\\\\n&= 50 \\cdot \\ln 2 \\approx \\boxed{34.66 \\, \\text{s}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "First Order Batch Conversion",
+        "formula": "X_A = 1 - e^{-kt}",
+        "variables": {
+            "X_A": "Fractional conversion of species A (dimensionless)",
+            "k": "Rate constant (s^{-1})",
+            "t": "Time (s)"
+        },
+        "description": "Expresses the conversion achieved in a first-order batch reaction as a function of time and rate constant.",
+        "example": {
+            "problem": "\\text{For } k = 0.1 \\, \\text{s}^{-1}, t = 5 \\, \\text{s}, \\text{ find } X_A.",
+            "solution": "\\begin{aligned}\nX_A &= 1 - e^{-kt} \\\\\n&= 1 - e^{-0.1 \\cdot 5} \\\\\n&= 1 - e^{-0.5} \\approx \\boxed{0.393}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Second Order Batch Time",
+        "formula": "t = \\frac{1}{C_{A0} k} \\left( \\frac{X_A}{1 - X_A} \\right)",
+        "variables": {
+            "t": "Time (s)",
+            "C_{A0}": "Initial concentration of species A (mol/m³)",
+            "k": "Rate constant (m³/(mol·s))",
+            "X_A": "Fractional conversion of species A (dimensionless)"
+        },
+        "description": "Calculates the time required for a second-order reaction in a batch reactor to achieve a specific conversion.",
+        "example": {
+            "problem": "\\text{For } C_{A0} = 2 \\, \\text{mol/m}^3, k = 0.01 \\, \\text{m}^3/(\\text{mol·s)}, X_A = 0.5, \\text{ find } t.",
+            "solution": "\\begin{aligned}\nt &= \\frac{1}{C_{A0} k} \\left( \\frac{X_A}{1 - X_A} \\right) \\\\\n&= \\frac{1}{2 \\cdot 0.01} \\cdot \\frac{0.5}{1 - 0.5} \\\\\n&= \\frac{1}{0.02} \\cdot 1 = \\boxed{50 \\, \\text{s}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Second Order Batch Conversion",
+        "formula": "X_A = \\frac{t k C_{A0}}{t k C_{A0} + 1}",
+        "variables": {
+            "X_A": "Fractional conversion of species A (dimensionless)",
+            "t": "Time (s)",
+            "k": "Rate constant (m³/(mol·s))",
+            "C_{A0}": "Initial concentration of species A (mol/m³)"
+        },
+        "description": "Expresses the conversion for a second-order reaction in a batch reactor as a function of time, rate constant, and initial concentration.",
+        "example": {
+            "problem": "\\text{For } t = 100 \\, \\text{s}, k = 0.02 \\, \\text{m}^3/(\\text{mol·s)}, C_{A0} = 1 \\, \\text{mol/m}^3, \\text{ find } X_A.",
+            "solution": "\\begin{aligned}\nX_A &= \\frac{t k C_{A0}}{t k C_{A0} + 1} \\\\\n&= \\frac{100 \\cdot 0.02 \\cdot 1}{100 \\cdot 0.02 \\cdot 1 + 1} \\\\\n&= \\frac{2}{2 + 1} \\\\\n&= \\boxed{0.667}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Bimolecular Second Order Time",
+        "formula": "t = \\frac{1}{C_{A0} k (\\theta_B - Z)} \\ln \\left( \\frac{\\theta_B - Z X_A}{1 - X_A} \\right) - \\ln \\theta_B",
+        "variables": {
+            "t": "Time (s)",
+            "C_{A0}": "Initial concentration of species A (mol/m³)",
+            "k": "Rate constant (m³/(mol·s))",
+            "\\theta_B": "Initial molar ratio of B to A (dimensionless)",
+            "Z": "Stoichiometric ratio b/a (dimensionless)",
+            "X_A": "Fractional conversion of species A (dimensionless)"
+        },
+        "description": "Calculates the time for a bimolecular second-order reaction aA + bB → products in a batch reactor.",
+        "example": {
+            "problem": "\\text{For } A + B \\to C, C_{A0} = 1 \\, \\text{mol/m}^3, k = 0.05 \\, \\text{m}^3/(\\text{mol·s)}, \\theta_B = 2, Z = 1, X_A = 0.4, \\text{ find } t.",
+            "solution": "\\begin{aligned}\nt &= \\frac{1}{C_{A0} k (\\theta_B - Z)} \\ln \\left( \\frac{\\theta_B - Z X_A}{1 - X_A} \\right) - \\ln \\theta_B \\\\\n&= \\frac{1}{1 \\cdot 0.05 \\cdot (2 - 1)} \\ln \\left( \\frac{2 - 1 \\cdot 0.4}{1 - 0.4} \\right) - \\ln 2 \\\\\n&= \\frac{1}{0.05} \\cdot \\ln \\left( \\frac{1.6}{0.6} \\right) - \\ln 2 \\\\\n&= 20 \\cdot \\ln \\left( \\frac{8}{3} \\right) - \\ln 2 \\approx 19.6 - 0.693 \\\\\n&= \\boxed{18.91 \\, \\text{s}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "First Order CSTR Conversion",
+        "formula": "X_A = \\frac{\\tau k}{\\tau k + 1}",
+        "variables": {
+            "X_A": "Fractional conversion of species A (dimensionless)",
+            "\\tau": "Space time (s)",
+            "k": "Rate constant (s^{-1})"
+        },
+        "description": "Calculates the conversion for a first-order reaction in a CSTR, derived from the design equation.",
+        "example": {
+            "problem": "\\text{For } \\tau = 50 \\, \\text{s}, k = 0.02 \\, \\text{s}^{-1}, \\text{ find } X_A \\text{ in a CSTR.}",
+            "solution": "\\begin{aligned}\nX_A &= \\frac{\\tau k}{\\tau k + 1} \\\\\n&= \\frac{50 \\cdot 0.02}{50 \\cdot 0.02 + 1} \\\\\n&= \\frac{1}{1 + 1} \\\\\n&= \\boxed{0.5}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Second Order CSTR Volume",
+        "formula": "V = \\frac{v_0 X_A}{k C_{A0} (1 - X_A)^2}",
+        "variables": {
+            "V": "Reactor volume (m³)",
+            "v_0": "Volumetric flow rate at inlet (m³/s)",
+            "X_A": "Fractional conversion of species A (dimensionless)",
+            "k": "Rate constant (m³/(mol·s))",
+            "C_{A0}": "Initial concentration of species A (mol/m³)"
+        },
+        "description": "Determines the volume of a CSTR for a second-order reaction to achieve a specific conversion.",
+        "example": {
+            "problem": "\\text{For } v_0 = 0.1 \\, \\text{m}^3/\\text{s}, X_A = 0.6, k = 0.01 \\, \\text{m}^3/(\\text{mol·s)}, C_{A0} = 2 \\, \\text{mol/m}^3, \\text{ find } V.",
+            "solution": "\\begin{aligned}\nV &= \\frac{v_0 X_A}{k C_{A0} (1 - X_A)^2} \\\\\n&= \\frac{0.1 \\cdot 0.6}{0.01 \\cdot 2 \\cdot (1 - 0.6)^2} \\\\\n&= \\frac{0.06}{0.02 \\cdot 0.16} \\\\\n&= \\boxed{18.75 \\, \\text{m}^3}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Second Order CSTR Conversion Quadratic",
+        "formula": "X_A = \\frac{(2 + M) - \\sqrt{(2 + M)^2 - 4}}{2}",
+        "variables": {
+            "X_A": "Fractional conversion of species A (dimensionless)",
+            "M": "Dimensionless parameter, 1 / (C_{A0} \\tau k) (dimensionless)",
+            "C_{A0}": "Initial concentration of species A (mol/m³)",
+            "\\tau": "Space time (s)",
+            "k": "Rate constant (m³/(mol·s))"
+        },
+        "description": "Solves for conversion in a second-order CSTR reaction by solving the quadratic equation derived from the design equation.",
+        "example": {
+            "problem": "\\text{For } C_{A0} = 1 \\, \\text{mol/m}^3, \\tau = 100 \\, \\text{s}, k = 0.02 \\, \\text{m}^3/(\\text{mol·s)}, \\text{ find } X_A.",
+            "solution": "\\begin{aligned}\nM &= \\frac{1}{C_{A0} \\tau k} = \\frac{1}{1 \\cdot 100 \\cdot 0.02} = 0.5 \\\\\nX_A &= \\frac{(2 + 0.5) - \\sqrt{(2 + 0.5)^2 - 4}}{2} \\\\\n&= \\frac{2.5 - \\sqrt{6.25 - 4}}{2} \\\\\n&= \\frac{2.5 - \\sqrt{2.25}}{2} = \\frac{2.5 - 1.5}{2} \\\\\n&= \\boxed{0.5}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "First Order PFR Conversion",
+        "formula": "X_A = 1 - e^{-\\tau k}",
+        "variables": {
+            "X_A": "Fractional conversion of species A (dimensionless)",
+            "\\tau": "Space time (s)",
+            "k": "Rate constant (s^{-1})"
+        },
+        "description": "Calculates the conversion for a first-order reaction in a plug flow reactor, derived from the PFR design equation.",
+        "example": {
+            "problem": "\\text{For } \\tau = 20 \\, \\text{s}, k = 0.05 \\, \\text{s}^{-1}, \\text{ find } X_A \\text{ in a PFR.}",
+            "solution": "\\begin{aligned}\nX_A &= 1 - e^{-\\tau k} \\\\\n&= 1 - e^{-20 \\cdot 0.05} \\\\\n&= 1 - e^{-1} \\approx \\boxed{0.632}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Second Order PFR Volume",
+        "formula": "V = \\frac{v_0}{C_{A0} k} \\left( \\frac{X_A}{1 - X_A} \\right)",
+        "variables": {
+            "V": "Reactor volume (m³)",
+            "v_0": "Volumetric flow rate at inlet (m³/s)",
+            "C_{A0}": "Initial concentration of species A (mol/m³)",
+            "k": "Rate constant (m³/(mol·s))",
+            "X_A": "Fractional conversion of species A (dimensionless)"
+        },
+        "description": "Determines the volume of a PFR for a second-order reaction to achieve a specific conversion.",
+        "example": {
+            "problem": "\\text{For } v_0 = 0.2 \\, \\text{m}^3/\\text{s}, C_{A0} = 1 \\, \\text{mol/m}^3, k = 0.01 \\, \\text{m}^3/(\\text{mol·s)}, X_A = 0.5, \\text{ find } V.",
+            "solution": "\\begin{aligned}\nV &= \\frac{v_0}{C_{A0} k} \\left( \\frac{X_A}{1 - X_A} \\right) \\\\\n&= \\frac{0.2}{1 \\cdot 0.01} \\cdot \\frac{0.5}{1 - 0.5} \\\\\n&= \\frac{0.2}{0.01} \\cdot 1 \\\\\n&= \\boxed{20 \\, \\text{m}^3}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Bimolecular Second Order PFR Volume",
+        "formula": "V = \\frac{v_0}{k C_{A0} (\\theta_B - Z)} \\ln \\left( \\frac{\\theta_B - Z X_A}{1 - X_A} \\right) - \\ln \\theta_B",
+        "variables": {
+            "V": "Reactor volume (m³)",
+            "v_0": "Volumetric flow rate at inlet (m³/s)",
+            "k": "Rate constant (m³/(mol·s))",
+            "C_{A0}": "Initial concentration of species A (mol/m³)",
+            "\\theta_B": "Initial molar ratio of B to A (dimensionless)",
+            "Z": "Stoichiometric ratio b/a (dimensionless)",
+            "X_A": "Fractional conversion of species A (dimensionless)"
+        },
+        "description": "Calculates the volume of a PFR for a bimolecular second-order reaction aA + bB → products.",
+        "example": {
+            "problem": "\\text{For } A + B \\to C, v_0 = 0.1 \\, \\text{m}^3/\\text{s}, k = 0.05 \\, \\text{m}^3/(\\text{mol·s)}, C_{A0} = 1 \\, \\text{mol/m}^3, \\theta_B = 2, Z = 1, X_A = 0.4, \\text{ find } V.",
+            "solution": "\\begin{aligned}\nV &= \\frac{v_0}{k C_{A0} (\\theta_B - Z)} \\ln \\left( \\frac{\\theta_B - Z X_A}{1 - X_A} \\right) - \\ln \\theta_B \\\\\n&= \\frac{0.1}{0.05 \\cdot 1 \\cdot (2 - 1)} \\ln \\left( \\frac{2 - 1 \\cdot 0.4}{1 - 0.4} \\right) - \\ln 2 \\\\\n&= \\frac{0.1}{0.05} \\cdot \\ln \\left( \\frac{1.6}{0.6} \\right) - \\ln 2 \\\\\n&= 2 \\cdot \\ln \\left( \\frac{8}{3} \\right) - \\ln 2 \\approx 1.962 - 0.693 \\\\\n&= \\boxed{1.27 \\, \\text{m}^3}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Molar Flow Rate of A",
+        "formula": "F_A = F_{A0} - F_{A0} X_A",
+        "variables": {
+            "F_A": "Molar flow rate of species A (mol/s)",
+            "F_{A0}": "Initial molar flow rate of species A (mol/s)",
+            "X_A": "Fractional conversion of species A (dimensionless)"
+        },
+        "description": "Expresses the molar flow rate of reactant A in a flow reactor as a function of its initial flow rate and conversion.",
+        "example": {
+            "problem": "\\text{Find } F_A \\text{ for } F_{A0} = 20 \\, \\text{mol/s}, X_A = 0.3.",
+            "solution": "\\begin{aligned}\nF_A &= F_{A0} (1 - X_A) \\\\\n&= 20 \\cdot (1 - 0.3) \\\\\n&= \\boxed{14 \\, \\text{mol/s}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Molar Flow Rate of B",
+        "formula": "F_B = F_{B0} - \\frac{b}{a} F_{A0} X_A",
+        "variables": {
+            "F_B": "Molar flow rate of species B (mol/s)",
+            "F_{B0}": "Initial molar flow rate of species B (mol/s)",
+            "b": "Stoichiometric coefficient of B (dimensionless)",
+            "a": "Stoichiometric coefficient of A (dimensionless)",
+            "F_{A0}": "Initial molar flow rate of species A (mol/s)",
+            "X_A": "Fractional conversion of species A (dimensionless)"
+        },
+        "description": "Calculates the molar flow rate of reactant B in a flow reactor, accounting for its consumption relative to A.",
+        "example": {
+            "problem": "\\text{For } 2A + B \\to C, \\text{ with } F_{A0} = 10 \\, \\text{mol/s}, F_{B0} = 8 \\, \\text{mol/s}, X_A = 0.4, \\text{ find } F_B.",
+            "solution": "\\begin{aligned}\nF_B &= F_{B0} - \\frac{b}{a} F_{A0} X_A \\\\\n&= 8 - \\frac{1}{2} \\cdot 10 \\cdot 0.4 \\\\\n&= 8 - 2 \\\\\n&= \\boxed{6 \\, \\text{mol/s}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Molar Flow Rate of C",
+        "formula": "F_C = F_{C0} + \\frac{c}{a} F_{A0} X_A",
+        "variables": {
+            "F_C": "Molar flow rate of species C (mol/s)",
+            "F_{C0}": "Initial molar flow rate of species C (mol/s)",
+            "c": "Stoichiometric coefficient of C (dimensionless)",
+            "a": "Stoichiometric coefficient of A (dimensionless)",
+            "F_{A0}": "Initial molar flow rate of species A (mol/s)",
+            "X_A": "Fractional conversion of species A (dimensionless)"
+        },
+        "description": "Determines the molar flow rate of product C in a flow reactor based on the conversion of limiting reactant A.",
+        "example": {
+            "problem": "\\text{For } A + B \\to 2C, \\text{ with } F_{A0} = 5 \\, \\text{mol/s}, F_{C0} = 0 \\, \\text{mol/s}, X_A = 0.6, \\text{ find } F_C.",
+            "solution": "\\begin{aligned}\nF_C &= F_{C0} + \\frac{c}{a} F_{A0} X_A \\\\\n&= 0 + \\frac{2}{1} \\cdot 5 \\cdot 0.6 \\\\\n&= \\boxed{6 \\, \\text{mol/s}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Molar Flow Rate of D",
+        "formula": "F_D = F_{D0} + \\frac{d}{a} F_{A0} X_A",
+        "variables": {
+            "F_D": "Molar flow rate of species D (mol/s)",
+            "F_{D0}": "Initial molar flow rate of species D (mol/s)",
+            "d": "Stoichiometric coefficient of D (dimensionless)",
+            "a": "Stoichiometric coefficient of A (dimensionless)",
+            "F_{A0}": "Initial molar flow rate of species A (mol/s)",
+            "X_A": "Fractional conversion of species A (dimensionless)"
+        },
+        "description": "Calculates the molar flow rate of product D in a flow reactor based on the conversion of limiting reactant A.",
+        "example": {
+            "problem": "\\text{For } 2A + B \\to 3D, \\text{ with } F_{A0} = 4 \\, \\text{mol/s}, F_{D0} = 1 \\, \\text{mol/s}, X_A = 0.5, \\text{ find } F_D.",
+            "solution": "\\begin{aligned}\nF_D &= F_{D0} + \\frac{d}{a} F_{A0} X_A \\\\\n&= 1 + \\frac{3}{2} \\cdot 4 \\cdot 0.5 \\\\\n&= 1 + 3 \\\\\n&= \\boxed{4 \\, \\text{mol/s}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Total Molar Flow Rate",
+        "formula": "F_T = F_{T0} + \\delta F_{A0} X_A",
+        "variables": {
+            "F_T": "Total molar flow rate (mol/s)",
+            "F_{T0}": "Initial total molar flow rate (mol/s)",
+            "\\delta": "Change in number of moles per mole of A reacted (dimensionless)",
+            "F_{A0}": "Initial molar flow rate of species A (mol/s)",
+            "X_A": "Fractional conversion of species A (dimensionless)"
+        },
+        "description": "Accounts for the change in total molar flow rate in a flow reactor due to the stoichiometric effect of the reaction on the number of moles.",
+        "example": {
+            "problem": "\\text{For the reaction } A \\to 2B, \\text{ with } F_{T0} = 10 \\, \\text{mol/s}, F_{A0} = 5 \\, \\text{mol/s}, X_A = 0.4, \\delta = 2 - 1 = 1, \\text{ find } F_T.",
+            "solution": "\\begin{aligned}\nF_T &= F_{T0} + \\delta F_{A0} X_A \\\\\n&= 10 + 1 \\cdot 5 \\cdot 0.4 \\\\\n&= 10 + 2 \\\\\n&= \\boxed{12 \\, \\text{mol/s}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Change in Number of Moles Delta",
+        "formula": "\\delta = \\frac{d}{a} + \\frac{c}{a} - \\frac{b}{a} - 1",
+        "variables": {
+            "\\delta": "Change in number of moles per mole of A reacted (dimensionless)",
+            "d": "Stoichiometric coefficient of species D (dimensionless)",
+            "c": "Stoichiometric coefficient of species C (dimensionless)",
+            "b": "Stoichiometric coefficient of species B (dimensionless)",
+            "a": "Stoichiometric coefficient of species A (dimensionless)"
+        },
+        "description": "Calculates the net change in the number of moles per mole of limiting reactant A reacted, used to adjust molar flow rates in gas-phase reactions.",
+        "example": {
+            "problem": "\\text{For the reaction } 2A + 3B \\to 4C + D, \\text{ calculate } \\delta.",
+            "solution": "\\begin{aligned}\n\\delta &= \\frac{d}{a} + \\frac{c}{a} - \\frac{b}{a} - 1 \\\\\n&= \\frac{1}{2} + \\frac{4}{2} - \\frac{3}{2} - 1 \\\\\n&= 0.5 + 2 - 1.5 - 1 \\\\\n&= \\boxed{0}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Volumetric Flow Rate for Gases",
+        "formula": "\\dot{V} = \\dot{V}_0 \\left( \\frac{P_0}{P} \\right) \\left( \\frac{F_T}{F_{T0}} \\right) \\left( \\frac{T}{T_0} \\right)",
+        "variables": {
+            "\\dot{V}": "Volumetric flow rate (m³/s)",
+            "\\dot{V}_0": "Initial volumetric flow rate (m³/s)",
+            "P_0": "Initial pressure (Pa)",
+            "P": "Pressure (Pa)",
+            "F_T": "Total molar flow rate (mol/s)",
+            "F_{T0}": "Initial total molar flow rate (mol/s)",
+            "T": "Temperature (K)",
+            "T_0": "Initial temperature (K)"
+        },
+        "description": "Calculates the volumetric flow rate for gaseous mixtures, accounting for changes in pressure, molar flow, and temperature.",
+        "example": {
+            "problem": "\\text{For } \\dot{V}_0 = 0.1 \\, \\text{m}^3/\\text{s}, P_0 = 101325 \\, \\text{Pa}, P = 90000 \\, \\text{Pa}, F_T = 12 \\, \\text{mol/s}, F_{T0} = 10 \\, \\text{mol/s}, T = 300 \\, \\text{K}, T_0 = 298 \\, \\text{K}, \\text{ find } \\dot{V}.",
+            "solution": "\\begin{aligned}\n\\dot{V} &= \\dot{V}_0 \\left( \\frac{P_0}{P} \\right) \\left( \\frac{F_T}{F_{T0}} \\right) \\left( \\frac{T}{T_0} \\right) \\\\\n&= 0.1 \\cdot \\frac{101325}{90000} \\cdot \\frac{12}{10} \\cdot \\frac{300}{298} \\\\\n&= 0.1 \\cdot 1.125 \\cdot 1.2 \\cdot 1.0067 \\\\\n&\\approx \\boxed{0.136 \\, \\text{m}^3/\\text{s}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Concentration of A for Variable Density",
+        "formula": "C_A = C_{A0} \\frac{1 - X_A}{1 + \\epsilon X_A} \\frac{T_0}{T} \\frac{P}{P_0}",
+        "variables": {
+            "C_A": "Concentration of species A (mol/m³)",
+            "C_{A0}": "Initial concentration of species A (mol/m³)",
+            "X_A": "Fractional conversion of species A (dimensionless)",
+            "\\epsilon": "Expansion factor, y_{A0} \\delta (dimensionless)",
+            "T_0": "Initial temperature (K)",
+            "T": "Temperature (K)",
+            "P": "Pressure (Pa)",
+            "P_0": "Initial pressure (Pa)"
+        },
+        "description": "Calculates the concentration of reactant A in systems with variable density, accounting for conversion, expansion, temperature, and pressure changes.",
+        "example": {
+            "problem": "\\text{For } C_{A0} = 2 \\, \\text{mol/m}^3, X_A = 0.3, \\epsilon = 1, T_0 = 298 \\, \\text{K}, T = 300 \\, \\text{K}, P = 90000 \\, \\text{Pa}, P_0 = 101325 \\, \\text{Pa}, \\text{ find } C_A.",
+            "solution": "\\begin{aligned}\nC_A &= C_{A0} \\frac{1 - X_A}{1 + \\epsilon X_A} \\frac{T_0}{T} \\frac{P}{P_0} \\\\\n&= 2 \\cdot \\frac{1 - 0.3}{1 + 1 \\cdot 0.3} \\cdot \\frac{298}{300} \\cdot \\frac{90000}{101325} \\\\\n&= 2 \\cdot \\frac{0.7}{1.3} \\cdot 0.9933 \\cdot 0.8889 \\\\\n&\\approx \\boxed{0.951 \\, \\text{mol/m}^3}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Concentration of B for Variable Density",
+        "formula": "C_B = C_{A0} \\left( \\theta_B - \\frac{b}{a} X_A \\right) \\frac{1}{1 + \\epsilon X_A} \\frac{T_0}{T} \\frac{P}{P_0}",
+        "variables": {
+            "C_B": "Concentration of species B (mol/m³)",
+            "C_{A0}": "Initial concentration of species A (mol/m³)",
+            "\\theta_B": "Initial molar ratio of B to A (dimensionless)",
+            "b": "Stoichiometric coefficient of B (dimensionless)",
+            "a": "Stoichiometric coefficient of A (dimensionless)",
+            "X_A": "Fractional conversion of species A (dimensionless)",
+            "\\epsilon": "Expansion factor, y_{A0} \\delta (dimensionless)",
+            "T_0": "Initial temperature (K)",
+            "T": "Temperature (K)",
+            "P": "Pressure (Pa)",
+            "P_0": "Initial pressure (Pa)"
+        },
+        "description": "Calculates the concentration of reactant B in variable density systems, considering stoichiometric consumption and system changes.",
+        "example": {
+            "problem": "\\text{For } A + 2B \\to C, \\text{ with } C_{A0} = 1 \\, \\text{mol/m}^3, \\theta_B = 2, X_A = 0.4, \\epsilon = 0.5, T_0 = 298 \\, \\text{K}, T = 300 \\, \\text{K}, P = 95000 \\, \\text{Pa}, P_0 = 100000 \\, \\text{Pa}, \\text{ find } C_B.",
+            "solution": "\\begin{aligned}\nC_B &= C_{A0} \\left( \\theta_B - \\frac{b}{a} X_A \\right) \\frac{1}{1 + \\epsilon X_A} \\frac{T_0}{T} \\frac{P}{P_0} \\\\\n&= 1 \\cdot \\left( 2 - \\frac{2}{1} \\cdot 0.4 \\right) \\cdot \\frac{1}{1 + 0.5 \\cdot 0.4} \\cdot \\frac{298}{300} \\cdot \\frac{95000}{100000} \\\\\n&= 1 \\cdot (2 - 0.8) \\cdot \\frac{1}{1.2} \\cdot 0.9933 \\cdot 0.95 \\\\\n&= 1.2 \\cdot 0.8333 \\cdot 0.9933 \\cdot 0.95 \\\\\n&\\approx \\boxed{0.943 \\, \\text{mol/m}^3}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Concentration of C for Variable Density",
+        "formula": "C_C = C_{A0} \\left( \\theta_C + \\frac{c}{a} X_A \\right) \\frac{1}{1 + \\epsilon X_A} \\frac{T_0}{T} \\frac{P}{P_0}",
+        "variables": {
+            "C_C": "Concentration of species C (mol/m³)",
+            "C_{A0}": "Initial concentration of species A (mol/m³)",
+            "\\theta_C": "Initial molar ratio of C to A (dimensionless)",
+            "c": "Stoichiometric coefficient of C (dimensionless)",
+            "a": "Stoichiometric coefficient of A (dimensionless)",
+            "X_A": "Fractional conversion of species A (dimensionless)",
+            "\\epsilon": "Expansion factor, y_{A0} \\delta (dimensionless)",
+            "T_0": "Initial temperature (K)",
+            "T": "Temperature (K)",
+            "P": "Pressure (Pa)",
+            "P_0": "Initial pressure (Pa)"
+        },
+        "description": "Calculates the concentration of product C in variable density systems, accounting for its production and system changes.",
+        "example": {
+            "problem": "\\text{For } 2A \\to 3C, \\text{ with } C_{A0} = 1 \\, \\text{mol/m}^3, \\theta_C = 0, X_A = 0.5, \\epsilon = 0.5, T_0 = 298 \\, \\text{K}, T = 300 \\, \\text{K}, P = 95000 \\, \\text{Pa}, P_0 = 100000 \\, \\text{Pa}, \\text{ find } C_C.",
+            "solution": "\\begin{aligned}\nC_C &= C_{A0} \\left( \\theta_C + \\frac{c}{a} X_A \\right) \\frac{1}{1 + \\epsilon X_A} \\frac{T_0}{T} \\frac{P}{P_0} \\\\\n&= 1 \\cdot \\left( 0 + \\frac{3}{2} \\cdot 0.5 \\right) \\cdot \\frac{1}{1 + 0.5 \\cdot 0.5} \\cdot \\frac{298}{300} \\cdot \\frac{95000}{100000} \\\\\n&= 1 \\cdot 0.75 \\cdot \\frac{1}{1.25} \\cdot 0.9933 \\cdot 0.95 \\\\\n&\\approx \\boxed{0.566 \\, \\text{mol/m}^3}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Concentration of D for Variable Density",
+        "formula": "C_D = C_{A0} \\left( \\theta_D + \\frac{d}{a} X_A \\right) \\frac{1}{1 + \\epsilon X_A} \\frac{T_0}{T} \\frac{P}{P_0}",
+        "variables": {
+            "C_D": "Concentration of species D (mol/m³)",
+            "C_{A0}": "Initial concentration of species A (mol/m³)",
+            "\\theta_D": "Initial molar ratio of D to A (dimensionless)",
+            "d": "Stoichiometric coefficient of D (dimensionless)",
+            "a": "Stoichiometric coefficient of A (dimensionless)",
+            "X_A": "Fractional conversion of species A (dimensionless)",
+            "\\epsilon": "Expansion factor, y_{A0} \\delta (dimensionless)",
+            "T_0": "Initial temperature (K)",
+            "T": "Temperature (K)",
+            "P": "Pressure (Pa)",
+            "P_0": "Initial pressure (Pa)"
+        },
+        "description": "Calculates the concentration of product D in variable density systems, considering its production and changes in system conditions.",
+        "example": {
+            "problem": "\\text{For } A + B \\to 2D, \\text{ with } C_{A0} = 2 \\, \\text{mol/m}^3, \\theta_D = 0, X_A = 0.3, \\epsilon = 0.2, T_0 = 298 \\, \\text{K}, T = 300 \\, \\text{K}, P = 90000 \\, \\text{Pa}, P_0 = 101325 \\, \\text{Pa}, \\text{ find } C_D.",
+            "solution": "\\begin{aligned}\nC_D &= C_{A0} \\left( \\theta_D + \\frac{d}{a} X_A \\right) \\frac{1}{1 + \\epsilon X_A} \\frac{T_0}{T} \\frac{P}{P_0} \\\\\n&= 2 \\cdot \\left( 0 + \\frac{2}{1} \\cdot 0.3 \\right) \\cdot \\frac{1}{1 + 0.2 \\cdot 0.3} \\cdot \\frac{298}{300} \\cdot \\frac{90000}{101325} \\\\\n&= 2 \\cdot 0.6 \\cdot \\frac{1}{1.06} \\cdot 0.9933 \\cdot 0.8889 \\\\\n&\\approx \\boxed{1.00 \\, \\text{mol/m}^3}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Concentration of Inert for Variable Density",
+        "formula": "C_I = C_{A0} \\theta_I \\frac{1}{1 + \\epsilon X_A} \\frac{T_0}{T} \\frac{P}{P_0}",
+        "variables": {
+            "C_I": "Concentration of inert species (mol/m³)",
+            "C_{A0}": "Initial concentration of species A (mol/m³)",
+            "\\theta_I": "Initial molar ratio of inert to A (dimensionless)",
+            "\\epsilon": "Expansion factor, y_{A0} \\delta (dimensionless)",
+            "X_A": "Fractional conversion of species A (dimensionless)",
+            "T_0": "Initial temperature (K)",
+            "T": "Temperature (K)",
+            "P": "Pressure (Pa)",
+            "P_0": "Initial pressure (Pa)"
+        },
+        "description": "Calculates the concentration of an inert species in a variable density system, affected by changes in volume, temperature, and pressure.",
+        "example": {
+            "problem": "\\text{For a system with } C_{A0} = 1 \\, \\text{mol/m}^3, \\theta_I = 3, X_A = 0.4, \\epsilon = 0.5, T_0 = 298 \\, \\text{K}, T = 300 \\, \\text{K}, P = 95000 \\, \\text{Pa}, P_0 = 100000 \\, \\text{Pa}, \\text{ find } C_I.",
+            "solution": "\\begin{aligned}\nC_I &= C_{A0} \\theta_I \\frac{1}{1 + \\epsilon X_A} \\frac{T_0}{T} \\frac{P}{P_0} \\\\\n&= 1 \\cdot 3 \\cdot \\frac{1}{1 + 0.5 \\cdot 0.4} \\cdot \\frac{298}{300} \\cdot \\frac{95000}{100000} \\\\\n&= 3 \\cdot \\frac{1}{1.2} \\cdot 0.9933 \\cdot 0.95 \\\\\n&\\approx \\boxed{2.36 \\, \\text{mol/m}^3}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Volumetric Flow Rate Expression",
+        "formula": "\\dot{V} = \\dot{V}_0 (1 + \\epsilon X_A) \\frac{T}{T_0} \\frac{P_0}{P}",
+        "variables": {
+            "\\dot{V}": "Volumetric flow rate (m³/s)",
+            "\\dot{V}_0": "Initial volumetric flow rate (m³/s)",
+            "\\epsilon": "Expansion factor, y_{A0} \\delta (dimensionless)",
+            "X_A": "Fractional conversion of species A (dimensionless)",
+            "T": "Temperature (K)",
+            "T_0": "Initial temperature (K)",
+            "P": "Pressure (Pa)",
+            "P_0": "Initial pressure (Pa)"
+        },
+        "description": "Simplified expression for the volumetric flow rate in variable density systems, incorporating expansion due to reaction.",
+        "example": {
+            "problem": "\\text{For } \\dot{V}_0 = 0.2 \\, \\text{m}^3/\\text{s}, \\epsilon = 1, X_A = 0.3, T = 300 \\, \\text{K}, T_0 = 298 \\, \\text{K}, P = 90000 \\, \\text{Pa}, P_0 = 101325 \\, \\text{Pa}, \\text{ find } \\dot{V}.",
+            "solution": "\\begin{aligned}\n\\dot{V} &= \\dot{V}_0 (1 + \\epsilon X_A) \\frac{T}{T_0} \\frac{P_0}{P} \\\\\n&= 0.2 \\cdot (1 + 1 \\cdot 0.3) \\cdot \\frac{300}{298} \\cdot \\frac{101325}{90000} \\\\\n&= 0.2 \\cdot 1.3 \\cdot 1.0067 \\cdot 1.125 \\\\\n&\\approx \\boxed{0.294 \\, \\text{m}^3/\\text{s}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Instantaneous Selectivity",
+        "formula": "S_{D/U} = \\frac{r_D}{r_U}",
+        "variables": {
+            "S_{D/U}": "Instantaneous selectivity of desired product D over undesired product U (dimensionless)",
+            "r_D": "Rate of formation of desired product D (mol/(m³·s))",
+            "r_U": "Rate of formation of undesired product U (mol/(m³·s))"
+        },
+        "description": "Measures the ratio of the formation rate of the desired product to the undesired product at a specific point in the reaction.",
+        "example": {
+            "problem": "\\text{For parallel reactions producing } D \\text{ and } U, \\text{ if } r_D = 0.8 \\, \\text{mol/(m}^3\\cdot\\text{s)}, r_U = 0.2 \\, \\text{mol/(m}^3\\cdot\\text{s)}, \\text{ find } S_{D/U}.",
+            "solution": "\\begin{aligned}\nS_{D/U} &= \\frac{r_D}{r_U} \\\\\n&= \\frac{0.8}{0.2} \\\\\n&= \\boxed{4}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Overall Selectivity Batch",
+        "formula": "\\tilde{S}_{D/U} = \\frac{N_D}{N_U}",
+        "variables": {
+            "\\tilde{S}_{D/U}": "Overall selectivity of desired product D over undesired product U (dimensionless)",
+            "N_D": "Moles of desired product D (mol)",
+            "N_U": "Moles of undesired product U (mol)"
+        },
+        "description": "Calculates the overall selectivity in a batch reactor by comparing the total moles of desired product to undesired product.",
+        "example": {
+            "problem": "\\text{In a batch reactor, if } N_D = 6 \\, \\text{mol}, N_U = 2 \\, \\text{mol}, \\text{ find } \\tilde{S}_{D/U}.",
+            "solution": "\\begin{aligned}\n\\tilde{S}_{D/U} &= \\frac{N_D}{N_U} \\\\\n&= \\frac{6}{2} \\\\\n&= \\boxed{3}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Overall Selectivity Flow",
+        "formula": "\\tilde{S}_{D/U} = \\frac{F_D}{F_U}",
+        "variables": {
+            "\\tilde{S}_{D/U}": "Overall selectivity of desired product D over undesired product U (dimensionless)",
+            "F_D": "Molar flow rate of desired product D (mol/s)",
+            "F_U": "Molar flow rate of undesired product U (mol/s)"
+        },
+        "description": "Calculates the overall selectivity in a flow reactor by comparing the molar flow rates of desired and undesired products.",
+        "example": {
+            "problem": "\\text{In a flow reactor, if } F_D = 5 \\, \\text{mol/s}, F_U = 1 \\, \\text{mol/s}, \\text{ find } \\tilde{S}_{D/U}.",
+            "solution": "\\begin{aligned}\n\\tilde{S}_{D/U} &= \\frac{F_D}{F_U} \\\\\n&= \\frac{5}{1} \\\\\n&= \\boxed{5}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Net Rate for Species i",
+        "formula": "r_{i,Net} = \\sum_{j=1}^J \\nu_{ij} r_j",
+        "variables": {
+            "r_{i,Net}": "Net rate of formation for species i (mol/(m³·s))",
+            "\\nu_{ij}": "Stoichiometric coefficient of species i in reaction j (dimensionless, negative for reactants)",
+            "r_j": "Rate of reaction j (mol/(m³·s))",
+            "J": "Number of reactions (dimensionless)"
+        },
+        "description": "Sums the contributions of all reactions to the net rate of formation or consumption of species i in a multiple-reaction system.",
+        "example": {
+            "problem": "\\text{For two reactions: } A \\to B \\text{ with } r_1 = 0.3 \\, \\text{mol/(m}^3\\cdot\\text{s)}, \\text{ and } B \\to C \\text{ with } r_2 = 0.1 \\, \\text{mol/(m}^3\\cdot\\text{s)}, \\text{ find } r_{B,Net}.",
+            "solution": "\\begin{aligned}\nr_{B,Net} &= \\sum_{j=1}^2 \\nu_{Bj} r_j \\\\\n&= (1) \\cdot 0.3 + (-1) \\cdot 0.1 \\\\\n&= 0.3 - 0.1 \\\\\n&= \\boxed{0.2 \\, \\text{mol/(m}^3\\cdot\\text{s)}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Selectivity for Parallel Reactions",
+        "formula": "S_{D/U} = \\frac{k_D}{k_U} C_A^{a_1 - a_2}",
+        "variables": {
+            "S_{D/U}": "Instantaneous selectivity of desired product D over undesired product U (dimensionless)",
+            "k_D": "Rate constant for desired reaction (units vary)",
+            "k_U": "Rate constant for undesired reaction (units vary)",
+            "C_A": "Concentration of species A (mol/m³)",
+            "a_1": "Reaction order for desired reaction (dimensionless)",
+            "a_2": "Reaction order for undesired reaction (dimensionless)"
+        },
+        "description": "Calculates selectivity for parallel reactions producing desired and undesired products, depending on reactant concentration and reaction orders.",
+        "example": {
+            "problem": "\\text{For parallel reactions } A \\to D \\text{ (first order, } k_D = 0.1 \\, \\text{s}^{-1}) \\text{ and } A \\to U \\text{ (second order, } k_U = 0.05 \\, \\text{m}^3/(\\text{mol·s)}), \\text{ with } C_A = 2 \\, \\text{mol/m}^3, \\text{ find } S_{D/U}.",
+            "solution": "\\begin{aligned}\nS_{D/U} &= \\frac{k_D}{k_U} C_A^{a_1 - a_2} \\\\\n&= \\frac{0.1}{0.05} \\cdot 2^{1 - 2} \\\\\n&= 2 \\cdot \\frac{1}{2} \\\\\n&= \\boxed{1}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Selectivity with Temperature Dependence",
+        "formula": "S_{D/U} = \\frac{k_D}{k_U} \\exp\\left( -\\frac{E_D - E_U}{RT} \\right)",
+        "variables": {
+            "S_{D/U}": "Instantaneous selectivity of desired product D over undesired product U (dimensionless)",
+            "k_D": "Pre-exponential factor for desired reaction (units vary)",
+            "k_U": "Pre-exponential factor for undesired reaction (units vary)",
+            "E_D": "Activation energy for desired reaction (J/mol)",
+            "E_U": "Activation energy for undesired reaction (J/mol)",
+            "R": "Gas constant (8.314 J/(mol·K))",
+            "T": "Temperature (K)"
+        },
+        "description": "Expresses selectivity for parallel reactions when concentration effects cancel out, highlighting temperature dependence through activation energies.",
+        "example": {
+            "problem": "\\text{For } k_D = k_U = 10^5 \\, \\text{s}^{-1}, E_D = 50 \\, \\text{kJ/mol}, E_U = 60 \\, \\text{kJ/mol}, T = 300 \\, \\text{K}, R = 8.314 \\, \\text{J/(mol·K)}, \\text{ find } S_{D/U}.",
+            "solution": "\\begin{aligned}\nS_{D/U} &= \\frac{k_D}{k_U} \\exp\\left( -\\frac{E_D - E_U}{RT} \\right) \\\\\n&= \\frac{10^5}{10^5} \\cdot \\exp\\left( -\\frac{50000 - 60000}{8.314 \\cdot 300} \\right) \\\\\n&= \\exp\\left( \\frac{10000}{2494.2} \\right) \\approx \\exp(4.01) \\\\\n&\\approx \\boxed{55.2}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Selectivity for Bimolecular Parallel",
+        "formula": "S_{D/U} = \\frac{k_D}{k_U} C_A^{\\alpha_1 - \\alpha_2} C_B^{\\beta_1 - \\beta_2}",
+        "variables": {
+            "S_{D/U}": "Instantaneous selectivity of desired product D over undesired product U (dimensionless)",
+            "k_D": "Rate constant for desired reaction (units vary)",
+            "k_U": "Rate constant for undesired reaction (units vary)",
+            "C_A": "Concentration of species A (mol/m³)",
+            "C_B": "Concentration of species B (mol/m³)",
+            "\\alpha_1": "Order with respect to A for desired reaction (dimensionless)",
+            "\\alpha_2": "Order with respect to A for undesired reaction (dimensionless)",
+            "\\beta_1": "Order with respect to B for desired reaction (dimensionless)",
+            "\\beta_2": "Order with respect to B for undesired reaction (dimensionless)"
+        },
+        "description": "Calculates selectivity for parallel bimolecular reactions, accounting for different reaction orders with respect to two reactants.",
+        "example": {
+            "problem": "\\text{For parallel reactions } A + B \\to D \\text{ (} k_D = 0.02 \\, \\text{m}^3/(\\text{mol·s)}, \\alpha_1 = 1, \\beta_1 = 1 \\text{) and } A \\to U \\text{ (} k_U = 0.1 \\, \\text{s}^{-1}, \\alpha_2 = 1, \\beta_2 = 0 \\text{), with } C_A = 2 \\, \\text{mol/m}^3, C_B = 3 \\, \\text{mol/m}^3, \\text{ find } S_{D/U}.",
+            "solution": "\\begin{aligned}\nS_{D/U} &= \\frac{k_D}{k_U} C_A^{\\alpha_1 - \\alpha_2} C_B^{\\beta_1 - \\beta_2} \\\\\n&= \\frac{0.02}{0.1} \\cdot 2^{1 - 1} \\cdot 3^{1 - 0} \\\\\n&= 0.2 \\cdot 3 \\\\\n&= \\boxed{0.6}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Three-Point Differentiation Initial",
+        "formula": "\\left( \\frac{dC_A}{dt} \\right)_{t_0} = \\frac{-3C_{A,0} + 4C_{A1} - C_{A2}}{2 \\Delta t}",
+        "variables": {
+            "\\left( \\frac{dC_A}{dt} \\right)_{t_0}": "Rate of change of concentration of A at initial time (mol/(m³·s))",
+            "C_{A,0}": "Concentration of A at initial time (mol/m³)",
+            "C_{A1}": "Concentration of A at first time step (mol/m³)",
+            "C_{A2}": "Concentration of A at second time step (mol/m³)",
+            "\\Delta t": "Time interval between measurements (s)"
+        },
+        "description": "Approximates the initial rate of change of concentration using a three-point finite difference method for the first data point.",
+        "example": {
+            "problem": "\\text{For } C_{A,0} = 1 \\, \\text{mol/m}^3, C_{A1} = 0.95 \\, \\text{mol/m}^3, C_{A2} = 0.88 \\, \\text{mol/m}^3, \\Delta t = 2 \\, \\text{s}, \\text{ find } \\left( \\frac{dC_A}{dt} \\right)_{t_0}.",
+            "solution": "\\begin{aligned}\n\\left( \\frac{dC_A}{dt} \\right)_{t_0} &= \\frac{-3C_{A,0} + 4C_{A1} - C_{A2}}{2 \\Delta t} \\\\\n&= \\frac{-3 \\cdot 1 + 4 \\cdot 0.95 - 0.88}{2 \\cdot 2} \\\\\n&= \\frac{-3 + 3.8 - 0.88}{4} \\\\\n&= \\frac{-0.08}{4} \\\\\n&= \\boxed{-0.02 \\, \\text{mol/(m}^3\\cdot\\text{s)}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Three-Point Differentiation Interior",
+        "formula": "\\left( \\frac{dC_A}{dt} \\right)_{t_i} = \\frac{C_{A,i+1} - C_{A,i-1}}{2 \\Delta t}",
+        "variables": {
+            "\\left( \\frac{dC_A}{dt} \\right)_{t_i}": "Rate of change of concentration of A at time t_i (mol/(m³·s))",
+            "C_{A,i+1}": "Concentration of A at next time step (mol/m³)",
+            "C_{A,i-1}": "Concentration of A at previous time step (mol/m³)",
+            "\\Delta t": "Time interval between measurements (s)"
+        },
+        "description": "Approximates the rate of change of concentration at an interior point using a centered three-point finite difference method.",
+        "example": {
+            "problem": "\\text{For } C_{A,i-1} = 1.1 \\, \\text{mol/m}^3, C_{A,i+1} = 0.9 \\, \\text{mol/m}^3, \\Delta t = 1 \\, \\text{s}, \\text{ find } \\left( \\frac{dC_A}{dt} \\right)_{t_i}.",
+            "solution": "\\begin{aligned}\n\\left( \\frac{dC_A}{dt} \\right)_{t_i} &= \\frac{C_{A,i+1} - C_{A,i-1}}{2 \\Delta t} \\\\\n&= \\frac{0.9 - 1.1}{2 \\cdot 1} \\\\\n&= \\frac{-0.2}{2} \\\\\n&= \\boxed{-0.1 \\, \\text{mol/(m}^3\\cdot\\text{s)}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Three-Point Differentiation Final",
+        "formula": "\\left( \\frac{dC_A}{dt} \\right)_{t_n} = \\frac{C_{A,n-2} - 4C_{A,n-1} + 3C_{A,n}}{2 \\Delta t}",
+        "variables": {
+            "\\left( \\frac{dC_A}{dt} \\right)_{t_n}": "Rate of change of concentration of A at final time (mol/(m³·s))",
+            "C_{A,n-2}": "Concentration of A two time steps before final (mol/m³)",
+            "C_{A,n-1}": "Concentration of A one time step before final (mol/m³)",
+            "C_{A,n}": "Concentration of A at final time (mol/m³)",
+            "\\Delta t": "Time interval between measurements (s)"
+        },
+        "description": "Approximates the rate of change of concentration at the final data point using a three-point finite difference method.",
+        "example": {
+            "problem": "\\text{For } C_{A,n-2} = 0.7 \\, \\text{mol/m}^3, C_{A,n-1} = 0.65 \\, \\text{mol/m}^3, C_{A,n} = 0.6 \\, \\text{mol/m}^3, \\Delta t = 2 \\, \\text{s}, \\text{ find } \\left( \\frac{dC_A}{dt} \\right)_{t_n}.",
+            "solution": "\\begin{aligned}\n\\left( \\frac{dC_A}{dt} \\right)_{t_n} &= \\frac{C_{A,n-2} - 4C_{A,n-1} + 3C_{A,n}}{2 \\Delta t} \\\\\n&= \\frac{0.7 - 4 \\cdot 0.65 + 3 \\cdot 0.6}{2 \\cdot 2} \\\\\n&= \\frac{0.7 - 2.6 + 1.8}{4} \\\\\n&= \\frac{-0.1}{4} \\\\\n&= \\boxed{-0.025 \\, \\text{mol/(m}^3\\cdot\\text{s)}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Half-Life General",
+        "formula": "t_{1/2} = \\frac{2^{n-1} - 1}{k (n-1) C_{A0}^{n-1}}",
+        "variables": {
+            "t_{1/2}": "Half-life of the reaction (s)",
+            "n": "Reaction order (dimensionless)",
+            "k": "Rate constant (units vary with n)",
+            "C_{A0}": "Initial concentration of species A (mol/m³)"
+        },
+        "description": "Calculates the half-life for an nth-order reaction (n ≠ 1), representing the time for half of the reactant to be consumed.",
+        "example": {
+            "problem": "\\text{For a second-order reaction (} n = 2 \\text{) with } k = 0.01 \\, \\text{m}^3/(\\text{mol·s)}, C_{A0} = 1 \\, \\text{mol/m}^3, \\text{ find } t_{1/2}.",
+            "solution": "\\begin{aligned}\nt_{1/2} &= \\frac{2^{n-1} - 1}{k (n-1) C_{A0}^{n-1}} \\\\\n&= \\frac{2^{2-1} - 1}{0.01 \\cdot (2-1) \\cdot 1^{2-1}} \\\\\n&= \\frac{2 - 1}{0.01 \\cdot 1} \\\\\n&= \\frac{1}{0.01} \\\\\n&= \\boxed{100 \\, \\text{s}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Half-Life First Order",
+        "formula": "t_{1/2} = \\frac{\\ln 2}{k}",
+        "variables": {
+            "t_{1/2}": "Half-life of the reaction (s)",
+            "k": "Rate constant (s^{-1})"
+        },
+        "description": "Calculates the half-life for a first-order reaction, independent of initial concentration.",
+        "example": {
+            "problem": "\\text{For a first-order reaction with } k = 0.05 \\, \\text{s}^{-1}, \\text{ find } t_{1/2}.",
+            "solution": "\\begin{aligned}\nt_{1/2} &= \\frac{\\ln 2}{k} \\\\\n&= \\frac{0.693}{0.05} \\\\\n&\\approx \\boxed{13.86 \\, \\text{s}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Log Half-Life",
+        "formula": "\\ln t_{1/2} = \\ln \\left( \\frac{2^{n-1} - 1}{k (n-1)} \\right) + (1 - n) \\ln C_{A0}",
+        "variables": {
+            "\\ln t_{1/2}": "Natural logarithm of half-life (dimensionless)",
+            "n": "Reaction order (dimensionless)",
+            "k": "Rate constant (units vary with n)",
+            "C_{A0}": "Initial concentration of species A (mol/m³)"
+        },
+        "description": "Linearized form of the half-life equation used to determine reaction order by plotting ln(t_{1/2}) versus ln(C_{A0}).",
+        "example": {
+            "problem": "\\text{For a second-order reaction (} n = 2 \\text{) with } k = 0.01 \\, \\text{m}^3/(\\text{mol·s)}, C_{A0} = 2 \\, \\text{mol/m}^3, \\text{ find } \\ln t_{1/2}.",
+            "solution": "\\begin{aligned}\n\\ln t_{1/2} &= \\ln \\left( \\frac{2^{n-1} - 1}{k (n-1)} \\right) + (1 - n) \\ln C_{A0} \\\\\n&= \\ln \\left( \\frac{2^{2-1} - 1}{0.01 \\cdot (2-1)} \\right) + (1 - 2) \\ln 2 \\\\\n&= \\ln \\left( \\frac{1}{0.01} \\right) - \\ln 2 \\\\\n&= \\ln 100 - 0.693 \\\\\n&\\approx 4.605 - 0.693 \\\\\n&= \\boxed{3.912}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Time for Maximum Intermediate in Series",
+        "formula": "t = \\frac{\\ln (k_2 / k_1)}{k_2 - k_1}",
+        "variables": {
+            "t": "Time to maximize intermediate B (s)",
+            "k_1": "Rate constant for reaction A to B (s^{-1})",
+            "k_2": "Rate constant for reaction B to C (s^{-1})"
+        },
+        "description": "Determines the time at which the concentration of intermediate B is maximized in a consecutive reaction A → B → C.",
+        "example": {
+            "problem": "\\text{For } A \\to B \\to C, \\text{ with } k_1 = 0.1 \\, \\text{s}^{-1}, k_2 = 0.2 \\, \\text{s}^{-1}, \\text{ find } t \\text{ for maximum } [B].",
+            "solution": "\\begin{aligned}\nt &= \\frac{\\ln (k_2 / k_1)}{k_2 - k_1} \\\\\n&= \\frac{\\ln (0.2 / 0.1)}{0.2 - 0.1} \\\\\n&= \\frac{\\ln 2}{0.1} \\\\\n&= \\frac{0.693}{0.1} \\\\\n&= \\boxed{6.93 \\, \\text{s}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Gibbs Free Energy Change",
+        "formula": "\\Delta G^0 = 151 \\, \\text{kJ/mol}",
+        "variables": {},
+        "description": "Standard Gibbs free energy change for the reaction CH4 + CO2 → 2CO + 2H2 at 373 K, indicating non-spontaneity at this temperature.",
+        "example": {
+            "problem": "\\text{Determine if the reaction } CH_4 + CO_2 \\to 2CO + 2H_2 \\text{ is spontaneous at } 373 \\, \\text{K}, \\text{ given } \\Delta G^0 = 151 \\, \\text{kJ/mol}.",
+            "solution": "\\begin{aligned}\n\\text{Since } \\Delta G^0 = 151 \\, \\text{kJ/mol} > 0, \\text{ the reaction is } \\boxed{\\text{non-spontaneous}} \\text{ at } 373 \\, \\text{K}.\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Gibbs Free Energy Change",
+        "formula": "\\Delta G^0 = -16 \\, \\text{kJ/mol}",
+        "variables": {},
+        "description": "Standard Gibbs free energy change for the reaction CH4 + CO2 → 2CO + 2H2 at 973 K, indicating spontaneity at this temperature.",
+        "example": {
+            "problem": "\\text{Determine if the reaction } CH_4 + CO_2 \\to 2CO + 2H_2 \\text{ is spontaneous at } 973 \\, \\text{K}, \\text{ given } \\Delta G^0 = -16 \\, \\text{kJ/mol}.",
+            "solution": "\\begin{aligned}\n\\text{Since } \\Delta G^0 = -16 \\, \\text{kJ/mol} < 0, \\text{ the reaction is } \\boxed{\\text{spontaneous}} \\text{ at } 973 \\, \\text{K}.\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Net Rate of Adsorption",
+        "formula": "r_{AD} = k_A P_A C_V - k_{-A} C_{A.S}",
+        "variables": {
+            "r_{AD}": "Net rate of adsorption (mol/(g cat · s))",
+            "k_A": "Adsorption rate constant (mol/(g cat · s · atm))",
+            "P_A": "Partial pressure of species A (atm)",
+            "C_V": "Concentration of vacant sites (mol/g cat)",
+            "k_{-A}": "Desorption rate constant (s^{-1})",
+            "C_{A.S}": "Concentration of sites occupied by A (mol/g cat)"
+        },
+        "description": "Calculates the net rate of adsorption of species A onto catalyst sites, balancing adsorption and desorption processes.",
+        "example": {
+            "problem": "\\text{For } k_A = 0.01 \\, \\text{mol/(g cat · s · atm)}, P_A = 2 \\, \\text{atm}, C_V = 0.1 \\, \\text{mol/g cat}, k_{-A} = 0.05 \\, \\text{s}^{-1}, C_{A.S} = 0.02 \\, \\text{mol/g cat}, \\text{ find } r_{AD}.",
+            "solution": "\\begin{aligned}\nr_{AD} &= k_A P_A C_V - k_{-A} C_{A.S} \\\\\n&= 0.01 \\cdot 2 \\cdot 0.1 - 0.05 \\cdot 0.02 \\\\\n&= 0.002 - 0.001 \\\\\n&= \\boxed{0.001 \\, \\text{mol/(g cat · s)}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Adsorption Equilibrium Constant",
+        "formula": "K_A = \\frac{k_A}{k_{-A}}",
+        "variables": {
+            "K_A": "Adsorption equilibrium constant (1/atm)",
+            "k_A": "Adsorption rate constant (mol/(g cat · s · atm))",
+            "k_{-A}": "Desorption rate constant (s^{-1})"
+        },
+        "description": "Defines the equilibrium constant for the adsorption of species A, as the ratio of adsorption to desorption rate constants.",
+        "example": {
+            "problem": "\\text{For } k_A = 0.02 \\, \\text{mol/(g cat · s · atm)}, k_{-A} = 0.1 \\, \\text{s}^{-1}, \\text{ find } K_A.",
+            "solution": "\\begin{aligned}\nK_A &= \\frac{k_A}{k_{-A}} \\\\\n&= \\frac{0.02}{0.1} \\\\\n&= \\boxed{0.2 \\, \\text{atm}^{-1}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Net Rate of Adsorption in Terms of Equilibrium",
+        "formula": "r_{AD} = k_A \\left( P_A C_V - \\frac{C_{A.S}}{K_A} \\right)",
+        "variables": {
+            "r_{AD}": "Net rate of adsorption (mol/(g cat · s))",
+            "k_A": "Adsorption rate constant (mol/(g cat · s · atm))",
+            "P_A": "Partial pressure of species A (atm)",
+            "C_V": "Concentration of vacant sites (mol/g cat)",
+            "C_{A.S}": "Concentration of sites occupied by A (mol/g cat)",
+            "K_A": "Adsorption equilibrium constant (1/atm)"
+        },
+        "description": "Expresses the net adsorption rate using the equilibrium constant, useful for simplifying catalytic reaction models.",
+        "example": {
+            "problem": "\\text{For } k_A = 0.01 \\, \\text{mol/(g cat · s · atm)}, P_A = 1.5 \\, \\text{atm}, C_V = 0.2 \\, \\text{mol/g cat}, C_{A.S} = 0.03 \\, \\text{mol/g cat}, K_A = 0.25 \\, \\text{atm}^{-1}, \\text{ find } r_{AD}.",
+            "solution": "\\begin{aligned}\nr_{AD} &= k_A \\left( P_A C_V - \\frac{C_{A.S}}{K_A} \\right) \\\\\n&= 0.01 \\cdot \\left( 1.5 \\cdot 0.2 - \\frac{0.03}{0.25} \\right) \\\\\n&= 0.01 \\cdot (0.3 - 0.12) \\\\\n&= 0.01 \\cdot 0.18 \\\\\n&= \\boxed{0.0018 \\, \\text{mol/(g cat · s)}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Net Rate of Surface Reaction Single Site",
+        "formula": "r_S = k_S C_{A.S} - \\frac{C_{B.S}}{K_S}",
+        "variables": {
+            "r_S": "Net rate of surface reaction (mol/(g cat · s))",
+            "k_S": "Surface reaction rate constant (s^{-1})",
+            "C_{A.S}": "Concentration of sites occupied by A (mol/g cat)",
+            "C_{B.S}": "Concentration of sites occupied by B (mol/g cat)",
+            "K_S": "Surface equilibrium constant (dimensionless)"
+        },
+        "description": "Calculates the net rate of a surface reaction for a single-site mechanism, balancing forward and reverse reactions.",
+        "example": {
+            "problem": "\\text{For } k_S = 0.05 \\, \\text{s}^{-1}, C_{A.S} = 0.1 \\, \\text{mol/g cat}, C_{B.S} = 0.02 \\, \\text{mol/g cat}, K_S = 2, \\text{ find } r_S.",
+            "solution": "\\begin{aligned}\nr_S &= k_S C_{A.S} - \\frac{C_{B.S}}{K_S} \\\\\n&= 0.05 \\cdot 0.1 - \\frac{0.02}{2} \\\\\n&= 0.005 - 0.01 \\\\\n&= \\boxed{-0.005 \\, \\text{mol/(g cat · s)}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Surface Equilibrium Constant",
+        "formula": "K_S = \\frac{k_S}{k_{-S}}",
+        "variables": {
+            "K_S": "Surface equilibrium constant (dimensionless)",
+            "k_S": "Surface reaction rate constant (s^{-1})",
+            "k_{-S}": "Reverse surface reaction rate constant (s^{-1})"
+        },
+        "description": "Defines the equilibrium constant for a surface reaction as the ratio of forward to reverse rate constants.",
+        "example": {
+            "problem": "\\text{For } k_S = 0.1 \\, \\text{s}^{-1}, k_{-S} = 0.05 \\, \\text{s}^{-1}, \\text{ find } K_S.",
+            "solution": "\\begin{aligned}\nK_S &= \\frac{k_S}{k_{-S}} \\\\\n&= \\frac{0.1}{0.05} \\\\\n&= \\boxed{2}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Net Rate of Surface Reaction Dual Site",
+        "formula": "r_S = k_S C_{A.S} C_V - \\frac{C_{B.S} C_V}{K_S}",
+        "variables": {
+            "r_S": "Net rate of surface reaction (mol/(g cat · s))",
+            "k_S": "Surface reaction rate constant (g cat/mol · s)",
+            "C_{A.S}": "Concentration of sites occupied by A (mol/g cat)",
+            "C_V": "Concentration of vacant sites (mol/g cat)",
+            "C_{B.S}": "Concentration of sites occupied by B (mol/g cat)",
+            "K_S": "Surface equilibrium constant (dimensionless)"
+        },
+        "description": "Calculates the net rate of a surface reaction requiring two active sites, used in dual-site catalytic mechanisms.",
+        "example": {
+            "problem": "\\text{For } k_S = 0.02 \\, \\text{g cat/(mol · s)}, C_{A.S} = 0.1 \\, \\text{mol/g cat}, C_V = 0.2 \\, \\text{mol/g cat}, C_{B.S} = 0.03 \\, \\text{mol/g cat}, K_S = 1.5, \\text{ find } r_S.",
+            "solution": "\\begin{aligned}\nr_S &= k_S C_{A.S} C_V - \\frac{C_{B.S} C_V}{K_S} \\\\\n&= 0.02 \\cdot 0.1 \\cdot 0.2 - \\frac{0.03 \\cdot 0.2}{1.5} \\\\\n&= 0.0004 - 0.004 \\\\\n&= \\boxed{-0.0036 \\, \\text{mol/(g cat · s)}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Net Rate of Surface Reaction Eley-Rideal",
+        "formula": "r_S = k_S P_B C_{A.S} - \\frac{C_{C.S}}{K_S}",
+        "variables": {
+            "r_S": "Net rate of surface reaction (mol/(g cat · s))",
+            "k_S": "Surface reaction rate constant (mol/(g cat · s · atm))",
+            "P_B": "Partial pressure of species B (atm)",
+            "C_{A.S}": "Concentration of sites occupied by A (mol/g cat)",
+            "C_{C.S}": "Concentration of sites occupied by C (mol/g cat)",
+            "K_S": "Surface equilibrium constant (1/atm)"
+        },
+        "description": "Calculates the net rate of a surface reaction following the Eley-Rideal mechanism, where a gas-phase species reacts with an adsorbed species.",
+        "example": {
+            "problem": "\\text{For } k_S = 0.01 \\, \\text{mol/(g cat · s · atm)}, P_B = 1.5 \\, \\text{atm}, C_{A.S} = 0.1 \\, \\text{mol/g cat}, C_{C.S} = 0.02 \\, \\text{mol/g cat}, K_S = 2 \\, \\text{atm}^{-1}, \\text{ find } r_S.",
+            "solution": "\\begin{aligned}\nr_S &= k_S P_B C_{A.S} - \\frac{C_{C.S}}{K_S} \\\\\n&= 0.01 \\cdot 1.5 \\cdot 0.1 - \\frac{0.02}{2} \\\\\n&= 0.0015 - 0.01 \\\\\n&= \\boxed{-0.0085 \\, \\text{mol/(g cat · s)}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Net Rate of Desorption",
+        "formula": "r_D = k_D C_{C.S} - \\frac{P_C C_V}{K_{D,C}}",
+        "variables": {
+            "r_D": "Net rate of desorption (mol/(g cat · s))",
+            "k_D": "Desorption rate constant (s^{-1})",
+            "C_{C.S}": "Concentration of sites occupied by C (mol/g cat)",
+            "P_C": "Partial pressure of species C (atm)",
+            "C_V": "Concentration of vacant sites (mol/g cat)",
+            "K_{D,C}": "Desorption equilibrium constant for C (1/atm)"
+        },
+        "description": "Calculates the net rate of desorption of species C from catalyst sites, balancing desorption and adsorption processes.",
+        "example": {
+            "problem": "\\text{For } k_D = 0.05 \\, \\text{s}^{-1}, C_{C.S} = 0.03 \\, \\text{mol/g cat}, P_C = 1 \\, \\text{atm}, C_V = 0.2 \\, \\text{mol/g cat}, K_{D,C} = 0.5 \\, \\text{atm}^{-1}, \\text{ find } r_D.",
+            "solution": "\\begin{aligned}\nr_D &= k_D C_{C.S} - \\frac{P_C C_V}{K_{D,C}} \\\\\n&= 0.05 \\cdot 0.03 - \\frac{1 \\cdot 0.2}{0.5} \\\\\n&= 0.0015 - 0.4 \\\\\n&= \\boxed{-0.3985 \\, \\text{mol/(g cat · s)}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Desorption Equilibrium Constant",
+        "formula": "K_{D,C} = \\frac{k_D}{k_{-D}}",
+        "variables": {
+            "K_{D,C}": "Desorption equilibrium constant for C (1/atm)",
+            "k_D": "Desorption rate constant (s^{-1})",
+            "k_{-D}": "Reverse desorption rate constant (mol/(g cat · s · atm))"
+        },
+        "description": "Defines the equilibrium constant for the desorption of species C as the ratio of desorption to adsorption rate constants.",
+        "example": {
+            "problem": "\\text{For } k_D = 0.1 \\, \\text{s}^{-1}, k_{-D} = 0.2 \\, \\text{mol/(g cat · s · atm)}, \\text{ find } K_{D,C}.",
+            "solution": "\\begin{aligned}\nK_{D,C} &= \\frac{k_D}{k_{-D}} \\\\\n&= \\frac{0.1}{0.2} \\\\\n&= \\boxed{0.5 \\, \\text{atm}^{-1}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Adsorption Equilibrium from Desorption",
+        "formula": "K_C = \\frac{1}{K_{D,C}}",
+        "variables": {
+            "K_C": "Adsorption equilibrium constant for C (atm)",
+            "K_{D,C}": "Desorption equilibrium constant for C (1/atm)"
+        },
+        "description": "Relates the adsorption equilibrium constant to the desorption equilibrium constant for species C, used in catalytic reaction models.",
+        "example": {
+            "problem": "\\text{For } K_{D,C} = 0.4 \\, \\text{atm}^{-1}, \\text{ find } K_C.",
+            "solution": "\\begin{aligned}\nK_C &= \\frac{1}{K_{D,C}} \\\\\n&= \\frac{1}{0.4} \\\\\n&= \\boxed{2.5 \\, \\text{atm}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Site Balance",
+        "formula": "C_T = C_V + C_{A.S} + C_{B.S}",
+        "variables": {
+            "C_T": "Total concentration of active sites (mol/g cat)",
+            "C_V": "Concentration of vacant sites (mol/g cat)",
+            "C_{A.S}": "Concentration of sites occupied by A (mol/g cat)",
+            "C_{B.S}": "Concentration of sites occupied by B (mol/g cat)"
+        },
+        "description": "Balances the total number of catalyst sites, summing vacant and occupied sites, essential for catalytic reaction kinetics.",
+        "example": {
+            "problem": "\\text{For } C_V = 0.3 \\, \\text{mol/g cat}, C_{A.S} = 0.2 \\, \\text{mol/g cat}, C_{B.S} = 0.1 \\, \\text{mol/g cat}, \\text{ find } C_T.",
+            "solution": "\\begin{aligned}\nC_T &= C_V + C_{A.S} + C_{B.S} \\\\\n&= 0.3 + 0.2 + 0.1 \\\\\n&= \\boxed{0.6 \\, \\text{mol/g cat}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Occupied Site Concentration",
+        "formula": "C_{C.S} = \\frac{K_B P_B P_P C_V}{K_S}",
+        "variables": {
+            "C_{C.S}": "Concentration of sites occupied by C (mol/g cat)",
+            "K_B": "Adsorption equilibrium constant for B (1/atm)",
+            "P_B": "Partial pressure of B (atm)",
+            "P_P": "Partial pressure of product P (atm)",
+            "C_V": "Concentration of vacant sites (mol/g cat)",
+            "K_S": "Surface equilibrium constant (dimensionless)"
+        },
+        "description": "Calculates the concentration of sites occupied by species C under equilibrium assumptions in catalytic reactions.",
+        "example": {
+            "problem": "\\text{For } K_B = 0.5 \\, \\text{atm}^{-1}, P_B = 1 \\, \\text{atm}, P_P = 0.5 \\, \\text{atm}, C_V = 0.2 \\, \\text{mol/g cat}, K_S = 2, \\text{ find } C_{C.S}.",
+            "solution": "\\begin{aligned}\nC_{C.S} &= \\frac{K_B P_B P_P C_V}{K_S} \\\\\n&= \\frac{0.5 \\cdot 1 \\cdot 0.5 \\cdot 0.2}{2} \\\\\n&= \\frac{0.05}{2} \\\\\n&= \\boxed{0.025 \\, \\text{mol/g cat}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Pressure Drop in Packed Bed",
+        "formula": "\\frac{dP}{dz} = -\\frac{G}{\\rho D_p} \\frac{1-\\phi}{\\phi^3} \\left[ \\frac{150 \\mu (1-\\phi)}{D_p} + 1.75 G \\right]",
+        "variables": {
+            "\\frac{dP}{dz}": "Pressure drop per unit length (Pa/m)",
+            "G": "Superficial mass velocity (kg/(m²·s))",
+            "\\rho": "Gas density (kg/m³)",
+            "D_p": "Particle diameter (m)",
+            "\\phi": "Porosity (dimensionless)",
+            "\\mu": "Gas viscosity (Pa·s)"
+        },
+        "description": "Calculates the pressure drop across a packed bed reactor using the Ergun equation, accounting for friction and inertial losses.",
+        "example": {
+            "problem": "\\text{For } G = 2 \\, \\text{kg/(m}^2\\cdot\\text{s)}, \\rho = 1.2 \\, \\text{kg/m}^3, D_p = 0.001 \\, \\text{m}, \\phi = 0.4, \\mu = 1.8 \\times 10^{-5} \\, \\text{Pa·s}, \\text{ find } \\frac{dP}{dz}.",
+            "solution": "\\begin{aligned}\n\\frac{dP}{dz} &= -\\frac{G}{\\rho D_p} \\frac{1-\\phi}{\\phi^3} \\left[ \\frac{150 \\mu (1-\\phi)}{D_p} + 1.75 G \\right] \\\\\n&= -\\frac{2}{1.2 \\cdot 0.001} \\cdot \\frac{1-0.4}{0.4^3} \\cdot \\left[ \\frac{150 \\cdot 1.8 \\times 10^{-5} \\cdot (1-0.4)}{0.001} + 1.75 \\cdot 2 \\right] \\\\\n&= -\\frac{2}{0.0012} \\cdot \\frac{0.6}{0.064} \\cdot [1620 + 3.5] \\\\\n&= -1666.67 \\cdot 9.375 \\cdot 1623.5 \\\\\n&\\approx \\boxed{-25371000 \\, \\text{Pa/m}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Gas Density Relation",
+        "formula": "\\rho = \\rho_0 \\frac{\\dot{V}_0}{\\dot{V}}",
+        "variables": {
+            "\\rho": "Gas density (kg/m³)",
+            "\\rho_0": "Initial gas density (kg/m³)",
+            "\\dot{V}_0": "Initial volumetric flow rate (m³/s)",
+            "\\dot{V}": "Volumetric flow rate (m³/s)"
+        },
+        "description": "Relates gas density to volumetric flow rates, derived from mass continuity in a flow system.",
+        "example": {
+            "problem": "\\text{For } \\rho_0 = 1.2 \\, \\text{kg/m}^3, \\dot{V}_0 = 0.1 \\, \\text{m}^3/\\text{s}, \\dot{V} = 0.12 \\, \\text{m}^3/\\text{s}, \\text{ find } \\rho.",
+            "solution": "\\begin{aligned}\n\\rho &= \\rho_0 \\frac{\\dot{V}_0}{\\dot{V}} \\\\\n&= 1.2 \\cdot \\frac{0.1}{0.12} \\\\\n&= \\boxed{1 \\, \\text{kg/m}^3}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Beta Zero",
+        "formula": "\\beta_0 = \\frac{G}{\\rho_0 D_p} \\frac{1-\\phi}{\\phi^3} \\left[ \\frac{150 \\mu (1-\\phi)}{D_p} + 1.75 G \\right]",
+        "variables": {
+            "\\beta_0": "Pressure drop parameter (Pa/m)",
+            "G": "Superficial mass velocity (kg/(m²·s))",
+            "\\rho_0": "Initial gas density (kg/m³)",
+            "D_p": "Particle diameter (m)",
+            "\\phi": "Porosity (dimensionless)",
+            "\\mu": "Gas viscosity (Pa·s)"
+        },
+        "description": "Defines the constant parameter in the Ergun equation for pressure drop in a packed bed under initial conditions.",
+        "example": {
+            "problem": "\\text{For } G = 1.5 \\, \\text{kg/(m}^2\\cdot\\text{s)}, \\rho_0 = 1.2 \\, \\text{kg/m}^3, D_p = 0.002 \\, \\text{m}, \\phi = 0.45, \\mu = 2 \\times 10^{-5} \\, \\text{Pa·s}, \\text{ find } \\beta_0.",
+            "solution": "\\begin{aligned}\n\\beta_0 &= \\frac{G}{\\rho_0 D_p} \\frac{1-\\phi}{\\phi^3} \\left[ \\frac{150 \\mu (1-\\phi)}{D_p} + 1.75 G \\right] \\\\\n&= \\frac{1.5}{1.2 \\cdot 0.002} \\cdot \\frac{1-0.45}{0.45^3} \\cdot \\left[ \\frac{150 \\cdot 2 \\times 10^{-5} \\cdot (1-0.45)}{0.002} + 1.75 \\cdot 1.5 \\right] \\\\\n&= 625 \\cdot \\frac{0.55}{0.091125} \\cdot [825 + 2.625] \\\\\n&= 625 \\cdot 6.035 \\cdot 827.625 \\\\\n&\\approx \\boxed{3123000 \\, \\text{Pa/m}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Pressure Drop Simplified",
+        "formula": "\\frac{dP}{dz} = \\beta_0 \\frac{\\dot{V}}{\\dot{V}_0}",
+        "variables": {
+            "\\frac{dP}{dz}": "Pressure drop per unit length (Pa/m)",
+            "\\beta_0": "Pressure drop parameter (Pa/m)",
+            "\\dot{V}": "Volumetric flow rate (m³/s)",
+            "\\dot{V}_0": "Initial volumetric flow rate (m³/s)"
+        },
+        "description": "Simplifies the pressure drop calculation in a packed bed by relating it to the volumetric flow rate ratio.",
+        "example": {
+            "problem": "\\text{For } \\beta_0 = 10000 \\, \\text{Pa/m}, \\dot{V} = 0.15 \\, \\text{m}^3/\\text{s}, \\dot{V}_0 = 0.1 \\, \\text{m}^3/\\text{s}, \\text{ find } \\frac{dP}{dz}.",
+            "solution": "\\begin{aligned}\n\\frac{dP}{dz} &= \\beta_0 \\frac{\\dot{V}}{\\dot{V}_0} \\\\\n&= 10000 \\cdot \\frac{0.15}{0.1} \\\\\n&= \\boxed{15000 \\, \\text{Pa/m}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Alpha Definition",
+        "formula": "\\alpha = \\frac{2 \\beta_0}{P_0 (1-\\phi) A \\rho_c}",
+        "variables": {
+            "\\alpha": "Pressure drop parameter (kg^{-1})",
+            "\\beta_0": "Pressure drop parameter (Pa/m)",
+            "P_0": "Initial pressure (Pa)",
+            "\\phi": "Porosity (dimensionless)",
+            "A": "Cross-sectional area of reactor (m²)",
+            "\\rho_c": "Catalyst density (kg/m³)"
+        },
+        "description": "Defines the pressure drop parameter alpha for packed bed reactors, relating pressure drop to catalyst weight.",
+        "example": {
+            "problem": "\\text{For } \\beta_0 = 5000 \\, \\text{Pa/m}, P_0 = 101325 \\, \\text{Pa}, \\phi = 0.4, A = 0.5 \\, \\text{m}^2, \\rho_c = 1500 \\, \\text{kg/m}^3, \\text{ find } \\alpha.",
+            "solution": "\\begin{aligned}\n\\alpha &= \\frac{2 \\beta_0}{P_0 (1-\\phi) A \\rho_c} \\\\\n&= \\frac{2 \\cdot 5000}{101325 \\cdot (1-0.4) \\cdot 0.5 \\cdot 1500} \\\\\n&= \\frac{10000}{101325 \\cdot 0.6 \\cdot 0.5 \\cdot 1500} \\\\\n&\\approx \\boxed{0.000219 \\, \\text{kg}^{-1}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Pressure in Terms of Alpha",
+        "formula": "P = P_0 \\sqrt{1 - \\alpha W}",
+        "variables": {
+            "P": "Pressure (Pa)",
+            "P_0": "Initial pressure (Pa)",
+            "\\alpha": "Pressure drop parameter (kg^{-1})",
+            "W": "Catalyst weight (kg)"
+        },
+        "description": "Calculates the pressure in a packed bed reactor as a function of catalyst weight, assuming isothermal conditions and no change in moles.",
+        "example": {
+            "problem": "\\text{For } P_0 = 101325 \\, \\text{Pa}, \\alpha = 0.0002 \\, \\text{kg}^{-1}, W = 1000 \\, \\text{kg}, \\text{ find } P.",
+            "solution": "\\begin{aligned}\nP &= P_0 \\sqrt{1 - \\alpha W} \\\\\n&= 101325 \\cdot \\sqrt{1 - 0.0002 \\cdot 1000} \\\\\n&= 101325 \\cdot \\sqrt{0.8} \\\\\n&\\approx 101325 \\cdot 0.8944 \\\\\n&= \\boxed{90584 \\, \\text{Pa}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Conversion with Pressure Drop First Order",
+        "formula": "X_A = 1 - e^{- \\frac{2k C_{A0}}{\\beta_0 \\dot{V}_0} \\left( P_0 - \\sqrt{P_0^2 - \\alpha W P_0} \\right)}",
+        "variables": {
+            "X_A": "Fractional conversion of species A (dimensionless)",
+            "k": "First-order rate constant (m³/(kg cat · s))",
+            "C_{A0}": "Initial concentration of species A (mol/m³)",
+            "\\beta_0": "Pressure drop parameter (Pa/m)",
+            "\\dot{V}_0": "Initial volumetric flow rate (m³/s)",
+            "P_0": "Initial pressure (Pa)",
+            "\\alpha": "Pressure drop parameter (kg^{-1})",
+            "W": "Catalyst weight (kg)"
+        },
+        "description": "Calculates the conversion of reactant A in a packed bed reactor for a first-order reaction, accounting for pressure drop using the Ergun equation and catalyst weight.",
+        "example": {
+            "problem": "\\text{For a first-order reaction with } k = 0.01 \\, \\text{m}^3/(\\text{kg cat · s)}, C_{A0} = 2 \\, \\text{mol/m}^3, \\beta_0 = 10000 \\, \\text{Pa/m}, \\dot{V}_0 = 0.1 \\, \\text{m}^3/\\text{s}, P_0 = 101325 \\, \\text{Pa}, \\alpha = 0.0002 \\, \\text{kg}^{-1}, W = 500 \\, \\text{kg}, \\text{ find } X_A.",
+            "solution": "\\begin{aligned}\nX_A &= 1 - e^{- \\frac{2k C_{A0}}{\\beta_0 \\dot{V}_0} \\left( P_0 - \\sqrt{P_0^2 - \\alpha W P_0} \\right)} \\\\\n&= 1 - e^{- \\frac{2 \\cdot 0.01 \\cdot 2}{10000 \\cdot 0.1} \\left( 101325 - \\sqrt{101325^2 - 0.0002 \\cdot 500 \\cdot 101325} \\right)} \\\\\n&= 1 - e^{- \\frac{0.04}{1000} \\left( 101325 - \\sqrt{101325^2 - 10132.5} \\right)} \\\\\n&= 1 - e^{- 0.00004 \\cdot \\left( 101325 - \\sqrt{1024662506.25} \\right)} \\\\\n&= 1 - e^{- 0.00004 \\cdot (101325 - 101162.5)} \\\\\n&= 1 - e^{- 0.00004 \\cdot 162.5} \\\\\n&= 1 - e^{-0.0065} \\\\\n&\\approx 1 - 0.9935 \\\\\n&= \\boxed{0.0065}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Moles Consumed Batch",
+        "formula": "N_{A0} - N_A = \\int_0^t -r_A V dt",
+        "variables": {
+            "N_{A0}": "Initial moles of species A (mol)",
+            "N_A": "Moles of species A at time t (mol)",
+            "r_A": "Rate of reaction of species A (mol/(m³·s))",
+            "V": "Reactor volume (m³)",
+            "t": "Time (s)"
+        },
+        "description": "Calculates the moles of reactant A consumed in a batch reactor over time, based on the reaction rate and reactor volume.",
+        "example": {
+            "problem": "\\text{For a first-order reaction } r_A = k C_A \\text{ with } k = 0.05 \\, \\text{s}^{-1}, C_{A0} = 1 \\, \\text{mol/m}^3, V = 0.2 \\, \\text{m}^3, \\text{ find moles consumed after } t = 10 \\, \\text{s}.",
+            "solution": "\\begin{aligned}\nN_{A0} &= C_{A0} V = 1 \\cdot 0.2 = 0.2 \\, \\text{mol} \\\\\nC_A &= C_{A0} e^{-kt} = 1 \\cdot e^{-0.05 \\cdot 10} = e^{-0.5} \\approx 0.6065 \\, \\text{mol/m}^3 \\\\\nN_A &= C_A V = 0.6065 \\cdot 0.2 = 0.1213 \\, \\text{mol} \\\\\nN_{A0} - N_A &= 0.2 - 0.1213 \\\\\n&= \\boxed{0.0787 \\, \\text{mol}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Theta Definition",
+        "formula": "\\theta_i = \\frac{C_{i0}}{C_{A0}}",
+        "variables": {
+            "\\theta_i": "Initial molar ratio of species i to A (dimensionless)",
+            "C_{i0}": "Initial concentration of species i (mol/m³)",
+            "C_{A0}": "Initial concentration of species A (mol/m³)"
+        },
+        "description": "Defines the initial molar ratio of species i to the limiting reactant A, used to express concentrations in reaction systems relative to A.",
+        "example": {
+            "problem": "\\text{For a reaction system with } C_{B0} = 3 \\, \\text{mol/m}^3, C_{A0} = 2 \\, \\text{mol/m}^3, \\text{ find } \\theta_B.",
+            "solution": "\\begin{aligned}\n\\theta_B &= \\frac{C_{B0}}{C_{A0}} \\\\\n&= \\frac{3}{2} \\\\\n&= \\boxed{1.5}\n\\end{aligned}"
+        }
+    }
+]

@@ -1,0 +1,99 @@
+[
+    {
+        "name": "Subject Pronouns",
+        "formula": "je, tu, il/elle/on, nous, vous, ils/elles",
+        "variables": {
+            "je": "I",
+            "tu": "You (informal)",
+            "il/elle/on": "He/She/One",
+            "nous": "We",
+            "vous": "You (formal/plural)",
+            "ils/elles": "They (masculine/feminine)"
+        },
+        "description": "French subject pronouns used to conjugate verbs."
+    },
+    {
+        "name": "Regular -ER Verb Conjugation (Present Tense)",
+        "formula": "Parler → je parl**e**, tu parl**es**, il/elle parl**e**, nous parl**ons**, vous parl**ez**, ils/elles parl**ent**",
+        "variables": {
+            "parler": "to speak",
+            "stem": "verb root after removing -er ending"
+        },
+        "description": "Pattern for conjugating regular -ER verbs in the present tense."
+    },
+    {
+        "name": "Regular -IR Verb Conjugation (Present Tense)",
+        "formula": "Finir → je fin**is**, tu fin**is**, il/elle fin**it**, nous fin**issons**, vous fin**issez**, ils/elles fin**issent**",
+        "variables": {
+            "finir": "to finish",
+            "stem": "verb root after removing -ir ending"
+        },
+        "description": "Pattern for conjugating regular -IR verbs in the present tense."
+    },
+    {
+        "name": "Regular -RE Verb Conjugation (Present Tense)",
+        "formula": "Vendre \\Rightarrow je \\ vend**s**, tu\\ vend**s**, il/elle \\ vend, nous\\ vend**ons**, vous\\ vend**ez**, ils/elles\\ vend**ent**",
+        "variables": {
+            "vendre": "to sell",
+            "stem": "verb root after removing -re ending"
+        },
+        "description": "Pattern for conjugating regular -RE verbs in the present tense."
+    },
+    {
+        "name": "Negation Formula",
+        "formula": "ne + [verb] + pas",
+        "variables": {
+            "ne...pas": "not",
+            "verb": "any conjugated verb"
+        },
+        "description": "Basic negation structure in French. Example: 'Je ne parle pas' = I do not speak."
+    },
+    {
+        "name": "Question Formation (Inversion)",
+        "formula": "Verb + Subject \\ Pronoun \\ + \\ ?",
+        "variables": {
+            "verb": "Conjugated verb",
+            "subject pronoun": "je/tu/il/nous/vous/ils"
+        },
+        "description": "Used for forming formal questions. Example: 'Parlez-vous français ?' = Do you speak French?"
+    },
+    {
+        "name": "Question Formation (Est-ce que)",
+        "formula": "Est-ce que + [statement] + ?",
+        "variables": {
+            "est-ce que": "Is it that (question marker)",
+            "statement": "affirmative sentence"
+        },
+        "description": "Common way to form yes/no questions. Example: 'Est-ce que tu aimes le café ?'"
+    },
+    {
+        "name": "Adjective Agreement Rule",
+        "formula": "Adjective + (e\\ for\\ feminine) + (s\\ for\\ plural)",
+        "variables": {
+            "masculine singular": "default form",
+            "feminine singular": "+e",
+            "masculine plural": "+s",
+            "feminine plural": "+es"
+        },
+        "description": "Adjectives must agree with the gender and number of the noun. Example: 'un homme intelligent' vs. 'une femme intelligente'."
+    },
+    {
+        "name": "Near Future Formula",
+        "formula": "Aller (present) + infinitive",
+        "variables": {
+            "aller": "to go (conjugated in present tense)",
+            "infinitive": "any unconjugated verb"
+        },
+        "description": "Expresses an action that will happen soon. Example: 'Je vais manger' = I am going to eat."
+    },
+    {
+        "name": "Recent Past Formula",
+        "formula": "Venir (present) + de + infinitive",
+        "variables": {
+            "venir": "to come (conjugated in present tense)",
+            "de": "of/from",
+            "infinitive": "any unconjugated verb"
+        },
+        "description": "Expresses something that just happened. Example: 'Je viens de finir' = I just finished."
+    }
+]

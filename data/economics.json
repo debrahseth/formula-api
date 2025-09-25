@@ -1,0 +1,440 @@
+[
+    {
+        "name": "Price Elasticity of Demand",
+        "formula": "E_d = \\frac{\\% \\Delta Q_d}{\\% \\Delta P} = \\frac{\\Delta Q_d / Q_d}{\\Delta P / P}",
+        "variables": {
+            "E_d": "Price elasticity of demand",
+            "\\Delta Q_d": "Change in quantity demanded",
+            "Q_d": "Initial quantity demanded",
+            "\\Delta P": "Change in price",
+            "P": "Initial price"
+        },
+        "description": "Measures responsiveness of quantity demanded to changes in price."
+    },
+    {
+        "name": "Income Elasticity of Demand",
+        "formula": "E_y = \\frac{\\% \\Delta Q_d}{\\% \\Delta Y} = \\frac{\\Delta Q_d / Q_d}{\\Delta Y / Y}",
+        "variables": {
+            "E_y": "Income elasticity of demand",
+            "\\Delta Q_d": "Change in quantity demanded",
+            "Q_d": "Initial quantity demanded",
+            "\\Delta Y": "Change in income",
+            "Y": "Initial income"
+        },
+        "description": "Measures responsiveness of quantity demanded to changes in income."
+    },
+    {
+        "name": "Cross-Price Elasticity of Demand",
+        "formula": "E_{xy} = \\frac{\\% \\Delta Q_x}{\\% \\Delta P_y} = \\frac{\\Delta Q_x / Q_x}{\\Delta P_y / P_y}",
+        "variables": {
+            "E_{xy}": "Cross-price elasticity of demand",
+            "\\Delta Q_x": "Change in quantity demanded of good X",
+            "Q_x": "Initial quantity demanded of good X",
+            "\\Delta P_y": "Change in price of good Y",
+            "P_y": "Initial price of good Y"
+        },
+        "description": "Measures how demand for one good responds to price changes of another good."
+    },
+    {
+        "name": "Price Elasticity of Supply",
+        "formula": "E_s = \\frac{\\% \\Delta Q_s}{\\% \\Delta P} = \\frac{\\Delta Q_s / Q_s}{\\Delta P / P}",
+        "variables": {
+            "E_s": "Price elasticity of supply",
+            "\\Delta Q_s": "Change in quantity supplied",
+            "Q_s": "Initial quantity supplied",
+            "\\Delta P": "Change in price",
+            "P": "Initial price"
+        },
+        "description": "Measures responsiveness of quantity supplied to changes in price."
+    },
+    {
+        "name": "Total Revenue",
+        "formula": "TR = P \\times Q",
+        "variables": {
+            "TR": "Total revenue",
+            "P": "Price per unit",
+            "Q": "Quantity sold"
+        },
+        "description": "Total revenue earned by selling a given quantity at a given price."
+    },
+    {
+        "name": "Marginal Revenue",
+        "formula": "MR = \\frac{\\Delta TR}{\\Delta Q}",
+        "variables": {
+            "MR": "Marginal revenue",
+            "\\Delta TR": "Change in total revenue",
+            "\\Delta Q": "Change in quantity sold"
+        },
+        "description": "Additional revenue from selling one more unit of a good."
+    },
+    {
+        "name": "Average Revenue",
+        "formula": "AR = \\frac{TR}{Q} = P",
+        "variables": {
+            "AR": "Average revenue per unit",
+            "TR": "Total revenue",
+            "Q": "Quantity sold",
+            "P": "Price per unit"
+        },
+        "description": "Revenue per unit of output sold."
+    },
+    {
+        "name": "Gross Domestic Product (GDP)",
+        "formula": "GDP = C + I + G + (X - M)",
+        "variables": {
+            "C": "Consumption",
+            "I": "Investment",
+            "G": "Government spending",
+            "X": "Exports",
+            "M": "Imports"
+        },
+        "description": "Total value of goods and services produced in an economy."
+    },
+    {
+        "name": "Real GDP",
+        "formula": "Real GDP = \\frac{Nominal GDP}{Price Index} \\times 100",
+        "variables": {
+            "Real GDP": "GDP adjusted for inflation",
+            "Nominal GDP": "GDP at current prices",
+            "Price Index": "Price level index"
+        },
+        "description": "Measures GDP in constant prices to account for inflation."
+    },
+    {
+        "name": "GDP Deflator",
+        "formula": "GDP\\ Deflator = \\frac{Nominal GDP}{Real GDP} \\times 100",
+        "variables": {
+            "Nominal GDP": "GDP at current prices",
+            "Real GDP": "GDP at constant prices"
+        },
+        "description": "Measures overall price level for all goods in the economy."
+    },
+    {
+        "name": "Inflation Rate",
+        "formula": "Inflation\\% = \\frac{CPI_{t} - CPI_{t-1}}{CPI_{t-1}} \\times 100",
+        "variables": {
+            "CPI_t": "Consumer Price Index at time t",
+            "CPI_{t-1}": "Consumer Price Index at previous period"
+        },
+        "description": "Percentage change in price level over time."
+    },
+    {
+        "name": "Unemployment Rate",
+        "formula": "UR = \\frac{Number\\ of\\ unemployed}{Labor\\ force} \\times 100",
+        "variables": {
+            "Number of unemployed": "Individuals actively seeking work",
+            "Labor force": "Employed + unemployed individuals"
+        },
+        "description": "Percentage of labor force that is unemployed."
+    },
+    {
+        "name": "Money Velocity (Quantity Theory)",
+        "formula": "MV = PQ",
+        "variables": {
+            "M": "Money supply",
+            "V": "Velocity of money",
+            "P": "Price level",
+            "Q": "Real output"
+        },
+        "description": "Connects money supply, velocity, price level, and output."
+    },
+    {
+        "name": "Simple Interest",
+        "formula": "I = P r t",
+        "variables": {
+            "I": "Interest earned",
+            "P": "Principal",
+            "r": "Annual interest rate",
+            "t": "Time in years"
+        },
+        "description": "Interest earned on principal over time at a fixed rate."
+    },
+    {
+        "name": "Compound Interest",
+        "formula": "A = P (1 + r/n)^{n t}",
+        "variables": {
+            "A": "Amount after interest",
+            "P": "Principal",
+            "r": "Annual interest rate",
+            "n": "Number of compounding periods per year",
+            "t": "Time in years"
+        },
+        "description": "Calculates amount with interest compounded periodically."
+    },
+    {
+        "name": "Marginal Cost",
+        "formula": "MC = \\frac{\\Delta TC}{\\Delta Q}",
+        "variables": {
+            "MC": "Marginal cost",
+            "\\Delta TC": "Change in total cost",
+            "\\Delta Q": "Change in quantity produced"
+        },
+        "description": "Additional cost of producing one more unit of output."
+    },
+    {
+        "name": "Average Total Cost",
+        "formula": "ATC = \\frac{TC}{Q}",
+        "variables": {
+            "ATC": "Average total cost",
+            "TC": "Total cost",
+            "Q": "Quantity produced"
+        },
+        "description": "Cost per unit of output."
+    },
+    {
+        "name": "Average Variable Cost",
+        "formula": "AVC = \\frac{VC}{Q}",
+        "variables": {
+            "AVC": "Average variable cost",
+            "VC": "Variable cost",
+            "Q": "Quantity produced"
+        },
+        "description": "Variable cost per unit of output."
+    },
+    {
+        "name": "Average Fixed Cost",
+        "formula": "AFC = \\frac{FC}{Q}",
+        "variables": {
+            "AFC": "Average fixed cost",
+            "FC": "Fixed cost",
+            "Q": "Quantity produced"
+        },
+        "description": "Fixed cost per unit of output."
+    },
+    {
+        "name": "Total Cost",
+        "formula": "TC = FC + VC",
+        "variables": {
+            "TC": "Total cost",
+            "FC": "Fixed cost",
+            "VC": "Variable cost"
+        },
+        "description": "Sum of fixed and variable costs."
+    },
+    {
+        "name": "Profit",
+        "formula": "\\Pi = TR - TC",
+        "variables": {
+            "\\Pi": "Profit",
+            "TR": "Total revenue",
+            "TC": "Total cost"
+        },
+        "description": "Difference between total revenue and total cost."
+    },
+    {
+        "name": "Average Revenue",
+        "formula": "AR = \\frac{TR}{Q}",
+        "variables": {
+            "AR": "Average revenue",
+            "TR": "Total revenue",
+            "Q": "Quantity sold"
+        },
+        "description": "Revenue per unit of output."
+    },
+    {
+        "name": "Marginal Revenue",
+        "formula": "MR = \\frac{\\Delta TR}{\\Delta Q}",
+        "variables": {
+            "MR": "Marginal revenue",
+            "\\Delta TR": "Change in total revenue",
+            "\\Delta Q": "Change in quantity sold"
+        },
+        "description": "Revenue from selling one additional unit."
+    },
+    {
+        "name": "Break-Even Point (Units)",
+        "formula": "Q_{BE} = \\frac{FC}{P - AVC}",
+        "variables": {
+            "Q_{BE}": "Break-even quantity",
+            "FC": "Fixed cost",
+            "P": "Price per unit",
+            "AVC": "Average variable cost"
+        },
+        "description": "Number of units to cover all costs."
+    },
+    {
+        "name": "Government Budget Deficit",
+        "formula": "Deficit = G - T",
+        "variables": {
+            "G": "Government spending",
+            "T": "Tax revenue"
+        },
+        "description": "Difference between government spending and tax revenue."
+    },
+    {
+        "name": "National Savings",
+        "formula": "S = Y - C - G",
+        "variables": {
+            "S": "National savings",
+            "Y": "National income",
+            "C": "Consumption",
+            "G": "Government spending"
+        },
+        "description": "Portion of income saved in an economy."
+    },
+    {
+        "name": "Investment Multiplier",
+        "formula": "k = \\frac{1}{1 - MPC}",
+        "variables": {
+            "k": "Multiplier",
+            "MPC": "Marginal propensity to consume"
+        },
+        "description": "Change in income resulting from change in investment."
+    },
+    {
+        "name": "Money Multiplier",
+        "formula": "m = \\frac{1}{RRR}",
+        "variables": {
+            "m": "Money multiplier",
+            "RRR": "Required reserve ratio"
+        },
+        "description": "Potential increase in money supply from deposits."
+    },
+    {
+        "name": "Interest Rate Effect on Investment",
+        "formula": "I = I_0 - b r",
+        "variables": {
+            "I": "Investment",
+            "I_0": "Autonomous investment",
+            "b": "Sensitivity to interest rate",
+            "r": "Interest rate"
+        },
+        "description": "Investment decreases as interest rate rises."
+    },
+    {
+        "name": "Net Exports",
+        "formula": "NX = X - M",
+        "variables": {
+            "NX": "Net exports",
+            "X": "Exports",
+            "M": "Imports"
+        },
+        "description": "Exports minus imports."
+    },
+    {
+        "name": "Trade Balance",
+        "formula": "TB = NX",
+        "variables": {
+            "TB": "Trade balance",
+            "NX": "Net exports"
+        },
+        "description": "Trade surplus or deficit of a country."
+    },
+    {
+        "name": "Aggregate Demand",
+        "formula": "AD = C + I + G + NX",
+        "variables": {
+            "AD": "Aggregate demand",
+            "C": "Consumption",
+            "I": "Investment",
+            "G": "Government spending",
+            "NX": "Net exports"
+        },
+        "description": "Total demand for goods and services in the economy."
+    },
+    {
+        "name": "Aggregate Supply",
+        "formula": "AS = f(P, W, Technology)",
+        "variables": {
+            "AS": "Aggregate supply",
+            "P": "Price level",
+            "W": "Wages",
+            "Technology": "Level of technology"
+        },
+        "description": "Total supply of goods and services at different price levels."
+    },
+    {
+        "name": "Phillips Curve (Short-Run)",
+        "formula": "π = π_e - β (u - u_n)",
+        "variables": {
+            "π": "Inflation rate",
+            "π_e": "Expected inflation",
+            "β": "Slope parameter",
+            "u": "Actual unemployment rate",
+            "u_n": "Natural unemployment rate"
+        },
+        "description": "Inverse relationship between unemployment and inflation in short run."
+    },
+    {
+        "name": "Okun’s Law",
+        "formula": "\\frac{\\Delta Y}{Y} = k (u_n - u)",
+        "variables": {
+            "\\Delta Y/Y": "Percentage change in output",
+            "k": "Okun coefficient",
+            "u_n": "Natural unemployment rate",
+            "u": "Actual unemployment rate"
+        },
+        "description": "Relates unemployment changes to output changes."
+    },
+    {
+        "name": "Real Interest Rate",
+        "formula": "r = i - π_e",
+        "variables": {
+            "r": "Real interest rate",
+            "i": "Nominal interest rate",
+            "π_e": "Expected inflation"
+        },
+        "description": "Interest rate adjusted for inflation."
+    },
+    {
+        "name": "Loanable Funds Market",
+        "formula": "S = I",
+        "variables": {
+            "S": "Savings",
+            "I": "Investment"
+        },
+        "description": "Equilibrium condition: savings equals investment in the economy."
+    },
+    {
+        "name": "Quantity Equation of Money",
+        "formula": "M V = P Y",
+        "variables": {
+            "M": "Money supply",
+            "V": "Velocity of money",
+            "P": "Price level",
+            "Y": "Real output"
+        },
+        "description": "Relates money supply to nominal GDP."
+    },
+    {
+        "name": "Okun Gap",
+        "formula": "Output Gap = Y - Y_p",
+        "variables": {
+            "Y": "Actual output",
+            "Y_p": "Potential output"
+        },
+        "description": "Difference between actual and potential output."
+    },
+    {
+        "name": "Consumer Surplus",
+        "formula": "CS = \\frac{1}{2} Q (P_{max} - P_e)",
+        "variables": {
+            "CS": "Consumer surplus",
+            "Q": "Quantity demanded",
+            "P_{max}": "Maximum willingness to pay",
+            "P_e": "Equilibrium price"
+        },
+        "description": "Area between demand curve and price line."
+    },
+    {
+        "name": "Producer Surplus",
+        "formula": "PS = \\frac{1}{2} Q (P_e - P_{min})",
+        "variables": {
+            "PS": "Producer surplus",
+            "Q": "Quantity sold",
+            "P_e": "Equilibrium price",
+            "P_{min}": "Minimum acceptable price"
+        },
+        "description": "Area between supply curve and price line."
+    },
+    {
+        "name": "Laffer Curve Concept",
+        "formula": "T = t Y(t)",
+        "variables": {
+            "T": "Tax revenue",
+            "t": "Tax rate",
+            "Y(t)": "Output as a function of tax rate"
+        },
+        "description": "Relationship between tax rate and revenue, showing optimal tax."
+    }
+]

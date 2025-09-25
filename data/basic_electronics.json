@@ -1,0 +1,727 @@
+[
+    {
+        "name": "Ohm's Law",
+        "formula": "V = I \\times R",
+        "variables": {
+            "V": "Voltage across the resistor (volts)",
+            "I": "Current through the resistor (amperes)",
+            "R": "Electrical resistance (ohms)"
+        },
+        "description": "Ohm's Law defines the linear relationship between voltage, current, and resistance in an electrical circuit."
+    },
+    {
+        "name": "Power",
+        "formula": "P = V \\times I = \\frac{V^2}{R} = I^2 \\times R",
+        "variables": {
+            "P": "Power (watts)",
+            "V": "Voltage (volts)",
+            "I": "Current (amperes)",
+            "R": "Resistance (ohms)"
+        },
+        "description": "Electrical power represents the rate at which energy is consumed or supplied in a circuit. It can be expressed in different forms using Ohm's Law."
+    },
+    {
+        "name": "Energy",
+        "formula": "E = P \\times t",
+        "variables": {
+            "E": "Energy (joules)",
+            "P": "Power (watts)",
+            "t": "Time (seconds)"
+        },
+        "description": "Energy consumed or supplied in a circuit is the product of power and the time for which it flows."
+    },
+    {
+        "name": "AC Power (Apparent Power)",
+        "formula": "S = V \\times I",
+        "variables": {
+            "S": "Apparent power (volt-amperes, VA)",
+            "V": "RMS voltage (volts)",
+            "I": "RMS current (amperes)"
+        },
+        "description": "Apparent power in AC circuits is the product of RMS voltage and RMS current, representing the total power flowing in the circuit."
+    },
+    {
+        "name": "AC Power (Active Power)",
+        "formula": "P = V \\times I \\times \\cos{\\phi}",
+        "variables": {
+            "P": "Active (real) power (watts)",
+            "V": "RMS voltage (volts)",
+            "I": "RMS current (amperes)",
+            "φ": "Phase angle between voltage and current (radians or degrees)"
+        },
+        "description": "Active power is the real power consumed in an AC circuit. It is the component of apparent power that performs useful work."
+    },
+    {
+        "name": "Power Factor",
+        "formula": "pf = \\cos{\\phi}",
+        "variables": {
+            "pf": "Power factor (dimensionless)",
+            "φ": "Phase angle between voltage and current"
+        },
+        "description": "Power factor is the cosine of the phase angle between voltage and current. It indicates the efficiency of power usage in AC circuits."
+    },
+    {
+        "name": "Heating Effect of Current (Joule’s Law)",
+        "formula": "H = I^2 \\times R \\times t",
+        "variables": {
+            "H": "Heat energy produced (joules)",
+            "I": "Current (amperes)",
+            "R": "Resistance (ohms)",
+            "t": "Time (seconds)"
+        },
+        "description": "Joule’s Law states that the heat produced in a conductor due to current flow is proportional to the square of the current, the resistance, and the time of flow."
+    },
+    {
+        "name": "Law of Mass Action",
+        "formula": "n \\cdot p = n_i^2",
+        "variables": {
+            "n": "Concentration of electrons in the conduction band (cm^-3)",
+            "p": "Concentration of holes in the valence band (cm^-3)",
+            "n_i": "Intrinsic carrier concentration (cm^-3)"
+        },
+        "description": "The Law of Mass Action states that the product of electron and hole concentrations in a semiconductor is constant at a given temperature, equal to the square of the intrinsic carrier concentration. For intrinsic semiconductors, n = p = n_i."
+    },
+    {
+        "name": "Carrier Concentration in Intrinsic Semiconductor",
+        "formula": "n_i = 5.2 \\times 10^{15} \\times T^{3/2} \\times \\exp\\left(-\\frac{E_g}{2 k T}\\right) \\; \\text{cm}^{-3}",
+        "variables": {
+            "n_i": "Intrinsic carrier concentration (cm^-3)",
+            "T": "Absolute temperature (K)",
+            "E_g": "Energy bandgap of the semiconductor (eV)",
+            "k": "Boltzmann constant (8.617 × 10^-5 eV/K)"
+        },
+        "description": "The intrinsic carrier concentration (n_i) in a semiconductor depends on temperature and the bandgap energy. It increases with temperature due to thermal excitation of electrons across the bandgap, and decreases with larger bandgap energy."
+    },
+    {
+        "name": "Law of Mass Action (N-type Semiconductor)",
+        "formula": "n \\approx N_D, \\quad p \\approx \\frac{n_i^2}{N_D}",
+        "variables": {
+            "n": "Electron concentration (cm^-3, majority carrier)",
+            "p": "Hole concentration (cm^-3, minority carrier)",
+            "n_i": "Intrinsic carrier concentration (cm^-3)",
+            "N_D": "Donor concentration (cm^-3)"
+        },
+        "description": "In an N-type semiconductor, electrons are the majority carriers with concentration approximately equal to the donor concentration. The minority carrier (hole) concentration is given by the mass action law as p ≈ n_i² / N_D."
+    },
+    {
+        "name": "Law of Mass Action (P-type Semiconductor)",
+        "formula": "p \\approx N_A, \\quad n \\approx \\frac{n_i^2}{N_A}",
+        "variables": {
+            "p": "Hole concentration (cm^-3, majority carrier)",
+            "n": "Electron concentration (cm^-3, minority carrier)",
+            "n_i": "Intrinsic carrier concentration (cm^-3)",
+            "N_A": "Acceptor concentration (cm^-3)"
+        },
+        "description": "In a P-type semiconductor, holes are the majority carriers with concentration approximately equal to the acceptor concentration. The minority carrier (electron) concentration is given by the mass action law as n ≈ n_i² / N_A."
+    },
+    {
+        "name": "Carrier Mobility",
+        "formula": "\\mu = \\frac{v_d}{E}",
+        "variables": {
+            "\\mu": "Carrier mobility (cm^2/V·s)",
+            "v_d": "Drift velocity of carriers (cm/s)",
+            "E": "Applied electric field (V/cm)"
+        },
+        "description": "Carrier mobility is a measure of how quickly charge carriers (electrons or holes) move through a semiconductor when subjected to an electric field."
+    },
+    {
+        "name": "Drift Velocity",
+        "formula": "v_d = \\mu \\times E",
+        "variables": {
+            "v_d": "Drift velocity (cm/s)",
+            "\\mu": "Carrier mobility (cm^2/V·s)",
+            "E": "Applied electric field (V/cm)"
+        },
+        "description": "Drift velocity is the average velocity of charge carriers in a semiconductor due to an external electric field. It is directly proportional to carrier mobility and the applied field."
+    },
+    {
+        "name": "Current Density",
+        "formula": "J = \\frac{I}{A}",
+        "variables": {
+            "J": "Current density (A/cm^2)",
+            "I": "Electric current (A)",
+            "A": "Cross-sectional area (cm^2)"
+        },
+        "description": "Current density is the amount of electric current flowing per unit cross-sectional area of a conductor or semiconductor."
+    },
+    {
+        "name": "Electrical Conductivity",
+        "formula": "\\sigma = (n \\mu_n + p \\mu_p) q",
+        "variables": {
+            "\\sigma": "Electrical conductivity (S/cm)",
+            "n": "Electron concentration (cm^-3)",
+            "p": "Hole concentration (cm^-3)",
+            "\\mu_n": "Electron mobility (cm^2/V·s)",
+            "\\mu_p": "Hole mobility (cm^2/V·s)",
+            "q": "Electronic charge (1.6 × 10^-19 C)"
+        },
+        "description": "The electrical conductivity of a semiconductor depends on both electron and hole contributions. It increases with carrier concentration and carrier mobility."
+    },
+    {
+        "name": "Drift Current Density",
+        "formula": "J_{drift} = \\rho_e v_e + \\rho_h v_h = (n \\mu_n + p \\mu_p) q E = \\sigma E",
+        "variables": {
+            "J_{drift}": "Drift current density (A/cm^2)",
+            "\\rho_e": "Charge density of electrons (C/cm^3)",
+            "\\rho_h": "Charge density of holes (C/cm^3)",
+            "v_e": "Drift velocity of electrons (cm/s)",
+            "v_h": "Drift velocity of holes (cm/s)",
+            "n": "Electron concentration (cm^-3)",
+            "p": "Hole concentration (cm^-3)",
+            "\\mu_n": "Electron mobility (cm^2/V·s)",
+            "\\mu_p": "Hole mobility (cm^2/V·s)",
+            "q": "Electronic charge (1.6 × 10^-19 C)",
+            "E": "Applied electric field (V/cm)",
+            "\\sigma": "Electrical conductivity (S/cm)"
+        },
+        "description": "Drift current density in a semiconductor arises from the motion of both electrons and holes under an applied electric field. It can be expressed in terms of charge densities and drift velocities, carrier mobilities and concentrations, or simply as conductivity multiplied by the electric field."
+    },
+    {
+        "name": "Drift Current",
+        "formula": "I_{drift} = I_{n(drift)} + I_{p(drift)} = q \\cdot A \\cdot (n \\mu_n + p \\mu_p) \\cdot E",
+        "variables": {
+            "I_{drift}": "Total drift current (A)",
+            "I_{n(drift)}": "Drift current due to electrons (A)",
+            "I_{p(drift)}": "Drift current due to holes (A)",
+            "q": "Electronic charge (1.6 × 10^-19 C)",
+            "A": "Cross-sectional area of the semiconductor (cm^2)",
+            "n": "Electron concentration (cm^-3)",
+            "p": "Hole concentration (cm^-3)",
+            "\\mu_n": "Electron mobility (cm^2/V·s)",
+            "\\mu_p": "Hole mobility (cm^2/V·s)",
+            "E": "Applied electric field (V/cm)"
+        },
+        "description": "The total drift current in a semiconductor is the sum of the electron and hole drift currents. It depends on the carrier concentrations, mobilities, applied electric field, and the cross-sectional area of the material."
+    },
+    {
+        "name": "Drift Current Density",
+        "formula": "J = q \\times n \\times \\mu \\times E",
+        "variables": {
+            "J": "Drift current density (A/cm^2)",
+            "q": "Electronic charge (1.6 × 10^-19 C)",
+            "n": "Carrier concentration (cm^-3)",
+            "\\mu": "Carrier mobility (cm^2/V·s)",
+            "E": "Applied electric field (V/cm)"
+        },
+        "description": "Drift current density is the electric current per unit area in a semiconductor due to the motion of charge carriers under an applied electric field."
+    },
+    {
+        "name": "Total Current Density in a Semiconductor",
+        "formula": "J_{total} = \\sigma E + q (D_n \\nabla n - D_p \\nabla p)",
+        "variables": {
+            "J_{total}": "Total current density (A/cm^2)",
+            "\\sigma": "Electrical conductivity (S/cm)",
+            "E": "Applied electric field (V/cm)",
+            "q": "Electronic charge (1.6 × 10^-19 C)",
+            "D_n": "Electron diffusion coefficient (cm^2/s)",
+            "D_p": "Hole diffusion coefficient (cm^2/s)",
+            "\\nabla n": "Gradient of electron concentration (cm^-4)",
+            "\\nabla p": "Gradient of hole concentration (cm^-4)"
+        },
+        "description": "The total current density in a semiconductor has two components: the drift current due to the applied electric field (σE) and the diffusion current due to carrier concentration gradients. The electron diffusion term contributes qD_n∇n, while the hole diffusion term contributes −qD_p∇p."
+    },
+    {
+        "name": "Junction Capacitance (Depletion Capacitance)",
+        "formula": "C_{dep} = \\frac{\\varepsilon_0 \\varepsilon_r A}{W_{dep}}",
+        "variables": {
+            "C_{dep}": "Junction (depletion) capacitance (F)",
+            "\\varepsilon_0": "Permittivity of free space (8.85 × 10^-14 F/cm)",
+            "\\varepsilon_r": "Relative permittivity (dielectric constant) of the semiconductor (dimensionless)",
+            "A": "Cross-sectional area of the junction (cm^2)",
+            "W_{dep}": "Depletion region width (cm)"
+        },
+        "description": "The junction capacitance in a semiconductor PN junction behaves like a parallel plate capacitor, where the depletion region acts as the dielectric layer. It is inversely proportional to the depletion width and directly proportional to the junction area and the semiconductor permittivity."
+    },
+    {
+        "name": "Built-in Potential of a PN Junction",
+        "formula": "V_B = V_T \\ln \\left( \\frac{N_A N_D}{n_i^2} \\right)",
+        "variables": {
+            "V_B": "Built-in potential (V)",
+            "V_T": "Thermal voltage (V), defined as kT/q",
+            "N_A": "Acceptor concentration (cm^-3)",
+            "N_D": "Donor concentration (cm^-3)",
+            "n_i": "Intrinsic carrier concentration (cm^-3)"
+        },
+        "description": "The built-in potential, also called the contact potential or potential barrier, is the equilibrium voltage that develops across the depletion region of a PN junction due to diffusion of carriers. It prevents further diffusion and balances the drift current caused by the electric field in the depletion region."
+    },
+    {
+        "name": "Forward Bias Voltage of a PN Junction",
+        "formula": "V_F = V_B + I_p (r_f + R_L)",
+        "variables": {
+            "V_F": "Forward applied voltage (V)",
+            "V_B": "Built-in potential (V)",
+            "I_p": "Diode (forward) current (A)",
+            "r_f": "Diode's internal (junction) resistance (Ω)",
+            "R_L": "External load resistance (Ω)"
+        },
+        "description": "The forward bias voltage applied to a PN junction must overcome the built-in potential barrier. The total voltage across the junction also includes the voltage drops due to the diode's internal resistance and the external load resistance.",
+        "example": {
+            "problem": "\\text{An AC voltage of peak value 20V is connected in series with a silicon diode and load resistance of 500Ω. If the forward resistance of the diode is 10Ω, find the peak current and peak output voltage through the diode}.",
+            "solution": "\\begin{aligned}\n\\textbf{(i) Practical Case:} \\\\\nV_F &= V_B + I_p (r_f + R_L) \\\\\n20 &= 0.7 + I_p (10 + 500) \\\\\n20 - 0.7 &= I_p (510) \\\\\n19.3 &= 510 I_p \\\\\nI_p &= \\tfrac{19.3}{510} \\\\\nI_p &\\approx \\boxed{37.8 \\, \\text{mA}} \\\\\n\\\\\nV_{P_{out}} &= I_p \\times R_L \\\\\n&= 37.8 \\, \\text{mA} \\times 500 \\, \\Omega \\\\\n&= \\boxed{18.9 \\, \\text{V}} \\\\\n\\\\\n\\textbf{(ii) Ideal Case:} \\\\\n\\text{For an ideal diode, set } V_B = 0, \\, r_f = 0 \\\\\nV_F &= I_p R_L \\\\\nI_p &= \\tfrac{V_F}{R_L} = \\tfrac{20}{500} \\\\\nI_p &= \\boxed{40 \\, \\text{mA}} \\\\\n\\\\\nV_{P_{out}} &= I_p \\times R_L \\\\\n&= 40 \\, \\text{mA} \\times 500 \\, \\Omega \\\\\n&= \\boxed{20 \\, \\text{V}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Output Voltage Across Load Resistance",
+        "formula": "V_{P_{out}} = I_p \\times R_L",
+        "variables": {
+            "V_{P_{out}}": "Output voltage across the load (V)",
+            "I_p": "Diode (or device) current (A)",
+            "R_L": "Load resistance (Ω)"
+        },
+        "description": "The output voltage across a load resistance is obtained from Ohm's law as the product of the current flowing through the load and the load resistance.",
+        "example": {
+            "problem": "\\text{A diode circuit has a forward current of 25 mA flowing through a load resistance of 400 Ω. Calculate the output voltage across the load}.",
+            "solution": "\\begin{aligned}\nV_{P_{out}} &= I_p \\times R_L \\\\\n&= 25 \\, \\text{mA} \\times 400 \\, \\Omega \\\\\n&= 0.025 \\, \\text{A} \\times 400 \\, \\Omega \\\\\n&= \\boxed{10 \\, \\text{V}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Average Load Voltage (Half-Wave Rectifier)",
+        "formula": "V_{ave} = \\frac{V_m}{\\pi}",
+        "variables": {
+            "V_{ave}": "Average DC output voltage (V)",
+            "V_m": "Peak input voltage (V)"
+        },
+        "description": "Gives the average output voltage of a half-wave rectifier.",
+        "example": {
+            "problem": "\\text{A half-wave rectifier is connected to an AC source with a peak voltage of 30 V. Calculate the average DC output voltage}.",
+            "solution": "\\begin{aligned}\nV_{ave} &= \\frac{V_m}{\\pi} \\\\\n&= \\frac{30}{\\pi} \\\\\n&\\approx \\frac{30}{3.1416} \\\\\n&\\approx \\boxed{9.55 \\, \\text{V}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Average Load Current (Half-Wave Rectifier)",
+        "formula": "I_{ave} = \\frac{I_m}{\\pi}",
+        "variables": {
+            "I_{ave}": "Average DC output current (A)",
+            "I_m": "Peak current (A)"
+        },
+        "description": "Average current through the load in half-wave rectification.",
+        "example": {
+            "problem": "\\text{In a half-wave rectifier circuit, the peak current through the load is 50 mA. Find the average DC output current}.",
+            "solution": "\\begin{aligned}\nI_{ave} &= \\frac{I_m}{\\pi} \\\\\n&= \\frac{50 \\, \\text{mA}}{\\pi} \\\\\n&\\approx \\frac{0.05}{3.1416} \\\\\n&\\approx \\boxed{15.92 \\, \\text{mA}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "RMS Current (Half-Wave Rectifier)",
+        "formula": "I_{rms} = \\frac{I_m}{2}",
+        "variables": {
+            "I_{rms}": "RMS load current (A)",
+            "I_m": "Peak current (A)"
+        },
+        "description": "RMS value of load current for half-wave rectification.",
+        "example": {
+            "problem": "\\text{A half-wave rectifier has a peak load current of 100 mA. Calculate the RMS load current}.",
+            "solution": "\\begin{aligned}\nI_{rms} &= \\frac{I_m}{2} \\\\\n&= \\frac{100 \\, \\text{mA}}{2} \\\\\n&= \\boxed{50 \\, \\text{mA}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "RMS Voltage (Half-Wave Rectifier)",
+        "formula": "V_{rms} = \\frac{V_m}{2}",
+        "variables": {
+            "V_{rms}": "RMS load voltage (V)",
+            "V_m": "Peak input voltage (V)"
+        },
+        "description": "RMS value of load voltage for half-wave rectification.",
+        "example": {
+            "problem": "\\text{Calculate the RMS load voltage for a half-wave rectifier with a peak input voltage of 24 V}.",
+            "solution": "\\begin{aligned}\nV_{rms} &= \\frac{V_m}{2} \\\\\n&= \\frac{24}{2} \\\\\n&= \\boxed{12 \\, \\text{V}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Peak Inverse Voltage (Half-Wave)",
+        "formula": "PIV = V_m",
+        "variables": {
+            "PIV": "Peak inverse voltage across diode (V)",
+            "V_m": "Peak input voltage (V)"
+        },
+        "description": "Maximum reverse bias voltage across diode in half-wave rectification.",
+        "example": {
+            "problem": "\\text{A half-wave rectifier is connected to an AC source with a peak voltage of 50 V. Determine the peak inverse voltage across the diode}.",
+            "solution": "\\begin{aligned}\nPIV &= V_m \\\\\n&= \\boxed{50 \\, \\text{V}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Efficiency (Half-Wave Rectifier)",
+        "formula": "\\eta = \\frac{0.405}{1 + \\frac{r_f}{R}}",
+        "variables": {
+            "\\eta": "Rectifier efficiency",
+            "r_f": "Forward resistance of diode (Ω)",
+            "R": "Load resistance (Ω)"
+        },
+        "description": "Efficiency of half-wave rectifier, maximum is 40.5% when r_f ≈ 0.",
+        "example": {
+            "problem": "\\text{A half-wave rectifier has a diode with a forward resistance of 10 Ω and a load resistance of 490 Ω. Calculate the efficiency of the rectifier}.",
+            "solution": "\\begin{aligned}\n\\eta &= \\frac{0.405}{1 + \\frac{r_f}{R}} \\\\\n&= \\frac{0.405}{1 + \\frac{10}{490}} \\\\\n&= \\frac{0.405}{1 + 0.02041} \\\\\n&= \\frac{0.405}{1.02041} \\\\\n&\\approx 0.3968 \\\\\n&= \\boxed{39.68 \\%}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Transformer Turns Ratio",
+        "formula": "\\frac{N_p}{N_s} = \\frac{V_p}{V_s}",
+        "variables": {
+            "N_p": "Primary turns",
+            "N_s": "Secondary turns",
+            "V_p": "Primary voltage (V)",
+            "V_s": "Secondary voltage (V)"
+        },
+        "description": "Relates transformer turns to primary and secondary voltages.",
+        "example": {
+            "problem": "\\text{A transformer has a primary voltage of } 230 \\, \\text{V} \\text{ and a secondary voltage of } 12 \\, \\text{V}. \\text{ If the secondary has } 50 \\text{ turns, how many turns are in the primary?}",
+            "solution": "\\begin{aligned}\n\\frac{N_p}{N_s} &= \\frac{V_p}{V_s} \\\\\nN_p &= N_s \\cdot \\frac{V_p}{V_s} \\\\\n&= 50 \\cdot \\frac{230}{12} \\\\\n&= 50 \\cdot 19.1667 \\\\\n&\\approx \\boxed{958 \\, \\text{turns}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Average Load Voltage (Full-Wave Rectifier)",
+        "formula": "V_{ave} = \\frac{2V_m}{\\pi}",
+        "variables": {
+            "V_{ave}": "Average DC output voltage (V)",
+            "V_m": "Peak input voltage (V)"
+        },
+        "description": "Average output voltage for a full-wave rectifier.",
+        "example": {
+            "problem": "\\text{A full-wave rectifier has a peak input voltage of } 15 \\, \\text{V}. \\text{ Calculate the average DC output voltage.}",
+            "solution": "\\begin{aligned}\nV_{ave} &= \\frac{2V_m}{\\pi} \\\\\n&= \\frac{2 \\cdot 15}{\\pi} \\\\\n&= \\frac{30}{\\pi} \\\\\n&\\approx \\frac{30}{3.1416} \\\\\n&\\approx \\boxed{9.55 \\, \\text{V}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Average Load Current (Full-Wave Rectifier)",
+        "formula": "I_{ave} = \\frac{2I_m}{\\pi}",
+        "variables": {
+            "I_{ave}": "Average DC output current (A)",
+            "I_m": "Peak current (A)"
+        },
+        "description": "Average current through the load for full-wave rectification.",
+        "example": {
+            "problem": "\\text{In a full-wave rectifier circuit, the peak current is } 80 \\, \\text{mA}. \\text{ Find the average DC output current.}",
+            "solution": "\\begin{aligned}\nI_{ave} &= \\frac{2I_m}{\\pi} \\\\\n&= \\frac{2 \\cdot 80 \\, \\text{mA}}{\\pi} \\\\\n&= \\frac{160}{\\pi} \\\\\n&\\approx \\frac{160}{3.1416} \\\\\n&\\approx \\boxed{50.93 \\, \\text{mA}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "RMS Current (Full-Wave Rectifier)",
+        "formula": "I_{rms} = \\frac{I_m}{\\sqrt{2}}",
+        "variables": {
+            "I_{rms}": "RMS load current (A)",
+            "I_m": "Peak current (A)"
+        },
+        "description": "RMS value of current in a full-wave rectifier.",
+        "example": {
+            "problem": "\\text{A full-wave rectifier has a peak load current of } 120 \\, \\text{mA}. \\text{ Calculate the RMS load current.}",
+            "solution": "\\begin{aligned}\nI_{rms} &= \\frac{I_m}{\\sqrt{2}} \\\\\n&= \\frac{120 \\, \\text{mA}}{\\sqrt{2}} \\\\\n&\\approx \\frac{120}{1.4142} \\\\\n&\\approx \\boxed{84.85 \\, \\text{mA}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "RMS Voltage (Full-Wave Rectifier)",
+        "formula": "V_{rms} = \\frac{V_m}{\\sqrt{2}}",
+        "variables": {
+            "V_{rms}": "RMS load voltage (V)",
+            "V_m": "Peak input voltage (V)"
+        },
+        "description": "RMS load voltage in a full-wave rectifier.",
+        "example": {
+            "problem": "\\text{Calculate the RMS load voltage for a full-wave rectifier with a peak input voltage of } 20 \\, \\text{V}.",
+            "solution": "\\begin{aligned}\nV_{rms} &= \\frac{V_m}{\\sqrt{2}} \\\\\n&= \\frac{20}{\\sqrt{2}} \\\\\n&\\approx \\frac{20}{1.4142} \\\\\n&\\approx \\boxed{14.14 \\, \\text{V}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Efficiency (Full-Wave Rectifier, Center Tap)",
+        "formula": "\\eta = \\frac{0.8106}{1 + \\frac{r_f}{R}}",
+        "variables": {
+            "\\eta": "Rectifier efficiency",
+            "r_f": "Forward resistance of diode (Ω)",
+            "R": "Load resistance (Ω)"
+        },
+        "description": "Efficiency of a center-tapped full-wave rectifier, max is ~81.06%.",
+        "example": {
+            "problem": "\\text{A center-tapped full-wave rectifier has a diode forward resistance of } 5 \\, \\Omega \\text{ and a load resistance of } 995 \\, \\Omega. \\text{ Calculate the efficiency of the rectifier.}",
+            "solution": "\\begin{aligned}\n\\eta &= \\frac{0.8106}{1 + \\frac{r_f}{R}} \\\\\n&= \\frac{0.8106}{1 + \\frac{5}{995}} \\\\\n&= \\frac{0.8106}{1 + 0.005025} \\\\\n&= \\frac{0.8106}{1.005025} \\\\\n&\\approx 0.8066 \\\\\n&= \\boxed{80.66 \\%}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Peak Inverse Voltage (Full-Wave, Center Tap)",
+        "formula": "PIV = 2V_m",
+        "variables": {
+            "PIV": "Peak inverse voltage across diode (V)",
+            "V_m": "Peak input voltage (V)"
+        },
+        "description": "Maximum reverse bias across diodes in center-tapped full-wave rectifier.",
+        "example": {
+            "problem": "\\text{A center-tapped full-wave rectifier has a peak input voltage of } 25 \\, \\text{V}. \\text{ Determine the peak inverse voltage across each diode.}",
+            "solution": "\\begin{aligned}\nPIV &= 2V_m \\\\\n&= 2 \\cdot 25 \\\\\n&= \\boxed{50 \\, \\text{V}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Efficiency (Full-Wave Rectifier, Bridge)",
+        "formula": "\\eta = \\frac{0.8106}{1 + \\frac{2r_f}{R}}",
+        "variables": {
+            "\\eta": "Rectifier efficiency",
+            "r_f": "Forward resistance of diode (Ω)",
+            "R": "Load resistance (Ω)"
+        },
+        "description": "Efficiency of bridge rectifier, max is ~81.06%.",
+        "example": {
+            "problem": "\\text{A bridge rectifier has a diode forward resistance of } 8 \\, \\Omega \\text{ and a load resistance of } 992 \\, \\Omega. \\text{ Calculate the efficiency of the rectifier.}",
+            "solution": "\\begin{aligned}\n\\eta &= \\frac{0.8106}{1 + \\frac{2r_f}{R}} \\\\\n&= \\frac{0.8106}{1 + \\frac{2 \\cdot 8}{992}} \\\\\n&= \\frac{0.8106}{1 + \\frac{16}{992}} \\\\\n&= \\frac{0.8106}{1 + 0.01613} \\\\\n&= \\frac{0.8106}{1.01613} \\\\\n&\\approx 0.7977 \\\\\n&= \\boxed{79.77 \\%}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Peak Inverse Voltage (Full-Wave, Bridge)",
+        "formula": "PIV = V_m",
+        "variables": {
+            "PIV": "Peak inverse voltage across diode (V)",
+            "V_m": "Peak input voltage (V)"
+        },
+        "description": "Peak reverse bias across each diode in bridge rectifier.",
+        "example": {
+            "problem": "\\text{A bridge rectifier is connected to an AC source with a peak voltage of } 40 \\, \\text{V}. \\text{ Find the peak inverse voltage across each diode.}",
+            "solution": "\\begin{aligned}\nPIV &= V_m \\\\\n&= \\boxed{40 \\, \\text{V}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Ripple Factor (General)",
+        "formula": "r = \\frac{I_{ac}}{I_{dc}} = \\frac{V_{ac}}{V_{dc}}",
+        "variables": {
+            "r": "Ripple factor",
+            "I_{ac}": "RMS value of AC component of load current (A)",
+            "I_{dc}": "Average value of load current (A)",
+            "V_{ac}": "RMS value of AC component of load voltage (V)",
+            "V_{dc}": "Average DC load voltage (V)"
+        },
+        "description": "Measures amount of AC present in rectified DC output.",
+        "example": {
+            "problem": "\\text{A rectifier circuit has an RMS AC component of load voltage of } 2 \\, \\text{V} \\text{ and an average DC load voltage of } 10 \\, \\text{V}. \\text{ Calculate the ripple factor.}",
+            "solution": "\\begin{aligned}\nr &= \\frac{V_{ac}}{V_{dc}} \\\\\n&= \\frac{2}{10} \\\\\n&= \\boxed{0.2}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Ripple Factor in Terms of RMS and DC Current",
+        "formula": "r = \\sqrt{\\left(\\frac{I_{rms}}{I_{dc}}\\right)^2 - 1}",
+        "variables": {
+            "r": "Ripple factor",
+            "I_{rms}": "RMS value of load current (A)",
+            "I_{dc}": "Average DC load current (A)"
+        },
+        "description": "Alternate formula for ripple factor using RMS and DC values.",
+        "example": {
+            "problem": "\\text{A rectifier has an RMS load current of } 50 \\, \\text{mA} \\text{ and an average DC load current of } 40 \\, \\text{mA}. \\text{ Calculate the ripple factor.}",
+            "solution": "\\begin{aligned}\nr &= \\sqrt{\\left(\\frac{I_{rms}}{I_{dc}}\\right)^2 - 1} \\\\\n&= \\sqrt{\\left(\\frac{50 \\, \\text{mA}}{40 \\, \\text{mA}}\\right)^2 - 1} \\\\\n&= \\sqrt{\\left(\\frac{50}{40}\\right)^2 - 1} \\\\\n&= \\sqrt{1.5625 - 1} \\\\\n&= \\sqrt{0.5625} \\\\\n&= \\boxed{0.75}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Ripple Factor (Half-Wave Rectifier)",
+        "formula": "r = 1.21",
+        "variables": {
+            "r": "Ripple factor (dimensionless)"
+        },
+        "description": "Ripple factor for half-wave rectification.",
+        "example": {
+            "problem": "\\text{Determine the ripple factor for a half-wave rectifier circuit.}",
+            "solution": "\\begin{aligned}\nr &= \\boxed{1.21}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Ripple Factor (Full-Wave Rectifier)",
+        "formula": "r = 0.48",
+        "variables": {
+            "r": "Ripple factor (dimensionless)"
+        },
+        "description": "Ripple factor for full-wave rectification.",
+        "example": {
+            "problem": "\\text{Determine the ripple factor for a full-wave rectifier circuit.}",
+            "solution": "\\begin{aligned}\nr &= \\boxed{0.48}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Zener Diode Power Dissipation",
+        "formula": "P_Z = V_Z I_Z",
+        "variables": {
+            "P_Z": "Power dissipated in Zener diode (W)",
+            "V_Z": "Zener voltage (V)",
+            "I_Z": "Zener current (A)"
+        },
+        "description": "Defines the power dissipation in a Zener diode under breakdown operation.",
+        "example": {
+            "problem": "\\text{A Zener diode with a Zener voltage of } 5 \\, \\text{V} \\text{ has a current of } 20 \\, \\text{mA} \\text{ flowing through it. Calculate the power dissipated in the Zener diode.}",
+            "solution": "\\begin{aligned}\nP_Z &= V_Z I_Z \\\\\n&= 5 \\, \\text{V} \\times 20 \\, \\text{mA} \\\\\n&= 5 \\times 0.02 \\\\\n&= \\boxed{0.1 \\, \\text{W}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Zener Diode Current Limiting Resistor",
+        "formula": "R = \\frac{V_{in} - V_Z}{I_Z}",
+        "variables": {
+            "R": "Series resistor value (Ω)",
+            "V_{in}": "Input voltage (V)",
+            "V_Z": "Zener voltage (V)",
+            "I_Z": "Zener current (A)"
+        },
+        "description": "Determines the series resistor required to limit Zener diode current.",
+        "example": {
+            "problem": "\\text{A Zener diode with a Zener voltage of } 6 \\, \\text{V} \\text{ is to operate with a current of } 15 \\, \\text{mA}. \\text{ If the input voltage is } 12 \\, \\text{V}, \\text{ calculate the series resistor value.}",
+            "solution": "\\begin{aligned}\nR &= \\frac{V_{in} - V_Z}{I_Z} \\\\\n&= \\frac{12 - 6}{0.015} \\\\\n&= \\frac{6}{0.015} \\\\\n&= \\boxed{400 \\, \\Omega}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Input Voltage Range for Zener Regulation",
+        "formula": "V_{in} = V_Z + I_Z R",
+        "variables": {
+            "V_{in}": "Input voltage for regulation (V)",
+            "V_Z": "Zener voltage (V)",
+            "I_Z": "Zener current (A)",
+            "R": "Series resistance (Ω)"
+        },
+        "description": "The input voltage at which the Zener diode can maintain voltage regulation.",
+        "example": {
+            "problem": "\\text{A Zener diode with a Zener voltage of } 5 \\, \\text{V} \\text{ and a current of } 10 \\, \\text{mA} \\text{ is connected with a series resistor of } 500 \\, \\Omega. \\text{ Calculate the minimum input voltage required for regulation.}",
+            "solution": "\\begin{aligned}\nV_{in} &= V_Z + I_Z R \\\\\n&= 5 + (0.01 \\times 500) \\\\\n&= 5 + 5 \\\\\n&= \\boxed{10 \\, \\text{V}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Line Regulation",
+        "formula": "Line\\ Regulation = \\frac{\\Delta V_{out}}{\\Delta V_{in}}",
+        "variables": {
+            "Line Regulation": "Measure of regulator performance (V/V)",
+            "ΔV_{out}": "Change in output voltage (V)",
+            "ΔV_{in}": "Change in input voltage (V)"
+        },
+        "description": "Specifies change in output voltage for a given input voltage change.",
+        "example": {
+            "problem": "\\text{A voltage regulator has an output voltage change of } 0.1 \\, \\text{V} \\text{ when the input voltage changes by } 5 \\, \\text{V}. \\text{ Calculate the line regulation.}",
+            "solution": "\\begin{aligned}\n\\text{Line Regulation} &= \\frac{\\Delta V_{out}}{\\Delta V_{in}} \\\\\n&= \\frac{0.1}{5} \\\\\n&= \\boxed{0.02 \\, \\text{V/V}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Maximum Current in Zener Diode",
+        "formula": "I_{Z(max)} = \\frac{P_Z}{V_Z}",
+        "variables": {
+            "I_{Z(max)}": "Maximum allowable Zener current (A)",
+            "P_Z": "Maximum power rating of Zener diode (W)",
+            "V_Z": "Zener voltage (V)"
+        },
+        "description": "Calculates maximum current Zener diode can safely conduct.",
+        "example": {
+            "problem": "\\text{A Zener diode has a maximum power rating of } 1 \\, \\text{W} \\text{ and a Zener voltage of } 10 \\, \\text{V}. \\text{ Calculate the maximum allowable Zener current.}",
+            "solution": "\\begin{aligned}\nI_{Z(max)} &= \\frac{P_Z}{V_Z} \\\\\n&= \\frac{1}{10} \\\\\n&= \\boxed{0.1 \\, \\text{A}} \\, \\text{or} \\, \\boxed{100 \\, \\text{mA}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "LED Series Resistor",
+        "formula": "R = \\frac{V_{supply} - V_f}{I_f}",
+        "variables": {
+            "R": "Series resistor (Ω)",
+            "V_{supply}": "Supply voltage (V)",
+            "V_f": "Forward voltage drop of LED (V)",
+            "I_f": "Forward current through LED (A)"
+        },
+        "description": "Resistor needed to limit LED current for safe operation.",
+        "example": {
+            "problem": "\\text{An LED with a forward voltage of } 2 \\, \\text{V} \\text{ and a forward current of } 20 \\, \\text{mA} \\text{ is connected to a } 9 \\, \\text{V} \\text{ supply. Calculate the series resistor required.}",
+            "solution": "\\begin{aligned}\nR &= \\frac{V_{supply} - V_f}{I_f} \\\\\n&= \\frac{9 - 2}{0.02} \\\\\n&= \\frac{7}{0.02} \\\\\n&= \\boxed{350 \\, \\Omega}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Photodiode Dark Current",
+        "formula": "I_D \\approx 0",
+        "variables": {
+            "I_D": "Dark current (A)"
+        },
+        "description": "Reverse current in a photodiode when no light is incident.",
+        "example": {
+            "problem": "\\text{Determine the dark current for a photodiode in complete darkness.}",
+            "solution": "\\begin{aligned}\nI_D &\\approx \\boxed{0 \\, \\text{A}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Photodiode Reverse Current",
+        "formula": "I_\\lambda \\propto E",
+        "variables": {
+            "I_\\lambda": "Reverse current due to light (A)",
+            "E": "Irradiance (mW/cm^2)"
+        },
+        "description": "Reverse current in a photodiode increases with light intensity.",
+        "example": {
+            "problem": "\\text{A photodiode produces a reverse current of } 10 \\, \\mu\\text{A} \\text{ at an irradiance of } 2 \\, \\text{mW/cm}^2. \\text{ Estimate the reverse current at an irradiance of } 5 \\, \\text{mW/cm}^2, \\text{ assuming a linear relationship.}",
+            "solution": "\\begin{aligned}\nI_\\lambda &\\propto E \\\\\n\\frac{I_{\\lambda2}}{I_{\\lambda1}} &= \\frac{E_2}{E_1} \\\\\nI_{\\lambda2} &= I_{\\lambda1} \\cdot \\frac{E_2}{E_1} \\\\\n&= 10 \\, \\mu\\text{A} \\cdot \\frac{5}{2} \\\\\n&= 10 \\cdot 2.5 \\\\\n&= \\boxed{25 \\, \\mu\\text{A}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Emitter Current Relationship",
+        "formula": "I_E = I_C + I_B",
+        "variables": {
+            "I_E": "Emitter current (A)",
+            "I_C": "Collector current (A)",
+            "I_B": "Base current (A)"
+        },
+        "description": "The total emitter current is the sum of collector current and base current.",
+        "example": {
+            "problem": "\\text{In a transistor circuit, the collector current is } 5 \\, \\text{mA} \\text{ and the base current is } 50 \\, \\mu\\text{A}. \\text{ Calculate the emitter current.}",
+            "solution": "\\begin{aligned}\nI_E &= I_C + I_B \\\\\n&= 5 \\, \\text{mA} + 50 \\, \\mu\\text{A} \\\\\n&= 5 \\, \\text{mA} + 0.05 \\, \\text{mA} \\\\\n&= \\boxed{5.05 \\, \\text{mA}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Current Gain (Alpha, Common Base)",
+        "formula": "\\alpha = \\frac{I_C}{I_E}",
+        "variables": {
+            "\\alpha": "Current gain in common base configuration (unitless)",
+            "I_C": "Collector current (A)",
+            "I_E": "Emitter current (A)"
+        },
+        "description": "Defines the current gain in a common-base transistor configuration.",
+        "example": {
+            "problem": "\\text{A transistor in common-base configuration has a collector current of } 4.8 \\, \\text{mA} \\text{ and an emitter current of } 5 \\, \\text{mA}. \\text{ Calculate the current gain } \\alpha.",
+            "solution": "\\begin{aligned}\n\\alpha &= \\frac{I_C}{I_E} \\\\\n&= \\frac{4.8 \\, \\text{mA}}{5 \\, \\text{mA}} \\\\\n&= \\boxed{0.96}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Current Gain (Beta, Common Emitter)",
+        "formula": "\\beta = \\frac{I_C}{I_B}",
+        "variables": {
+            "\\beta": "Current gain in common emitter configuration (unitless)",
+            "I_C": "Collector current (A)",
+            "I_B": "Base current (A)"
+        },
+        "description": "Defines the current gain in a common-emitter transistor configuration.",
+        "example": {
+            "problem": "\\text{In a common-emitter transistor circuit, the collector current is } 3 \\, \\text{mA} \\text{ and the base current is } 15 \\, \\mu\\text{A}. \\text{ Calculate the current gain } \\beta.",
+            "solution": "\\begin{aligned}\n\\beta &= \\frac{I_C}{I_B} \\\\\n&= \\frac{3 \\, \\text{mA}}{15 \\, \\mu\\text{A}} \\\\\n&= \\frac{3 \\times 10^{-3}}{15 \\times 10^{-6}} \\\\\n&= \\frac{3}{0.015} \\\\\n&= \\boxed{200}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Relation between Alpha and Beta",
+        "formula": "\\beta = \\frac{\\alpha}{1 - \\alpha}",
+        "variables": {
+            "\\beta": "Current gain in common emitter (unitless)",
+            "\\alpha": "Current gain in common base (unitless)"
+        },
+        "description": "Relates the current gain in common base to that in common emitter.",
+        "example": {
+            "problem": "\\text{A transistor has a common-base current gain } \\alpha \\text{ of } 0.98. \\text{ Calculate the common-emitter current gain } \\beta.",
+            "solution": "\\begin{aligned}\n\\beta &= \\frac{\\alpha}{1 - \\alpha} \\\\\n&= \\frac{0.98}{1 - 0.98} \\\\\n&= \\frac{0.98}{0.02} \\\\\n&= \\boxed{49}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Collector Current in Common Emitter",
+        "formula": "I_C = \\beta I_B",
+        "variables": {
+            "I_C": "Collector current (A)",
+            "I_B": "Base current (A)",
+            "\\beta": "Current gain in common emitter (unitless)"
+        },
+        "description": "Collector current expressed as a multiple of base current in CE configuration.",
+        "example": {
+            "problem": "\\text{A transistor in common-emitter configuration has a current gain } \\beta \\text{ of } 100 \\text{ and a base current of } 20 \\, \\mu\\text{A}. \\text{ Calculate the collector current.}",
+            "solution": "\\begin{aligned}\nI_C &= \\beta I_B \\\\\n&= 100 \\cdot 20 \\, \\mu\\text{A} \\\\\n&= 100 \\cdot 20 \\times 10^{-6} \\\\\n&= 0.002 \\, \\text{A} \\\\\n&= \\boxed{2 \\, \\text{mA}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "DC Load Line Equation",
+        "formula": "I_C = \\frac{V_{CC} - V_{CE}}{R_C}",
+        "variables": {
+            "I_C": "Collector current (A)",
+            "V_{CC}": "Supply voltage (V)",
+            "V_{CE}": "Collector-emitter voltage (V)",
+            "R_C": "Collector resistance (Ω)"
+        },
+        "description": "Equation of the DC load line showing the relationship between IC and VCE for a given supply.",
+        "example": {
+            "problem": "\\text{A transistor circuit has a supply voltage of } 12 \\, \\text{V} \\text{ and a collector resistance of } 2 \\, \\text{k}\\Omega. \\text{ If the collector-emitter voltage is } 4 \\, \\text{V}, \\text{ calculate the collector current.}",
+            "solution": "\\begin{aligned}\nI_C &= \\frac{V_{CC} - V_{CE}}{R_C} \\\\\n&= \\frac{12 - 4}{2000} \\\\\n&= \\frac{8}{2000} \\\\\n&= 0.004 \\, \\text{A} \\\\\n&= \\boxed{4 \\, \\text{mA}}\n\\end{aligned}"
+        }
+    }
+]

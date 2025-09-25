@@ -1,0 +1,776 @@
+[
+    {
+        "name": "Kinetic Energy, KE",
+        "formula": "\\text{KE} = \\frac{1}{2} \\times m v^2",
+        "variables": {
+            "m": "mass of the body",
+            "v": "velocity"
+        },
+        "description": "KE is the energy due to translational motion of the system as a whole relative to some frame of reference or to the rotation of the system about some axis. It's and extensive property."
+    },
+    {
+        "name": "Potential Energy, PE",
+        "formula": "\\mathrm{PE} = m \\times g \\times z",
+        "variables": {
+            "m": "mass of the body",
+            "g": "acceleration due to gravity (9.81 m/s²)",
+            "z": "elevation"
+        },
+        "description": "PE is the energy due to the position of the system in a potential field. It's an extensive property."
+    },
+    {
+        "name": "Internal Energy, U",
+        "formula": "\\Delta U = Q - W",
+        "variables": {
+            "\\Delta U": "Change in internal energy of a CLOSED SYSTEM.",
+            "Q": "Heat (Defined to be + when it is transferred to the system from the surroundings)",
+            "W": "Work (Defined to be + when work is done by system)"
+        },
+        "description": "Internal energy is the total microscopic energy contained within a system, arising from the kinetic and potential energies of its molecules. According to the first law of thermodynamics, the change in internal energy (ΔU) of a closed system equals the heat added to the system (Q) minus the work done by the system (W)."
+    },
+    {
+        "name": "Work (W)",
+        "formula": "\\mathrm{W} = \\int_{v_1}^{v_2} P \\ dv",
+        "variables": {
+            "P": "Pressure"
+        },
+        "description": "Work is the energy transferred to or from a system when it expands or contracts under pressure. It is calculated as the area under the pressure-volume (P-V) curve. In a quasi-static process, the work done by the system is given by the integral of pressure (P) with respect to volume (v) from the initial volume (v₁) to the final volume (v₂). Positive work corresponds to energy leaving the system when it expands, and negative work corresponds to energy entering the system when it is compressed."
+    },
+    {
+        "name": "First Law of Thermodynamics",
+        "formula": "Q - W = (H_2 - H_1) + \\frac{1}{2} m(v_2^2 - v_1^2) + mg(z_2 - z_1)",
+        "variables": {
+            "Q": "Heat added to the system",
+            "W": "Work done by the system",
+            "H": "Enthalpy of the system (H = U + PV)",
+            "m": "Mass of the system",
+            "v": "Velocity of the system",
+            "g": "Acceleration due to gravity",
+            "z": "Height of the system"
+        },
+        "description": "The First Law of Thermodynamics states that the energy added to a system as heat (Q) minus the work done by the system (W) equals the total change in the system's energy. This includes changes in enthalpy (H), kinetic energy (½ m(v₂² - v₁²)), and potential energy (mg(z₂ - z₁)). It is essentially a statement of conservation of energy, accounting for all forms of energy transfer in a system."
+    },
+    {
+        "name": "Enthalpy (H)",
+        "formula": "H = U + PV",
+        "variables": {
+            "U": "Internal energy of the system",
+            "P": "Pressure of the system",
+            "V": "Volume of the system"
+        },
+        "description": "Enthalpy is a thermodynamic quantity representing the total heat content of a system. It combines the system's internal energy (U) with the energy associated with its pressure and volume (PV). Enthalpy is especially useful for processes occurring at constant pressure, where the change in enthalpy (ΔH) equals the heat added to or removed from the system."
+    },
+    {
+        "name": "Flow Work and Shaft Work",
+        "formula": "\\dot{W} = \\dot{W_s} + \\dot{W_{fl}}",
+        "variables": {
+            "\\dot{W}": "Total rate of work done on or by the system",
+            "\\dot{W_s}": "Shaft work (mechanical work done by a rotating shaft)",
+            "\\dot{W_{fl}}": "Flow work (work required to push mass into or out of a control volume)"
+        },
+        "description": "In a control volume, the total work rate W is the sum of shaft work Ws and flow work Wfl. Shaft work is mechanical work done by devices such as turbines or pumps, while flow work represents the energy required to move fluid into or out of the system against pressure. This distinction is important in analyzing energy transfer in open systems."
+    },
+    {
+        "name": "The Open-System Energy Balance",
+        "formula": "\\Delta \\dot{H} + \\Delta \\dot{E_p} + \\Delta \\dot{E_k} = \\dot{Q} - \\dot{W_s} \\\\ , \\\\ \\Delta \\dot{H} = \\dot{m} (\\hat{H}_{out} - \\hat{H}_{in}) = \\dot{m} \\Delta \\hat{H}",
+        "variables": {
+            "\\Delta \\dot{H}": "Change in the specific rate of enthalpy",
+            "\\Delta \\dot{E_k}": "Change in the rate of Kinetic Energy",
+            "\\Delta \\dot{E_p}": "Chnage in the rate of POtential Energy",
+            "\\dot{Q}": "Rate of heat in/out of the system",
+            "\\dot{W_s}": "Rate of shaft work in/out of the system"
+        },
+        "description": "This states that, 'The net rate at which energy is transferred to a system as heat and/or shaft work equals the difference between the rates at which the quantity (enthalpy + kinetic energy + potential energy) is transported into and out of the system."
+    },
+    {
+        "name": "Material Balance for a Steady-State Process",
+        "formula": "\\sum \\dot{m}_{in} = \\sum \\dot{m}_{out}",
+        "variables": {
+            "\\dot{m}_{in}": "Mass flow rate into the system",
+            "\\dot{m}_{out}": "Mass flow rate out of the system"
+        },
+        "description": "For a system at steady-state, the total mass entering equals the total mass leaving the system."
+    },
+    {
+        "name": "Overall Material Balance with Accumulation",
+        "formula": "\\frac{d m_{sys}}{dt} = \\sum \\dot{m}_{in} - \\sum \\dot{m}_{out}",
+        "variables": {
+            "m_{sys}": "Mass in the system",
+            "\\dot{m}_{in}": "Mass flow rate into the system",
+            "\\dot{m}_{out}": "Mass flow rate out of the system"
+        },
+        "description": "For unsteady-state processes, the rate of accumulation equals mass in minus mass out."
+    },
+    {
+        "name": "Component Material Balance",
+        "formula": "\\frac{d (m_i)_{sys}}{dt} = \\sum \\dot{m}_{i,in} - \\sum \\dot{m}_{i,out} + r_i V",
+        "variables": {
+            "(m_i)_{sys}": "Mass of component i in the system",
+            "\\dot{m}_{i,in}": "Mass flow rate of component i entering",
+            "\\dot{m}_{i,out}": "Mass flow rate of component i leaving",
+            "r_i": "Rate of generation/consumption of component i",
+            "V": "Volume of the system"
+        },
+        "description": "Accounts for accumulation, flow, and chemical reaction of a component in a system."
+    },
+    {
+        "name": "The Open-System Energy Balance",
+        "formula": "\\Delta \\dot{H} + \\Delta \\dot{E_p} + \\Delta \\dot{E_k} = \\dot{Q} - \\dot{W_s} \\\\ , \\\\ \\Delta \\dot{H} = \\dot{m} (\\hat{H}_{out} - \\hat{H}_{in}) = \\dot{m} \\Delta \\hat{H}",
+        "variables": {
+            "\\Delta \\dot{H}": "Change in the specific rate of enthalpy",
+            "\\Delta \\dot{E_k}": "Change in the rate of Kinetic Energy",
+            "\\Delta \\dot{E_p}": "Change in the rate of Potential Energy",
+            "\\dot{Q}": "Rate of heat in/out of the system",
+            "\\dot{W_s}": "Rate of shaft work in/out of the system"
+        },
+        "description": "The net rate at which energy is transferred to a system as heat and/or shaft work equals the difference between the rates at which the quantity (enthalpy + kinetic energy + potential energy) is transported into and out of the system."
+    },
+    {
+        "name": "Closed-System Energy Balance",
+        "formula": "\\Delta E_{sys} = Q - W",
+        "variables": {
+            "\\Delta E_{sys}": "Change in total energy of the system",
+            "Q": "Heat added to the system",
+            "W": "Work done by the system"
+        },
+        "description": "Energy change in a closed system is the net effect of heat and work interactions."
+    },
+    {
+        "name": "Sensible Heat Calculation",
+        "formula": "Q = m C_p \\Delta T",
+        "variables": {
+            "Q": "Amount of heat added or removed",
+            "m": "Mass of the substance",
+            "C_p": "Specific heat capacity at constant pressure",
+            "\\Delta T": "Temperature change"
+        },
+        "description": "Relates the heat added or removed to temperature change in a substance."
+    },
+    {
+        "name": "Latent Heat Calculation",
+        "formula": "Q = m \\Delta H_{phase}",
+        "variables": {
+            "Q": "Heat added/removed for phase change",
+            "m": "Mass of substance",
+            "\\Delta H_{phase}": "Latent heat of the phase change"
+        },
+        "description": "Heat required for phase transition without temperature change."
+    },
+    {
+        "name": "Ideal Gas Law",
+        "formula": "P V = n R T \\\\,  \\\\ \\rho = \\frac{P M}{R T}",
+        "variables": {
+            "P": "Pressure of the gas",
+            "V": "Volume of the gas",
+            "n": "Number of moles",
+            "R": "Universal gas constant",
+            "T": "Temperature",
+            "\\rho": "Density of the gas",
+            "M": "Molar mass of the gas"
+        },
+        "description": "Relates pressure, volume, temperature, and amount of an ideal gas."
+    },
+    {
+        "name": "Partial Pressure in Gas Mixtures",
+        "formula": "P_i = y_i P_{total}",
+        "variables": {
+            "P_i": "Partial pressure of component i",
+            "y_i": "Mole fraction of component i in the gas",
+            "P_{total}": "Total pressure of the gas mixture"
+        },
+        "description": "Partial pressure is proportional to mole fraction in ideal gas mixtures."
+    },
+    {
+        "name": "Raoult's Law",
+        "formula": "y_i P = x_i P_i^*",
+        "variables": {
+            "y_i": "Mole fraction of component i in the vapor phase",
+            "x_i": "Mole fraction of component i in the liquid phase",
+            "P": "Total pressure of the system",
+            "P_i^*": "Vapor pressure of pure component i"
+        },
+        "description": "Relates the partial pressure of a component in the vapor phase to its mole fraction in the liquid phase and its pure-component vapor pressure."
+    },
+    {
+        "name": "Henry's Law",
+        "formula": "C_i = k_H P_i",
+        "variables": {
+            "C_i": "Concentration of gas i in liquid",
+            "k_H": "Henry's constant for the gas-liquid pair",
+            "P_i": "Partial pressure of the gas above the liquid"
+        },
+        "description": "The solubility of a gas in a liquid is proportional to its partial pressure."
+    },
+    {
+        "name": "Mole Fraction Calculation",
+        "formula": "x_i = \\frac{n_i}{\\sum n_i}",
+        "variables": {
+            "x_i": "Mole fraction of component i",
+            "n_i": "Number of moles of component i",
+            "\\sum n_i": "Total moles in mixture"
+        },
+        "description": "Defines mole fraction as the ratio of moles of a component to total moles."
+    },
+    {
+        "name": "Mass Fraction Calculation",
+        "formula": "w_i = \\frac{m_i}{\\sum m_i}",
+        "variables": {
+            "w_i": "Mass fraction of component i",
+            "m_i": "Mass of component i",
+            "\\sum m_i": "Total mass of mixture"
+        },
+        "description": "Defines mass fraction as the ratio of mass of a component to total mass."
+    },
+    {
+        "name": "Mean Molecular Weight of Gas Mixture",
+        "formula": "M_{mix} = \\sum x_i M_i",
+        "variables": {
+            "M_{mix}": "Mean molecular weight of mixture",
+            "x_i": "Mole fraction of component i",
+            "M_i": "Molecular weight of component i"
+        },
+        "description": "Weighted average molecular weight based on mole fractions."
+    },
+    {
+        "name": "Excess Enthalpy for Mixtures",
+        "formula": "H_{mix} = \\sum x_i H_i + H^E",
+        "variables": {
+            "H_{mix}": "Enthalpy of the mixture",
+            "x_i": "Mole fraction of component i",
+            "H_i": "Enthalpy of pure component i",
+            "H^E": "Excess enthalpy due to mixing"
+        },
+        "description": "Accounts for non-ideal enthalpy changes in mixtures."
+    },
+    {
+        "name": "Energy Balance for Non-Reactive Closed System",
+        "formula": "dU = \\delta Q - \\delta W",
+        "variables": {
+            "dU": "Change in internal energy",
+            "Q": "Heat added to the system",
+            "W": "Work done by the system"
+        },
+        "description": "Internal energy change equals net heat minus work."
+    },
+    {
+        "name": "Polytropic Process",
+        "formula": "P V^n = constant",
+        "variables": {
+            "P": "Pressure",
+            "V": "Volume",
+            "n": "Polytropic index"
+        },
+        "description": "Describes a process where pressure and volume are related by a polytropic index."
+    },
+    {
+        "name": "Isothermal Work",
+        "formula": "W = n R T \\ln \\frac{V_f}{V_i}",
+        "variables": {
+            "W": "Work done by the gas",
+            "n": "Number of moles",
+            "R": "Universal gas constant",
+            "T": "Temperature (constant)",
+            "V_f": "Final volume",
+            "V_i": "Initial volume"
+        },
+        "description": "Work done by an ideal gas during an isothermal process."
+    },
+    {
+        "name": "Adiabatic Work",
+        "formula": "W = \\frac{P_i V_i - P_f V_f}{\\gamma - 1}",
+        "variables": {
+            "W": "Work done",
+            "P_i, P_f": "Initial and final pressures",
+            "V_i, V_f": "Initial and final volumes",
+            "\\gamma": "Heat capacity ratio (C_p/C_v)"
+        },
+        "description": "Work done by an ideal gas in an adiabatic process."
+    },
+    {
+        "name": "Change in Enthalpy",
+        "formula": "\\Delta H = \\int C_p dT",
+        "variables": {
+            "\\Delta H": "Change in enthalpy",
+            "C_p": "Specific heat at constant pressure",
+            "dT": "Temperature differential"
+        },
+        "description": "Enthalpy change due to temperature change at constant pressure."
+    },
+    {
+        "name": "Change in Internal Energy",
+        "formula": "\\Delta U = \\int C_v dT",
+        "variables": {
+            "\\Delta U": "Change in internal energy",
+            "C_v": "Specific heat at constant volume",
+            "dT": "Temperature differential"
+        },
+        "description": "Internal energy change due to temperature change at constant volume."
+    },
+    {
+        "name": "Enthalpy of Mixing",
+        "formula": "H_{mix} = \\sum n_i H_i(T) + \\Delta H_{mix}^{excess}",
+        "variables": {
+            "H_{mix}": "Total enthalpy of mixture",
+            "n_i": "Moles of component i",
+            "H_i(T)": "Enthalpy of pure component i at temperature T",
+            "\\Delta H_{mix}^{excess}": "Excess enthalpy due to interactions"
+        },
+        "description": "Total enthalpy including ideal and excess contributions for mixtures."
+    },
+    {
+        "name": "Heat Capacity of a Mixture",
+        "formula": "C_p,mix = \\sum x_i C_{p,i}",
+        "variables": {
+            "C_p,mix": "Heat capacity of the mixture",
+            "x_i": "Mole fraction of component i",
+            "C_{p,i}": "Heat capacity of pure component i"
+        },
+        "description": "Weighted sum of heat capacities of components."
+    },
+    {
+        "name": "Rate Law for a Chemical Reaction",
+        "formula": "r = k [A]^m [B]^n",
+        "variables": {
+            "r": "Rate of reaction",
+            "k": "Rate constant",
+            "[A], [B]": "Concentration of reactants A and B",
+            "m, n": "Reaction orders with respect to A and B"
+        },
+        "description": "Reaction rate depends on reactant concentrations raised to their respective orders."
+    },
+    {
+        "name": "Arrhenius Equation",
+        "formula": "k = A e^{-E_a/(R T)}",
+        "variables": {
+            "k": "Rate constant",
+            "A": "Frequency factor (pre-exponential factor)",
+            "E_a": "Activation energy",
+            "R": "Universal gas constant",
+            "T": "Temperature"
+        },
+        "description": "Relates reaction rate constant to temperature."
+    },
+    {
+        "name": "Half-Life for First-Order Reaction",
+        "formula": "t_{1/2} = \\frac{0.693}{k}",
+        "variables": {
+            "t_{1/2}": "Half-life",
+            "k": "Rate constant"
+        },
+        "description": "Time for concentration to drop to half in a first-order reaction."
+    },
+    {
+        "name": "Half-Life for Second-Order Reaction",
+        "formula": "t_{1/2} = \\frac{1}{k [A]_0}",
+        "variables": {
+            "t_{1/2}": "Half-life",
+            "k": "Rate constant",
+            "[A]_0": "Initial concentration of A"
+        },
+        "description": "Time for concentration to drop to half in a second-order reaction."
+    },
+    {
+        "name": "Conversion of Reactant in a Batch Reactor",
+        "formula": "X_A = \\frac{N_{A0} - N_A}{N_{A0}}",
+        "variables": {
+            "X_A": "Fractional conversion of A",
+            "N_{A0}": "Initial moles of A",
+            "N_A": "Moles of A at time t"
+        },
+        "description": "Defines fractional conversion in batch reactions."
+    },
+    {
+        "name": "Design Equation for a Continuous Stirred Tank Reactor (CSTR)",
+        "formula": "V = \\frac{F_{A0} X_A}{-r_A}",
+        "variables": {
+            "V": "Volume of reactor",
+            "F_{A0}": "Molar flow rate of A into reactor",
+            "X_A": "Conversion of A",
+            "r_A": "Rate of reaction of A (negative for consumption)"
+        },
+        "description": "Reactor volume required for a given conversion in a CSTR."
+    },
+    {
+        "name": "Design Equation for a Plug Flow Reactor (PFR)",
+        "formula": "V = \\int_{0}^{X_A} \\frac{F_{A0}}{-r_A} dX_A",
+        "variables": {
+            "V": "Volume of reactor",
+            "F_{A0}": "Molar flow rate of A into reactor",
+            "X_A": "Conversion of A",
+            "r_A": "Rate of reaction of A"
+        },
+        "description": "Reactor volume for a PFR based on conversion and reaction rate."
+    },
+    {
+        "name": "Damkohler Number",
+        "formula": "Da = \\frac{k C_0^{n-1} V}{F_{A0}}",
+        "variables": {
+            "Da": "Damkohler number",
+            "k": "Reaction rate constant",
+            "C_0": "Initial concentration",
+            "n": "Reaction order",
+            "V": "Reactor volume",
+            "F_{A0}": "Molar flow rate of A"
+        },
+        "description": "Dimensionless number comparing reaction rate to flow rate."
+    },
+    {
+        "name": "Mass Transfer Coefficient Relation",
+        "formula": "N_A = k_c (C_{A}^* - C_{A})",
+        "variables": {
+            "N_A": "Molar flux of A",
+            "k_c": "Mass transfer coefficient",
+            "C_A^*": "Concentration of A at interface",
+            "C_A": "Bulk concentration of A"
+        },
+        "description": "Relates molar flux to concentration driving force."
+    },
+    {
+        "name": "Overall Mass Balance in Absorption Column",
+        "formula": "F (y_{A,in} - y_{A,out}) = N_A S",
+        "variables": {
+            "F": "Molar flow rate of gas",
+            "y_{A,in}, y_{A,out}": "Inlet and outlet mole fraction of A in gas",
+            "N_A": "Molar flux of A",
+            "S": "Interfacial area"
+        },
+        "description": "Mass transfer of a component in an absorption column."
+    },
+    {
+        "name": "Fick's Law of Diffusion",
+        "formula": "J_A = -D_{AB} \\frac{dC_A}{dx}",
+        "variables": {
+            "J_A": "Diffusive flux of A",
+            "D_{AB}": "Diffusion coefficient",
+            "\\frac{dC_A}{dx}": "Concentration gradient of A"
+        },
+        "description": "Rate of diffusion proportional to concentration gradient."
+    },
+    {
+        "name": "Material Balance in Distillation",
+        "formula": "F z_F = V y + L x",
+        "variables": {
+            "F": "Feed flow rate",
+            "z_F": "Mole fraction in feed",
+            "V": "Vapor flow rate",
+            "y": "Mole fraction in vapor",
+            "L": "Liquid flow rate",
+            "x": "Mole fraction in liquid"
+        },
+        "description": "Relates feed, vapor, and liquid compositions in a distillation stage."
+    },
+    {
+        "name": "McCabe-Thiele Step Calculation",
+        "formula": "y_{n+1} = \\frac{R}{R+1} x_n + \\frac{x_D}{R+1}",
+        "variables": {
+            "y_{n+1}": "Vapor mole fraction leaving stage n+1",
+            "x_n": "Liquid mole fraction entering stage n",
+            "R": "Reflux ratio",
+            "x_D": "Distillate mole fraction"
+        },
+        "description": "Stepwise calculation of equilibrium stages in binary distillation."
+    },
+    {
+        "name": "Equilibrium Constant for Gas-Phase Reaction",
+        "formula": "K_p = \\frac{P_C^c P_D^d}{P_A^a P_B^b}",
+        "variables": {
+            "K_p": "Equilibrium constant in terms of partial pressures",
+            "P_A, P_B, P_C, P_D": "Partial pressures of species",
+            "a,b,c,d": "Stoichiometric coefficients"
+        },
+        "description": "Relates partial pressures at equilibrium for a chemical reaction."
+    },
+    {
+        "name": "Gibbs Free Energy Relation",
+        "formula": "\\Delta G = \\Delta G^0 + RT \\ln Q",
+        "variables": {
+            "\\Delta G": "Gibbs free energy change",
+            "\\Delta G^0": "Standard Gibbs free energy change",
+            "R": "Universal gas constant",
+            "T": "Temperature",
+            "Q": "Reaction quotient"
+        },
+        "description": "Predicts direction of reaction and equilibrium position."
+    },
+    {
+        "name": "Vapor-Liquid Equilibrium (VLE) with Raoult's Law",
+        "formula": "y_i P = x_i P_i^* \\gamma_i",
+        "variables": {
+            "y_i": "Mole fraction in vapor",
+            "x_i": "Mole fraction in liquid",
+            "P": "Total pressure",
+            "P_i^*": "Pure component vapor pressure",
+            "\\gamma_i": "Activity coefficient of component i"
+        },
+        "description": "Non-ideal VLE accounting for activity coefficients."
+    },
+    {
+        "name": "Enthalpy of Reaction",
+        "formula": "\\Delta H_r = \\sum \\nu_p H_p - \\sum \\nu_r H_r",
+        "variables": {
+            "\\Delta H_r": "Enthalpy of reaction",
+            "\\nu_p, \\nu_r": "Stoichiometric coefficients of products and reactants",
+            "H_p, H_r": "Enthalpy of products and reactants"
+        },
+        "description": "Difference between enthalpies of products and reactants."
+    },
+    {
+        "name": "Overall Heat Transfer Rate",
+        "formula": "Q = U A \\Delta T_{lm}",
+        "variables": {
+            "Q": "Heat transfer rate",
+            "U": "Overall heat transfer coefficient",
+            "A": "Heat transfer area",
+            "\\Delta T_{lm}": "Log mean temperature difference"
+        },
+        "description": "Heat transfer through a surface in steady-state."
+    },
+    {
+        "name": "Log Mean Temperature Difference (LMTD)",
+        "formula": "\\Delta T_{lm} = \\frac{\\Delta T_1 - \\Delta T_2}{\\ln(\\Delta T_1 / \\Delta T_2)}",
+        "variables": {
+            "\\Delta T_1": "Temperature difference at one end",
+            "\\Delta T_2": "Temperature difference at the other end"
+        },
+        "description": "Used in calculating heat transfer for counter/parallel flow exchangers."
+    },
+    {
+        "name": "Pressure Drop in Pipe (Darcy-Weisbach)",
+        "formula": "\\Delta P = f \\frac{L}{D} \\frac{\\rho V^2}{2}",
+        "variables": {
+            "f": "Friction factor",
+            "L": "Length of pipe",
+            "D": "Pipe diameter",
+            "\\rho": "Fluid density",
+            "V": "Fluid velocity"
+        },
+        "description": "Pressure loss due to friction in a pipe."
+    },
+    {
+        "name": "Reynolds Number",
+        "formula": "Re = \\frac{\\rho V D}{\\mu}",
+        "variables": {
+            "Re": "Reynolds number",
+            "\\rho": "Fluid density",
+            "V": "Fluid velocity",
+            "D": "Pipe diameter",
+            "\\mu": "Dynamic viscosity"
+        },
+        "description": "Dimensionless number determining flow regime (laminar or turbulent)."
+    },
+    {
+        "name": "Sherwood Number for Mass Transfer",
+        "formula": "Sh = \\frac{k_c L}{D_{AB}}",
+        "variables": {
+            "Sh": "Sherwood number",
+            "k_c": "Mass transfer coefficient",
+            "L": "Characteristic length",
+            "D_{AB}": "Diffusion coefficient"
+        },
+        "description": "Dimensionless number for convective mass transfer."
+    },
+    {
+        "name": "Overall Material Balance with Reaction",
+        "formula": "F_{A0} - F_A + V r_A = 0",
+        "variables": {
+            "F_{A0}": "Inlet molar flow of A",
+            "F_A": "Outlet molar flow of A",
+            "V": "Reactor volume",
+            "r_A": "Reaction rate of A"
+        },
+        "description": "Overall balance for reactive system at steady state."
+    },
+    {
+        "name": "Gas Constant (R) Values",
+        "formula": "\\mathrm{R} = 8.314\\ \\frac{Pa.m^3}{mol.K}",
+        "variables": {
+            "R": "Universal gas constant"
+        },
+        "description": "The gas constant (R) has multiple units depending on the system of measurement:"
+    },
+    {
+        "name": "Gas Constant Units",
+        "formula": "\\mathrm{R} = 8.314\\ \\frac{J}{mol.K}",
+        "variables": {
+            "8.314": "m³·Pa/(mol·K) or J/(mol·K)",
+            "0.08314": "L·bar/(mol·K)",
+            "0.08206": "L·atm/(mol·K)",
+            "62.36": "L·mmHg/(mol·K)",
+            "0.7302": "ft³·atm/(lb-mole·°R)",
+            "10.73": "ft³·psia/(lb-mole·°R)",
+            "1.987": "cal/(mol·K) or Btu/(lb-mole·°R)"
+        },
+        "description": "These values represent the gas constant in various unit systems."
+    },
+    {
+        "name": "Conversion between Mass Flow Rate and Molar Flow Rate",
+        "formula": "\\dot{n} = \\frac{\\dot{m}}{M}",
+        "variables": {
+            "\\dot{n}": "Molar flow rate (mol/s)",
+            "\\dot{m}": "Mass flow rate (kg/s)",
+            "M": "Molar mass of the species (kg/mol)"
+        },
+        "description": "Converts mass flow rate to molar flow rate using the molar mass of the substance."
+    },
+    {
+        "name": "Conversion between Molar Flow Rate and Mass Flow Rate",
+        "formula": "\\dot{m} = \\dot{n} M",
+        "variables": {
+            "\\dot{m}": "Mass flow rate (kg/s)",
+            "\\dot{n}": "Molar flow rate (mol/s)",
+            "M": "Molar mass of the species (kg/mol)"
+        },
+        "description": "Converts molar flow rate to mass flow rate using the molar mass of the substance."
+    },
+    {
+        "name": "Volumetric Flow Rate from Molar Flow Rate (Ideal Gas)",
+        "formula": "\\dot{V} = \\frac{\\dot{n} R T}{P}",
+        "variables": {
+            "\\dot{V}": "Volumetric flow rate (m³/s)",
+            "\\dot{n}": "Molar flow rate (mol/s)",
+            "R": "Ideal gas constant (8.314 J/mol·K)",
+            "T": "Temperature (K)",
+            "P": "Pressure (Pa)"
+        },
+        "description": "Converts molar flow rate to volumetric flow rate for ideal gases using the ideal gas law."
+    },
+    {
+        "name": "Molar Flow Rate from Volumetric Flow Rate (Ideal Gas)",
+        "formula": "\\dot{n} = \\frac{P \\dot{V}}{R T}",
+        "variables": {
+            "\\dot{n}": "Molar flow rate (mol/s)",
+            "\\dot{V}": "Volumetric flow rate (m³/s)",
+            "R": "Ideal gas constant (8.314 J/mol·K)",
+            "T": "Temperature (K)",
+            "P": "Pressure (Pa)"
+        },
+        "description": "Converts volumetric flow rate to molar flow rate for ideal gases using the ideal gas law."
+    },
+    {
+        "name": "Volumetric Flow Rate from Mass Flow Rate",
+        "formula": "\\dot{V} = \\frac{\\dot{m}}{\\rho}",
+        "variables": {
+            "\\dot{V}": "Volumetric flow rate (m³/s)",
+            "\\dot{m}": "Mass flow rate (kg/s)",
+            "\\rho": "Density of the fluid (kg/m³)"
+        },
+        "description": "Converts mass flow rate to volumetric flow rate using the fluid density."
+    },
+    {
+        "name": "Mass Flow Rate from Volumetric Flow Rate",
+        "formula": "\\dot{m} = \\dot{V} \\rho",
+        "variables": {
+            "\\dot{m}": "Mass flow rate (kg/s)",
+            "\\dot{V}": "Volumetric flow rate (m³/s)",
+            "\\rho": "Density of the fluid (kg/m³)"
+        },
+        "description": "Converts volumetric flow rate to mass flow rate using the fluid density."
+    },
+    {
+        "name": "Celsius to Kelvin",
+        "formula": "T_K = T_{(\\degree C)} + 273.15",
+        "variables": {
+            "T_K": "Temperature in Kelvin",
+            "T_{(\\degree C)}": "Temperature in Celsius"
+        },
+        "description": "Converts Celsius to Kelvin by adding 273.15."
+    },
+    {
+        "name": "Kelvin to Celsius",
+        "formula": "T_{(\\degree C)} = T_K - 273.15",
+        "variables": {
+            "T_{(\\degree C)}": "Temperature in Celsius",
+            "T_K": "Temperature in Kelvin"
+        },
+        "description": "Converts Kelvin to Celsius by subtracting 273.15."
+    },
+    {
+        "name": "Fahrenheit to Rankine",
+        "formula": "T_{(\\degree R)} = T_{(\\degree F)} + 459.67",
+        "variables": {
+            "T_{(\\degree R)}": "Temperature in Rankine",
+            "T_{(\\degree F)}": "Temperature in Fahrenheit"
+        },
+        "description": "Converts Fahrenheit to Rankine by adding 459.67."
+    },
+    {
+        "name": "Rankine to Fahrenheit",
+        "formula": "T_{(\\degree F)} = T_{(\\degree R)} - 459.67",
+        "variables": {
+            "T_{(\\degree F)}": "Temperature in Fahrenheit",
+            "T_{(\\degree R)}": "Temperature in Rankine"
+        },
+        "description": "Converts Rankine to Fahrenheit by subtracting 459.67."
+    },
+    {
+        "name": "Rankine to Kelvin",
+        "formula": "T_K = \\frac{5}{9} T_{(\\degree R)}",
+        "variables": {
+            "T_K": "Temperature in Kelvin",
+            "T_{(\\degree R)}": "Temperature in Rankine"
+        },
+        "description": "Converts Rankine to Kelvin using the ratio 5/9."
+    },
+    {
+        "name": "Kelvin to Rankine",
+        "formula": "T_{(\\degree R)} = \\frac{9}{5} T_K",
+        "variables": {
+            "T_{(\\degree R)}": "Temperature in Rankine",
+            "T_K": "Temperature in Kelvin"
+        },
+        "description": "Converts Kelvin to Rankine using the ratio 9/5."
+    },
+    {
+        "name": "Celsius to Fahrenheit",
+        "formula": "T_{(\\degree F)} = \\frac{9}{5} T_{(\\degree C)} + 32",
+        "variables": {
+            "T_{(\\degree F)}": "Temperature in Fahrenheit",
+            "T_{(\\degree C)}": "Temperature in Celsius"
+        },
+        "description": "Converts Celsius to Fahrenheit using the linear relation."
+    },
+    {
+        "name": "Fahrenheit to Celsius",
+        "formula": "T_{(\\degree C)} = \\frac{5}{9} (T_{(\\degree F)} - 32)",
+        "variables": {
+            "T_{(\\degree C)}": "Temperature in Celsius",
+            "T_{(\\degree F)}": "Temperature in Fahrenheit"
+        },
+        "description": "Converts Fahrenheit to Celsius using the linear relation."
+    },
+    {
+        "name": "Mole Fraction of a Component",
+        "formula": "x_i = \\frac{n_i}{\\sum_{j=1}^{n} n_j}",
+        "variables": {
+            "x_i": "Mole fraction of component i (dimensionless)",
+            "n_i": "Number of moles of component i",
+            "n_j": "Number of moles of component j",
+            "n": "Total number of components in the mixture"
+        },
+        "description": "Calculates the mole fraction of a component in a mixture. Mole fractions are widely used in chemical engineering to relate composition to thermodynamic and transport properties."
+    },
+    {
+        "name": "Density of a Liquid Mixture Using Mass Fractions",
+        "formula": "\\rho_{mix} = \\sum_{i=1}^{n} w_i \\rho_i",
+        "variables": {
+            "\\rho_{mix}": "Density of the mixture (kg/m³)",
+            "w_i": "Mass fraction of component i in the mixture (dimensionless)",
+            "\\rho_i": "Density of pure component i (kg/m³)",
+            "n": "Number of components in the mixture"
+        },
+        "description": "Calculates the density of a liquid mixture using the mass fractions and densities of the individual components. Useful for multi-component solutions where volumetric changes are negligible."
+    },
+    {
+        "name": "Density of a Liquid Mixture Using Mole Fractions",
+        "formula": "\\rho_{mix} = \\frac{\\sum_{i=1}^{n} x_i M_i}{\\sum_{i=1}^{n} x_i V_i} \\quad \\text{or} \\quad \\rho_{mix} = \\sum_{i=1}^{n} x_i \\rho_i",
+        "variables": {
+            "\\rho_{mix}": "Density of the mixture (kg/m³)",
+            "\\rho_i": "Density of component i (kg/m³)",
+            "x_i": "Mole fraction of component i (dimensionless)",
+            "M_i": "Molar mass of component i (kg/mol)",
+            "V_i": "Molar volume of component i (m³/mol)",
+            "n": "Number of components in the mixture"
+        },
+        "description": "Calculates the density of a liquid mixture using mole fractions. The numerator sums the contributions of each component's molar mass, while the denominator sums the contributions of each component's molar volume. Assumes ideal mixing (no volume contraction)."
+    }
+]

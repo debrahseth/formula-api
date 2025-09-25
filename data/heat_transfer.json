@@ -1,0 +1,11 @@
+[
+    {
+        "name": "Convective Resistance",
+        "formula": "R = \\frac{1}{h.A}",
+        "variables": {
+            "h": "Convective Heat Transfer Coefficient (W/m²K)",
+            "A": "Heat Transfer Area (m²)"
+        },
+        "description": "Shows the resistance caused by convective transfer."
+    }
+]

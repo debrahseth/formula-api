@@ -1,0 +1,970 @@
+[
+    {
+        "name": "Approximate Number of Classes",
+        "formula": "k \\approx \\sqrt{n}",
+        "variables": {
+            "k": "Number of classes",
+            "n": "Number of data points"
+        },
+        "description": "Rule of thumb for determining the number of classes in a frequency distribution."
+    },
+    {
+        "name": "Range",
+        "formula": "R = x_{\\max} - x_{\\min}",
+        "variables": {
+            "R": "Range",
+            "x_{\\max}": "Maximum value",
+            "x_{\\min}": "Minimum value"
+        },
+        "description": "Difference between the highest and lowest values in a data set."
+    },
+    {
+        "name": "Class Width",
+        "formula": "w = \\frac{R}{k}",
+        "variables": {
+            "w": "Class width",
+            "R": "Range",
+            "k": "Number of classes"
+        },
+        "description": "Width of each class in a frequency distribution, often rounded up to a convenient number."
+    },
+    {
+        "name": "Fractional Uncertainty",
+        "formula": "u = \\frac{\\Delta}{x}",
+        "variables": {
+            "u": "Fractional uncertainty",
+            "\\Delta": "Uncertainty",
+            "x": "Best value"
+        },
+        "description": "Relative uncertainty in a measurement."
+    },
+    {
+        "name": "Percentage Uncertainty",
+        "formula": "u_{\\%} = \\frac{\\Delta}{x} \\times 100\\%",
+        "variables": {
+            "u_{\\%}": "Percentage uncertainty",
+            "\\Delta": "Uncertainty",
+            "x": "Best value"
+        },
+        "description": "Uncertainty expressed as a percentage of the best value."
+    },
+    {
+        "name": "Error",
+        "formula": "e = x_{reported} - x_{true}",
+        "variables": {
+            "e": "Error",
+            "x_{reported}": "Reported value",
+            "x_{true}": "True value"
+        },
+        "description": "Difference between the reported value and the true value."
+    },
+    {
+        "name": "Fractional Error",
+        "formula": "\\frac{e}{x_{true}}",
+        "variables": {
+            "e": "Error",
+            "x_{true}": "True value"
+        },
+        "description": "Relative error in a measurement."
+    },
+    {
+        "name": "Percentage Error",
+        "formula": "\\frac{e}{x_{true}} \\times 100\\%",
+        "variables": {
+            "e": "Error",
+            "x_{true}": "True value"
+        },
+        "description": "Error expressed as a percentage of the true value."
+    },
+    {
+        "name": "Sample Mean",
+        "formula": "\\bar{x} = \\frac{\\sum_{i=1}^n x_i}{n}",
+        "variables": {
+            "\\bar{x}": "Sample mean",
+            "x_i": "Individual observations",
+            "n": "Number of observations"
+        },
+        "description": "Arithmetic average of a set of observations."
+    },
+    {
+        "name": "Mean Absolute Deviation",
+        "formula": "\\bar{d} = \\frac{1}{n} \\sum_{i=1}^n |x_i - \\bar{x}|",
+        "variables": {
+            "\\bar{d}": "Mean absolute deviation",
+            "x_i": "Individual observations",
+            "\\bar{x}": "Sample mean",
+            "n": "Number of observations"
+        },
+        "description": "Average absolute deviation from the mean."
+    },
+    {
+        "name": "Standard Error of the Mean",
+        "formula": "s_{\\bar{x}} = \\frac{s}{\\sqrt{n}}",
+        "variables": {
+            "s_{\\bar{x}}": "Standard error of the mean",
+            "s": "Standard deviation",
+            "n": "Number of observations"
+        },
+        "description": "Uncertainty associated with the sample mean."
+    },
+    {
+        "name": "Uncertainty in Sum or Difference (Maximum)",
+        "formula": "\\Delta z = |\\Delta x| + |\\Delta y|",
+        "variables": {
+            "\\Delta z": "Uncertainty in z",
+            "\\Delta x": "Uncertainty in x",
+            "\\Delta y": "Uncertainty in y"
+        },
+        "description": "Maximum uncertainty for z = x ± y."
+    },
+    {
+        "name": "Uncertainty in Sum or Difference (Quadrature)",
+        "formula": "\\Delta z = \\sqrt{(\\Delta x)^2 + (\\Delta y)^2}",
+        "variables": {
+            "\\Delta z": "Uncertainty in z",
+            "\\Delta x": "Uncertainty in x",
+            "\\Delta y": "Uncertainty in y"
+        },
+        "description": "Uncertainty for z = x ± y assuming independent random errors."
+    },
+    {
+        "name": "Uncertainty in Scalar Multiplication",
+        "formula": "\\Delta (k x) = |k| \\Delta x",
+        "variables": {
+            "k": "Exact constant",
+            "\\Delta x": "Uncertainty in x"
+        },
+        "description": "Uncertainty when multiplying by an exact constant."
+    },
+    {
+        "name": "Relative Uncertainty in Product or Quotient (Maximum)",
+        "formula": "\\frac{\\Delta z}{|z|} = \\frac{\\Delta x}{|x|} + \\frac{\\Delta y}{|y|}",
+        "variables": {
+            "\\Delta z": "Uncertainty in z",
+            "z": "Result",
+            "\\Delta x": "Uncertainty in x",
+            "x": "Value of x",
+            "\\Delta y": "Uncertainty in y",
+            "y": "Value of y"
+        },
+        "description": "Maximum relative uncertainty for z = x * y or z = x / y."
+    },
+    {
+        "name": "Relative Uncertainty in Product or Quotient (Quadrature)",
+        "formula": "\\frac{\\Delta z}{|z|} = \\sqrt{ \\left( \\frac{\\Delta x}{x} \\right)^2 + \\left( \\frac{\\Delta y}{y} \\right)^2 }",
+        "variables": {
+            "\\Delta z": "Uncertainty in z",
+            "z": "Result",
+            "\\Delta x": "Uncertainty in x",
+            "x": "Value of x",
+            "\\Delta y": "Uncertainty in y",
+            "y": "Value of y"
+        },
+        "description": "Relative uncertainty for z = x * y or z = x / y assuming independent errors."
+    },
+    {
+        "name": "Relative Uncertainty for Powers (Maximum)",
+        "formula": "\\frac{\\Delta z}{z} = |m| \\frac{\\Delta x}{x} + |n| \\frac{\\Delta y}{y}",
+        "variables": {
+            "\\Delta z": "Uncertainty in z",
+            "z": "Result",
+            "m": "Exponent for x",
+            "\\Delta x": "Uncertainty in x",
+            "x": "Value of x",
+            "n": "Exponent for y",
+            "\\Delta y": "Uncertainty in y",
+            "y": "Value of y"
+        },
+        "description": "Maximum relative uncertainty for z = x^m y^n."
+    },
+    {
+        "name": "Relative Uncertainty for Powers (Quadrature)",
+        "formula": "\\frac{\\Delta z}{z} = \\sqrt{ (m \\frac{\\Delta x}{x})^2 + (n \\frac{\\Delta y}{y})^2 }",
+        "variables": {
+            "\\Delta z": "Uncertainty in z",
+            "z": "Result",
+            "m": "Exponent for x",
+            "\\Delta x": "Uncertainty in x",
+            "x": "Value of x",
+            "n": "Exponent for y",
+            "\\Delta y": "Uncertainty in y",
+            "y": "Value of y"
+        },
+        "description": "Relative uncertainty for z = x^m y^n assuming independent errors."
+    },
+    {
+        "name": "General Propagation of Uncertainty (Maximum)",
+        "formula": "\\Delta z = \\left| \\frac{\\partial z}{\\partial x} \\right| \\Delta x + \\left| \\frac{\\partial z}{\\partial y} \\right| \\Delta y + \\cdots",
+        "variables": {
+            "\\Delta z": "Uncertainty in z",
+            "\\frac{\\partial z}{\\partial x}": "Partial derivative with respect to x",
+            "\\Delta x": "Uncertainty in x",
+            "\\frac{\\partial z}{\\partial y}": "Partial derivative with respect to y",
+            "\\Delta y": "Uncertainty in y"
+        },
+        "description": "General formula for maximum uncertainty propagation."
+    },
+    {
+        "name": "Law of Propagation of Uncertainty",
+        "formula": "\\Delta z = \\sqrt{ \\left( \\frac{\\partial z}{\\partial x} \\Delta x \\right)^2 + \\left( \\frac{\\partial z}{\\partial y} \\Delta y \\right)^2 + \\cdots }",
+        "variables": {
+            "\\Delta z": "Uncertainty in z",
+            "\\frac{\\partial z}{\\partial x}": "Partial derivative with respect to x",
+            "\\Delta x": "Uncertainty in x",
+            "\\frac{\\partial z}{\\partial y}": "Partial derivative with respect to y",
+            "\\Delta y": "Uncertainty in y"
+        },
+        "description": "General formula for uncertainty propagation assuming independent random errors."
+    },
+    {
+        "name": "Resistance Temperature Dependence",
+        "formula": "R = R_0 (1 + \\alpha (T - 20))",
+        "variables": {
+            "R": "Resistance at temperature T (°C)",
+            "R_0": "Resistance at 20°C",
+            "\\alpha": "Temperature coefficient of resistance",
+            "T": "Temperature (°C)"
+        },
+        "description": "Linear approximation for the change in resistance with temperature."
+    },
+    {
+        "name": "Gravitational Acceleration from Pendulum",
+        "formula": "g = \\frac{4 \\pi^2 L}{T^2}",
+        "variables": {
+            "g": "Acceleration due to gravity",
+            "L": "Length of pendulum",
+            "T": "Period of oscillation"
+        },
+        "description": "Formula to calculate g using measurements from a simple pendulum."
+    },
+    {
+        "name": "Sample Mean",
+        "formula": "\\bar{x} = \\frac{\\sum x_i}{n}",
+        "variables": {
+            "\\bar{x}": "Sample mean",
+            "x_i": "Individual values",
+            "n": "Number of values"
+        },
+        "description": "Arithmetic average of sample data."
+    },
+    {
+        "name": "Population Mean",
+        "formula": "\\mu = \\frac{\\sum x_i}{N}",
+        "variables": {
+            "\\mu": "Population mean",
+            "x_i": "Individual values",
+            "N": "Population size"
+        },
+        "description": "Arithmetic average of population data."
+    },
+    {
+        "name": "Mean of Frequency Distribution",
+        "formula": "\\bar{x} = \\frac{\\sum f_i x_i}{\\sum f_i}",
+        "variables": {
+            "\\bar{x}": "Mean",
+            "f_i": "Frequencies",
+            "x_i": "Values"
+        },
+        "description": "Mean for data in frequency table."
+    },
+    {
+        "name": "Mean for Grouped Data",
+        "formula": "\\bar{x} = \\frac{\\sum f \\cdot x_m}{n}",
+        "variables": {
+            "\\bar{x}": "Mean",
+            "f": "Frequency",
+            "x_m": "Midpoint",
+            "n": "Total number"
+        },
+        "description": "Mean using class midpoints."
+    },
+    {
+        "name": "Assumed Mean Method",
+        "formula": "\\bar{x} = M + \\frac{\\sum f_i d_i}{\\sum f_i}",
+        "variables": {
+            "\\bar{x}": "Mean",
+            "M": "Assumed mean",
+            "f_i": "Frequencies",
+            "d_i": "Deviations"
+        },
+        "description": "Mean using an assumed value."
+    },
+    {
+        "name": "Geometric Mean",
+        "formula": "G = \\sqrt[n]{x_1 x_2 \\cdots x_n}",
+        "variables": {
+            "G": "Geometric mean",
+            "x_i": "Values",
+            "n": "Number of values"
+        },
+        "description": "nth root of product of values."
+    },
+    {
+        "name": "Logarithmic Mean",
+        "formula": "\\frac{x_2 - x_1}{\\ln x_2 - \\ln x_1}",
+        "variables": {
+            "x_1, x_2": "Two numbers"
+        },
+        "description": "Mean for two numbers using logs."
+    },
+    {
+        "name": "Harmonic Mean",
+        "formula": "H = \\frac{n}{\\sum (1/x_i)}",
+        "variables": {
+            "H": "Harmonic mean",
+            "n": "Number of values",
+            "x_i": "Values"
+        },
+        "description": "Reciprocal of mean of reciprocals."
+    },
+    {
+        "name": "Median for Grouped Data",
+        "formula": "\\text{Median} = L_1 + \\left( \\frac{N/2 - (\\sum f)_1}{f_{\\text{median}}} \\right) c",
+        "variables": {
+            "L_1": "Lower boundary of median class",
+            "N": "Total frequency",
+            "(\\sum f)_1": "Sum of frequencies below median class",
+            "f_{\\text{median}}": "Frequency of median class",
+            "c": "Class size"
+        },
+        "description": "Median in grouped frequency."
+    },
+    {
+        "name": "Mode for Grouped Data",
+        "formula": "\\text{Mode} = L_1 + \\left( \\frac{\\Delta_1}{\\Delta_1 + \\Delta_2} \\right) c",
+        "variables": {
+            "L_1": "Lower boundary of modal class",
+            "\\Delta_1": "Modal freq minus prev freq",
+            "\\Delta_2": "Modal freq minus next freq",
+            "c": "Class size"
+        },
+        "description": "Mode in grouped frequency."
+    },
+    {
+        "name": "Midrange",
+        "formula": "\\frac{\\text{lowest} + \\text{highest}}{2}",
+        "variables": {
+            "lowest, highest": "Extreme values"
+        },
+        "description": "Rough estimate of middle."
+    },
+    {
+        "name": "Weighted Mean",
+        "formula": "\\bar{x} = \\frac{\\sum w_i x_i}{\\sum w_i}",
+        "variables": {
+            "\\bar{x}": "Weighted mean",
+            "w_i": "Weights",
+            "x_i": "Values"
+        },
+        "description": "Mean with unequal representation."
+    },
+    {
+        "name": "Range",
+        "formula": "R = \\text{highest} - \\text{lowest}",
+        "variables": {
+            "R": "Range"
+        },
+        "description": "Difference between extremes."
+    },
+    {
+        "name": "Population Variance",
+        "formula": "\\sigma^2 = \\frac{\\sum (X_i - \\mu)^2}{N}",
+        "variables": {
+            "\\sigma^2": "Population variance",
+            "X_i": "Values",
+            "\\mu": "Mean",
+            "N": "Size"
+        },
+        "description": "Average squared deviation."
+    },
+    {
+        "name": "Sample Variance",
+        "formula": "s^2 = \\frac{\\sum (x_i - \\bar{x})^2}{n-1}",
+        "variables": {
+            "s^2": "Sample variance",
+            "x_i": "Values",
+            "\\bar{x}": "Mean",
+            "n": "Sample size"
+        },
+        "description": "Average squared deviation."
+    },
+    {
+        "name": "Population Standard Deviation",
+        "formula": "\\sigma = \\sqrt{\\sigma^2}",
+        "variables": {
+            "\\sigma": "Standard deviation"
+        },
+        "description": "Square root of variance."
+    },
+    {
+        "name": "Variance for Grouped Data",
+        "formula": "s^2 = \\frac{\\sum f \\cdot x_m^2 - [(\\sum f \\cdot x_m)^2 / n]}{n-1}",
+        "variables": {
+            "s^2": "Variance",
+            "f": "Frequency",
+            "x_m": "Midpoint",
+            "n": "Total"
+        },
+        "description": "Variance using midpoints."
+    },
+    {
+        "name": "Shortcut Sample Variance",
+        "formula": "s^2 = \\frac{n \\sum x^2 - (\\sum x)^2}{n(n-1)}",
+        "variables": {
+            "s^2": "Variance",
+            "n": "Sample size",
+            "x": "Values"
+        },
+        "description": "Alternative calculation."
+    },
+    {
+        "name": "Coefficient of Variation (Sample)",
+        "formula": "CV = \\frac{s}{\\bar{x}} \\times 100\\%",
+        "variables": {
+            "CV": "Coefficient of variation",
+            "s": "Standard deviation",
+            "\\bar{x}": "Mean"
+        },
+        "description": "Relative standard deviation."
+    },
+    {
+        "name": "Coefficient of Variation (Population)",
+        "formula": "CV = \\frac{\\sigma}{\\mu} \\times 100\\%",
+        "variables": {
+            "CV": "Coefficient of variation",
+            "\\sigma": "Standard deviation",
+            "\\mu": "Mean"
+        },
+        "description": "Relative standard deviation."
+    },
+    {
+        "name": "Chebyshev's Theorem Proportion",
+        "formula": "\\geq 1 - \\frac{1}{k^2}",
+        "variables": {
+            "k": "Number greater than 1"
+        },
+        "description": "Proportion within k std devs."
+    },
+    {
+        "name": "z-Score",
+        "formula": "z = \\frac{\\text{value} - \\text{mean}}{\\text{std dev}}",
+        "variables": {
+            "z": "z-score",
+            "value": "Data value",
+            "mean": "Mean",
+            "std dev": "Standard deviation"
+        },
+        "description": "Standardized value."
+    },
+    {
+        "name": "Percentile Formula",
+        "formula": "\\frac{\\text{num below } x + 0.5 \\times \\text{num equal } x}{\\text{total}} \\times 100\\%",
+        "variables": {
+            "x": "Value"
+        },
+        "description": "Percentile rank."
+    },
+    {
+        "name": "Value for Percentile Index",
+        "formula": "c = \\frac{n p}{100}",
+        "variables": {
+            "c": "Index",
+            "n": "Total values",
+            "p": "Percentile"
+        },
+        "description": "Position for pth percentile."
+    },
+    {
+        "name": "Lower Quartile (Grouped)",
+        "formula": "Q_1 = L_1 + \\left( \\frac{N/4 - (\\sum f)_1}{f_1} \\right) c_1",
+        "variables": {
+            "Q_1": "Lower quartile",
+            "L_1": "Lower boundary",
+            "N": "Total",
+            "(\\sum f)_1": "Sum below",
+            "f_1": "Frequency",
+            "c_1": "Size"
+        },
+        "description": "Q1 in grouped data."
+    },
+    {
+        "name": "Upper Quartile (Grouped)",
+        "formula": "Q_3 = L_3 + \\left( \\frac{3N/4 - (\\sum f)_3}{f_3} \\right) c_3",
+        "variables": {
+            "Q_3": "Upper quartile",
+            "L_3": "Lower boundary",
+            "N": "Total",
+            "(\\sum f)_3": "Sum below",
+            "f_3": "Frequency",
+            "c_3": "Size"
+        },
+        "description": "Q3 in grouped data."
+    },
+    {
+        "name": "Kth Percentile (Grouped)",
+        "formula": "P_k = L_k + \\left( \\frac{k N / 100 - (\\sum f)_k}{f_k} \\right) c_k",
+        "variables": {
+            "P_k": "kth percentile",
+            "L_k": "Lower boundary",
+            "N": "Total",
+            "(\\sum f)_k": "Sum below",
+            "f_k": "Frequency",
+            "c_k": "Size"
+        },
+        "description": "Pk in grouped data."
+    },
+    {
+        "name": "Pearson Correlation Coefficient",
+        "formula": "r = \\frac{n(\\sum xy) - (\\sum x)(\\sum y)}{\\sqrt{[n(\\sum x^2) - (\\sum x)^2][n(\\sum y^2) - (\\sum y)^2]}}",
+        "variables": {
+            "r": "Correlation coefficient",
+            "n": "Number of pairs",
+            "x, y": "Variables"
+        },
+        "description": "Measure of linear relationship."
+    },
+    {
+        "name": "Regression Line Intercept",
+        "formula": "a_0 = \\frac{(\\sum y)(\\sum x^2) - (\\sum x)(\\sum xy)}{n(\\sum x^2) - (\\sum x)^2}",
+        "variables": {
+            "a_0": "Intercept",
+            "x, y": "Variables",
+            "n": "Number"
+        },
+        "description": "Intercept of least squares line."
+    },
+    {
+        "name": "Regression Line Slope",
+        "formula": "a_1 = \\frac{n(\\sum xy) - (\\sum x)(\\sum y)}{n(\\sum x^2) - (\\sum x)^2}",
+        "variables": {
+            "a_1": "Slope",
+            "x, y": "Variables",
+            "n": "Number"
+        },
+        "description": "Slope of least squares line."
+    },
+    {
+        "name": "Total Variation",
+        "formula": "\\sum (y - \\bar{y})^2 = \\sum (y' - \\bar{y})^2 + \\sum (y - y')^2",
+        "variables": {
+            "y": "Observed",
+            "y'": "Predicted",
+            "\\bar{y}": "Mean"
+        },
+        "description": "Decomposition into explained and unexplained."
+    },
+    {
+        "name": "Coefficient of Determination",
+        "formula": "r^2 = \\frac{\\text{explained variation}}{\\text{total variation}}",
+        "variables": {
+            "r^2": "Coeff of determination"
+        },
+        "description": "Proportion of variation explained."
+    },
+    {
+        "name": "Standard Error of Estimate",
+        "formula": "S_{\\text{est}} = \\sqrt{\\frac{\\sum (y_i - y')^2}{n-2}}",
+        "variables": {
+            "S_{\\text{est}}": "Standard error",
+            "y_i": "Observed",
+            "y'": "Predicted",
+            "n": "Number"
+        },
+        "description": "Std dev of residuals."
+    },
+    {
+        "name": "Parabola Regression",
+        "formula": "y = a_0 + a_1 x + a_2 x^2",
+        "variables": {
+            "y": "Dependent",
+            "x": "Independent"
+        },
+        "description": "Quadratic regression model."
+    },
+    {
+        "name": "Multiple Correlation Coefficient",
+        "formula": "R = \\sqrt{\\frac{r_{yx1}^2 + r_{yx2}^2 - 2 r_{yx1} r_{yx2} r_{x1x2}}{1 - r_{x1x2}^2}}",
+        "variables": {
+            "R": "Multiple correlation",
+            "r_{yx1}": "Corr y and x1",
+            "etc.": "Other correlations"
+        },
+        "description": "Correlation with multiple variables."
+    },
+    {
+        "name": "Multiple Regression",
+        "formula": "y = a_0 + a_1 x_1 + a_2 x_2",
+        "variables": {
+            "y": "Dependent",
+            "x_1, x_2": "Independents"
+        },
+        "description": "Regression with two predictors."
+    },
+    {
+        "name": "Spearman Rank Correlation",
+        "formula": "r_s = 1 - \\frac{6 \\sum d^2}{n(n^2 - 1)}",
+        "variables": {
+            "r_s": "Rank correlation",
+            "d": "Rank differences",
+            "n": "Number"
+        },
+        "description": "Nonparametric correlation."
+    },
+    {
+        "name": "Spearman with Ties",
+        "formula": "r_s = 1 - \\frac{6 \\left( \\sum d^2 + \\frac{m(m^2 - 1)}{12} + \\cdots \\right)}{n(n^2 - 1)}",
+        "variables": {
+            "m": "Number of ties"
+        },
+        "description": "Adjusted for tied ranks."
+    },
+    {
+        "name": "Probability of Event",
+        "formula": "P(A) = \\frac{n}{N}",
+        "variables": {
+            "P(A)": "Probability",
+            "n": "Favorable",
+            "N": "Total"
+        },
+        "description": "For equally likely outcomes."
+    },
+    {
+        "name": "Complement Probability",
+        "formula": "P(E') = 1 - P(E)",
+        "variables": {
+            "E'": "Complement"
+        },
+        "description": "Probability of not E."
+    },
+    {
+        "name": "Addition Rule",
+        "formula": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+        "variables": {
+            "A \\cup B": "Union"
+        },
+        "description": "Probability of A or B."
+    },
+    {
+        "name": "Addition for Three Events",
+        "formula": "P(A \\cup B \\cup C) = P(A) + P(B) + P(C) - P(A \\cap B) - P(A \\cap C) - P(B \\cap C) + P(A \\cap B \\cap C)",
+        "variables": {
+            "A \\cup B \\cup C": "Union"
+        },
+        "description": "Probability of A or B or C."
+    },
+    {
+        "name": "Conditional Probability",
+        "formula": "P(A | B) = \\frac{P(A \\cap B)}{P(B)}",
+        "variables": {
+            "P(A | B)": "Conditional"
+        },
+        "description": "Probability of A given B."
+    },
+    {
+        "name": "Multiplication Rule",
+        "formula": "P(A \\cap B) = P(A | B) P(B)",
+        "variables": {
+            "A \\cap B": "Intersection"
+        },
+        "description": "Joint probability."
+    },
+    {
+        "name": "Total Probability Rule",
+        "formula": "P(B) = P(B | A) P(A) + P(B | A') P(A')",
+        "variables": {
+            "A'": "Complement"
+        },
+        "description": "Partition into A and A'."
+    },
+    {
+        "name": "General Total Probability",
+        "formula": "P(B) = \\sum P(B | E_i) P(E_i)",
+        "variables": {
+            "E_i": "Partition events"
+        },
+        "description": "Over mutually exclusive exhaustive events."
+    },
+    {
+        "name": "Independence",
+        "formula": "P(A \\cap B) = P(A) P(B)",
+        "variables": {},
+        "description": "For independent events."
+    },
+    {
+        "name": "Bayes' Theorem",
+        "formula": "P(A | B) = \\frac{P(B | A) P(A)}{P(B)}",
+        "variables": {},
+        "description": "Reverse conditional."
+    },
+    {
+        "name": "General Bayes' Theorem",
+        "formula": "P(E_1 | B) = \\frac{P(B | E_1) P(E_1)}{\\sum P(B | E_i) P(E_i)}",
+        "variables": {
+            "E_i": "Partition"
+        },
+        "description": "Over multiple events."
+    },
+    {
+        "name": "Probability Mass Function",
+        "formula": "f(x) = P(X = x)",
+        "variables": {
+            "f(x)": "Probability at x",
+            "X": "Discrete random variable"
+        },
+        "description": "Defines the probability distribution for a discrete random variable, with f(x) ≥ 0 and sum f(x) = 1."
+    },
+    {
+        "name": "Cumulative Distribution Function (Discrete)",
+        "formula": "F(x) = P(X \\leq x) = \\sum_{x_i \\leq x} f(x_i)",
+        "variables": {
+            "F(x)": "Cumulative probability up to x",
+            "f(x_i)": "Probability mass at x_i"
+        },
+        "description": "Probability that the discrete random variable is less than or equal to x."
+    },
+    {
+        "name": "Discrete Uniform Probability Mass Function",
+        "formula": "f(x_i) = \\frac{1}{n}",
+        "variables": {
+            "n": "Number of possible values"
+        },
+        "description": "Equal probability for each of n values in the range."
+    },
+    {
+        "name": "Discrete Uniform Mean",
+        "formula": "\\mu = \\frac{a + b}{2}",
+        "variables": {
+            "a": "First value",
+            "b": "Last value"
+        },
+        "description": "Mean for uniform distribution from a to b."
+    },
+    {
+        "name": "Discrete Uniform Variance",
+        "formula": "\\sigma^2 = \\frac{(b - a + 1)^2 - 1}{12}",
+        "variables": {
+            "a": "First value",
+            "b": "Last value"
+        },
+        "description": "Variance for uniform distribution from a to b."
+    },
+    {
+        "name": "Binomial Probability Mass Function",
+        "formula": "f(x) = \\binom{n}{x} p^x (1-p)^{n-x}",
+        "variables": {
+            "n": "Number of trials",
+            "p": "Probability of success",
+            "x": "Number of successes"
+        },
+        "description": "Probability of x successes in n independent Bernoulli trials."
+    },
+    {
+        "name": "Geometric Probability Mass Function",
+        "formula": "f(x) = (1-p)^{x-1} p",
+        "variables": {
+            "p": "Probability of success",
+            "x": "Trial number of first success"
+        },
+        "description": "Probability that the first success occurs on the xth trial."
+    },
+    {
+        "name": "Negative Binomial Probability Mass Function",
+        "formula": "f(x) = \\binom{x-1}{r-1} p^r (1-p)^{x-r}",
+        "variables": {
+            "r": "Number of successes",
+            "p": "Probability of success",
+            "x": "Trial number of rth success"
+        },
+        "description": "Probability that the rth success occurs on the xth trial."
+    },
+    {
+        "name": "Hypergeometric Probability Mass Function",
+        "formula": "f(x) = \\frac{ \\binom{K}{x} \\binom{N-K}{n-x} }{ \\binom{N}{n} }",
+        "variables": {
+            "N": "Population size",
+            "K": "Number of successes in population",
+            "n": "Sample size",
+            "x": "Number of successes in sample"
+        },
+        "description": "Probability of x successes in sample of n from finite population without replacement."
+    },
+    {
+        "name": "Poisson Probability Mass Function",
+        "formula": "f(x) = \\frac{ e^{-\\lambda} \\lambda^x }{ x! }",
+        "variables": {
+            "\\lambda": "Average rate",
+            "x": "Number of occurrences"
+        },
+        "description": "Probability of x occurrences in a fixed interval."
+    },
+    {
+        "name": "Probability Density Function Properties",
+        "formula": "f(x) \\geq 0, \\quad \\int_{-\\infty}^{\\infty} f(x) \\, dx = 1",
+        "variables": {
+            "f(x)": "Density function"
+        },
+        "description": "Conditions for a valid continuous probability density function."
+    },
+    {
+        "name": "Continuous Cumulative Distribution Function",
+        "formula": "F(x) = \\int_{-\\infty}^{x} f(u) \\, du",
+        "variables": {
+            "F(x)": "Cumulative probability"
+        },
+        "description": "Integral of pdf up to x."
+    },
+    {
+        "name": "Continuous Uniform Probability Density Function",
+        "formula": "f(x) = \\frac{1}{b - a}",
+        "variables": {
+            "a": "Lower bound",
+            "b": "Upper bound"
+        },
+        "description": "Uniform density over [a, b]."
+    },
+    {
+        "name": "Normal Probability Density Function",
+        "formula": "f(x) = \\frac{1}{\\sigma \\sqrt{2\\pi}} \\exp\\left( -\\frac{(x - \\mu)^2}{2\\sigma^2} \\right)",
+        "variables": {
+            "\\mu": "Mean",
+            "\\sigma": "Standard deviation"
+        },
+        "description": "Bell-shaped distribution."
+    },
+    {
+        "name": "Standard Normal z-Score",
+        "formula": "z = \\frac{x - \\mu}{\\sigma}",
+        "variables": {
+            "z": "Standardized value",
+            "x": "Original value"
+        },
+        "description": "Transforms normal to standard normal."
+    },
+    {
+        "name": "Pearson Coefficient of Skewness",
+        "formula": "PC = \\frac{3(\\bar{x} - \\text{median})}{s}",
+        "variables": {
+            "\\bar{x}": "Sample mean",
+            "s": "Sample standard deviation"
+        },
+        "description": "Measures skewness; |PC| < 1 indicates not significantly skewed."
+    },
+    {
+        "name": "Exponential Probability Density Function",
+        "formula": "f(x) = \\lambda e^{-\\lambda x}",
+        "variables": {
+            "\\lambda": "Rate parameter",
+            "x": "Value ≥ 0"
+        },
+        "description": "Time until next event in Poisson process."
+    },
+    {
+        "name": "Erlang Probability Density Function",
+        "formula": "f(x) = \\frac{\\lambda^r x^{r-1} e^{-\\lambda x}}{(r-1)!}",
+        "variables": {
+            "\\lambda": "Rate",
+            "r": "Integer shape parameter"
+        },
+        "description": "Time until r events in Poisson process."
+    },
+    {
+        "name": "Weibull Probability Density Function",
+        "formula": "f(x) = \\frac{\\alpha}{\\beta} \\left( \\frac{x}{\\beta} \\right)^{\\alpha - 1} e^{- (x/\\beta)^{\\alpha}}",
+        "variables": {
+            "\\alpha": "Shape",
+            "\\beta": "Scale"
+        },
+        "description": "Models failure times with varying hazard rates."
+    },
+    {
+        "name": "Lognormal Probability Density Function",
+        "formula": "f(x) = \\frac{1}{x \\sigma \\sqrt{2\\pi}} \\exp\\left( -\\frac{(\\ln x - \\mu)^2}{2\\sigma^2} \\right)",
+        "variables": {
+            "\\mu": "Mean of ln x",
+            "\\sigma": "Sd of ln x"
+        },
+        "description": "Distribution of variable whose logarithm is normal."
+    },
+    {
+        "name": "Confidence Interval for Mean (σ Known or n ≥ 30)",
+        "formula": "\\bar{x} \\pm z_{\\alpha/2} \\frac{\\sigma}{\\sqrt{n}}",
+        "variables": {
+            "\\bar{x}": "Sample mean",
+            "z_{\\alpha/2}": "z critical value",
+            "\\sigma": "Population sd",
+            "n": "Sample size"
+        },
+        "description": "Interval estimate for population mean."
+    },
+    {
+        "name": "Maximum Error of Estimate",
+        "formula": "E = z_{\\alpha/2} \\frac{\\sigma}{\\sqrt{n}}",
+        "variables": {
+            "E": "Error margin"
+        },
+        "description": "Half-width of confidence interval."
+    },
+    {
+        "name": "Sample Size for Mean Confidence Interval",
+        "formula": "n = \\left( \\frac{z_{\\alpha/2} \\sigma}{E} \\right)^2",
+        "variables": {
+            "n": "Required sample size"
+        },
+        "description": "Minimum sample size for desired error margin."
+    },
+    {
+        "name": "Confidence Interval for Mean (σ Unknown, n < 30)",
+        "formula": "\\bar{x} \\pm t_{\\alpha/2} \\frac{s}{\\sqrt{n}}",
+        "variables": {
+            "t_{\\alpha/2}": "t critical value, df = n-1",
+            "s": "Sample sd"
+        },
+        "description": "Interval using t-distribution."
+    },
+    {
+        "name": "Chi-Square Statistic",
+        "formula": "\\chi^2 = \\frac{(n-1) s^2}{\\sigma^2}",
+        "variables": {
+            "\\chi^2": "Chi-square value",
+            "df": "n-1"
+        },
+        "description": "For variance inference."
+    },
+    {
+        "name": "Confidence Interval for Variance",
+        "formula": "\\frac{(n-1)s^2}{\\chi^2_{\\text{right}}} < \\sigma^2 < \\frac{(n-1)s^2}{\\chi^2_{\\text{left}}}",
+        "variables": {
+            "\\chi^2_{\\text{right}}": "Chi-square at α/2",
+            "\\chi^2_{\\text{left}}": "Chi-square at 1-α/2"
+        },
+        "description": "Interval for population variance."
+    },
+    {
+        "name": "Confidence Interval for Standard Deviation",
+        "formula": "\\sqrt{ \\frac{(n-1)s^2}{\\chi^2_{\\text{right}}} } < \\sigma < \\sqrt{ \\frac{(n-1)s^2}{\\chi^2_{\\text{left}}} }",
+        "variables": {},
+        "description": "Square root of variance interval."
+    },
+    {
+        "name": "Z Test Statistic for Mean",
+        "formula": "z = \\frac{\\bar{x} - \\mu}{\\sigma / \\sqrt{n}}",
+        "variables": {
+            "\\bar{x}": "Sample mean",
+            "\\mu": "Hypothesized population mean",
+            "\\sigma": "Population standard deviation",
+            "n": "Sample size"
+        },
+        "description": "Test statistic for hypothesis testing on population mean when \\sigma is known or n \\geq 30."
+    },
+    {
+        "name": "T Test Statistic for Mean",
+        "formula": "t = \\frac{\\bar{x} - \\mu}{s / \\sqrt{n}}",
+        "variables": {
+            "\\bar{x}": "Sample mean",
+            "\\mu": "Hypothesized population mean",
+            "s": "Sample standard deviation",
+            "n": "Sample size"
+        },
+        "description": "Test statistic for hypothesis testing on population mean when \\sigma is unknown and n < 30, with degrees of freedom df = n - 1."
+    }
+]

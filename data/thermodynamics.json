@@ -1,0 +1,660 @@
+[
+    {
+        "name": "Ideal Gas Law",
+        "formula": "PV = nRT",
+        "variables": {
+            "P": "Pressure (Pa)",
+            "V": "Volume (m³)",
+            "n": "Moles of gas (mol)",
+            "R": "Universal gas constant (8.314 J/mol·K)",
+            "T": "Temperature (K)"
+        },
+        "description": "Relates pressure, volume, and temperature for an ideal gas."
+    },
+    {
+        "name": "First Law of Thermodynamics",
+        "formula": "\\Delta U = Q - W",
+        "variables": {
+            "ΔU": "Change in internal energy (J)",
+            "Q": "Heat added to the system (J)",
+            "W": "Work done by the system (J)"
+        },
+        "description": "Energy conservation principle applied to thermodynamic systems."
+    },
+    {
+        "name": "Enthalpy",
+        "formula": "H = U + PV",
+        "variables": {
+            "H": "Enthalpy (J)",
+            "U": "Internal energy (J)",
+            "P": "Pressure (Pa)",
+            "V": "Volume (m³)"
+        },
+        "description": "Definition of enthalpy as a state function."
+    },
+    {
+        "name": "Change in Enthalpy",
+        "formula": "\\Delta H = \\Delta U + P\\Delta V",
+        "variables": {
+            "ΔH": "Change in enthalpy (J)",
+            "ΔU": "Change in internal energy (J)",
+            "P": "Pressure (Pa)",
+            "ΔV": "Change in volume (m³)"
+        },
+        "description": "At constant pressure, enthalpy change accounts for internal energy and work."
+    },
+    {
+        "name": "Heat Capacity at Constant Volume",
+        "formula": "C_V = \\left(\\frac{\\partial U}{\\partial T}\\right)_V",
+        "variables": {
+            "Cv": "Heat capacity at constant volume (J/mol·K)",
+            "U": "Internal energy (J)",
+            "T": "Temperature (K)"
+        },
+        "description": "Heat required to raise the temperature of a system at constant volume."
+    },
+    {
+        "name": "Heat Capacity at Constant Pressure",
+        "formula": "C_P = \\left(\\frac{\\partial H}{\\partial T}\\right)_P",
+        "variables": {
+            "Cp": "Heat capacity at constant pressure (J/mol·K)",
+            "H": "Enthalpy (J)",
+            "T": "Temperature (K)"
+        },
+        "description": "Heat required to raise the temperature of a system at constant pressure."
+    },
+    {
+        "name": "Relation of Heat Capacities",
+        "formula": "C_P - C_V = R",
+        "variables": {
+            "C_P": "Heat capacity at constant pressure",
+            "C_V": "Heat capacity at constant volume",
+            "R": "Gas constant (J/mol·K)"
+        },
+        "description": "Relation between heat capacities for ideal gases."
+    },
+    {
+        "name": "Isothermal Work (Ideal Gas)",
+        "formula": "W = nRT \\ln\\left(\\frac{V_2}{V_1}\\right)",
+        "variables": {
+            "W": "Work done (J)",
+            "n": "Moles of gas (mol)",
+            "R": "Gas constant (J/mol·K)",
+            "T": "Temperature (K)",
+            "V1": "Initial volume (m³)",
+            "V2": "Final volume (m³)"
+        },
+        "description": "Work done by an ideal gas in an isothermal process."
+    },
+    {
+        "name": "Polytropic Work",
+        "formula": "W = \\frac{P_2V_2 - P_1V_1}{1 - n}",
+        "variables": {
+            "W": "Work done (J)",
+            "P1": "Initial pressure (Pa)",
+            "V1": "Initial volume (m³)",
+            "P2": "Final pressure (Pa)",
+            "V2": "Final volume (m³)",
+            "n": "Polytropic index"
+        },
+        "description": "Work done in a polytropic process (n ≠ 1)."
+    },
+    {
+        "name": "Entropy Change (Ideal Gas)",
+        "formula": "\\Delta S = nC_V \\ln\\left(\\frac{T_2}{T_1}\\right) + nR \\ln\\left(\\frac{V_2}{V_1}\\right)",
+        "variables": {
+            "ΔS": "Entropy change (J/K)",
+            "n": "Moles of gas (mol)",
+            "Cv": "Heat capacity at constant volume (J/mol·K)",
+            "T1": "Initial temperature (K)",
+            "T2": "Final temperature (K)",
+            "V1": "Initial volume (m³)",
+            "V2": "Final volume (m³)",
+            "R": "Gas constant (J/mol·K)"
+        },
+        "description": "Entropy change for an ideal gas process."
+    },
+    {
+        "name": "Gibbs Free Energy",
+        "formula": "G = H - TS",
+        "variables": {
+            "G": "Gibbs free energy (J)",
+            "H": "Enthalpy (J)",
+            "T": "Temperature (K)",
+            "S": "Entropy (J/K)"
+        },
+        "description": "Determines spontaneity of processes at constant pressure and temperature."
+    },
+    {
+        "name": "Helmholtz Free Energy",
+        "formula": "F = U - TS",
+        "variables": {
+            "F": "Helmholtz free energy (J)",
+            "U": "Internal energy (J)",
+            "T": "Temperature (K)",
+            "S": "Entropy (J/K)"
+        },
+        "description": "Useful thermodynamic potential at constant volume and temperature."
+    },
+    {
+        "name": "Clausius-Clapeyron Equation",
+        "formula": "\\frac{dP}{dT} = \\frac{\\Delta H_{vap}}{T \\Delta v}",
+        "variables": {
+            "dP/dT": "Slope of phase boundary",
+            "ΔHvap": "Enthalpy of vaporization (J/mol)",
+            "T": "Temperature (K)",
+            "Δv": "Change in specific volume (m³/mol)"
+        },
+        "description": "Relates vapor pressure change with temperature during phase change."
+    },
+    {
+        "name": "Carnot Efficiency",
+        "formula": "\\eta = 1 - \\frac{Tc}{Th}",
+        "variables": {
+            "η": "Efficiency",
+            "Tc": "Cold reservoir temperature (K)",
+            "Th": "Hot reservoir temperature (K)"
+        },
+        "description": "Maximum possible efficiency of a heat engine operating between two temperatures."
+    },
+    {
+        "name": "Constant Pressure Work",
+        "formula": "W = P \\Delta V",
+        "variables": {
+            "W": "Work done (J)",
+            "P": "Pressure (Pa)",
+            "ΔV": "Change in volume (m³)"
+        },
+        "description": "Work done during expansion or compression at constant pressure."
+    },
+    {
+        "name": "Heat Transfer (Sensible Heat)",
+        "formula": "Q = mc\\Delta T",
+        "variables": {
+            "Q": "Heat (J)",
+            "m": "Mass (kg)",
+            "c": "Specific heat capacity (J/kg·K)",
+            "ΔT": "Change in temperature (K)"
+        },
+        "description": "Heat required to change the temperature of a substance."
+    },
+    {
+        "name": "Latent Heat",
+        "formula": "Q = mL",
+        "variables": {
+            "Q": "Heat (J)",
+            "m": "Mass (kg)",
+            "L": "Latent heat (J/kg)"
+        },
+        "description": "Heat required for a phase change at constant temperature."
+    },
+    {
+        "name": "Backward Finite Difference Method",
+        "formula": "\\frac{df}{dx} = \\frac{f(x_i) - f(x_{i-1})}{x_i - x_{i-1}}",
+        "variables": {
+            "df/dx": "Difference quotient",
+            "f(xi)": "Value of function at x",
+            "f(xi-1)": "Value of function at (x-1)"
+        },
+        "description": "A technique for the approximation of differentials."
+    },
+    {
+        "name": "Forward Finite Difference Method",
+        "formula": "\\frac{df}{dx} = \\frac{f(x_{i+1}) - f(x_i)}{x_{i+1} - x_i}",
+        "variables": {
+            "df/dx": "Difference quotient",
+            "f(xi)": "Value of function at x",
+            "f(xi+1)": "Value of function at (x+1)"
+        },
+        "description": "A technique for the approximation of differentials."
+    },
+    {
+        "name": "Central Finite Difference Method",
+        "formula": "\\frac{df}{dx} = \\frac{f(x_{i+1}) - f(x_{i-1})}{x_{i+1} - x_{i-1}}",
+        "variables": {
+            "df/dx": "Difference quotient",
+            "f(xi+1)": "Value of function at (x+1)",
+            "f(xi-1)": "Value of function at (x-1)"
+        },
+        "description": "A technique for the approximation of differentials. The most accurate method."
+    },
+    {
+        "name": "The Cyclic Relation / Rule",
+        "formula": "z = f(x,y), \\quad \\left( \\frac{\\partial x}{\\partial y} \\right)_{z}\\left( \\frac{\\partial z}{\\partial x} \\right)_{y}\\left( \\frac{\\partial y}{\\partial z} \\right)_{x}= -1",
+        "variables": {
+            "x": "Independent variable (e.g., volume, pressure, etc.)",
+            "y": "Independent variable (e.g., pressure, temperature, etc.)",
+            "z": "Dependent variable defined as a function of x and y"
+        },
+        "description": "The cyclic rule in thermodynamics relates three interdependent variables (such as pressure, volume, and temperature). It states that the product of three specific partial derivatives equals -1, ensuring consistency among thermodynamic relationships."
+    },
+    {
+        "name": "Reciprocity Rule",
+        "formula": "\\left( \\frac{\\partial x}{\\partial y} \\right)_{z} = \\frac{1}{\\left( \\frac{\\partial y}{\\partial x} \\right)_{z}}",
+        "variables": {
+            "x": "Independent variable (e.g., pressure, volume, temperature, etc.)",
+            "y": "Independent variable related to x",
+            "z": "Variable held constant"
+        },
+        "description": "The reciprocity rule states that the partial derivative of x with respect to y (at constant z) is the reciprocal of the partial derivative of y with respect to x (at constant z). This ensures consistency in the definition of interdependent thermodynamic variables."
+    },
+    {
+        "name": "Maxwell Relation 1",
+        "formula": "\\left( \\frac{\\partial T}{\\partial V} \\right)_{S} = - \\left( \\frac{\\partial P}{\\partial S} \\right)_{V}",
+        "variables": {
+            "T": "Temperature",
+            "V": "Volume",
+            "S": "Entropy",
+            "P": "Pressure"
+        },
+        "description": "Relates changes in temperature with volume at constant entropy to changes in pressure with entropy at constant volume."
+    },
+    {
+        "name": "Maxwell Relation 2",
+        "formula": "\\left( \\frac{\\partial T}{\\partial P} \\right)_{S} = \\left( \\frac{\\partial V}{\\partial S} \\right)_{P}",
+        "variables": {
+            "T": "Temperature",
+            "P": "Pressure",
+            "S": "Entropy",
+            "V": "Volume"
+        },
+        "description": "Relates changes in temperature with pressure at constant entropy to changes in volume with entropy at constant pressure."
+    },
+    {
+        "name": "Maxwell Relation 3",
+        "formula": "\\left( \\frac{\\partial S}{\\partial V} \\right)_{T} = \\left( \\frac{\\partial P}{\\partial T} \\right)_{V}",
+        "variables": {
+            "S": "Entropy",
+            "V": "Volume",
+            "T": "Temperature",
+            "P": "Pressure"
+        },
+        "description": "Relates changes in entropy with volume at constant temperature to changes in pressure with temperature at constant volume."
+    },
+    {
+        "name": "Maxwell Relation 4",
+        "formula": "\\left( \\frac{\\partial S}{\\partial P} \\right)_{T} = - \\left( \\frac{\\partial V}{\\partial T} \\right)_{P}",
+        "variables": {
+            "S": "Entropy",
+            "P": "Pressure",
+            "T": "Temperature",
+            "V": "Volume"
+        },
+        "description": "Relates changes in entropy with pressure at constant temperature to changes in volume with temperature at constant pressure."
+    },
+    {
+        "name": "Clapeyron Equation",
+        "formula": "\\frac{dP}{dT} = \\frac{L}{T \\Delta v}",
+        "variables": {
+            "dP/dT": "Slope of the phase boundary in the P-T diagram",
+            "L": "Latent heat of phase transition (J/mol)",
+            "T": "Absolute temperature (K)",
+            "Δv": "Change in specific volume between phases (m³/mol)"
+        },
+        "description": "Relates the slope of a phase boundary on a pressure-temperature diagram to the latent heat and change in specific volume during a phase transition."
+    },
+    {
+        "name": "Clapeyron Equation (Liquid–Vapor Phase Change)",
+        "formula": "\\left( \\frac{dP}{dT} \\right)_{Sat} = \\frac{h_g - h_f}{T (v_g - v_f)} = \\frac{h_{fg}}{T v_{fg}}",
+        "variables": {
+            "dP/dT": "Slope of saturation curve on P-T diagram",
+            "hg": "Specific enthalpy of saturated vapor",
+            "hf": "Specific enthalpy of saturated liquid",
+            "hfg": "Latent heat of vaporization (hg - hf)",
+            "T": "Absolute temperature (K)",
+            "vg": "Specific volume of saturated vapor",
+            "vf": "Specific volume of saturated liquid",
+            "vfg": "Difference in specific volume (vg - vf)"
+        },
+        "description": "The Clapeyron equation for liquid–vapor phase change, relating the slope of the saturation curve to enthalpy of vaporization and volume change."
+    },
+    {
+        "name": "General Clapeyron Equation (Any Phase Change)",
+        "formula": "\\left( \\frac{dP}{dT} \\right)_{Sat} = \\frac{h_2 - h_1}{T (v_2 - v_1)}",
+        "variables": {
+            "dP/dT": "Slope of the phase boundary line in a P-T diagram",
+            "h1": "Specific enthalpy of phase 1",
+            "h2": "Specific enthalpy of phase 2",
+            "T": "Absolute temperature (K)",
+            "v1": "Specific volume of phase 1",
+            "v2": "Specific volume of phase 2"
+        },
+        "description": "The general Clapeyron equation, applicable to any phase change, relating the slope of the coexistence line to enthalpy and volume differences."
+    },
+    {
+        "name": "Antoine Equation",
+        "formula": "\\log_{10} P = A - \\frac{B}{C + T}",
+        "variables": {
+            "P": "Vapor pressure (usually in mmHg or bar)",
+            "T": "Temperature (°C)",
+            "A": "Antoine constant specific to the substance",
+            "B": "Antoine constant specific to the substance",
+            "C": "Antoine constant specific to the substance"
+        },
+        "description": "An empirical equation used to estimate the vapor pressure of pure substances as a function of temperature."
+    },
+    {
+        "name": "Modified Clapeyron Equation (Clausius–Clapeyron Equation)",
+        "formula": "\\ln \\left( \\frac{P_2}{P_1} \\right) = - \\frac{\\Delta H_{vap}}{R} \\left( \\frac{1}{T_2} - \\frac{1}{T_1} \\right)",
+        "variables": {
+            "P1": "Vapor pressure at temperature T1",
+            "P2": "Vapor pressure at temperature T2",
+            "ΔHvap": "Latent heat of vaporization (J/mol)",
+            "R": "Universal gas constant (8.314 J/mol·K)",
+            "T1": "Initial absolute temperature (K)",
+            "T2": "Final absolute temperature (K)"
+        },
+        "description": "A simplified form of the Clapeyron equation assuming the enthalpy of vaporization is constant; relates vapor pressure and temperature during phase change."
+    },
+    {
+        "name": "Enthalpy Change Equation",
+        "formula": "h_2 - h_1 = \\int_{T_1}^{T_2} C_p dT + \\int_{P_1}^{P_2} \\left[ v - T \\left( \\frac{\\partial v}{\\partial T} \\right)_P \\right] dP",
+        "variables": {
+            "h2": "Final enthalpy",
+            "h1": "Initial enthalpy",
+            "Cp": "Specific heat capacity at constant pressure",
+            "T1": "Initial temperature",
+            "T2": "Final temperature",
+            "P1": "Initial pressure",
+            "P2": "Final pressure",
+            "v": "Specific volume",
+            "T": "Temperature"
+        },
+        "description": "Equation representing the change in enthalpy between two states, accounting for temperature-dependent specific heat and pressure effects."
+    },
+    {
+        "name": "Change in Internal Energy",
+        "formula": "U_2 - U_1 = \\int_{T_1}^{T_2} C_v dT + \\int_{V_1}^{V_2} \\left[T \\left( \\frac{\\partial P}{\\partial T} \\right)_V - P \\right] dV",
+        "variables": {
+            "U2": "Final internal energy",
+            "U1": "Initial internal energy",
+            "Cv": "Specific heat capacity at constant volume",
+            "T1": "Initial temperature",
+            "T2": "Final temperature",
+            "V1": "Initial volume",
+            "V2": "Final volume"
+        },
+        "description": "Equation representing the change in internal energy between two states, considering temperature-dependent specific heat and volume effects."
+    },
+    {
+        "name": "Change in Entropy",
+        "formula": "S_2 - S_1 = \\int_{T_1}^{T_2} \\frac{C_p}{T} dT - \\int_{P_1}^{P_2} \\left[\\left( \\frac{\\partial V}{\\partial T} \\right)_P \\right] dP",
+        "variables": {
+            "S2": "Final entropy",
+            "S1": "Initial entropy",
+            "Cp": "Specific heat capacity at constant pressure",
+            "T1": "Initial temperature",
+            "T2": "Final temperature",
+            "P1": "Initial pressure",
+            "P2": "Final pressure"
+        },
+        "description": "Equation representing the change in entropy between two states, accounting for temperature-dependent specific heat and pressure effects."
+    },
+    {
+        "name": "Change in Entropy",
+        "formula": "S_2 - S_1 = \\int_{T_1}^{T_2} \\frac{C_v}{T} dT + \\int_{V_1}^{V_2} \\left[\\left( \\frac{\\partial P}{\\partial T} \\right)_V \\right] dV",
+        "variables": {
+            "S2": "Final entropy",
+            "S1": "Initial entropy",
+            "Cv": "Specific heat capacity at constant volume",
+            "T1": "Initial temperature",
+            "T2": "Final temperature",
+            "V1": "Initial volume",
+            "V2": "Final volume"
+        },
+        "description": "Equation representing the change in entropy between two states, accounting for temperature-dependent specific heat and pressure effects."
+    },
+    {
+        "name": "Change in Enthalpy (DFh)",
+        "formula": "DF_h = h - h^{IG} = \\int_0^P \\left[ v - T \\left( \\frac{\\partial v}{\\partial T} \\right)_P \\right] dP",
+        "variables": {
+            "DFh": "Change in enthalpy",
+            "h": "Final enthalpy",
+            "hIG": "Ideal gas enthalpy",
+            "v": "Specific volume",
+            "T": "Temperature",
+            "P": "Pressure"
+        },
+        "description": "Equation representing the change in enthalpy relative to an ideal gas, integrating over pressure with temperature-dependent specific volume."
+    },
+    {
+        "name": "Change in Internal Energy (DFu)",
+        "formula": "DF_u = u - u^{IG} = \\int_\\infty^v \\left[ T \\left( \\frac{\\partial P}{\\partial T} \\right)_v - P \\right] dv",
+        "variables": {
+            "DFu": "Change in internal energy",
+            "u": "Final internal energy",
+            "uIG": "Ideal gas internal energy",
+            "T": "Temperature",
+            "P": "Pressure",
+            "v": "Specific volume"
+        },
+        "description": "Equation representing the change in internal energy relative to an ideal gas, integrating over volume with temperature-dependent pressure."
+    },
+    {
+        "name": "Change in Entropy (DFs)",
+        "formula": "DF_s = s - s^{IG} = -\\int_0^P \\left( \\left( \\frac{\\partial v}{\\partial T} \\right)P - \\frac{R}{P} \\right) dP = \\int_\\infty^v \\left[ \\left( \\frac{\\partial P}{\\partial T} \\right)_v - \\frac{R}{v} \\right] dv",
+        "variables": {
+            "DFs": "Change in entropy",
+            "s": "Final entropy",
+            "sIG": "Ideal gas entropy",
+            "v": "Specific volume",
+            "T": "Temperature",
+            "P": "Pressure",
+            "R": "Universal gas constant"
+        },
+        "description": "Equation representing the change in entropy relative to an ideal gas, with dual integral forms over pressure and volume."
+    },
+    {
+        "name": "Enthalpy Departure Function - van der Waals",
+        "formula": "\\frac{\\mathrm{DF}_H(T,P)}{RT} = Z - 1 - \\frac{A}{Z}",
+        "variables": {
+            "DF_H": "Enthalpy departure function",
+            "T": "Temperature",
+            "P": "Pressure",
+            "R": "Universal gas constant",
+            "Z": "Compressibility factor",
+            "A": "Attractive parameter",
+            "B": "Repulsive parameter"
+        },
+        "description": "Expression for the enthalpy departure function normalized by RT for the van der Waals equation of state."
+    },
+    {
+        "name": "Enthalpy Departure Function - Redlich-Kwong",
+        "formula": "\\frac{\\mathrm{DF}_H(T,P)}{RT} = Z - 1 - \\frac{3A}{2Z} \\ln \\left(1 + \\frac{Z}{B}\\right)",
+        "variables": {
+            "DF_H": "Enthalpy departure function",
+            "T": "Temperature",
+            "P": "Pressure",
+            "R": "Universal gas constant",
+            "Z": "Compressibility factor",
+            "A": "Attractive parameter",
+            "B": "Repulsive parameter"
+        },
+        "description": "Expression for the enthalpy departure function normalized by RT for the Redlich-Kwong equation of state."
+    },
+    {
+        "name": "Enthalpy Departure Function - Soave-Redlich-Kwong",
+        "formula": "\\frac{\\mathrm{DF}_H(T,P)}{RT} = Z - 1 - \\left( \\frac{1 + m}{\\sqrt{\\alpha}} \\right) \\frac{A}{B} \\ln \\left(1 + \\frac{B}{Z}\\right)",
+        "variables": {
+            "DF_H": "Enthalpy departure function",
+            "T": "Temperature",
+            "P": "Pressure",
+            "R": "Universal gas constant",
+            "Z": "Compressibility factor",
+            "A": "Attractive parameter",
+            "B": "Repulsive parameter",
+            "m": "Acentric factor parameter",
+            "α": "Alpha function parameter"
+        },
+        "description": "Expression for the enthalpy departure function normalized by RT for the Soave-Redlich-Kwong equation of state."
+    },
+    {
+        "name": "Enthalpy Departure Function - Peng-Robinson",
+        "formula": "\\frac{\\mathrm{DF}_H(T,P)}{RT} = Z - 1 - \\left( \\frac{1 + m}{\\sqrt{\\alpha}} \\right) \\frac{A}{\\sqrt{8B}} \\ln \\left[ \\frac{Z + (1 + \\sqrt{2})B}{Z + (1 - \\sqrt{2})B} \\right]",
+        "variables": {
+            "DF_H": "Enthalpy departure function",
+            "T": "Temperature",
+            "P": "Pressure",
+            "R": "Universal gas constant",
+            "Z": "Compressibility factor",
+            "A": "Attractive parameter",
+            "B": "Repulsive parameter",
+            "m": "Acentric factor parameter",
+            "α": "Alpha function parameter"
+        },
+        "description": "Expression for the enthalpy departure function normalized by RT for the Peng-Robinson equation of state."
+    },
+    {
+        "name": "Entropy Departure Function - van der Waals",
+        "formula": "\\frac{\\mathrm{DF}_S(T,P)}{R} = \\ln(Z - B)",
+        "variables": {
+            "DF_S": "Entropy departure function",
+            "T": "Temperature",
+            "P": "Pressure",
+            "R": "Universal gas constant",
+            "Z": "Compressibility factor",
+            "B": "Repulsive parameter"
+        },
+        "description": "Expression for the entropy departure function normalized by R for the van der Waals equation of state."
+    },
+    {
+        "name": "Entropy Departure Function - Redlich-Kwong",
+        "formula": "\\frac{\\mathrm{DF}_S(T,P)}{R} = \\ln(Z - B) - \\frac{A}{2B} \\ln \\left(1 + \\frac{B}{Z}\\right)",
+        "variables": {
+            "DF_S": "Entropy departure function",
+            "T": "Temperature",
+            "P": "Pressure",
+            "R": "Universal gas constant",
+            "Z": "Compressibility factor",
+            "A": "Attractive parameter",
+            "B": "Repulsive parameter"
+        },
+        "description": "Expression for the entropy departure function normalized by R for the Redlich-Kwong equation of state."
+    },
+    {
+        "name": "Entropy Departure Function - Soave-Redlich-Kwong",
+        "formula": "\\frac{\\mathrm{DF}_S(T,P)}{R} = \\ln(Z - B) - \\left( \\frac{1 + m}{\\sqrt{\\alpha}} - 1 \\right) \\frac{A}{B} \\ln \\left(1 + \\frac{B}{Z}\\right)",
+        "variables": {
+            "DF_S": "Entropy departure function",
+            "T": "Temperature",
+            "P": "Pressure",
+            "R": "Universal gas constant",
+            "Z": "Compressibility factor",
+            "A": "Attractive parameter",
+            "B": "Repulsive parameter",
+            "m": "Acentric factor parameter",
+            "α": "Alpha function parameter"
+        },
+        "description": "Expression for the entropy departure function normalized by R for the Soave-Redlich-Kwong equation of state."
+    },
+    {
+        "name": "Entropy Departure Function - Peng-Robinson",
+        "formula": "\\frac{\\mathrm{DF}_S(T,P)}{R} = \\ln(Z - B) - \\left( \\frac{1 + m}{\\sqrt{\\alpha}} - 1 \\right) \\frac{A}{\\sqrt{8B}} \\ln \\left[ \\frac{Z + (1 + \\sqrt{2})B}{Z + (1 - \\sqrt{2})B} \\right]",
+        "variables": {
+            "DF_S": "Entropy departure function",
+            "T": "Temperature",
+            "P": "Pressure",
+            "R": "Universal gas constant",
+            "Z": "Compressibility factor",
+            "A": "Attractive parameter",
+            "B": "Repulsive parameter",
+            "m": "Acentric factor parameter",
+            "α": "Alpha function parameter"
+        },
+        "description": "Expression for the entropy departure function normalized by R for the Peng-Robinson equation of state."
+    },
+    {
+        "name": "Change in Internal Energy",
+        "formula": "u_2 - u_1 = (h_2 - h_1) - (P_2 v_2 - P_1 v_1) = (h_2 - h_1) - R (Z_2 T_2 - Z_1 T_1)",
+        "variables": {
+            "u_2": "Final internal energy",
+            "u_1": "Initial internal energy",
+            "h_2": "Final enthalpy",
+            "h_1": "Initial enthalpy",
+            "P_2": "Final pressure",
+            "v_2": "Final specific volume",
+            "P_1": "Initial pressure",
+            "v_1": "Initial specific volume",
+            "R": "Universal gas constant",
+            "Z_2": "Compressibility factor at state 2",
+            "T_2": "Final temperature",
+            "Z_1": "Compressibility factor at state 1",
+            "T_1": "Initial temperature"
+        },
+        "description": "Equation for the change in internal energy, derived from enthalpy change and pressure-volume work, adjusted with compressibility factors."
+    },
+    {
+        "name": "Change in Enthalpy",
+        "formula": "\\tilde{h}2 - \\tilde{h}1 = (\\tilde{h}_2 - \\tilde{h}_1)_{ideal} - R_uT_c (Z_{h_2} - Z_{h_1}) = (h_2 - h_1)_{ideal} - RT_c (Z_{h_2} - Z_{h_1})",
+        "variables": {
+            "{h}2": "Final reduced enthalpy",
+            "{h}1": "Initial reduced enthalpy",
+            "h_2": "Final enthalpy",
+            "h_1": "Initial enthalpy",
+            "(h2 - h1)ideal": "Ideal gas enthalpy difference",
+            "R": "Universal gas constant",
+            "T_c": "Critical temperature",
+            "Zh2": "Compressibility factor at state 2",
+            "Zh1": "Compressibility factor at state 1"
+        },
+        "description": "Equation for the change in reduced enthalpy, accounting for the ideal gas enthalpy difference and the generalized enthalpy departure chart."
+    },
+    {
+        "name": "Change in Entropy",
+        "formula": "\\tilde{s}_2 - \\tilde{s}_1 = (\\tilde{s}_2 - \\tilde{s}_1)_{ideal} - R_u (Z_{s_2} - Z_{s_1}) = (s_2 - s_1)_{ideal} - R (Z_{s_2} - Z_{s_1})",
+        "variables": {
+            "{s}2": "Final reduced entropy",
+            "{s}1": "Initial reduced entropy",
+            "s_2": "Final entropy",
+            "s_1": "Initial entropy",
+            "(s_2 - s_1){ideal}": "Ideal gas entropy difference",
+            "R_u": "Universal gas constant",
+            "R": "Universal gas constant",
+            "Zs2": "Compressibility factor at state 2",
+            "Zs1": "Compressibility factor at state 1"
+        },
+        "description": "Equation for the change in reduced entropy, accounting for the ideal gas entropy difference and the generalized entropy departure chart."
+    },
+    {
+        "name": "Coefficient of Thermal Expansion",
+        "formula": "\\alpha \\text{ or } \\beta = \\frac{1}{v} \\left( \\frac{\\partial v}{\\partial T} \\right)_P",
+        "variables": {
+            "α or β": "Coefficient of thermal expansion",
+            "v": "Specific volume",
+            "T": "Temperature",
+            "P": "Pressure"
+        },
+        "description": "The coefficient of thermal expansion, defined as the change in volume with temperature under constant pressure per unit volume."
+    },
+    {
+        "name": "Isothermal Compressibility",
+        "formula": "\\kappa = - \\frac{1}{v} \\left( \\frac{\\partial v}{\\partial P} \\right)_T",
+        "variables": {
+            "κ": "Isothermal compressibility",
+            "v": "Specific volume",
+            "P": "Pressure",
+            "T": "Temperature"
+        },
+        "description": "The isothermal compressibility, defined as the change in volume with pressure under constant temperature per unit volume."
+    },
+    {
+        "name": "Change in Pressure for liquids",
+        "formula": "\\Delta P = \\frac{\\alpha}{\\kappa} \\Delta T = \\frac{\\beta}{\\kappa} \\Delta T",
+        "variables": {
+            "ΔP": "Change in Pressure",
+            "α or β": "Coefficient of thermal expansion",
+            "ΔT": "Change in Temperature"
+        },
+        "description": "Calculation of the increase in pressure of liquids contained in a constant volume as a result of temperature rise."
+    },
+    {
+        "name": "Joule-Thompson Coefficient",
+        "formula": "\\mu_{JT} = \\left (\\frac{\\partial T}{\\partial P} \\right)_h = \\frac{v}{C_p} [\\alpha T - 1] = \\frac{\\tilde{v}}{\\bar{C_p}} [\\alpha T - 1]",
+        "variables": {
+            "μJT < 0": "temperature increases with reducing pressure",
+            "μJT = 0": "temperature remains constant with reducing pressure",
+            "μJT > 0": "temperature decreases with reducing pressure"
+        },
+        "description": "The temperature behaviour of a fluid during a throttling process. NB: This is better if the expansitivity is not constant."
+    }
+]

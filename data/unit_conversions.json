@@ -1,0 +1,512 @@
+[
+    {
+        "name": "Celsius to Fahrenheit",
+        "formula": "F = \\frac{9}{5}C + 32",
+        "variables": {
+            "F": "Temperature in Fahrenheit (°F)",
+            "C": "Temperature in Celsius (°C)"
+        },
+        "description": "Converts temperature from Celsius to Fahrenheit.",
+        "example": {
+            "problem": "\\text{Convert } 25 \\, ^\\circ\\text{C} \\text{ to Fahrenheit.}",
+            "solution": "\\begin{aligned}\nF &= \\frac{9}{5}C + 32 \\\\\n&= \\frac{9}{5} \\cdot 25 + 32 \\\\\n&= 45 + 32 \\\\\n&= \\boxed{77 \\, ^\\circ\\text{F}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Kelvin to Celsius",
+        "formula": "C = K - 273.15",
+        "variables": {
+            "C": "Temperature in Celsius (°C)",
+            "K": "Temperature in Kelvin (K)"
+        },
+        "description": "Converts temperature from Kelvin to Celsius.",
+        "example": {
+            "problem": "\\text{Convert } 300 \\, \\text{K} \\text{ to Celsius.}",
+            "solution": "\\begin{aligned}\nC &= K - 273.15 \\\\\n&= 300 - 273.15 \\\\\n&= \\boxed{26.85 \\, ^\\circ\\text{C}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Fahrenheit to Kelvin",
+        "formula": "K = \\frac{5}{9}(F - 32) + 273.15",
+        "variables": {
+            "K": "Temperature in Kelvin (K)",
+            "F": "Temperature in Fahrenheit (°F)"
+        },
+        "description": "Converts temperature from Fahrenheit to Kelvin.",
+        "example": {
+            "problem": "\\text{Convert } 68 \\, ^\\circ\\text{F} \\text{ to Kelvin.}",
+            "solution": "\\begin{aligned}\nK &= \\frac{5}{9}(F - 32) + 273.15 \\\\\n&= \\frac{5}{9}(68 - 32) + 273.15 \\\\\n&= \\frac{5}{9} \\cdot 36 + 273.15 \\\\\n&= 20 + 273.15 \\\\\n&= \\boxed{293.15 \\, \\text{K}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Atm to kPa",
+        "formula": "P_{\\text{kPa}} = P_{\\text{atm}} \\cdot 101.325",
+        "variables": {
+            "P_{\\text{kPa}}": "Pressure in kilopascals (kPa)",
+            "P_{\\text{atm}}": "Pressure in atmospheres (atm)"
+        },
+        "description": "Converts pressure from atmospheres to kilopascals.",
+        "example": {
+            "problem": "\\text{Convert } 2 \\, \\text{atm} \\text{ to kPa.}",
+            "solution": "\\begin{aligned}\nP_{\\text{kPa}} &= P_{\\text{atm}} \\cdot 101.325 \\\\\n&= 2 \\cdot 101.325 \\\\\n&= \\boxed{202.65 \\, \\text{kPa}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Bar to psi",
+        "formula": "P_{\\text{psi}} = \\frac{P_{\\text{bar}} \\cdot 14.696}{1.01325}",
+        "variables": {
+            "P_{\\text{psi}}": "Pressure in pounds per square inch (psi)",
+            "P_{\\text{bar}}": "Pressure in bars (bar)"
+        },
+        "description": "Converts pressure from bars to psi.",
+        "example": {
+            "problem": "\\text{Convert } 3 \\, \\text{bar} \\text{ to psi.}",
+            "solution": "\\begin{aligned}\nP_{\\text{psi}} &= \\frac{P_{\\text{bar}} \\cdot 14.696}{1.01325} \\\\\n&= \\frac{3 \\cdot 14.696}{1.01325} \\\\\n&= \\frac{44.088}{1.01325} \\\\\n&\\approx \\boxed{43.52 \\, \\text{psi}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Joule to Calorie",
+        "formula": "E_{\\text{cal}} = \\frac{E_{\\text{J}}}{4.184}",
+        "variables": {
+            "E_{\\text{cal}}": "Energy in calories (cal)",
+            "E_{\\text{J}}": "Energy in joules (J)"
+        },
+        "description": "Converts energy from joules to calories.",
+        "example": {
+            "problem": "\\text{Convert } 4184 \\, \\text{J} \\text{ to calories.}",
+            "solution": "\\begin{aligned}\nE_{\\text{cal}} &= \\frac{E_{\\text{J}}}{4.184} \\\\\n&= \\frac{4184}{4.184} \\\\\n&= \\boxed{1000 \\, \\text{cal}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Kilogram to Pound",
+        "formula": "m_{\\text{lb}} = m_{\\text{kg}} \\cdot 2.20462",
+        "variables": {
+            "m_{\\text{lb}}": "Mass in pounds (lb)",
+            "m_{\\text{kg}}": "Mass in kilograms (kg)"
+        },
+        "description": "Converts mass from kilograms to pounds.",
+        "example": {
+            "problem": "\\text{Convert } 5 \\, \\text{kg} \\text{ to pounds.}",
+            "solution": "\\begin{aligned}\nm_{\\text{lb}} &= m_{\\text{kg}} \\cdot 2.20462 \\\\\n&= 5 \\cdot 2.20462 \\\\\n&\\approx \\boxed{11.02 \\, \\text{lb}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Meter to Foot",
+        "formula": "L_{\\text{ft}} = L_{\\text{m}} \\cdot 3.28084",
+        "variables": {
+            "L_{\\text{ft}}": "Length in feet (ft)",
+            "L_{\\text{m}}": "Length in meters (m)"
+        },
+        "description": "Converts length from meters to feet.",
+        "example": {
+            "problem": "\\text{Convert } 2 \\, \\text{m} \\text{ to feet.}",
+            "solution": "\\begin{aligned}\nL_{\\text{ft}} &= L_{\\text{m}} \\cdot 3.28084 \\\\\n&= 2 \\cdot 3.28084 \\\\\n&\\approx \\boxed{6.56 \\, \\text{ft}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Liter to Gallon",
+        "formula": "V_{\\text{gal}} = \\frac{V_{\\text{L}}}{3.78541}",
+        "variables": {
+            "V_{\\text{gal}}": "Volume in gallons (gal)",
+            "V_{\\text{L}}": "Volume in liters (L)"
+        },
+        "description": "Converts volume from liters to gallons.",
+        "example": {
+            "problem": "\\text{Convert } 10 \\, \\text{L} \\text{ to gallons.}",
+            "solution": "\\begin{aligned}\nV_{\\text{gal}} &= \\frac{V_{\\text{L}}}{3.78541} \\\\\n&= \\frac{10}{3.78541} \\\\\n&\\approx \\boxed{2.64 \\, \\text{gal}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Watt to Horsepower",
+        "formula": "P_{\\text{hp}} = \\frac{P_{\\text{W}}}{745.7}",
+        "variables": {
+            "P_{\\text{hp}}": "Power in horsepower (hp)",
+            "P_{\\text{W}}": "Power in watts (W)"
+        },
+        "description": "Converts power from watts to horsepower.",
+        "example": {
+            "problem": "\\text{Convert } 1491.4 \\, \\text{W} \\text{ to horsepower.}",
+            "solution": "\\begin{aligned}\nP_{\\text{hp}} &= \\frac{P_{\\text{W}}}{745.7} \\\\\n&= \\frac{1491.4}{745.7} \\\\\n&\\approx \\boxed{2 \\, \\text{hp}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Liters per Second to Gallons per Minute",
+        "formula": "Q_{\\text{gpm}} = Q_{\\text{L/s}} \\cdot 15.8503",
+        "variables": {
+            "Q_{\\text{gpm}}": "Flow rate in gallons per minute (gpm)",
+            "Q_{\\text{L/s}}": "Flow rate in liters per second (L/s)"
+        },
+        "description": "Converts flow rate from liters per second to gallons per minute.",
+        "example": {
+            "problem": "\\text{Convert } 2 \\, \\text{L/s} \\text{ to gallons per minute.}",
+            "solution": "\\begin{aligned}\nQ_{\\text{gpm}} &= Q_{\\text{L/s}} \\cdot 15.8503 \\\\\n&= 2 \\cdot 15.8503 \\\\\n&\\approx \\boxed{31.70 \\, \\text{gpm}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Mole to Gram",
+        "formula": "m = n \\cdot M",
+        "variables": {
+            "m": "Mass in grams (g)",
+            "n": "Amount in moles (mol)",
+            "M": "Molar mass (g/mol)"
+        },
+        "description": "Converts moles to grams using the molar mass of the substance.",
+        "example": {
+            "problem": "\\text{Convert } 2 \\, \\text{mol} \\text{ of water (molar mass } 18 \\, \\text{g/mol}) \\text{ to grams.}",
+            "solution": "\\begin{aligned}\nm &= n \\cdot M \\\\\n&= 2 \\cdot 18 \\\\\n&= \\boxed{36 \\, \\text{g}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "kg/m³ to g/cm³",
+        "formula": "D_{\\text{g/cm}^3} = \\frac{D_{\\text{kg/m}^3}}{1000}",
+        "variables": {
+            "D_{\\text{g/cm}^3}": "Density in grams per cubic centimeter (g/cm³)",
+            "D_{\\text{kg/m}^3}": "Density in kilograms per cubic meter (kg/m³)"
+        },
+        "description": "Converts density from kilograms per cubic meter to grams per cubic centimeter.",
+        "example": {
+            "problem": "\\text{Convert } 1000 \\, \\text{kg/m}^3 \\text{ to g/cm}^3.",
+            "solution": "\\begin{aligned}\nD_{\\text{g/cm}^3} &= \\frac{D_{\\text{kg/m}^3}}{1000} \\\\\n&= \\frac{1000}{1000} \\\\\n&= \\boxed{1 \\, \\text{g/cm}^3}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "J/kg.K to cal/g.K",
+        "formula": "C_{\\text{cal/g.K}} = \\frac{C_{\\text{J/kg.K}}}{4184}",
+        "variables": {
+            "C_{\\text{cal/g.K}}": "Specific heat in calories per gram per Kelvin (cal/g.K)",
+            "C_{\\text{J/kg.K}}": "Specific heat in joules per kilogram per Kelvin (J/kg.K)"
+        },
+        "description": "Converts specific heat from joules per kilogram per Kelvin to calories per gram per Kelvin.",
+        "example": {
+            "problem": "\\text{Convert } 4184 \\, \\text{J/kg.K} \\text{ to cal/g.K.}",
+            "solution": "\\begin{aligned}\nC_{\\text{cal/g.K}} &= \\frac{C_{\\text{J/kg.K}}}{4184} \\\\\n&= \\frac{4184}{4184} \\\\\n&= \\boxed{1 \\, \\text{cal/g.K}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Minutes to Seconds",
+        "formula": "t_s = t_{min} \u00d7 60",
+        "variables": {
+            "t_s": "Time in seconds (s)",
+            "t_{min}": "Time in minutes (min)"
+        },
+        "description": "Converts time from minutes to seconds.",
+        "example": {
+            "problem": "\\text{Convert 5 minutes to seconds}.",
+            "solution": "t_s = 5 \u00d7 60 = 300 s"
+        }
+    },
+    {
+        "name": "Hours to Seconds",
+        "formula": "t_s = t_{hr} \u00d7 3600",
+        "variables": {
+            "t_s": "Time in seconds (s)",
+            "t_{hr}": "Time in hours (hr)"
+        },
+        "description": "Converts time from hours to seconds.",
+        "example": {
+            "problem": "\\text{Convert 2 hours to seconds}.",
+            "solution": "t_s = 2 \u00d7 3600 = 7200 s"
+        }
+    },
+    {
+        "name": "Kilometer per Hour to Meter per Second",
+        "formula": "v_{m/s} = \\frac{v_{km/h}}{3.6}",
+        "variables": {
+            "v_{m/s}": "Speed in meters per second (m/s)",
+            "v_{km/h}": "Speed in kilometers per hour (km/h)"
+        },
+        "description": "Converts speed from kilometers per hour to meters per second.",
+        "example": {
+            "problem": "\\text{Convert 72 km/h to m/s}.",
+            "solution": "v_{m/s} = 72 / 3.6 = 20 m/s"
+        }
+    },
+    {
+        "name": "Square Meter to Square Foot",
+        "formula": "A_{ft^2} = A_{m^2} \u00d7 10.7639",
+        "variables": {
+            "A_{ft^2}": "Area in square feet (ft²)",
+            "A_{m^2}": "Area in square meters (m²)"
+        },
+        "description": "Converts area from square meters to square feet.",
+        "example": {
+            "problem": "\\text{Convert 50 m² to ft²}.",
+            "solution": "A_{ft^2} = 50 \u00d7 10.7639 \u2248 538.2 ft²"
+        }
+    },
+    {
+        "name": "Hectare to Acre",
+        "formula": "A_{acre} = A_{ha} \u00d7 2.47105",
+        "variables": {
+            "A_{acre}": "Area in acres (acre)",
+            "A_{ha}": "Area in hectares (ha)"
+        },
+        "description": "Converts area from hectares to acres.",
+        "example": {
+            "problem": "\\text{Convert 3 ha to acres}.",
+            "solution": "A_{acre} = 3 \u00d7 2.47105 \u2248 7.41 acres"
+        }
+    },
+    {
+        "name": "Byte to Bit",
+        "formula": "B_{bit} = B_{byte} \u00d7 8",
+        "variables": {
+            "B_{bit}": "Data in bits (b)",
+            "B_{byte}": "Data in bytes (B)"
+        },
+        "description": "Converts data from bytes to bits.",
+        "example": {
+            "problem": "\\text{Convert 256 bytes to bits}.",
+            "solution": "B_{bit} = 256 \u00d7 8 = 2048 bits"
+        }
+    },
+    {
+        "name": "Kilobyte to Megabyte",
+        "formula": "S_{MB} = \\frac{S_{KB}}{1024}",
+        "variables": {
+            "S_{MB}": "Size in megabytes (MB)",
+            "S_{KB}": "Size in kilobytes (KB)"
+        },
+        "description": "Converts storage from kilobytes to megabytes.",
+        "example": {
+            "problem": "\\text{Convert 2048 KB to MB}.",
+            "solution": "S_{MB} = 2048 / 1024 = 2 MB"
+        }
+    },
+    {
+        "name": "Hertz to Kilohertz",
+        "formula": "f_{kHz} = \\frac{f_{Hz}}{1000}",
+        "variables": {
+            "f_{kHz}": "Frequency in kilohertz (kHz)",
+            "f_{Hz}": "Frequency in hertz (Hz)"
+        },
+        "description": "Converts frequency from hertz to kilohertz.",
+        "example": {
+            "problem": "\\text{Convert 15,000 Hz to kHz}.",
+            "solution": "f_{kHz} = 15000 / 1000 = 15 kHz"
+        }
+    },
+    {
+        "name": "Electronvolt to Joule",
+        "formula": "E_J = E_{eV} \u00d7 1.602 \u00d7 10^{-19}",
+        "variables": {
+            "E_J": "Energy in joules (J)",
+            "E_{eV}": "Energy in electronvolts (eV)"
+        },
+        "description": "Converts energy from electronvolts to joules.",
+        "example": {
+            "problem": "\\text{Convert 3 eV to joules}.",
+            "solution": "E_J = 3 \u00d7 1.602e-19 \u2248 4.806e-19 J"
+        }
+    },
+    {
+        "name": "Newton-Meter to Foot-Pound",
+        "formula": "T_{ft\u00b7lb} = T_{Nm} \u00d7 0.73756",
+        "variables": {
+            "T_{ft\u00b7lb}": "Torque in foot-pounds (ft·lb)",
+            "T_{Nm}": "Torque in newton-meters (N·m)"
+        },
+        "description": "Converts torque from newton-meters to foot-pounds.",
+        "example": {
+            "problem": "\\text{Convert 10 N·m to ft·lb}.",
+            "solution": "T_{ft\u00b7lb} = 10 \u00d7 0.73756 \u2248 7.38 ft·lb"
+        }
+    },
+    {
+        "name": "Gray to Sievert",
+        "formula": "D_{Sv} = D_{Gy} \u00d7 QF",
+        "variables": {
+            "D_{Sv}": "Dose equivalent in sieverts (Sv)",
+            "D_{Gy}": "Absorbed dose in grays (Gy)",
+            "QF": "Quality factor (dimensionless, depends on radiation type)"
+        },
+        "description": "Converts absorbed dose (Gy) to equivalent dose (Sv) using the radiation quality factor.",
+        "example": {
+            "problem": "\\text{Convert 0.5 Gy of alpha particles (QF = 20) to sieverts}.",
+            "solution": "D_{Sv} = 0.5 \u00d7 20 = 10 Sv"
+        }
+    },
+    {
+        "name": "Pascal to mmHg",
+        "formula": "P_{mmHg} = P_{Pa} \u00d7 0.00750062",
+        "variables": {
+            "P_{mmHg}": "Pressure in millimeters of mercury (mmHg)",
+            "P_{Pa}": "Pressure in pascals (Pa)"
+        },
+        "description": "Converts pressure from pascals to millimeters of mercury.",
+        "example": {
+            "problem": "\\text{Convert 101325 Pa to mmHg}.",
+            "solution": "P_{mmHg} = 101325 \u00d7 0.00750062 \u2248 760 mmHg"
+        }
+    },
+    {
+        "name": "Newton to Pound-Force",
+        "formula": "F_{lbf} = F_N \u00d7 0.224809",
+        "variables": {
+            "F_{lbf}": "Force in pounds-force (lbf)",
+            "F_N": "Force in newtons (N)"
+        },
+        "description": "Converts force from newtons to pounds-force.",
+        "example": {
+            "problem": "\\text{Convert 100 N to lbf}.",
+            "solution": "F_{lbf} = 100 \u00d7 0.224809 \u2248 22.48 lbf"
+        }
+    },
+    {
+        "name": "Kilowatt-Hour to Joule",
+        "formula": "E_J = E_{kWh} \u00d7 3.6 \u00d7 10^6",
+        "variables": {
+            "E_J": "Energy in joules (J)",
+            "E_{kWh}": "Energy in kilowatt-hours (kWh)"
+        },
+        "description": "Converts energy from kilowatt-hours to joules.",
+        "example": {
+            "problem": "\\text{Convert 2 kWh to joules}.",
+            "solution": "E_J = 2 \u00d7 3.6e6 = 7.2e6 J"
+        }
+    },
+    {
+        "name": "BTU to kWh",
+        "formula": "E_{kWh} = E_{BTU} \u00d7 0.000293071",
+        "variables": {
+            "E_{kWh}": "Energy in kilowatt-hours (kWh)",
+            "E_{BTU}": "Energy in British thermal units (BTU)"
+        },
+        "description": "Converts energy from BTU to kilowatt-hours.",
+        "example": {
+            "problem": "\\text{Convert 5000 BTU to kWh}.",
+            "solution": "E_{kWh} = 5000 \u00d7 0.000293071 \u2248 1.47 kWh"
+        }
+    },
+    {
+        "name": "Cubic Meter to Cubic Foot",
+        "formula": "V_{ft^3} = V_{m^3} \u00d7 35.3147",
+        "variables": {
+            "V_{ft^3}": "Volume in cubic feet (ft³)",
+            "V_{m^3}": "Volume in cubic meters (m³)"
+        },
+        "description": "Converts volume from cubic meters to cubic feet.",
+        "example": {
+            "problem": "\\text{Convert 2 m³ to ft³}.",
+            "solution": "V_{ft^3} = 2 \u00d7 35.3147 \u2248 70.63 ft³"
+        }
+    },
+    {
+        "name": "Kilojoule per Kilogram to BTU per Pound",
+        "formula": "h_{BTU/lb} = h_{kJ/kg} \u00d7 0.429922",
+        "variables": {
+            "h_{BTU/lb}": "Specific energy in BTU per pound (BTU/lb)",
+            "h_{kJ/kg}": "Specific energy in kilojoules per kilogram (kJ/kg)"
+        },
+        "description": "Converts specific energy from kilojoules per kilogram to BTU per pound.",
+        "example": {
+            "problem": "\\text{Convert 100 kJ/kg to BTU/lb}.",
+            "solution": "h_{BTU/lb} = 100 \u00d7 0.429922 \u2248 42.99 BTU/lb"
+        }
+    },
+    {
+        "name": "Ampere-Hour to Coulomb",
+        "formula": "Q_C = Q_{Ah} \u00d7 3600",
+        "variables": {
+            "Q_C": "Charge in coulombs (C)",
+            "Q_{Ah}": "Charge in ampere-hours (Ah)"
+        },
+        "description": "Converts electric charge from ampere-hours to coulombs.",
+        "example": {
+            "problem": "\\text{Convert 5 Ah to coulombs}.",
+            "solution": "Q_C = 5 \u00d7 3600 = 18000 C"
+        }
+    },
+    {
+        "name": "Tesla to Gauss",
+        "formula": "B_G = B_T \u00d7 10000",
+        "variables": {
+            "B_G": "Magnetic flux density in gauss (G)",
+            "B_T": "Magnetic flux density in tesla (T)"
+        },
+        "description": "Converts magnetic flux density from tesla to gauss.",
+        "example": {
+            "problem": "\\text{Convert 0.002 T to gauss}.",
+            "solution": "B_G = 0.002 \u00d7 10000 = 20 G"
+        }
+    },
+    {
+        "name": "Lumen to Candela",
+        "formula": "I_{cd} = \\frac{\u03a6_{lm}}{4\u03c0}",
+        "variables": {
+            "I_{cd}": "Luminous intensity in candela (cd)",
+            "\u03a6_{lm}": "Luminous flux in lumens (lm)"
+        },
+        "description": "Converts luminous flux in lumens to luminous intensity in candela assuming isotropic emission.",
+        "example": {
+            "problem": "\\text{Convert 12.57 lumens to candela}.",
+            "solution": "I_{cd} = 12.57 / (4\u03c0) \u2248 1 cd"
+        }
+    },
+    {
+        "name": "Ohm to Siemens",
+        "formula": "G_S = 1 / R_\u03a9",
+        "variables": {
+            "G_S": "Electrical conductance in siemens (S)",
+            "R_\u03a9": "Electrical resistance in ohms (Ω)"
+        },
+        "description": "Converts electrical resistance in ohms to electrical conductance in siemens.",
+        "example": {
+            "problem": "\\text{Convert 5 Ω to siemens}.",
+            "solution": "G_S = 1 / 5 = 0.2 S"
+        }
+    },
+    {
+        "name": "Centipoise to Pascal-Second",
+        "formula": "η_{Pa·s} = η_{cP} \\times 0.001",
+        "variables": {
+            "η_{Pa·s}": "Dynamic viscosity in pascal-seconds (Pa·s)",
+            "η_{cP}": "Dynamic viscosity in centipoise (cP)"
+        },
+        "description": "Converts dynamic viscosity from centipoise to pascal-seconds (SI unit).",
+        "example": {
+            "problem": "\\text{Convert 500 cP to Pa.s}",
+            "solution": "η_{Pa·s} = 500 \\times 0.001 = 0.5 Pa·s"
+        }
+    },
+    {
+        "name": "Centipoise to Poise",
+        "formula": "η_{P} = η_{cP} / 100",
+        "variables": {
+            "η_{P}": "Dynamic viscosity in poise (P)",
+            "η_{cP}": "Dynamic viscosity in centipoise (cP)"
+        },
+        "description": "Converts dynamic viscosity from centipoise to poise (CGS unit).",
+        "example": {
+            "problem": "\\text{Convert 250 cP to poise}.",
+            "solution": "η_{P} = 250 / 100 = 2.5 P"
+        }
+    },
+    {
+        "name": "Centipoise to lb/ft·s",
+        "formula": "η_{lb/(ft·s)} = η_{cP} \\times 0.000672",
+        "variables": {
+            "η_{lb/(ft·s)}": "Dynamic viscosity in pound per foot-second (lb/ft·s)",
+            "η_{cP}": "Dynamic viscosity in centipoise (cP)"
+        },
+        "description": "Converts dynamic viscosity from centipoise to pound per foot-second (imperial unit).",
+        "example": {
+            "problem": "\\text{Convert 1000 cP to lb/ft.s}.",
+            "solution": "η_{lb/(ft·s)} = 1000 \\times 0.000672 = 0.672 lb/ft·s"
+        }
+    },
+    {
+        "name": "Centipoise to Centistoke (for liquids with ρ = 1 g/cm³)",
+        "formula": "\\nu_{cSt} = η_{cP} / \\rho_{(g/cm³)}",
+        "variables": {
+            "\\nu_{cSt}": "Kinematic viscosity in centistokes (cSt)",
+            "\\mu_{cP}": "Dynamic viscosity in centipoise (cP)",
+            "\\rho_{(g/cm³)}": "Density of the liquid in g/cm³"
+        },
+        "description": "Converts dynamic viscosity in centipoise to kinematic viscosity in centistokes, given the density of the fluid.",
+        "example": {
+            "problem": "\\text{Convert 10 cP to cSt for water at } \\rho = 1 g/cm³.",
+            "solution": "\\nu_{cSt} = 10 / 1 = 10 cSt"
+        }
+    }
+]

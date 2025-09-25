@@ -1,0 +1,612 @@
+[
+    {
+        "name": "Determinant of a 2x2 Matrix",
+        "formula": "A = \\begin{bmatrix}a & b \\\\ c & d \\end{bmatrix}, \\quad det(A) = ad - bc",
+        "variables": {
+            "A": "2x2 matrix [[a, b], [c, d]]",
+            "a": "Element in row 1, column 1",
+            "b": "Element in row 1, column 2",
+            "c": "Element in row 2, column 1",
+            "d": "Element in row 2, column 2"
+        },
+        "description": "The determinant of a 2x2 matrix gives the scaling factor of the transformation represented by the matrix.",
+        "example": {
+            "problem": "\\text{Find det(A) for} \\ A = \\begin{bmatrix} 3 & 2 \\\\ 1 & 4 \\end{bmatrix}.",
+            "solution": "\\begin{aligned}\n\\det(A) &= (3)(4) - (2)(1) \\\\\n&= 12 - 2 \\\\\n&= \\boxed{10}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Inverse of a 2x2 Matrix",
+        "formula": "A = \\begin{bmatrix}a & b \\\\ c & d \\end{bmatrix}, \\quad A^{-1} = \\frac{1}{ad - bc} \\begin{vmatrix} d & -b \\\\ -c & a \\end{vmatrix}",
+        "variables": {
+            "A": "2x2 matrix [[a, b], [c, d]]",
+            "a, b, c, d": "Matrix elements"
+        },
+        "description": "The inverse of a 2x2 matrix exists if and only if the determinant is non-zero.",
+        "example": {
+            "problem": "\\text{Find the inverse of matrix} \\ A = \\begin{bmatrix} 3 & 2 \\\\ 1 & 4 \\end{bmatrix}.",
+            "solution": "\\begin{aligned}\n\\det(A) &= 10 \\\\\nA^{-1} &= \\tfrac{1}{10}\\begin{vmatrix} 4 & -2 \\\\ -1 & 3 \\end{vmatrix}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Dot Product of Two Vectors",
+        "formula": "u \\cdot v = \\sum_{i=1}^n u_i v_i",
+        "variables": {
+            "u, v": "n-dimensional vectors",
+            "u_i, v_i": "Components of vectors u and v"
+        },
+        "description": "The dot product gives a scalar that measures the projection of one vector onto another.",
+        "example": {
+            "problem": "\\text{Find u} \\cdot \\text{v for} \\ u = [2, 3]\\ \\text{and}\\ v = [1, 4].",
+            "solution": "\\begin{aligned}\n u \\cdot v &= (2)(1) + (3)(4) \\\\\n&= 2 + 12 \\\\\n&= \\boxed{14}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Cross Product of 3D Vectors",
+        "formula": "\\mathbf{u} = \\begin{bmatrix} u_1 & u_2 & u_3 \\end{bmatrix}, \\quad \\mathbf{v} = \\begin{bmatrix} v_1 & v_2 & v_3 \\end{bmatrix} \\\\,\\\\ \\mathbf{u} \\times \\mathbf{v} = \\begin{bmatrix} u_2 v_3 - u_3 v_2 \\\\ u_3 v_1 - u_1 v_3 \\\\ u_1 v_2 - u_2 v_1 \\end{bmatrix}",
+        "variables": {
+            "u, v": "3D vectors",
+            "u_i, v_i": "Components of u and v"
+        },
+        "description": "The cross product of two 3D vectors results in a vector perpendicular to both.",
+        "example": {
+            "problem": "\\text{Find } \\mathbf{u} \\times \\mathbf{v} \\text{ for } \\mathbf{u} = \\begin{bmatrix} 1 & 2 & 3 \\end{bmatrix} \\text{ and } \\mathbf{v} = \\begin{bmatrix} 4 & 5 & 6 \\end{bmatrix}.",
+            "solution": "\\begin{aligned}\n\\mathbf{u} \\times \\mathbf{v} &= \\begin{bmatrix} 2 \\cdot 6 - 3 \\cdot 5 \\\\ 3 \\cdot 4 - 1 \\cdot 6 \\\\ 1 \\cdot 5 - 2 \\cdot 4 \\end{bmatrix} \\\\\n&= \\begin{bmatrix} 12 - 15 \\\\ 12 - 6 \\\\ 5 - 8 \\end{bmatrix} \\\\\n&= \\begin{bmatrix} -3 \\\\ 6 \\\\ -3 \\end{bmatrix} \\\\\n&= \\boxed{\\begin{bmatrix} -3 & 6 & -3 \\end{bmatrix}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Matrix Transpose",
+        "formula": "A = \\begin{bmatrix}a & b \\\\ c & d \\end{bmatrix}, \\quad (A^T) = \\begin{bmatrix}a & c \\\\ d & d \\end{bmatrix}, \\quad (A^T)_{ij} = A_{ji}",
+        "variables": {
+            "A": "Any m×n matrix",
+            "A^T": "Transpose of A"
+        },
+        "description": "The transpose of a matrix is formed by flipping its rows into columns.",
+        "example": {
+            "problem": "\\text{Find}\\ A^T \\ \\text{for} A = \\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\end{bmatrix}.",
+            "solution": "\\begin{aligned}\nA^T &= \\begin{bmatrix} 1 & 4 \\\\ 2 & 5 \\\\ 3 & 6 \\end{bmatrix}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Cramer's Rule for 2 Equations",
+        "formula": "x = \\frac{\\det(A_x)}{\\det(A)}, \\quad y = \\frac{\\det(A_y)}{\\det(A)}",
+        "variables": {
+            "A": "Coefficient matrix",
+            "A_x, A_y": "Matrix with replaced columns of constants"
+        },
+        "description": "Cramer's rule provides a direct way of solving small linear systems using determinants.",
+        "example": {
+            "problem": "\\text{Solve}\\ 2x + y = 5, 3x - y = 4.",
+            "solution": "\\begin{aligned}\nA &= \\begin{bmatrix} 2 & 1 \\\\ 3 & -1 \\end{bmatrix}, \\quad \\det(A) = -5 \\\\\nA_x &= \\begin{bmatrix} 5 & 1 \\\\ 4 & -1 \\end{bmatrix}, \\quad \\det(A_x) = -9 \\\\\nA_y &= \\begin{bmatrix} 2 & 5 \\\\ 3 & 4 \\end{bmatrix}, \\quad \\det(A_y) = -7 \\\\\nx &= \\tfrac{-9}{-5} = 1.8, \\; y = \\tfrac{-7}{-5} = 1.4\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Determinant of a 3x3 Matrix",
+        "formula": "A = \\begin{bmatrix}a & b & c \\\\ d & e & f \\\\ g & h & i \\end{bmatrix}, \\quad det(A) = a(ei − fh) − b(di − fg) + c(dh − eg)",
+        "variables": {
+            "A": "3x3 matrix [[a, b, c], [d, e, f], [g, h, i]]"
+        },
+        "description": "The determinant of a 3x3 matrix can be computed using the rule of Sarrus or cofactor expansion.",
+        "example": {
+            "problem": "\\text{Find} \\det{A} \\ \\text{for} \\ A = \\begin{bmatrix} 1 & 2 & 3 \\\\ 0 & 4 & 5 \\\\ 1 & 0 & 6 \\end{bmatrix}.",
+            "solution": "\\begin{aligned}\n\\det(A) &= 1(4\\cdot 6 - 5\\cdot 0) - 2(0\\cdot 6 - 5\\cdot 1) + 3(0\\cdot 0 - 4\\cdot 1) \\\\\n&= 1(24 - 0) - 2(0 - 5) + 3(0 - 4) \\\\\n&= 24 + 10 - 12 \\\\\n&= \\boxed{22}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Trace of a Matrix",
+        "formula": "tr(A) = \\sum_{i=1}^n a_{ii}",
+        "variables": {
+            "A": "Square matrix",
+            "a_{ii}": "Diagonal elements of A"
+        },
+        "description": "The trace of a matrix is the sum of its diagonal elements and is invariant under similarity transformations.",
+        "example": {
+            "problem": "\\text{Find tr(A) for}\\ A = \\begin{bmatrix} 3 & 2 \\\\ 7 & 5 \\end{bmatrix}",
+            "solution": "\\begin{aligned}\ntr(A) &= 3 + 5 = \\boxed{8}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Scalar Multiplication of a Matrix",
+        "formula": "(cA)_{ij} = c \\cdot a_{ij}",
+        "variables": {
+            "c": "Scalar multiplier",
+            "A": "Any m×n matrix",
+            "a_{ij}": "Element of A"
+        },
+        "description": "Scalar multiplication scales every entry of the matrix by the given scalar.",
+        "example": {
+            "problem": "\\text{Multiply}\\ A = \\begin{bmatrix} 1 & -2 \\\\ 3 & 4 \\end{bmatrix} \\text{by scalar}\\ 3.",
+            "solution": "\\begin{aligned}\n3A &= \\begin{bmatrix} 3 & -6 \\\\ 9 & 12 \\end{bmatrix}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Matrix Addition",
+        "formula": "(A + B)_{ij} = a_{ij} + b_{ij}",
+        "variables": {
+            "A, B": "m×n matrices",
+            "a_{ij}, b_{ij}": "Corresponding elements of A and B"
+        },
+        "description": "Two matrices of the same dimension can be added element by element.",
+        "example": {
+            "problem": "\\text{Find}\\ A + B \\ \\text{for}\\ A = \\begin{bmatrix} 1& 2 \\\\ 3& 4 \\end{bmatrix} \\text{and}\\ B = \\begin{bmatrix} 5& 6 \\\\ 7 & 8\\end{bmatrix}.",
+            "solution": "\\begin{aligned}\nA + B &= \\begin{bmatrix} 1+5 & 2+6 \\\\ 3+7 & 4+8 \\end{bmatrix} \\\\\n&= \\begin{bmatrix} 6 & 8 \\\\ 10 & 12 \\end{bmatrix}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Matrix Multiplication",
+        "formula": "(AB)_{ij} = \\sum_{k=1}^n a_{ik} b_{kj}",
+        "variables": {
+            "A": "m×n matrix",
+            "B": "n×p matrix",
+            "AB": "m×p product matrix"
+        },
+        "description": "Matrix multiplication combines rows of the first matrix with columns of the second. It is not commutative in general.",
+        "example": {
+            "problem": "\\text{Compute}\\ AB \\ \\text{where}\\ A = \\begin{bmatrix} 1& 2 \\\\ 3& 4\\end{bmatrix} \\text{and}\\ B = \\begin{bmatrix} 2& 0 \\\\ 1& 2\\end{bmatrix}.",
+            "solution": "\\begin{aligned}\nAB &= \\begin{bmatrix} (1)(2)+(2)(1) & (1)(0)+(2)(2) \\\\ (3)(2)+(4)(1) & (3)(0)+(4)(2) \\end{bmatrix} \\\\\n&= \\begin{bmatrix} 4 & 4 \\\\ 10 & 8 \\end{bmatrix}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Rank of a Matrix",
+        "formula": "rank(A) = \\text{dimension of the column space of } A",
+        "variables": {
+            "A": "Any matrix"
+        },
+        "description": "The rank of a matrix is the maximum number of linearly independent columns (or rows).",
+        "example": {
+            "problem": "\\text{Find}\\ rank(A)\\ \\text{for}\\ A = \\begin{bmatrix}1& 2\\\\ 2& 4\\end{bmatrix}.",
+            "solution": "\\begin{aligned}\n\\text{Row 2 is a multiple of Row 1, so rank}(A) = 1.\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Norm of a Vector",
+        "formula": "\\|v\\| = \\sqrt{\\sum_{i=1}^n v_i^2}",
+        "variables": {
+            "v": "Vector in n-dimensional space",
+            "v_i": "Components of vector v"
+        },
+        "description": "The Euclidean norm measures the length (magnitude) of a vector.",
+        "example": {
+            "problem": "\\text{Find} \\ ||v|| \\ \\text{for}\\ v = [3, 4].",
+            "solution": "\\begin{aligned}\n\\|v\\| &= \\sqrt{3^2 + 4^2} = \\sqrt{25} = \\boxed{5}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Unit Vector",
+        "formula": "\\hat{v} = \\frac{v}{\\|v\\|}",
+        "variables": {
+            "v": "Vector",
+            "\\|v\\|": "Norm (length) of v"
+        },
+        "description": "A unit vector points in the same direction as v but has magnitude 1.",
+        "example": {
+            "problem": "\\text{Find the unit vector of}\\ v = [3, 4].",
+            "solution": "\\begin{aligned}\n\\|v\\| &= 5 \\\\\n\\hat{v} &= \\tfrac{1}{5}[3, 4] = \\boxed{[0.6, 0.8]}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Projection of u onto v",
+        "formula": "\\text{proj}_v(u) = \\frac{u \\cdot v}{\\|v\\|^2} v",
+        "variables": {
+            "u, v": "Vectors",
+            "u · v": "Dot product of u and v"
+        },
+        "description": "The projection of u onto v gives the component of u in the direction of v.",
+        "example": {
+            "problem": "\\text{Find}\\ proj_v(u)\\ \\text{for}\\ u = [2, 3], v = [1, 0].",
+            "solution": "\\begin{aligned}\n u \\cdot v &= 2(1) + 3(0) = 2 \\\\\n \\|v\\|^2 &= 1^2 = 1 \\\\\n \\text{proj}_v(u) &= 2[1, 0] = \\boxed{[2, 0]}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Orthogonality Condition",
+        "formula": "u \\cdot v = 0 \\iff u \\perp v",
+        "variables": {
+            "u, v": "Vectors in n-dimensional space"
+        },
+        "description": "Two vectors are orthogonal if their dot product equals zero.",
+        "example": {
+            "problem": "\\text{Check if}\\ u = [1, 2]\\ \\text{and}\\ v = [2, -1]\\ \\text{are orthogonal}.",
+            "solution": "\\begin{aligned}\n u \\cdot v &= (1)(2) + (2)(-1) = 2 - 2 = 0 \\\\\n\\text{Thus, } u \\perp v.\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Determinant of a Triangular Matrix",
+        "formula": "det(A) = \\prod_{i=1}^n a_{ii}",
+        "variables": {
+            "A": "Upper or lower triangular matrix",
+            "a_{ii}": "Diagonal elements"
+        },
+        "description": "A triangular matrix is a special type of square matrix where all the entries either above or below the main diagonal are zero. The determinant of a triangular matrix is the product of its diagonal elements.",
+        "example": {
+            "problem": "\\text{Find det(A) for}\\ A = \\begin{bmatrix} 2& 1& 3\\\\ 0& 4& 5\\\\ 0& 0& 6\\end{bmatrix}.",
+            "solution": "\\begin{aligned}\n\\det(A) &= 2 \\cdot 4 \\cdot 6 = \\boxed{48}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Characteristic Polynomial",
+        "formula": "p(\\lambda) = \\det(A - \\lambda I)",
+        "variables": {
+            "A": "Square matrix",
+            "λ": "Eigenvalue",
+            "I": "Identity matrix"
+        },
+        "description": "The characteristic polynomial is used to compute the eigenvalues of a matrix.",
+        "example": {
+            "problem": "\\text{Find}\\ p(\\lambda) \\ \\text{for}\\ A = \\begin{bmatrix} 2& 1\\\\ 1& 2\\end{bmatrix}.",
+            "solution": "\\begin{aligned}\np(\\lambda) &= \\det\\begin{bmatrix} 2-\\lambda & 1 \\\\ 1 & 2-\\lambda \\end{bmatrix} \\\\\n&= (2-\\lambda)^2 - 1 \\\\\n&= \\lambda^2 - 4\\lambda + 3\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Eigenvalue Equation",
+        "formula": "A v = \\lambda v",
+        "variables": {
+            "A": "Square matrix",
+            "v": "Eigenvector",
+            "λ": "Eigenvalue"
+        },
+        "description": "An eigenvalue λ of A is a scalar such that Av = λv for some nonzero vector v.",
+        "example": {
+            "problem": "\\text{Check if}\\ \\lambda = 3 \\ \\text{is an eigenvalue of}\\ A = \\begin{bmatrix} 3& 0 \\\\ 0& 2\\end{bmatrix}.",
+            "solution": "\\begin{aligned}\nA v &= 3 v \\\\\n\\text{Let } v = [1, 0], \\; A v = [3, 0] = 3[1, 0] \\\\\n\\text{Thus, } \\lambda = 3 \\text{ is an eigenvalue.}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Eigenvector Normalization",
+        "formula": "\\hat{v} = \\frac{v}{\\|v\\|}",
+        "variables": {
+            "v": "Eigenvector",
+            "\\|v\\|": "Norm of v"
+        },
+        "description": "Eigenvectors are often normalized to have unit length.",
+        "example": {
+            "problem": "\\text{Normalize}\\ v = [2, 0].",
+            "solution": "\\begin{aligned}\n\\|v\\| &= \\sqrt{2^2 + 0^2} = 2 \\\\\n\\hat{v} &= [2, 0]/2 = \\boxed{[1, 0]}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Cofactor Expansion (Laplace Expansion)",
+        "formula": "\\det(A) = \\sum_{j=1}^n (-1)^{i+j} a_{ij} M_{ij}",
+        "variables": {
+            "a_{ij}": "Element of A",
+            "M_{ij}": "Minor of a_{ij}",
+            "i": "Chosen row",
+            "j": "Chosen column"
+        },
+        "description": "The determinant can be computed by expanding along any row or column.",
+        "example": {
+            "problem": "\\text{Find } \\det(A) \\text{ for } A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} \\text{ using cofactor expansion.}",
+            "solution": "\\begin{aligned}\n\\text{Expanding along row 1:}\n\\\\\n\\det(A) &= (-1)^{1+1} a_{11} M_{11} + (-1)^{1+2} a_{12} M_{12} \\\\\n&= (1) \\cdot 1 \\cdot 4 + (-1) \\cdot 2 \\cdot 3 \\\\\n&= 1 \\cdot 4 - 2 \\cdot 3 \\\\\n&= 4 - 6 \\\\\n&= \\boxed{-2}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Principle of Mathematical Induction",
+        "formula": "\\text{If } P(1) \\text{ is true and } P(k) \\implies P(k+1) \\text{ for all } k \\in \\mathbb{N}, \\text{ then } P(n) \\text{ is true } \\forall n \\in \\mathbb{N}",
+        "variables": {
+            "P(n)": "Statement depending on n",
+            "n": "Natural number"
+        },
+        "description": "The principle of mathematical induction is a proof technique used to establish that a statement is true for all natural numbers.",
+        "example": {
+            "problem": "\\text{Prove that} \\ 1 + 2 + 3 + ... + n = \\frac{n(n+1)}{2}.",
+            "solution": "\\begin{aligned}\nP(1): 1 &= \\frac{1(2)}{2} = 1 \\checkmark \\\\\n\\text{Assume}: 1 + 2 + \\dots + k &= \\frac{k(k+1)}{2} \\\\\n\\text{Then}: 1 + 2 + \\dots + k + (k+1) &= \\frac{k(k+1)}{2} + (k+1) \\\\\n&= \\frac{k(k+1) + 2(k+1)}{2} \\\\\n&= \\frac{(k+1)(k+2)}{2} \\\\\n\\text{Thus, true for } k+1. \\text{ Hence proven.}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Complex Number in Polar Form",
+        "formula": "z = r (cos θ + i sin θ)",
+        "variables": {
+            "z": "Complex number",
+            "r": "Modulus of z",
+            "θ": "Argument of z"
+        },
+        "description": "A complex number can be represented in polar form using its modulus and argument.",
+        "example": {
+            "problem": "\\text{Express} \\ z = 1 + i\\sqrt{3} \\ \\text{in polar form.}",
+            "solution": "\\begin{aligned}\nr &= \\sqrt{1^2 + (√3)^2} = 2 \\\\\nθ &= \\tan^{-1}(√3/1) = 60° \\\\\nz &= 2(\\cos 60° + i \\sin 60°)\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Multiplication of Complex Numbers in Polar Form",
+        "formula": "z_1 z_2 = r_1 r_2 [\\cos(\\theta_1+\\theta_2) + i\\sin(\\theta_1+\\theta_2)]",
+        "variables": {
+            "z_1, z_2": "Complex numbers",
+            "r_1, r_2": "Moduli",
+            "θ_1, θ_2": "Arguments"
+        },
+        "description": "To multiply complex numbers in polar form, multiply their moduli and add their arguments.",
+        "example": {
+            "problem": "\\text{Multiply} \\ (2cis30°) \\times (3cis45°).",
+            "solution": "\\begin{aligned}\n= (2 \\times 3)cis(30°+45°) \\\\\n= 6cis75°\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Division of Complex Numbers in Polar Form",
+        "formula": "\\frac{z_1}{z_2} = \\frac{r_1}{r_2} [\\cos(θ_1-θ_2) + i \\sin(θ_1-θ_2)]",
+        "variables": {
+            "z_1, z_2": "Complex numbers",
+            "r_1, r_2": "Moduli",
+            "θ_1, θ_2": "Arguments"
+        },
+        "description": "To divide complex numbers in polar form, divide their moduli and subtract their arguments.",
+        "example": {
+            "problem": "\\text{Divide}\\ (4cis120°) \\div (2cis30°).",
+            "solution": "\\begin{aligned}\n= (4/2)cis(120°-30°) \\\\\n= 2cis90° = 2i\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "De Moivre's Theorem",
+        "formula": "(\\cos θ + i \\sin θ)^n = \\cos(nθ) + i \\sin(nθ)",
+        "variables": {
+            "n": "Integer",
+            "θ": "Angle in radians or degrees"
+        },
+        "description": "De Moivre's theorem relates powers of complex numbers in polar form to multiple-angle trigonometric identities.",
+        "example": {
+            "problem": "\\text{Expand} (\\cos θ + i \\sin θ)^3.",
+            "solution": "\\begin{aligned}\n&= cos(3θ) + i sin(3θ)\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "nth Roots of Complex Numbers",
+        "formula": "z_k = r^{1/n} \\left[\\cos \\left(\\frac{θ+2kπ}{n} \\right) + i \\sin \\left(\\frac{θ+2kπ}{n} \\right) \\right], k=0,1,...,n-1",
+        "variables": {
+            "r": "Modulus",
+            "θ": "Argument",
+            "n": "Root degree"
+        },
+        "description": "The nth roots of a complex number are evenly spaced points on a circle in the complex plane.",
+        "example": {
+            "problem": "\\text{Find cube roots of} \\ 8cis0°.",
+            "solution": "\\begin{aligned}\nz_k &= 2cis(0°+120°k), k=0,1,2 \\\\\n&= 2, -1+i√3, -1-i√3\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Roots of Unity",
+        "formula": "ω_k = \\cos \\left( \\frac{2kπ}{n} \\right) + i \\sin \\left(\\frac{2kπ}{n} \\right), k=0,...,n-1",
+        "variables": {
+            "n": "Degree of roots",
+            "ω_k": "nth roots of unity"
+        },
+        "description": "The nth roots of unity are the complex solutions of z^n = 1.",
+        "example": {
+            "problem": "\\text{Find the 4th roots of unity.}",
+            "solution": "1, i, -1, -i"
+        }
+    },
+    {
+        "name": "Logarithm of a Complex Number",
+        "formula": "\\log{z} = \\ln{r} + i(\\theta + 2k\\pi), k ∈ Z",
+        "variables": {
+            "z": "Complex number",
+            "r": "Modulus of z",
+            "\\theta": "Argument of z"
+        },
+        "description": "The logarithm of a complex number is multivalued, differing by integer multiples of 2πi.",
+        "example": {
+            "problem": "\\text{Find} \\ \\log{1+i}.",
+            "solution": "\\begin{aligned}\nr &= √2, θ = 45° = π/4 \\\\\nLog(1+i) &= ln√2 + i(π/4 + 2kπ)\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Expansion of sin(nθ)",
+        "formula": "\\sin(n\\theta) = \\sum_{k=0}^{\\lfloor n/2 \\rfloor} (-1)^k \\binom{n}{2k+1} \\cos^{2k}(\\theta) \\sin^{n-(2k+1)}(\\theta)",
+        "variables": {
+            "n": "Integer power",
+            "\\theta": "Angle",
+            "\\binom{n}{k}": "Binomial coefficient"
+        },
+        "description": "Using De Moivre's theorem, \\sin(n\\theta) can be expanded into powers of \\sin and \\cos.",
+        "example": {
+            "problem": "\\text{Expand } \\sin(3\\theta).",
+            "solution": "\\begin{aligned}\n\\sin(3\\theta) &= 3\\sin(\\theta) - 4\\sin^3(\\theta)\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Expansion of cos(nθ)",
+        "formula": "\\cos(n\\theta) = \\sum_{k=0}^{\\lfloor n/2 \\rfloor} (-1)^k \\binom{n}{2k} \\cos^{n-2k}(\\theta) \\sin^{2k}(\\theta)",
+        "variables": {
+            "n": "Integer power",
+            "\\theta": "Angle",
+            "\\binom{n}{k}": "Binomial coefficient"
+        },
+        "description": "Using De Moivre's theorem, \\cos(n\\theta) can be expanded into powers of \\sin and \\cos.",
+        "example": {
+            "problem": "\\text{Expand } \\cos(3\\theta).",
+            "solution": "\\begin{aligned}\n\\cos(3\\theta) &= 4\\cos^3(\\theta) - 3\\cos(\\theta)\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Trigonometric Identities (Pythagorean)",
+        "formula": "\\sin^2 \\theta + \\cos^2 \\theta = 1",
+        "variables": {
+            "\\theta": "Angle in radians or degrees"
+        },
+        "description": "One of the fundamental trigonometric identities relating sine and cosine.",
+        "example": {
+            "problem": "\\text{Verify } \\sin^2(30^\\circ) + \\cos^2(30^\\circ).",
+            "solution": "\\begin{aligned}\n\\sin^2(30^\\circ) + \\cos^2(30^\\circ) &= \\left(\\frac{1}{2}\\right)^2 + \\left(\\frac{\\sqrt{3}}{2}\\right)^2 \\\\\n&= \\frac{1}{4} + \\frac{3}{4} = 1 \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Vector Addition",
+        "formula": "\\vec{u} + \\vec{v} = (u_1 + v_1, u_2 + v_2, u_3 + v_3)",
+        "variables": {
+            "\\vec{u}, \\vec{v}": "Vectors in \\mathbb{R}^3"
+        },
+        "description": "The sum of two vectors is obtained by adding corresponding components.",
+        "example": {
+            "problem": "\\text{Find } (1, 2, 3) + (4, 5, 6).",
+            "solution": "\\begin{aligned}\n(1+4, 2+5, 3+6) &= (5, 7, 9)\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Dot Product of Two Vectors",
+        "formula": "\\vec{u} \\cdot \\vec{v} = |\\vec{u}||\\vec{v}|\\cos\\theta = u_1 v_1 + u_2 v_2 + u_3 v_3",
+        "variables": {
+            "\\vec{u}, \\vec{v}": "Vectors",
+            "\\theta": "Angle between \\vec{u} and \\vec{v}"
+        },
+        "description": "The dot product gives a scalar and relates to the cosine of the angle between vectors.",
+        "example": {
+            "problem": "\\text{Find dot product of } \\vec{u} = (1, 2, 3), \\vec{v} = (4, -5, 6).",
+            "solution": "\\begin{aligned}\n1 \\cdot 4 + 2 \\cdot (-5) + 3 \\cdot 6 &= 4 - 10 + 18 = 12\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Scalar Projection of a Vector",
+        "formula": "\\text{proj}_{\\vec{u}}(\\vec{v}) = \\frac{\\vec{u} \\cdot \\vec{v}}{|\\vec{u}|}",
+        "variables": {
+            "\\vec{u}": "Reference vector",
+            "\\vec{v}": "Projected vector"
+        },
+        "description": "The scalar projection is the length of \\vec{v} projected onto \\vec{u}.",
+        "example": {
+            "problem": "\\text{Find projection of } \\vec{v} = (3, 4) \\text{ on } \\vec{u} = (1, 0).",
+            "solution": "\\begin{aligned}\n\\frac{1 \\cdot 3 + 0 \\cdot 4}{\\sqrt{1^2 + 0^2}} &= \\frac{3}{1} = 3\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Vector Projection of a Vector",
+        "formula": "\\text{proj}_{\\vec{u}}(\\vec{v}) = \\frac{\\vec{u} \\cdot \\vec{v}}{|\\vec{u}|^2} \\vec{u}",
+        "variables": {
+            "\\vec{u}": "Reference vector",
+            "\\vec{v}": "Projected vector"
+        },
+        "description": "The vector projection gives a vector along \\vec{u} representing the projection of \\vec{v}.",
+        "example": {
+            "problem": "\\text{Project } \\vec{v} = (2, 2) \\text{ onto } \\vec{u} = (1, 0).",
+            "solution": "\\begin{aligned}\n\\frac{2 \\cdot 1 + 2 \\cdot 0}{1^2} \\cdot (1, 0) &= 2 \\cdot (1, 0) = (2, 0)\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Scalar Triple Product",
+        "formula": "[\\vec{a}, \\vec{b}, \\vec{c}] = \\vec{a} \\cdot (\\vec{b} \\times \\vec{c})",
+        "variables": {
+            "\\vec{a}, \\vec{b}, \\vec{c}": "Vectors in \\mathbb{R}^3"
+        },
+        "description": "The scalar triple product gives the volume of the parallelepiped formed by three vectors.",
+        "example": {
+            "problem": "\\text{Find volume for } \\vec{a} = (1, 0, 0), \\vec{b} = (0, 1, 0), \\vec{c} = (0, 0, 1).",
+            "solution": "\\begin{aligned}\n\\vec{a} \\cdot (\\vec{b} \\times \\vec{c}) &= (1, 0, 0) \\cdot (0, 0, 1) = 1\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Linear Dependence of Vectors",
+        "formula": "c_1 \\vec{v}_1 + c_2 \\vec{v}_2 + \\dots + c_k \\vec{v}_k = 0",
+        "variables": {
+            "c_i": "Scalars",
+            "\\vec{v}_i": "Vectors"
+        },
+        "description": "Vectors are linearly dependent if a non-trivial linear combination of them gives the zero vector.",
+        "example": {
+            "problem": "\\text{Check if } (1, 2), (2, 4) \\text{ are dependent.}",
+            "solution": "\\begin{aligned}\n\\text{Yes, since } (2, 4) &= 2 \\cdot (1, 2).\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Parametric Equations of a Line in 3D",
+        "formula": "x = x_0 + at, \\ y = y_0 + bt, \\ z = z_0 + ct",
+        "variables": {
+            "(x_0, y_0, z_0)": "Point on line",
+            "(a, b, c)": "Direction ratios",
+            "t": "Parameter"
+        },
+        "description": "The parametric form of a line in 3D expresses coordinates in terms of a parameter t.",
+        "example": {
+            "problem": "\\text{Find parametric equations of line through } (1, 2, 3) \\text{ with direction } (2, 1, -1).",
+            "solution": "\\begin{aligned}\nx &= 1 + 2t, \\ y = 2 + t, \\ z = 3 - t\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Symmetric Equations of a Line in 3D",
+        "formula": "\\frac{x - x_0}{a} = \\frac{y - y_0}{b} = \\frac{z - z_0}{c}",
+        "variables": {
+            "(x_0, y_0, z_0)": "Point on line",
+            "(a, b, c)": "Direction ratios"
+        },
+        "description": "The symmetric form eliminates the parameter from the parametric form of the line.",
+        "example": {
+            "problem": "\\text{Find symmetric form of line through } (1, 2, 3) \\text{ with direction } (2, 1, -1).",
+            "solution": "\\begin{aligned}\n\\frac{x - 1}{2} = \\frac{y - 2}{1} = \\frac{z - 3}{-1}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Gaussian Elimination (Row Echelon Form)",
+        "formula": "\\text{Use elementary row operations to reduce } A \\text{ to upper triangular form.}",
+        "variables": {
+            "A": "Coefficient matrix of a system"
+        },
+        "description": "Gaussian elimination transforms a system of equations into row echelon form to solve linear systems.",
+        "example": {
+            "problem": "\\text{Solve system: } x + y = 2, \\ 2x + 3y = 5.",
+            "solution": "\\begin{aligned}\nA &= \\begin{bmatrix} 1 & 1 & 2 \\\\ 2 & 3 & 5 \\end{bmatrix} \\\\\nR_2 \\to R_2 - 2R_1 &: \\begin{bmatrix} 1 & 1 & 2 \\\\ 0 & 1 & 1 \\end{bmatrix} \\\\\n\\text{Back substitution: } y &= 1, \\ x = 1.\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Row Echelon Form (REF)",
+        "formula": "\\text{A matrix is in REF if:} \\\\ 1. \\text{ All nonzero rows are above any zero rows. } \\\\ 2. \\text{ The leading entry of each nonzero row is to the right of the leading entry of the row above. } \\\\ 3. \\text{ All entries below a leading entry are zero. }",
+        "variables": {
+            "Leading entry": "First nonzero entry in a row",
+            "Row": "Horizontal line of entries in the matrix"
+        },
+        "description": "REF is a simplified form of a matrix obtained by Gaussian elimination, useful for solving systems of linear equations.",
+        "example": {
+            "problem": "\\text{Is the matrix } \\begin{bmatrix}1 & 2 & 0 \\\\ 0 & 3 & 4 \\\\ 0 & 0 & 5\\end{bmatrix} \\text{ in REF?}",
+            "solution": "\\text{Yes. The leading entries (1, 3, 5) shift rightward as rows progress, and zeros lie below each pivot.}"
+        }
+    },
+    {
+        "name": "Reduced Row Echelon Form (RREF)",
+        "formula": "\\text{A matrix is in RREF if it is in REF and:} \\\\ 4. \\text{ Each leading entry is } 1. \\\\ 5. \\text{ Each leading 1 is the only nonzero entry in its column. }",
+        "variables": {
+            "Leading 1": "Pivot normalized to 1",
+            "Pivot column": "Column containing a leading 1"
+        },
+        "description": "RREF is the fully reduced version of REF, obtained by Gauss-Jordan elimination.",
+        "example": {
+            "problem": "\\text{Transform } \\begin{bmatrix}1 & 2 & 0 \\\\ 0 & 3 & 4 \\\\ 0 & 0 & 5\\end{bmatrix} \\text{ into RREF.}",
+            "solution": "\\text{Divide each pivot row by its leading coefficient and eliminate above pivots: } \\\\ \\begin{bmatrix}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1\\end{bmatrix}."
+        }
+    },
+    {
+        "name": "Gauss-Jordan Elimination",
+        "formula": "1. \\text{ Use row operations to reach REF. } \\\\ 2. \\text{ Scale each pivot to 1. } \\\\ 3. \\text{ Eliminate entries above each pivot to reach RREF. }",
+        "variables": {
+            "Row operations": "Swapping rows, scaling rows, adding multiples of rows",
+            "Pivot": "Leading 1 in each row"
+        },
+        "description": "Gauss-Jordan elimination is a method to solve linear systems, invert matrices, and compute RREF.",
+        "example": {
+            "problem": "\\text{Solve the system } x + y = 2, \\ x - y = 0 \\text{ using Gauss-Jordan elimination.}",
+            "solution": "\\text{Augmented matrix: } \\begin{bmatrix}1 & 1 & | & 2 \\\\ 1 & -1 & | & 0\\end{bmatrix}. \\\\ \\text{RREF: } \\begin{bmatrix}1 & 0 & | & 1 \\\\ 0 & 1 & | & 1\\end{bmatrix}. \\\\ \\text{Solution: } x=1, y=1."
+        }
+    },
+    {
+        "name": "Vector Cross Product",
+        "formula": "a \\times b = (a_{2}b_{3} - a_{3}b_{2})\\mathbf{i} - (a_{1}b_{3} - a_{3}b_{1})\\mathbf{j} + (a_{1}b_{2} - a_{2}b_{1})\\mathbf{k}",
+        "variables": {
+            "a": "Vector a = (a1, a2, a3)",
+            "b": "Vector b = (b1, b2, b3)",
+            "\\mathbf{i},\\mathbf{j},\\mathbf{k}": "Unit vectors in x,y,z directions"
+        },
+        "description": "The cross product of two vectors in 3D gives a vector perpendicular to both, with magnitude |a||b|sin(θ).",
+        "example": {
+            "problem": "\\text{Compute } (1,2,3) \\times (4,5,6).",
+            "solution": "\\begin{aligned} (1,2,3) \\times (4,5,6) &= (-3,6,-3). \\end{aligned}"
+        }
+    },
+    {
+        "name": "Rank-Nullity Theorem",
+        "formula": "\\text{rank}(A) + \\text{nullity}(A) = n",
+        "variables": {
+            "\\text{rank}(A)": "Dimension of the column space of A",
+            "\\text{nullity}(A)": "Dimension of the null space of A",
+            "n": "Number of columns of A"
+        },
+        "description": "The theorem relates the rank and nullity of a matrix, ensuring the sum equals the number of variables in the system.",
+        "example": {
+            "problem": "\\text{Matrix } A = \\begin{bmatrix}1 & 0 & 0 \\\\ 0 & 1 & 0\\end{bmatrix}. \\text{ Find rank and nullity.}",
+            "solution": "\\text{rank}(A)=2 \\ (\\text{two pivots}), \\ \\text{nullity}=1 \\ (\\text{one free variable}). \\\\ \\text{Rank + nullity = 3 = number of columns.}"
+        }
+    }
+]

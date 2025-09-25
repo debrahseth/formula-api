@@ -1,0 +1,306 @@
+[
+    {
+        "name": "General Form of a Differential Equation",
+        "formula": "F(x, y, y', y'', \\dots, y^{(n)}) = 0",
+        "variables": {
+            "F": "Function defining the equation",
+            "x": "Independent variable",
+            "y": "Dependent variable",
+            "y'": "First derivative dy/dx",
+            "y''": "Second derivative d²y/dx²",
+            "y^{(n)}": "nth derivative"
+        },
+        "description": "Represents the general form of a differential equation relating a function to its derivatives.",
+        "example": {
+            "problem": "\\text{Identify the general form of the differential equation } y'' + 3y' + 2y = 0.",
+            "solution": "\\begin{aligned}\nF(x, y, y', y'') &= y'' + 3y' + 2y \\\\\n&= 0 \\\\\n\\text{This is a second-order linear DE.}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Order of a Differential Equation",
+        "formula": "\\text{Order} = n \\text{ where } y^{(n)} \\text{ is the highest derivative}",
+        "variables": {
+            "n": "Highest order of derivative present"
+        },
+        "description": "The order is the highest derivative appearing in the equation.",
+        "example": {
+            "problem": "\\text{Determine the order of } \\frac{dy}{dx} + y^2 = x.",
+            "solution": "\\begin{aligned}\n\\text{The highest derivative is } \\frac{dy}{dx} \\text{ (first order).} \\\\\n\\text{Order} &= \\boxed{1}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Degree of a Differential Equation",
+        "formula": "\\text{Degree} = m \\text{ where the highest derivative is raised to power } m",
+        "variables": {
+            "m": "Power of the highest-order derivative"
+        },
+        "description": "The degree is the power of the highest-order derivative when the equation is polynomial in derivatives.",
+        "example": {
+            "problem": "\\text{Find the degree of } \\left( \\frac{d^2 y}{dx^2} \\right)^3 + \\frac{dy}{dx} = y.",
+            "solution": "\\begin{aligned}\n\\text{Highest derivative is } y'' \\text{ raised to power 3.} \\\\\n\\text{Degree} &= \\boxed{3}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Ordinary Differential Equation (ODE)",
+        "formula": "F(x, y, y', \\dots, y^{(n)}) = 0",
+        "variables": {
+            "F": "Function of single independent variable x and its derivatives"
+        },
+        "description": "An ODE involves functions of one independent variable and its derivatives.",
+        "example": {
+            "problem": "\\text{Classify } y' + P(x)y = Q(x) \\text{ as ODE or PDE.}",
+            "solution": "\\begin{aligned}\n\\text{It involves one independent variable } x \\text{ and derivatives w.r.t. } x. \\\\\n\\text{It is an} \\boxed{\\text{ODE}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Partial Differential Equation (PDE)",
+        "formula": "F(x_1, \\dots, x_n, \\frac{\\partial y}{\\partial x_i}, \\dots) = 0",
+        "variables": {
+            "F": "Function of multiple independent variables and partial derivatives"
+        },
+        "description": "A PDE involves partial derivatives with respect to multiple independent variables.",
+        "example": {
+            "problem": "\\text{Classify } \\frac{\\partial^2 u}{\\partial x^2} + \\frac{\\partial^2 u}{\\partial y^2} = 0 \\text{ as ODE or PDE.}",
+            "solution": "\\begin{aligned}\n\\text{It has partial derivatives w.r.t. } x \\text{ and } y. \\\\\n\\text{It is a} \\boxed{\\text{PDE}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Linear Differential Equation",
+        "formula": "a_n y^{(n)} + \\dots + a_1 y' + a_0 y = g(x)",
+        "variables": {
+            "a_i": "Functions of x (coefficients)",
+            "g(x)": "Non-homogeneous term"
+        },
+        "description": "Linear if the dependent variable and its derivatives appear to the first power and not multiplied together.",
+        "example": {
+            "problem": "\\text{Is } y'' + 3y' + 2y = \\sin x \\text{ linear?}",
+            "solution": "\\begin{aligned}\ny \\text{ and derivatives are to first power.} \\\\\n\\text{Yes, it is} \\boxed{\\text{linear}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Non-Linear Differential Equation",
+        "formula": "F(y, y', \\dots) \\text{ contains products or powers >1 of y or derivatives}",
+        "variables": {
+            "F": "Non-linear function"
+        },
+        "description": "Non-linear if y or derivatives are raised to powers greater than 1 or multiplied together.",
+        "example": {
+            "problem": "\\text{Is } y' = y^2 \\text{ linear?}",
+            "solution": "\\begin{aligned}\ny \\text{ is squared.} \\\\\n\\text{No, it is} \\boxed{\\text{non-linear}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Form DE by Eliminating Arbitrary Constants",
+        "formula": "\\text{Differentiate and eliminate constants from } y = f(x, c_1, \\dots, c_n)",
+        "variables": {
+            "c_i": "Arbitrary constants"
+        },
+        "description": "Differentiate the equation enough times and solve to eliminate constants, yielding a DE of order n for n constants.",
+        "example": {
+            "problem": "\\text{Form the DE by eliminating the constant } c \\text{ from } y = c \\sin x.",
+            "solution": "\\begin{aligned}\ny &= c \\sin x \\\\\n\\frac{dy}{dx} &= c \\cos x \\\\\n\\frac{dy}{dx} / y &= \\cot x \\\\\n\\frac{dy}{dx} &= y \\cot x \\\\\n\\boxed{\\frac{dy}{dx} = y \\cot x}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Initial Value Problem (IVP)",
+        "formula": "y' = f(x,y), \\ y(x_0) = y_0",
+        "variables": {
+            "y_0": "Initial condition at x = x_0"
+        },
+        "description": "A DE with initial conditions to find a unique solution satisfying the conditions at a starting point.",
+        "example": {
+            "problem": "\\text{Solve the IVP } y' = y, \\ y(0) = 1.",
+            "solution": "\\begin{aligned}\ny' = y \\implies \\frac{dy}{y} = dx \\\\\n\\ln |y| = x + c \\\\\ny = Ae^x \\\\\ny(0) = 1 \\implies A = 1 \\\\\n\\boxed{y = e^x}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Boundary Value Problem (BVP)",
+        "formula": "y'' + p(x)y' + q(x)y = r(x), \\ y(a) = \\alpha, \\ y(b) = \\beta",
+        "variables": {
+            "\\alpha, \\beta": "Boundary conditions at x = a and x = b"
+        },
+        "description": "A DE with conditions specified at two different points (boundaries), common in physical problems like heat conduction.",
+        "example": {
+            "problem": "\\text{Solve the BVP } y'' + y = 0, \\ y(0) = 0, \\ y(\\pi) = 0.",
+            "solution": "\\begin{aligned}\ny = A \\cos x + B \\sin x \\\\\ny(0) = 0 \\implies A = 0 \\\\\ny = B \\sin x \\\\\ny(\\pi) = 0 \\implies B \\sin \\pi = 0 \\\\\n\\text{Trivial solution } \\boxed{y = 0}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Particular Solution with Initial Conditions",
+        "formula": "y_p = y_g + c \\text{ adjusted to satisfy ICs}",
+        "variables": {
+            "y_g": "General solution",
+            "c": "Constants determined by ICs"
+        },
+        "description": "Apply initial or boundary conditions to the general solution to find the particular solution.",
+        "example": {
+            "problem": "\\text{Find the particular solution to } y' - 2y = 0 \\text{ with } y(0) = 3.",
+            "solution": "\\begin{aligned}\ny = ce^{2x} \\\\\ny(0) = 3 \\implies c = 3 \\\\\n\\boxed{y = 3e^{2x}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "First-Order Separable DE",
+        "formula": "\\frac{dy}{dx} = f(x) g(y) \\implies \\int \\frac{dy}{g(y)} = \\int f(x) \\, dx",
+        "variables": {
+            "f(x)": "Function of x only",
+            "g(y)": "Function of y only"
+        },
+        "description": "Separate variables and integrate both sides to solve.",
+        "example": {
+            "problem": "\\text{Solve } \\frac{dy}{dx} = xy.",
+            "solution": "\\begin{aligned}\n\\frac{dy}{y} = x \\, dx \\\\\n\\ln |y| = \\frac{x^2}{2} + c \\\\\ny &= Ae^{x^2 / 2} \\\\\n\\boxed{y = Ae^{x^2 / 2}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Homogeneous Function Test",
+        "formula": "f(tx, ty) = t^k f(x, y) \\text{ (homogeneous of degree k)}",
+        "variables": {
+            "k": "Degree of homogeneity"
+        },
+        "description": "A function is homogeneous if scaling arguments by t scales the function by t^k.",
+        "example": {
+            "problem": "\\text{Is } f(x,y) = \\frac{x^2}{y} \\text{ homogeneous?}",
+            "solution": "\\begin{aligned}\nf(tx, ty) &= \\frac{(tx)^2}{ty} = \\frac{t^2 x^2}{t y} = t \\cdot \\frac{x^2}{y} = t^1 f(x,y) \\\\\n\\text{Homogeneous of degree } \\boxed{1}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Exact Differential Equation",
+        "formula": "M(x,y) dx + N(x,y) dy = 0 \\text{ where } \\frac{\\partial M}{\\partial y} = \\frac{\\partial N}{\\partial x}",
+        "variables": {
+            "M": "Coefficient of dx",
+            "N": "Coefficient of dy"
+        },
+        "description": "An equation is exact if it is the total differential of some function; solve by integrating M dx and adding integral of (N - ∂/∂y ∫M dx) dy.",
+        "example": {
+            "problem": "\\text{Is } (2xy + y) dx + (x^2 + x) dy = 0 \\text{ exact? Solve it.}",
+            "solution": "\\begin{aligned}\n\\frac{\\partial M}{\\partial y} &= 2x + 1, \\ \\frac{\\partial N}{\\partial x} = 2x + 1 \\\\\n\\text{Exact.} \\\\\n\\int M \\, dx &= x^2 y + y x + h(y) \\\\\n\\frac{\\partial}{\\partial y} &= x^2 + x + h'(y) = N = x^2 + x \\\\\nh'(y) = 0 \\implies h = c \\\\\n\\boxed{x^2 y + x y = c}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integrating Factor for Non-Exact DE",
+        "formula": "\\mu = e^{\\int \\frac{1}{N} \\left( \\frac{\\partial M}{\\partial y} - \\frac{\\partial N}{\\partial x} \\right) dy} \\text{ (if function of y only)}",
+        "variables": {
+            "\\mu": "Integrating factor"
+        },
+        "description": "Multiply by an integrating factor to make the equation exact; check if (∂M/∂y - ∂N/∂x)/N is function of y only.",
+        "example": {
+            "problem": "\\text{Find integrating factor for } y dx + (x + y^2) dy = 0.",
+            "solution": "\\begin{aligned}\nM = y, N = x + y^2 \\\\\n\\frac{\\partial M}{\\partial y} - \\frac{\\partial N}{\\partial x} = 1 - 1 = 0 \\\\\n\\text{Already exact.} \\text{ (Trivial case)} \\\\\n\\boxed{\\mu = 1}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "First-Order Linear DE",
+        "formula": "y' + P(x) y = Q(x), \\ \\mu = e^{\\int P dx}, \\ y \\mu = \\int \\mu Q \\, dx + c",
+        "variables": {
+            "P(x)": "Coefficient of y",
+            "Q(x)": "Non-homogeneous term",
+            "\\mu": "Integrating factor"
+        },
+        "description": "Standard form; multiply by integrating factor to make left side exact.",
+        "example": {
+            "problem": "\\text{Solve } y' + 2y = e^{-2x}.",
+            "solution": "\\begin{aligned}\n\\mu &= e^{\\int 2 dx} = e^{2x} \\\\\ne^{2x} y' + 2 e^{2x} y &= 1 \\\\\n\\frac{d}{dx} (y e^{2x}) &= 1 \\\\\ny e^{2x} &= x + c \\\\\ny &= (x + c) e^{-2x} \\\\\n\\boxed{y = (x + c) e^{-2x}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Second-Order Linear Homogeneous DE",
+        "formula": "y'' + p y' + q y = 0",
+        "variables": {
+            "p, q": "Coefficients (constants or functions of x)"
+        },
+        "description": "Homogeneous if right side is 0; solutions from characteristic equation for constant coefficients.",
+        "example": {
+            "problem": "\\text{Solve } y'' - 3y' + 2y = 0.",
+            "solution": "\\begin{aligned}\nr^2 - 3r + 2 = 0 \\implies (r-1)(r-2) = 0 \\\\\nr = 1, 2 \\\\\ny &= c_1 e^x + c_2 e^{2x} \\\\\n\\boxed{y = c_1 e^x + c_2 e^{2x}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Method of Reduction of Order",
+        "formula": "Assume\\ y_2 = v(x) y_1, \\ y_2' = v' y_1 + v y_1', \\ plug into DE to solve for v",
+        "variables": {
+            "y_1": "Known solution",
+            "v": "Function to find"
+        },
+        "description": "For second-order linear homogeneous DE, if one solution y_1 is known, find second by assuming y_2 = v y_1 and reducing order.",
+        "example": {
+            "problem": "\\text{Given y_1 = e^x for y'' - 2y' + y = 0, find y_2 using reduction of order.}",
+            "solution": "\\begin{aligned}\ny_2 = v e^x \\\\\ny_2' = v' e^x + v e^x \\\\\ny_2'' = v'' e^x + 2 v' e^x + v e^x \\\\\n\\text{Plug in: } v'' e^x + 2 v' e^x + v e^x - 2(v' e^x + v e^x) + v e^x = 0 \\\\\nv'' e^x = 0 \\implies v'' = 0 \\\\\nv' = c, v = c x + d \\\\\ny_2 = x e^x \\ (c=1, d=0) \\\\\n\\boxed{y_2 = x e^x}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Method of Undetermined Coefficients",
+        "formula": "Assume\\ y_p = A e^{rx} \\text{ or polynomial, etc., plug in and solve for coefficients}",
+        "variables": {
+            "y_p": "Particular solution",
+            "A": "Undetermined coefficients"
+        },
+        "description": "For non-homogeneous linear DE with constant coefficients, guess form of particular solution based on right-hand side.",
+        "example": {
+            "problem": "\\text{Find y_p for y'' + y = \\sin x.",
+            "solution": "\\begin{aligned}\ny_p = A \\cos x + B \\sin x \\\\\ny_p' = -A \\sin x + B \\cos x \\\\\ny_p'' = -A \\cos x - B \\sin x \\\\\n-A \\cos x - B \\sin x + A \\cos x + B \\sin x = \\sin x \\\\\n0 = \\sin x \\text{ (wrong guess, use resonance)} \\\\\n\\text{For resonance, guess } y_p = x (A \\cos x + B \\sin x) \\\\\n\\text{After calculation: } A = 0, B = -1/2 \\\\\n\\boxed{y_p = -\\frac{1}{2} x \\cos x}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Method of Variation of Parameters",
+        "formula": "y_p = u_1 y_1 + u_2 y_2, \\ u_1' y_1 + u_2' y_2 = 0, \\ u_1' y_1' + u_2' y_2' = g(x)",
+        "variables": {
+            "y_1, y_2": "Homogeneous solutions",
+            "u_1, u_2": "Functions to vary parameters"
+        },
+        "description": "For non-homogeneous linear DE, assume particular solution as linear combination of homogeneous solutions with variable parameters, solve system for u_1', u_2'.",
+        "example": {
+            "problem": "\\text{Find y_p for y'' + y = \\sec x, \\ y_1 = \\cos x, y_2 = \\sin x.",
+            "solution": "\\begin{aligned}\nu_1' \\cos x + u_2' \\sin x &= 0 \\\\\n-\\nu_1' \\sin x + u_2' \\cos x &= \\sec x \\\\\nW = \\cos^2 x + \\sin^2 x = 1 \\\\\nu_1' &= -\\sin x \\sec x = -\\tan x \\\\\n\\nu_1 &= \\ln |\\cos x| \\\\\nu_2' &= \\sec x \\cos x = 1 \\\\\n\\nu_2 &= x \\\\\ny_p &= \\ln |\\cos x| \\cos x + x \\sin x \\\\\n\\boxed{y_p = \\cos x \\ln |\\cos x| + x \\sin x}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "D Operator",
+        "formula": "D = \\frac{d}{dx}, \\ D^n y = y^{(n)}, \\ (D^2 + a D + b) y = 0",
+        "variables": {
+            "D": "Differential operator"
+        },
+        "description": "Symbolic method using D for derivatives to solve linear DE with constant coefficients via factoring or auxiliary equation.",
+        "example": {
+            "problem": "\\text{Solve } (D^2 - 3D + 2)y = 0 \\text{ using D operator.}",
+            "solution": "\\begin{aligned}\n(D-1)(D-2)y = 0 \\\\\n\\text{Solutions: } e^x, e^{2x} \\\\\n\\boxed{y = c_1 e^x + c_2 e^{2x}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Laplace Transform",
+        "formula": "\\mathcal{L}\\{f(t)\\} = F(s) = \\int_0^\\infty e^{-st} f(t) \\, dt",
+        "variables": {
+            "s": "Complex frequency parameter",
+            "F(s)": "Transform in s-domain"
+        },
+        "description": "Transforms DE from time domain to s-domain for easier solving, especially with initial conditions.",
+        "example": {
+            "problem": "\\text{Find } \\mathcal{L}\\{e^{at}\\} (t \\geq 0).",
+            "solution": "\\begin{aligned}\nF(s) &= \\int_0^\\infty e^{-st} e^{at} \\, dt = \\int_0^\\infty e^{(a-s)t} \\, dt \\\\\n&= \\left[ \\frac{e^{(a-s)t}}{a-s} \\right]_0^\\infty = \\frac{1}{s - a} \\ (s > a) \\\\\n\\boxed{\\mathcal{L}\\{e^{at}\\} = \\frac{1}{s - a}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Inverse Laplace Transform",
+        "formula": "f(t) = \\mathcal{L}^{-1}\\{F(s)\\} = \\frac{1}{2\\pi i} \\int_{\\gamma - i\\infty}^{\\gamma + i\\infty} e^{st} F(s) \\, ds",
+        "variables": {
+            "f(t)": "Original function in time domain"
+        },
+        "description": "Recovers the time-domain function from the s-domain transform using tables or partial fractions.",
+        "example": {
+            "problem": "\\text{Find } \\mathcal{L}^{-1} \\left\\{ \\frac{1}{s^2 + 4} \\right\\}.",
+            "solution": "\\begin{aligned}\n\\mathcal{L}\\{\\sin 2t\\} = \\frac{2}{s^2 + 4} \\implies \\frac{1}{s^2 + 4} = \\frac{1}{2} \\cdot \\frac{2}{s^2 + 4} \\\\\n\\mathcal{L}^{-1} \\left\\{ \\frac{1}{s^2 + 4} \\right\\} = \\frac{1}{2} \\sin 2t \\\\\n\\boxed{f(t) = \\frac{1}{2} \\sin 2t}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Laplace Transform of Derivative",
+        "formula": "\\mathcal{L}\\{y'\\} = s Y(s) - y(0), \\ \\mathcal{L}\\{y''\\} = s^2 Y(s) - s y(0) - y'(0)",
+        "variables": {
+            "Y(s)": "\\mathcal{L}\\{y(t)\\}",
+            "y(0), y'(0)": "Initial conditions"
+        },
+        "description": "Transforms derivatives into algebraic terms in s-domain, incorporating initial conditions.",
+        "example": {
+            "problem": "\\text{Find } \\mathcal{L}\\{y''\\} \\text{ if } y(0) = 1, y'(0) = 0.",
+            "solution": "\\begin{aligned}\n\\mathcal{L}\\{y''\\} &= s^2 Y(s) - s \\cdot 1 - 0 \\\\\n&= s^2 Y(s) - s \\\\\n\\boxed{s^2 Y(s) - s}\n\\end{aligned}"
+        }
+    }
+]

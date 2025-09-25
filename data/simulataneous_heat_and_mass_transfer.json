@@ -1,0 +1,1310 @@
+[
+    {
+        "name": "Steam Economy",
+        "formula": "\\text{Steam Economy} = \\frac{\\text{kg of vapor produced}}{\\text{kg of steam used}}",
+        "variables": {
+            "kg of vapor produced": "Mass of vapor generated in the evaporator",
+            "kg of steam used": "Mass of steam supplied to the evaporator"
+        },
+        "description": "Ratio of the mass of vapor produced to the mass of steam used, indicating evaporator efficiency."
+    },
+    {
+        "name": "Energy Balance in Evaporation",
+        "formula": "V H_s + W C_{p w} T_1 = W C_{p w} T_2 + V H_s",
+        "variables": {
+            "V": "Vapor flow rate",
+            "H_s": "Enthalpy of vapor at saturation temperature",
+            "W": "Liquid flow rate",
+            "C_{p w}": "Heat capacity of water",
+            "T_1": "Initial temperature of liquid",
+            "T_2": "Final temperature of liquid"
+        },
+        "description": "Simplified energy balance for the evaporation process, assuming reference temperature 0°C and no heat losses."
+    },
+    {
+        "name": "Boiling Point Rise",
+        "formula": "\\text{BPR} = T_{\\text{solution}} - T_{\\text{solvent}}",
+        "variables": {
+            "T_{\\text{solution}}": "Boiling point of solution",
+            "T_{\\text{solvent}}": "Boiling point of pure solvent"
+        },
+        "description": "Difference in boiling points between solution and pure solvent."
+    },
+    {
+        "name": "Overall Heat Transfer Coefficient Reciprocal",
+        "formula": "\\frac{1}{U} = \\frac{1}{h_s} + \\frac{x}{k} + \\frac{1}{h_b}",
+        "variables": {
+            "U": "Overall heat transfer coefficient",
+            "h_s": "Steam side heat transfer coefficient",
+            "x": "Thickness",
+            "k": "Thermal conductivity",
+            "h_b": "Boiling side heat transfer coefficient"
+        },
+        "description": "Combined resistance in heat transfer for evaporation."
+    },
+    {
+        "name": "Total Material Balance",
+        "formula": "F = V + L",
+        "variables": {
+            "F": "Feed flow rate",
+            "V": "Vapor flow rate",
+            "L": "Concentrate flow rate"
+        },
+        "description": "Mass balance for single effect evaporator."
+    },
+    {
+        "name": "Solid Balance",
+        "formula": "F x_F = L x_L",
+        "variables": {
+            "x_F": "Mass fraction of solids in feed",
+            "x_L": "Mass fraction of solids in concentrate"
+        },
+        "description": "Balance of solids in evaporation process."
+    },
+    {
+        "name": "Energy Balance for Evaporator",
+        "formula": "F H_F + S H_S = L H_L + V H_V + S H_{C S}",
+        "variables": {
+            "H_F": "Enthalpy of feed",
+            "S": "Steam flow rate",
+            "H_S": "Enthalpy of steam",
+            "H_L": "Enthalpy of concentrate",
+            "H_V": "Enthalpy of vapor",
+            "H_{C S}": "Enthalpy of condensed steam"
+        },
+        "description": "Detailed energy balance for evaporator."
+    },
+    {
+        "name": "Simplified Steam Energy",
+        "formula": "S \\lambda_S = L H_L + V H_V - F H_F",
+        "variables": {
+            "S": "Mass of steam condensed",
+            "\\lambda_S": "Latent heat of steam",
+            "L": "Mass of liquid concentrate",
+            "H_L": "Enthalpy of concentrate",
+            "V": "Mass of vapor leaving",
+            "H_V": "Enthalpy of vapor",
+            "F": "Mass of feed",
+            "H_F": "Enthalpy of feed"
+        },
+        "description": "Energy provided by steam condensation balances the enthalpy changes of feed, concentrate, and vapor."
+    },
+    {
+        "name": "Feed Enthalpy",
+        "formula": "H_F = C_F T_F",
+        "variables": {
+            "H_F": "Enthalpy of feed",
+            "C_F": "Heat capacity of feed",
+            "T_F": "Feed temperature"
+        },
+        "description": "Enthalpy of feed assuming reference temperature is 0°C."
+    },
+    {
+        "name": "Concentrate Enthalpy",
+        "formula": "H_L = C_L T_L",
+        "variables": {
+            "H_L": "Enthalpy of concentrate",
+            "C_L": "Heat capacity of concentrate",
+            "T_L": "Concentrate temperature"
+        },
+        "description": "Enthalpy of concentrate assuming reference temperature is 0°C."
+    },
+    {
+        "name": "Concentration Ratio",
+        "formula": "R = \\frac{x_L}{x_F}",
+        "variables": {
+            "x_L": "Fraction of solids in the concentrate",
+            "x_F": "Fraction of solids in the feed"
+        },
+        "description": "Ratio of solid fractions in concentrate and feed."
+    },
+    {
+        "name": "Total Vapor in Multiple Effects",
+        "formula": "V_{\\text{total}} = V_1 + V_2 + V_3",
+        "variables": {
+            "V_1": "Vapor from first effect",
+            "V_2": "Vapor from second effect",
+            "V_3": "Vapor from third effect"
+        },
+        "description": "Sum of vapors from each effect in a multiple effect evaporator."
+    },
+    {
+        "name": "Available Temperature Drop",
+        "formula": "\\Delta T_{\\text{available}} = \\Delta T_1 + \\Delta T_2 + \\Delta T_3 - \\text{BPR} = T_S - T_3 - \\text{BPR}",
+        "variables": {
+            "\\Delta T_1": "Temperature drop in first stage",
+            "\\Delta T_2": "Temperature drop in second stage",
+            "\\Delta T_3": "Temperature drop in third stage",
+            "BPR": "Boiler pressure reduction factor",
+            "T_S": "Steam temperature",
+            "T_3": "Temperature at third stage"
+        },
+        "description": "Total temperature drop across all stages, adjusted for boiler pressure reduction."
+    },
+    {
+        "name": "Heat Transfer Rate in Effect",
+        "formula": "q = U_1 \\Delta T_1 = U_2 \\Delta T_2 = U_3 \\Delta T_3",
+        "variables": {
+            "q": "Heat transfer rate (W or J/s)",
+            "U_i": "Overall heat transfer coefficient in effect i",
+            "\\Delta T_i": "Temperature difference in effect i"
+        },
+        "description": "Equal heat transfer in each effect assuming same area."
+    },
+    {
+        "name": "Temperature in Effect 1",
+        "formula": "T_1 = T_{S1} - \\Delta T_1",
+        "variables": {
+            "T_1": "Boiling temperature in first effect",
+            "T_{S1}": "Steam temperature entering first effect",
+            "\\Delta T_1": "Temperature drop in first effect"
+        },
+        "description": "Boiling temperature in first effect."
+    },
+    {
+        "name": "Temperature in Effect 2",
+        "formula": "T_2 = T_1 - \\text{BPR}_1 - \\Delta T_2",
+        "variables": {
+            "T_2": "Boiling temperature in second effect",
+            "\\text{BPR}_1": "Boiling point rise in first effect",
+            "\\Delta T_2": "Temperature drop in second effect"
+        },
+        "description": "Boiling temperature in second effect."
+    },
+    {
+        "name": "Temperature in Effect 3",
+        "formula": "T_3 = T_2 - \\text{BPR}_2 - \\Delta T_3",
+        "variables": {
+            "T_3": "Boiling temperature in third effect",
+            "\\text{BPR}_2": "Boiling point rise in second effect",
+            "\\Delta T_3": "Temperature drop in third effect"
+        },
+        "description": "Boiling temperature in third effect."
+    },
+    {
+        "name": "Vapor Temperature to Effect 2",
+        "formula": "T_{S2} = T_1 - \\text{BPR}_1",
+        "variables": {
+            "T_{S2}": "Temperature of vapor entering second effect"
+        },
+        "description": "Temperature of vapor entering second effect."
+    },
+    {
+        "name": "Vapor Temperature to Effect 3",
+        "formula": "T_{S3} = T_2 - \\text{BPR}_2",
+        "variables": {
+            "T_{S3}": "Temperature of vapor entering third effect"
+        },
+        "description": "Temperature of vapor entering third effect."
+    },
+    {
+        "name": "Heat Transfer Rate in First Effect",
+        "formula": "q_1 = S \\lambda_{S1}",
+        "variables": {
+            "q_1": "Heat transfer rate in first effect",
+            "S": "Steam flow rate",
+            "\\lambda_{S1}": "Latent heat of steam in first effect"
+        },
+        "description": "Heat from steam in first effect."
+    },
+    {
+        "name": "Area in First Effect",
+        "formula": "A_1 = \\frac{q_1}{U_1 \\Delta T_1}",
+        "variables": {
+            "A_1": "Surface area for heat transfer in first effect"
+        },
+        "description": "Required heat transfer area for first effect."
+    },
+    {
+        "name": "Duhring's Rule BPR",
+        "formula": "\\text{BPR} = 1.78 x + 6.22 x^2",
+        "variables": {
+            "x": "Weight fraction of solute"
+        },
+        "description": "Empirical formula for boiling point rise."
+    },
+    {
+        "name": "Solution Heat Capacity",
+        "formula": "c_p = 4.19 - 2.35 x",
+        "variables": {
+            "c_p": "Heat capacity of solution (kJ/kg·K)"
+        },
+        "description": "Heat capacity of liquid solutions."
+    },
+    {
+        "name": "Dalton's Law for Moist Air",
+        "formula": "P = P_t = P_a + P_v",
+        "variables": {
+            "P_t": "Total pressure",
+            "P_a": "Partial pressure of dry air",
+            "P_v": "Partial pressure of water vapor"
+        },
+        "description": "Total pressure is sum of partial pressures."
+    },
+    {
+        "name": "Relative Humidity",
+        "formula": "\\phi = \\frac{P_v}{P_{\\text{sat}}}",
+        "variables": {
+            "P_v": "Partial pressure of water vapor",
+            "P_{\\text{sat}}": "Saturation pressure at given temperature"
+        },
+        "description": "Ratio of vapor pressure to saturation pressure."
+    },
+    {
+        "name": "Humidity Ratio",
+        "formula": "H = 0.622 \\frac{P_v}{P_t - P_v}",
+        "variables": {
+            "H": "Humidity ratio (kg water/kg dry air)"
+        },
+        "description": "Mass of water vapor per mass of dry air."
+    },
+    {
+        "name": "Sensible Heat Transfer",
+        "formula": "Q_s = m_a (h_w - h_2) = m_a c_{pm} (T_1 - T_2)",
+        "variables": {
+            "Q_s": "Sensible heat transfer",
+            "m_a": "Air mass flow (kg/s)",
+            "c_{pm}": "Specific heat of moist air (kJ/kg·K)",
+            "T_1": "Initial air temperature",
+            "T_2": "Final air temperature"
+        },
+        "description": "Heat removed without moisture change."
+    },
+    {
+        "name": "Latent Heat Transfer",
+        "formula": "Q_l = m_a (h_1 - h_w) = m_a \\lambda_c (H_1 - H_2)",
+        "variables": {
+            "Q_l": "Latent heat transfer",
+            "m_a": "Air mass flow",
+            "\\lambda_c": "Latent heat of condensation",
+            "H_1": "Initial humidity ratio",
+            "H_2": "Final humidity ratio"
+        },
+        "description": "Heat removed due to condensation."
+    },
+    {
+        "name": "Sensible Heat Factor",
+        "formula": "\\text{SHF} = \\frac{Q_s}{Q_t}",
+        "variables": {
+            "SHF": "Sensible heat factor",
+            "Q_s": "Sensible heat transfer",
+            "Q_t": "Total heat transfer"
+        },
+        "description": "Fraction of total heat that is sensible."
+    },
+    {
+        "name": "Cooling Load",
+        "formula": "Q_t = m_a (h_1 - h_2) - m_w h_w",
+        "variables": {
+            "m_w": "Condensed water",
+            "h_w": "Enthalpy of water condensed"
+        },
+        "description": "Total cooling required for air dehumidification."
+    },
+    {
+        "name": "Sensible and Latent Heat in Cooling",
+        "formula": "Q_t = Q_s + Q_l",
+        "variables": {
+            "Q_s": "Sensible heat",
+            "Q_l": "Latent heat"
+        },
+        "description": "Breakdown of cooling load."
+    },
+    {
+        "name": "Sensible Heat Transfer",
+        "formula": "Q_s = m_a (h_w - h_2) = m_a c_{pm} (T_1 - T_2)",
+        "variables": {
+            "Q_s": "Sensible heat transfer (J)",
+            "m_a": "Mass flow of air (kg/s)",
+            "h_w": "Enthalpy of air after sensible cooling (J/kg)",
+            "h_2": "Enthalpy of air before cooling (J/kg)",
+            "c_{pm}": "Specific heat of moist air (J/kg·K)",
+            "T_1": "Initial air temperature (K)",
+            "T_2": "Final air temperature (K)"
+        },
+        "description": "Heat removed from air without changing its moisture content."
+    },
+    {
+        "name": "Latent Heat Transfer",
+        "formula": "Q_l = m_a (h_1 - h_w) = m_a \\lambda_c (H_1 - H_2)",
+        "variables": {
+            "Q_l": "Latent heat transfer (J)",
+            "m_a": "Mass flow of air (kg/s)",
+            "h_1": "Initial enthalpy of air (J/kg)",
+            "h_w": "Enthalpy of air after sensible cooling (J/kg)",
+            "\\lambda_c": "Latent heat of condensation at coil temperature (J/kg)",
+            "H_1": "Initial absolute humidity of air (kg water/kg dry air)",
+            "H_2": "Final absolute humidity of air (kg water/kg dry air)"
+        },
+        "description": "Heat removed due to condensation or moisture removal."
+    },
+    {
+        "name": "Sensible Heat Factor",
+        "formula": "\\text{SHF} = \\frac{Q_s}{Q_t}",
+        "variables": {
+            "SHF": "Sensible heat factor (dimensionless)",
+            "Q_s": "Sensible heat transfer (J)",
+            "Q_t": "Total heat transfer (sensible + latent) (J)"
+        },
+        "description": "Fraction of total heat that is sensible (non-condensational)."
+    },
+    {
+        "name": "Bypass Factor",
+        "formula": "\\text{BPF} = \\frac{T_2 - T_s}{T_1 - T_s} = \\frac{H_2 - H_s}{H_1 - H_s} = \\frac{h_2 - h_s}{h_1 - h_s}",
+        "variables": {
+            "T_s": "Coil temperature",
+            "H_s": "Humidity at coil",
+            "h_s": "Enthalpy at coil"
+        },
+        "description": "Measure of coil efficiency."
+    },
+    {
+        "name": "Water Added in Humidification",
+        "formula": "m_w = m_a (H_f - H_i)",
+        "variables": {
+            "m_w": "Mass of water added (kg)",
+            "m_a": "Mass of dry air (kg)",
+            "H_i": "Initial absolute humidity (kg water/kg dry air)",
+            "H_f": "Final absolute humidity (kg water/kg dry air)"
+        },
+        "description": "Calculates the mass of water added to air to reach desired humidity."
+    },
+    {
+        "name": "Enthalpy Change in Humidification",
+        "formula": "Q_t = m_a (h_f - h_i) - m_w h_w",
+        "variables": {
+            "Q_t": "Heat required (J)",
+            "m_a": "Mass of dry air (kg)",
+            "h_i": "Initial enthalpy of air (J/kg)",
+            "h_f": "Final enthalpy of air (J/kg)",
+            "m_w": "Mass of water added (kg)",
+            "h_w": "Enthalpy of added water (J/kg)"
+        },
+        "description": "Energy required to humidify air accounting for air and added water."
+    },
+    {
+        "name": "Water Balance in Mixing",
+        "formula": "m_{a1} H_1 + m_{a2} H_2 = (m_{a1} + m_{a2}) H_3",
+        "variables": {
+            "m_{a1}": "Mass of air stream 1 (kg)",
+            "m_{a2}": "Mass of air stream 2 (kg)",
+            "H_1": "Humidity of air stream 1 (kg water/kg dry air)",
+            "H_2": "Humidity of air stream 2 (kg water/kg dry air)",
+            "H_3": "Humidity of mixed air (kg water/kg dry air)"
+        },
+        "description": "Conservation of water during mixing of two humid air streams."
+    },
+    {
+        "name": "Energy Balance in Mixing",
+        "formula": "m_{a1} h_1 + m_{a2} h_2 = (m_{a1} + m_{a2}) h_3",
+        "variables": {
+            "m_{a1}": "Mass of air stream 1 (kg)",
+            "m_{a2}": "Mass of air stream 2 (kg)",
+            "h_1": "Enthalpy of air stream 1 (J/kg)",
+            "h_2": "Enthalpy of air stream 2 (J/kg)",
+            "h_3": "Enthalpy of mixed air (J/kg)"
+        },
+        "description": "Conservation of energy during mixing of two air streams."
+    },
+    {
+        "name": "Mass Flow Rate from Volume",
+        "formula": "m_a = \\frac{\\text{Vol}}{\\text{Spe Vol}}",
+        "variables": {
+            "m_a": "Mass flow rate of air (kg/s)",
+            "Vol": "Volumetric flow rate (m³/s)",
+            "Spe Vol": "Specific volume of air (m³/kg)"
+        },
+        "description": "Calculate mass flow of air from its volumetric flow and specific volume."
+    },
+    {
+        "name": "Heat Balance in Dryer",
+        "formula": "M h_1 + G h_{G2} = M h_2 + G h_{G1}",
+        "variables": {
+            "M": "Mass of solids (kg)",
+            "G": "Mass flow of drying air (kg/s)",
+            "h_1": "Initial enthalpy of solids (J/kg)",
+            "h_2": "Final enthalpy of solids (J/kg)",
+            "h_{G1}": "Initial enthalpy of gas (J/kg)",
+            "h_{G2}": "Final enthalpy of gas (J/kg)"
+        },
+        "description": "Energy balance for a dryer assuming no losses."
+    },
+    {
+        "name": "Solid Enthalpy",
+        "formula": "h = C_{pd} T + C_{pw} X T",
+        "variables": {
+            "h": "Enthalpy of wet solid (J/kg)",
+            "C_{pd}": "Specific heat of dry solid (J/kg·K)",
+            "C_{pw}": "Specific heat of water in solid (J/kg·K)",
+            "T": "Temperature of solid (K)",
+            "X": "Moisture content (kg water/kg dry solid)"
+        },
+        "description": "Calculate the enthalpy of a wet solid based on its moisture content."
+    },
+    {
+        "name": "Gas Enthalpy",
+        "formula": "h_G = C_G T_G + H \\lambda_0",
+        "variables": {
+            "h_G": "Enthalpy of humid gas (J/kg)",
+            "C_G": "Specific heat of dry gas (J/kg·K)",
+            "T_G": "Gas temperature (K)",
+            "H": "Humidity ratio (kg water/kg dry air)",
+            "\\lambda_0": "Latent heat of vaporization (J/kg)"
+        },
+        "description": "Enthalpy of humid air considering sensible and latent heat."
+    },
+    {
+        "name": "Moisture Balance in Dryer",
+        "formula": "M X_1 + G H_2 = M X_2 + G H_1",
+        "variables": {
+            "M": "Mass of solids (kg)",
+            "G": "Mass flow of air (kg/s)",
+            "X_1": "Initial moisture content of solids",
+            "X_2": "Final moisture content of solids",
+            "H_1": "Initial humidity of air",
+            "H_2": "Final humidity of air"
+        },
+        "description": "Balance of moisture between solids and drying air."
+    },
+    {
+        "name": "Moisture Content Wet Basis",
+        "formula": "\\text{MC}_{\\text{wb}} = \\frac{M_w}{M} \\times 100",
+        "variables": {
+            "MC_{wb}": "Moisture content (wet basis, %)",
+            "M_w": "Mass of water in sample (kg)",
+            "M": "Total mass of wet sample (kg)"
+        },
+        "description": "Moisture content expressed relative to total wet mass."
+    },
+    {
+        "name": "Moisture Content Dry Basis",
+        "formula": "\\text{MC}_{\\text{db}} = \\frac{M_w}{M_d} \\times 100",
+        "variables": {
+            "MC_{db}": "Moisture content (dry basis, %)",
+            "M_w": "Mass of water in sample (kg)",
+            "M_d": "Mass of dry solid (kg)"
+        },
+        "description": "Moisture content expressed relative to dry mass."
+    },
+    {
+        "name": "Relation Between MC wb and db",
+        "formula": "\\text{MC}_{\\text{wb}} = \\frac{\\text{MC}_{\\text{db}}}{1 + \\text{MC}_{\\text{db}}} \\times 100",
+        "variables": {
+            "MC_{wb}": "Moisture content wet basis (%)",
+            "MC_{db}": "Moisture content dry basis (%)"
+        },
+        "description": "Converts moisture content between dry basis and wet basis."
+    },
+    {
+        "name": "Free Moisture Content",
+        "formula": "X = X_T - X^*",
+        "variables": {
+            "X_T": "Total moisture content",
+            "X^*": "Equilibrium moisture content"
+        },
+        "description": "Excess moisture above equilibrium."
+    },
+    {
+        "name": "Drying Rate",
+        "formula": "R = -\\frac{M}{A} \\frac{dX}{dt}",
+        "variables": {
+            "M": "Mass of dry solid",
+            "A": "Drying area"
+        },
+        "description": "Rate of moisture removal."
+    },
+    {
+        "name": "Drying Time in Constant Rate Period",
+        "formula": "t = \\frac{M}{A R_C} (X_1 - X_2)",
+        "variables": {
+            "t": "Drying time (s)",
+            "M": "Mass of wet solid (kg)",
+            "A": "Evaporation surface area (m²)",
+            "R_C": "Constant drying rate (kg/m²·s)",
+            "X_1": "Initial moisture content (kg water/kg dry solid)",
+            "X_2": "Final moisture content (kg water/kg dry solid)"
+        },
+        "description": "Calculates the time required to dry a material during the constant rate period."
+    },
+    {
+        "name": "Flux of Water Vapor",
+        "formula": "N_A = k_y (y_w - y)",
+        "variables": {
+            "N_A": "Molar flux of water vapor (mol/m²·s)",
+            "k_y": "Mass transfer coefficient (m/s)",
+            "y_w": "Mole fraction of water vapor at the surface",
+            "y": "Mole fraction of water vapor in the bulk air"
+        },
+        "description": "Describes the rate at which water vapor diffuses from the wet surface into the surrounding air."
+    },
+    {
+        "name": "Heat for Vaporization",
+        "formula": "q = h A (T - T_w) = M_A N_A \\lambda_w A",
+        "variables": {
+            "q": "Heat transferred (W)",
+            "h": "Convective heat transfer coefficient (W/m²·K)",
+            "A": "Surface area (m²)",
+            "T": "Air or heating medium temperature (K)",
+            "T_w": "Wet surface temperature (K)",
+            "M_A": "Mass of evaporating component (kg)",
+            "N_A": "Moles of evaporating component",
+            "\\lambda_w": "Latent heat of vaporization (J/kg)"
+        },
+        "description": "Heat balance for the evaporation process, considering convection and latent heat."
+    },
+    {
+        "name": "Psychrometric Ratio",
+        "formula": "\\frac{h}{k_y M_B} = c_s = 1.005 + 1.88 H",
+        "variables": {
+            "h": "Convective heat transfer coefficient (W/m²·K)",
+            "k_y": "Mass transfer coefficient (m/s)",
+            "M_B": "Mass of dry air (kg)",
+            "c_s": "Psychrometric ratio (dimensionless)",
+            "H": "Humidity ratio (kg water/kg dry air)"
+        },
+        "description": "Dimensionless ratio used in drying calculations linking heat and mass transfer."
+    },
+    {
+        "name": "Convective Heat Transfer Parallel Flow",
+        "formula": "h = 0.0204 G^{0.8}",
+        "variables": {
+            "G": "Gas mass velocity"
+        },
+        "description": "For air parallel to surface."
+    },
+    {
+        "name": "Convective Heat Transfer Perpendicular Flow",
+        "formula": "h = 0.37 G^{0.37}",
+        "variables": {
+            "h": "Convective heat transfer coefficient (W/m²·K)",
+            "G": "Mass velocity of air (kg/m²·s)"
+        },
+        "description": "Convective heat transfer coefficient for air perpendicular to the surface."
+    },
+    {
+        "name": "Gas Mass Velocity",
+        "formula": "G = \\rho_{\\text{air}} \\times V_{\\text{air}}",
+        "variables": {
+            "\\rho_{\\text{air}}": "Density of air (kg/m³)",
+            "V_{\\text{air}}": "Air velocity (m/s)",
+            "G": "Mass flow per unit area (kg/m²·s)"
+        },
+        "description": "Mass flow of gas per unit area."
+    },
+    {
+        "name": "Molar Specific Volume",
+        "formula": "V_m' = 0.00283 + 0.00456 H (T + 273)",
+        "variables": {
+            "V_m'": "Molar specific volume (m³/mol)",
+            "H": "Humidity ratio (kg water/kg dry air)",
+            "T": "Temperature (°C)"
+        },
+        "description": "Approximate molar specific volume of moist air."
+    },
+    {
+        "name": "Density of Moist Air",
+        "formula": "\\rho = \\frac{1 + H}{V_m'}",
+        "variables": {
+            "\\rho": "Density of moist air (kg/m³)",
+            "H": "Humidity ratio (kg water/kg dry air)",
+            "V_m'": "Molar specific volume (m³/mol)"
+        },
+        "description": "Calculation of moist air density."
+    },
+    {
+        "name": "Radiative Heat Transfer",
+        "formula": "q_R = \\sigma \\epsilon (T_R^4 - T_s^4)",
+        "variables": {
+            "q_R": "Radiative heat flux (W/m²)",
+            "\\sigma": "Stefan-Boltzmann constant (5.67×10⁻⁸ W/m²·K⁴)",
+            "\\epsilon": "Emissivity of the surface",
+            "T_R": "Temperature of the radiation source (K)",
+            "T_s": "Surface temperature (K)"
+        },
+        "description": "Heat transfer from a hot surface by radiation."
+    },
+    {
+        "name": "Radiation Heat Coefficient",
+        "formula": "h_R = \\frac{\\sigma \\epsilon (T_R^4 - T_s^4)}{T_R - T_s}",
+        "variables": {
+            "h_R": "Radiation heat transfer coefficient (W/m²·K)",
+            "\\sigma": "Stefan-Boltzmann constant",
+            "\\epsilon": "Emissivity of the surface",
+            "T_R": "Radiation source temperature (K)",
+            "T_s": "Surface temperature (K)"
+        },
+        "description": "Effective radiation heat transfer coefficient."
+    },
+    {
+        "name": "Conductive Heat Transfer",
+        "formula": "q_k = U A (T - T_s)",
+        "variables": {
+            "q_k": "Heat transfer rate (W)",
+            "U": "Overall heat transfer coefficient (W/m²·K)",
+            "A": "Area (m²)",
+            "T": "Temperature of hot fluid or tray (K)",
+            "T_s": "Surface temperature of solids (K)"
+        },
+        "description": "Heat transferred by conduction through a tray and solids."
+    },
+    {
+        "name": "Overall Conductivity Reciprocal",
+        "formula": "\\frac{1}{U} = \\frac{1}{h_c} + \\frac{l_m}{k_m} + \\frac{l_s}{k_s}",
+        "variables": {
+            "l_m": "Metal thickness",
+            "k_m": "Metal conductivity",
+            "l_s": "Solid thickness",
+            "k_s": "Solid conductivity"
+        },
+        "description": "Combined conductive resistances."
+    },
+    {
+        "name": "Drying Rate with Multiple Transfers",
+        "formula": "R_C = \\frac{(h_c + U)(T - T_s) + h_R (T_R - T_s)}{\\lambda_s} = k_y M_B (H_s - H)",
+        "variables": {
+            "h_c": "Convective heat transfer coefficient (W/m²·K)",
+            "U": "Overall heat transfer coefficient (W/m²·K)",
+            "T": "Air temperature (K)",
+            "T_s": "Surface temperature of the material (K)",
+            "h_R": "Radiative heat transfer coefficient (W/m²·K)",
+            "T_R": "Radiation source temperature (K)",
+            "\\lambda_s": "Latent heat of drying (J/kg)",
+            "k_y": "Mass transfer coefficient (m/s)",
+            "M_B": "Mass of the wet material (kg)",
+            "H_s": "Humidity at the surface",
+            "H": "Humidity of the air"
+        },
+        "description": "Drying rate considering convection, conduction, and radiation effects."
+    },
+    {
+        "name": "Drying Time Linear Rate",
+        "formula": "t_f = \\frac{M (X_1 - X_2)}{A (R_1 - R_2)} \\ln \\frac{R_1}{R_2}",
+        "variables": {
+            "M": "Mass of material (kg)",
+            "X_1": "Initial moisture content",
+            "X_2": "Final moisture content",
+            "A": "Drying surface area (m²)",
+            "R_1": "Initial drying rate",
+            "R_2": "Final drying rate"
+        },
+        "description": "Drying time for linear falling rate period."
+    },
+    {
+        "name": "Drying Time Linear Through Origin",
+        "formula": "t_f = \\frac{M X_c}{A R_c} \\ln \\frac{X_c}{X_2}",
+        "variables": {
+            "M": "Mass of material (kg)",
+            "X_c": "Critical moisture content where linear rate starts",
+            "R_c": "Drying rate at X_c",
+            "A": "Drying surface area (m²)",
+            "X_2": "Final moisture content"
+        },
+        "description": "Drying time assuming linear rate through origin."
+    },
+    {
+        "name": "Diffusion Equation",
+        "formula": "\\frac{dX}{dt} = D_L \\frac{d^2 X}{dx^2}",
+        "variables": {
+            "X": "Moisture content",
+            "t": "Time (s)",
+            "x": "Position in the material (m)",
+            "D_L": "Liquid diffusion coefficient (m²/s)"
+        },
+        "description": "Describes liquid diffusion in solids during drying."
+    },
+    {
+        "name": "Average Moisture in Diffusion",
+        "formula": "X = \\frac{8}{\\pi^2} (X_1 - X^*) \\exp \\left( - \\frac{\\pi^2 D_L t}{4 x_1^2} \\right)",
+        "variables": {
+            "X": "Moisture content at time t",
+            "X_1": "Initial moisture content",
+            "X^*": "Equilibrium moisture content",
+            "t": "Time (s)",
+            "D_L": "Liquid diffusion coefficient (m²/s)",
+            "x_1": "Characteristic thickness of material (m)"
+        },
+        "description": "Approximate solution for diffusion-controlled drying."
+    },
+    {
+        "name": "Drying Time Diffusion",
+        "formula": "t = \\frac{4 x_1^2}{\\pi^2 D_L} \\ln \\frac{8 X_1}{\\pi^2 X}",
+        "variables": {
+            "t": "Drying time (s)",
+            "x_1": "Characteristic thickness of material (m)",
+            "D_L": "Liquid diffusion coefficient (m²/s)",
+            "X_1": "Initial moisture content",
+            "X": "Moisture content at time t"
+        },
+        "description": "Time required for diffusion-controlled drying."
+    },
+    {
+        "name": "Drying Rate Diffusion",
+        "formula": "R = \\frac{\\pi^2 D_L \\rho_s}{4 x_1^2} X",
+        "variables": {
+            "R": "Drying rate (kg/m²·s)",
+            "D_L": "Liquid diffusion coefficient (m²/s)",
+            "\\rho_s": "Density of the solid (kg/m³)",
+            "x_1": "Characteristic thickness of material (m)",
+            "X": "Moisture content"
+        },
+        "description": "Rate during diffusion period of drying."
+    },
+    {
+        "name": "Capillary Drying Time",
+        "formula": "t = \\frac{x_1 \\rho_s \\lambda_w X_c}{h (T - T_w)} \\ln \\frac{X_c}{X}",
+        "variables": {
+            "t": "Drying time (s)",
+            "x_1": "Material thickness (m)",
+            "\\rho_s": "Solid density (kg/m³)",
+            "\\lambda_w": "Latent heat of water (J/kg)",
+            "X_c": "Critical moisture content",
+            "X": "Moisture content at time t",
+            "h": "Heat transfer coefficient (W/m²·K)",
+            "T": "Air temperature (K)",
+            "T_w": "Wet bulb temperature (K)"
+        },
+        "description": "Drying time when capillary flow controls the process."
+    },
+    {
+        "name": "Moisture Balance in Dryer",
+        "formula": "M X_1 + G H_2 = M X_2 + G H_1",
+        "variables": {
+            "M": "Mass of material (kg)",
+            "X_1": "Initial moisture content",
+            "X_2": "Final moisture content",
+            "G": "Mass of drying air (kg)",
+            "H_1": "Humidity of inlet air",
+            "H_2": "Humidity of outlet air"
+        },
+        "description": "Represents moisture balance in a continuous dryer."
+    },
+    {
+        "name": "Fourier's Law of Heat Conduction",
+        "formula": "q = -k \\frac{dT}{dx}",
+        "variables": {
+            "q": "Heat flux (W/m²)",
+            "k": "Thermal conductivity (W/(m K))",
+            "T": "Temperature (K)",
+            "x": "Distance (m)"
+        },
+        "description": "Rate of heat conduction in one dimension."
+    },
+    {
+        "name": "Newton's Law of Cooling",
+        "formula": "q = h (T_s - T_\\infty)",
+        "variables": {
+            "h": "Heat transfer coefficient (W/(m² K))",
+            "T_s": "Surface temperature (K)",
+            "T_\\infty": "Fluid temperature (K)"
+        },
+        "description": "Convective heat transfer rate."
+    },
+    {
+        "name": "Log Mean Temperature Difference",
+        "formula": "\\Delta T_{LM} = \\frac{\\Delta T_1 - \\Delta T_2}{\\ln (\\Delta T_1 / \\Delta T_2)}",
+        "variables": {
+            "\\Delta T_1": "Temperature difference at one end",
+            "\\Delta T_2": "Temperature difference at other end"
+        },
+        "description": "For heat exchangers in countercurrent or cocurrent flow."
+    },
+    {
+        "name": "Fick's First Law of Diffusion",
+        "formula": "J_A = -D_{AB} \\frac{dC_A}{dx}",
+        "variables": {
+            "J_A": "Molar flux of A (mol/(m² s))",
+            "D_{AB}": "Diffusion coefficient (m²/s)",
+            "C_A": "Concentration of A (mol/m³)"
+        },
+        "description": "Rate of diffusion in one dimension."
+    },
+    {
+        "name": "Mass Transfer Coefficient",
+        "formula": "N_A = k_c (C_{A s} - C_{A \\infty})",
+        "variables": {
+            "N_A": "Mass flux (mol/(m² s))",
+            "k_c": "Mass transfer coefficient (m/s)",
+            "C_{A s}": "Surface concentration (mol/m³)",
+            "C_{A \\infty}": "Bulk concentration (mol/m³)"
+        },
+        "description": "Convective mass transfer rate."
+    },
+    {
+        "name": "Nusselt Number",
+        "formula": "Nu = \\frac{h L}{k}",
+        "variables": {
+            "h": "Convective heat transfer coefficient (W/m²·K)",
+            "L": "Characteristic length (m)",
+            "k": "Thermal conductivity of the fluid (W/m·K)"
+        },
+        "description": "Dimensionless number representing the ratio of convective to conductive heat transfer."
+    },
+    {
+        "name": "Sherwood Number",
+        "formula": "Sh = \\frac{k_c L}{D_{AB}}",
+        "variables": {
+            "k_c": "Mass transfer coefficient (m/s)",
+            "L": "Characteristic length (m)",
+            "D_{AB}": "Diffusivity of species A in B (m²/s)"
+        },
+        "description": "Dimensionless number representing the ratio of convective to diffusive mass transfer."
+    },
+    {
+        "name": "Reynolds Number",
+        "formula": "Re = \\frac{\\rho v L}{\\mu}",
+        "variables": {
+            "\\rho": "Density (kg/m³)",
+            "v": "Velocity (m/s)",
+            "\\mu": "Viscosity (Pa s)"
+        },
+        "description": "Ratio of inertial to viscous forces."
+    },
+    {
+        "name": "Prandtl Number",
+        "formula": "Pr = \\frac{\\nu}{\\alpha}",
+        "variables": {
+            "\\nu": "Kinematic viscosity (m²/s)",
+            "\\alpha": "Thermal diffusivity (m²/s)"
+        },
+        "description": "Ratio of momentum to thermal diffusivity."
+    },
+    {
+        "name": "Schmidt Number",
+        "formula": "Sc = \\frac{\\nu}{D_{AB}}",
+        "variables": {
+            "\\nu": "Kinematic viscosity (m²/s)",
+            "D_{AB}": "Mass diffusivity of species A in B (m²/s)"
+        },
+        "description": "Dimensionless number representing the ratio of momentum diffusivity (viscosity) to mass diffusivity."
+    },
+    {
+        "name": "Lewis Number",
+        "formula": "Le = \\frac{\\alpha}{D_{AB}}",
+        "variables": {
+            "\\alpha": "Thermal diffusivity (m²/s)",
+            "D_{AB}": "Mass diffusivity of species A in B (m²/s)"
+        },
+        "description": "Dimensionless number comparing thermal diffusivity to mass diffusivity."
+    },
+    {
+        "name": "Hagen-Poiseuille Law",
+        "formula": "\\Delta P = \\frac{32 \\mu v L}{D^2}",
+        "variables": {
+            "\\Delta P": "Pressure drop (Pa)",
+            "\\mu": "Dynamic viscosity (Pa·s)",
+            "v": "Average fluid velocity (m/s)",
+            "L": "Pipe length (m)",
+            "D": "Pipe diameter (m)"
+        },
+        "description": "Calculates pressure drop for laminar flow of a Newtonian fluid through a circular pipe."
+    },
+    {
+        "name": "Fanning Friction Factor Laminar",
+        "formula": "f = \\frac{16}{Re}",
+        "variables": {
+            "f": "Fanning friction factor",
+            "Re": "Reynolds number (dimensionless)"
+        },
+        "description": "For laminar flow in pipes."
+    },
+    {
+        "name": "Blasius Equation",
+        "formula": "f = \\frac{0.0791}{Re^{0.25}}",
+        "variables": {
+            "f": "Darcy friction factor (dimensionless)",
+            "Re": "Reynolds number (dimensionless)"
+        },
+        "description": "Used to estimate the friction factor for turbulent flow in smooth pipes."
+    },
+    {
+        "name": "Dittus-Boelter Equation",
+        "formula": "Nu = 0.023 Re^{0.8} Pr^{0.4}",
+        "variables": {
+            "Nu": "Nusselt number (dimensionless)",
+            "Re": "Reynolds number (dimensionless)",
+            "Pr": "Prandtl number (dimensionless)"
+        },
+        "description": "Empirical correlation for convective heat transfer in turbulent pipe flow (typically for heating)."
+    },
+    {
+        "name": "Chilton-Colburn Analogy",
+        "formula": "j_H = j_M = \\frac{f}{2}",
+        "variables": {
+            "j_H": "Colburn j-factor for heat",
+            "j_M": "Colburn j-factor for mass"
+        },
+        "description": "Analogy between heat and mass transfer."
+    },
+    {
+        "name": "Colburn j-Factor for Heat",
+        "formula": "j_H = \\frac{Nu}{Re Pr^{1/3}}",
+        "variables": {
+            "Nu": "Nusselt number (dimensionless)",
+            "Re": "Reynolds number (dimensionless)",
+            "Pr": "Prandtl number (dimensionless)"
+        },
+        "description": "Dimensionless group used to correlate convective heat transfer in fluid flows."
+    },
+    {
+        "name": "Colburn j-Factor for Mass",
+        "formula": "j_M = \\frac{Sh}{Re Sc^{1/3}}",
+        "variables": {
+            "Sh": "Sherwood number (dimensionless)",
+            "Re": "Reynolds number (dimensionless)",
+            "Sc": "Schmidt number (dimensionless)"
+        },
+        "description": "Dimensionless group used to correlate convective mass transfer in fluid flows."
+    },
+    {
+        "name": "Stefan Law for Diffusion",
+        "formula": "N_A = \\frac{D_{AB} P}{RT \\delta} \\ln \\frac{P - P_{A2}}{P - P_{A1}}",
+        "variables": {
+            "P": "Total pressure (Pa)",
+            "R": "Gas constant (J/(mol K))",
+            "\\delta": "Film thickness (m)"
+        },
+        "description": "Diffusion through stagnant gas."
+    },
+    {
+        "name": "Effectiveness-NTU Method",
+        "formula": "\\epsilon = \\frac{1 - \\exp (-NTU (1 - C_r))}{1 - C_r \\exp (-NTU (1 - C_r))}",
+        "variables": {
+            "\\epsilon": "Heat exchanger effectiveness",
+            "NTU": "Number of transfer units",
+            "C_r": "Capacity ratio"
+        },
+        "description": "For counterflow heat exchanger."
+    },
+    {
+        "name": "Number of Transfer Units",
+        "formula": "NTU = \\frac{U A}{C_{\\min}}",
+        "variables": {
+            "C_{\\min}": "Minimum heat capacity rate"
+        },
+        "description": "Dimensionless parameter for heat exchangers."
+    },
+    {
+        "name": "Fenske Equation for Minimum Plates",
+        "formula": "N_{\\min} = \\frac{\\ln [ (x_D / (1 - x_D)) / (x_B / (1 - x_B)) ]}{\\ln \\alpha}",
+        "variables": {
+            "N_{\\min}": "Minimum number of plates",
+            "x_D": "Distillate mole fraction",
+            "x_B": "Bottoms mole fraction",
+            "\\alpha": "Relative volatility"
+        },
+        "description": "For distillation at total reflux."
+    },
+    {
+        "name": "Underwood Equation for Minimum Reflux",
+        "formula": "R_{\\min} + 1 = \\sum \\frac{\\alpha_i x_{F i}}{\\alpha_i - \\theta}",
+        "variables": {
+            "R_{\\min}": "Minimum reflux ratio",
+            "\\theta": "Underwood constant"
+        },
+        "description": "For multicomponent distillation."
+    },
+    {
+        "name": "Gilliland Correlation",
+        "formula": "Y = 1 - \\exp \\left[ \\frac{(1 + 54.4 X) (X - 1)}{11 + 117.2 X} \\sqrt{X} \\right]",
+        "variables": {
+            "Y": "(N - N_min) / N",
+            "X": "(R - R_min) / (R + 1)"
+        },
+        "description": "Relates reflux and stages in distillation."
+    },
+    {
+        "name": "HTU for Absorption",
+        "formula": "H_G = \\frac{G}{k_y a}",
+        "variables": {
+            "H_G": "Height of gas transfer unit (m)",
+            "G": "Gas molar velocity (mol/(m² s))",
+            "k_y a": "Volumetric mass transfer coefficient (mol/(m³ s))"
+        },
+        "description": "Height of transfer unit for gas phase."
+    },
+    {
+        "name": "NTU for Absorption",
+        "formula": "N_G = \\int \\frac{dy}{y - y^*}",
+        "variables": {
+            "N_G": "Number of gas transfer units",
+            "y": "Gas mole fraction",
+            "y^*": "Equilibrium mole fraction"
+        },
+        "description": "Number of transfer units for gas phase."
+    },
+    {
+        "name": "Packed Column Height",
+        "formula": "Z = H_G N_G",
+        "variables": {
+            "Z": "Total column height (m)",
+            "H_G": "Height of a transfer unit (m)",
+            "N_G": "Number of transfer units (dimensionless)"
+        },
+        "description": "Represents the total height of a packed column as the product of height of a transfer unit and the number of transfer units."
+    },
+    {
+        "name": "Murphree Efficiency for Tray",
+        "formula": "E_M = \\frac{y_n - y_{n+1}}{y_n^* - y_{n+1}}",
+        "variables": {
+            "E_M": "Murphree efficiency",
+            "y_n": "Gas leaving tray n",
+            "y_{n+1}": "Gas entering tray n",
+            "y_n^*": "Equilibrium gas"
+        },
+        "description": "Efficiency of a tray in distillation."
+    },
+    {
+        "name": "Weber Number",
+        "formula": "We = \\frac{\\rho v^2 L}{\\sigma}",
+        "variables": {
+            "ρ": "Fluid density (kg/m³)",
+            "v": "Fluid velocity (m/s)",
+            "L": "Characteristic length (m)",
+            "σ": "Surface tension (N/m)"
+        },
+        "description": "Dimensionless number representing the ratio of inertial forces to surface tension forces."
+    },
+    {
+        "name": "Grashof Number",
+        "formula": "Gr = \\frac{g \\beta \\Delta T L^3}{\\nu^2}",
+        "variables": {
+            "g": "Acceleration due to gravity (m/s²)",
+            "\\beta": "Thermal expansion coefficient (1/K)",
+            "\\Delta T": "Temperature difference (K)",
+            "L": "Characteristic length (m)",
+            "\\nu": "Kinematic viscosity (m²/s)"
+        },
+        "description": "Dimensionless number for natural convection, representing the ratio of buoyancy to viscous forces."
+    },
+    {
+        "name": "Peclet Number for Heat",
+        "formula": "Pe_h = Re Pr",
+        "variables": {
+            "Re": "Reynolds number",
+            "Pr": "Prandtl number"
+        },
+        "description": "Ratio of advective to diffusive heat transport."
+    },
+    {
+        "name": "Peclet Number for Mass",
+        "formula": "Pe_m = Re Sc",
+        "variables": {
+            "Re": "Reynolds number",
+            "Sc": "Schmidt number"
+        },
+        "description": "Ratio of advective to diffusive mass transport."
+    },
+    {
+        "name": "Graetz Number",
+        "formula": "Gz = \\frac{\\pi D v \\rho C_p}{4 L k}",
+        "variables": {
+            "D": "Pipe diameter",
+            "v": "Fluid velocity",
+            "ρ": "Fluid density",
+            "C_p": "Specific heat capacity",
+            "L": "Pipe length",
+            "k": "Thermal conductivity"
+        },
+        "description": "Dimensionless number for heat transfer in laminar pipe flow."
+    },
+    {
+        "name": "Biot Number for Heat",
+        "formula": "Bi_h = \\frac{h L}{k}",
+        "variables": {
+            "h": "Convective heat transfer coefficient",
+            "L": "Characteristic length",
+            "k": "Thermal conductivity"
+        },
+        "description": "Ratio of internal to external thermal resistance."
+    },
+    {
+        "name": "Biot Number for Mass",
+        "formula": "Bi_m = \\frac{k_c L}{D}",
+        "variables": {
+            "k_c": "Mass transfer coefficient",
+            "L": "Characteristic length",
+            "D": "Diffusion coefficient"
+        },
+        "description": "Ratio of internal to external mass transfer resistance."
+    },
+    {
+        "name": "Fourier Number for Heat",
+        "formula": "Fo_h = \\frac{\\alpha t}{L^2}",
+        "variables": {
+            "α": "Thermal diffusivity",
+            "t": "Time",
+            "L": "Characteristic length"
+        },
+        "description": "Dimensionless time for heat conduction."
+    },
+    {
+        "name": "Fourier Number for Mass",
+        "formula": "Fo_m = \\frac{D t}{L^2}",
+        "variables": {
+            "D": "Diffusion coefficient",
+            "t": "Time",
+            "L": "Characteristic length"
+        },
+        "description": "Dimensionless time for mass diffusion."
+    },
+    {
+        "name": "Thiele Modulus",
+        "formula": "\\phi = L \\sqrt{\\frac{k}{D}}",
+        "variables": {
+            "L": "Characteristic length of catalyst particle",
+            "k": "Reaction rate constant (1/s)",
+            "D": "Diffusivity in catalyst"
+        },
+        "description": "Dimensionless number for diffusion and reaction in catalyst."
+    },
+    {
+        "name": "Effectiveness Factor",
+        "formula": "\\eta = \\frac{\\tanh \\phi}{\\phi}",
+        "variables": {
+            "φ": "Thiele modulus"
+        },
+        "description": "Ratio of actual reaction rate to rate if entire particle were at surface concentration (first-order reaction in flat plate catalyst)."
+    },
+    {
+        "name": "Henry's Law",
+        "formula": "P_A = H_A x_A",
+        "variables": {
+            "H_A": "Henry's constant (Pa)",
+            "x_A": "Mole fraction in liquid"
+        },
+        "description": "Equilibrium for gas-liquid."
+    },
+    {
+        "name": "Raoult's Law",
+        "formula": "P_A = P_A^0 y_A",
+        "variables": {
+            "P_A^0": "Vapor pressure of pure A (Pa)",
+            "y_A": "Mole fraction in gas"
+        },
+        "description": "For ideal solutions."
+    },
+    {
+        "name": "K-Value in Distillation",
+        "formula": "K = \\frac{y}{x}",
+        "variables": {
+            "y": "Mole fraction of the component in the vapor phase",
+            "x": "Mole fraction of the component in the liquid phase"
+        },
+        "description": "The K-value (equilibrium constant) relates the composition of a component in the vapor phase to that in the liquid phase during distillation."
+    },
+    {
+        "name": "Relative Volatility",
+        "formula": "\\alpha = \\frac{K_1}{K_2}",
+        "variables": {
+            "K_1": "Equilibrium constant (K-value) of component 1",
+            "K_2": "Equilibrium constant (K-value) of component 2"
+        },
+        "description": "Relative volatility is the ratio of K-values for two components and indicates how easily one component can be separated from another by distillation."
+    },
+    {
+        "name": "McCabe-Thiele Method Operating Line",
+        "formula": "y = \\frac{L}{V} x + \\frac{D x_D}{V}",
+        "variables": {
+            "L": "Liquid flow (mol/s)",
+            "V": "Vapor flow (mol/s)",
+            "D": "Distillate flow (mol/s)",
+            "x_D": "Distillate composition"
+        },
+        "description": "Rectifying section operating line."
+    },
+    {
+        "name": "Stripping Section Operating Line",
+        "formula": "y = \\frac{L'}{V'} x - \\frac{B x_B}{V'}",
+        "variables": {
+            "L'": "Liquid flow in stripping",
+            "V'": "Vapor flow in stripping",
+            "B": "Bottoms flow (mol/s)",
+            "x_B": "Bottoms composition"
+        },
+        "description": "For distillation column."
+    },
+    {
+        "name": "q-Line for Feed",
+        "formula": "y = \\frac{q}{q-1} x - \\frac{x_F}{q-1}",
+        "variables": {
+            "q": "Feed quality",
+            "x_F": "Feed composition"
+        },
+        "description": "Feed line in McCabe-Thiele."
+    },
+    {
+        "name": "Tray Efficiency Overall",
+        "formula": "E_o = \\frac{\\ln (1 + E_M (\\lambda - 1))}{\\lambda - 1}",
+        "variables": {
+            "E_M": "Murphree tray efficiency",
+            "\\lambda": "Stripping factor, defined as m V / L",
+            "V": "Vapor flow rate",
+            "L": "Liquid flow rate",
+            "m": "Slope of the equilibrium line"
+        },
+        "description": "Overall tray efficiency relates the actual separation achieved to the Murphree efficiency and accounts for the stripping factor."
+    },
+    {
+        "name": "Flooding Velocity",
+        "formula": "v_f = K \\sqrt{\\frac{\\rho_L - \\rho_G}{\\rho_G}}",
+        "variables": {
+            "K": "Constant from chart",
+            "\\rho_L": "Liquid density",
+            "\\rho_G": "Gas density"
+        },
+        "description": "For packed columns."
+    },
+    {
+        "name": "HETP for Packed Column",
+        "formula": "HETP = \\frac{Z}{N}",
+        "variables": {
+            "Z": "Height of the packed column",
+            "N": "Number of theoretical equilibrium stages"
+        },
+        "description": "Height Equivalent to a Theoretical Plate (HETP) represents the height of packing required to achieve the same separation as one theoretical stage."
+    },
+    {
+        "name": "Liquid Holdup in Extraction",
+        "formula": "h_L = \\frac{V_L}{V_L + V_H}",
+        "variables": {
+            "V_L": "Light phase velocity",
+            "V_H": "Heavy phase velocity"
+        },
+        "description": "Fractional holdup in liquid-liquid extraction."
+    },
+    {
+        "name": "Knudsen Diffusion Coefficient",
+        "formula": "D_K = \\frac{d_p}{3} \\sqrt{\\frac{8 RT}{\\pi M}}",
+        "variables": {
+            "d_p": "Pore diameter (m)",
+            "M": "Molecular weight (kg/mol)"
+        },
+        "description": "Diffusion in small pores."
+    },
+    {
+        "name": "Effective Diffusivity in Catalyst",
+        "formula": "D_e = \\frac{\\epsilon_p D}{\\tau_p}",
+        "variables": {
+            "\\epsilon_p": "Porosity",
+            "\\tau_p": "Tortuosity"
+        },
+        "description": "Effective diffusion in porous solid."
+    },
+    {
+        "name": "Weisz-Prater Criterion",
+        "formula": "C_{WP} = \\eta \\phi^2",
+        "variables": {
+            "\\eta": "Effectiveness factor of the catalyst",
+            "\\phi": "Thiele modulus, characterizing diffusion vs reaction rate"
+        },
+        "description": "Used to check for internal diffusion limitations in porous catalysts. A value of C_{WP} << 1 indicates negligible internal diffusion resistance."
+    },
+    {
+        "name": "Mears Criterion",
+        "formula": "C_M = \\frac{-r_A \\rho L^2}{D_e C_b}",
+        "variables": {
+            "C_b": "Bulk concentration"
+        },
+        "description": "For external mass transfer limitation."
+    }
+]

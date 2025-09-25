@@ -1,0 +1,796 @@
+[
+    {
+        "name": "Batch Composition Ratio",
+        "formula": "R = \\frac{\\text{Mass of oxide A}}{\\text{Mass of oxide B}}",
+        "description": "Mass ratio used to express the proportion of one oxide to another in a glass batch (e.g. SiO2 : Na2O).",
+        "variables": {
+            "R": "Mass ratio (dimensionless)",
+            "Mass of oxide A": "Mass of first oxide (kg)",
+            "Mass of oxide B": "Mass of second oxide (kg)"
+        }
+    },
+    {
+        "name": "Mole Fraction of Component i",
+        "formula": "x_{i} = \\frac{n_{i}}{\\sum n_{j}}",
+        "description": "Mole fraction of oxide i in a glass or ceramic batch.",
+        "variables": {
+            "x_{i}": "Mole fraction of component i (dimensionless)",
+            "n_{i}": "Moles of component i (mol)",
+            "\\sum n_{j}": "Total moles of all components (mol)"
+        }
+    },
+    {
+        "name": "Viscosity-Temperature Relationship (Arrhenius Type)",
+        "formula": "\\eta = \\eta_{0} e^{\\frac{E_{\\text{a}}}{RT}}",
+        "description": "Simple Arrhenius-type expression for viscosity of silicate melts.",
+        "variables": {
+            "\\eta": "Viscosity at temperature T (Pa·s)",
+            "\\eta_{0}": "Pre-exponential factor (Pa·s)",
+            "E_{\\text{a}}": "Activation energy for viscous flow (J·mol^{-1})",
+            "R": "Universal gas constant (8.314 J·mol^{-1}·K^{-1})",
+            "T": "Absolute temperature (K)"
+        }
+    },
+    {
+        "name": "Gas Volume Released During Fusion",
+        "formula": "V = \\frac{nRT}{P}",
+        "description": "Ideal gas law to estimate CO_{2} or SO_{2} volume released from batch decomposition.",
+        "variables": {
+            "V": "Gas volume (m^{3})",
+            "n": "Moles of gas released (mol)",
+            "R": "Universal gas constant (8.314 J·mol^{-1}·K^{-1})",
+            "T": "Temperature (K)",
+            "P": "Pressure (Pa)"
+        }
+    },
+    {
+        "name": "Heat Required for Melting",
+        "formula": "Q = m c_{p} (T_{\\text{m}} - T_{\\text{0}}) + m L_{\\text{f}}",
+        "description": "Sensible plus latent heat needed to bring a batch to its melting point and fuse it.",
+        "variables": {
+            "Q": "Heat required (J)",
+            "m": "Mass of batch (kg)",
+            "c_{p}": "Specific heat capacity (J·kg^{-1}·K^{-1})",
+            "T_{\\text{m}}": "Melting temperature (K)",
+            "T_{\\text{0}}": "Initial temperature (K)",
+            "L_{\\text{f}}": "Latent heat of fusion (J·kg^{-1})"
+        }
+    },
+    {
+        "name": "Batch Composition Ratio",
+        "formula": "R = \\frac{\\text{Mass of oxide A}}{\\text{Mass of oxide B}}",
+        "description": "Mass ratio used to express the proportion of one oxide to another in a glass batch (e.g. SiO_{2} : Na_{2}O).",
+        "variables": {
+            "R": "Mass ratio (dimensionless)",
+            "Mass of oxide A": "Mass of first oxide (kg)",
+            "Mass of oxide B": "Mass of second oxide (kg)"
+        }
+    },
+    {
+        "name": "Mole Fraction of Component i",
+        "formula": "x_{i} = \\frac{n_{i}}{\\sum n_{j}}",
+        "description": "Mole fraction of oxide i in a glass or ceramic batch.",
+        "variables": {
+            "x_{i}": "Mole fraction of component i (dimensionless)",
+            "n_{i}": "Moles of component i (mol)",
+            "\\sum n_{j}": "Total moles of all components (mol)"
+        }
+    },
+    {
+        "name": "Viscosity–Temperature Relationship (Arrhenius Type)",
+        "formula": "\\eta = \\eta_{0} e^{\\frac{E_{\\text{a}}}{RT}}",
+        "description": "Simple Arrhenius-type expression for viscosity of silicate melts.",
+        "variables": {
+            "\\eta": "Viscosity at temperature T (Pa·s)",
+            "\\eta_{0}": "Pre-exponential factor (Pa·s)",
+            "E_{\\text{a}}": "Activation energy for viscous flow (J·mol^{-1})",
+            "R": "Universal gas constant (8.314 J·mol^{-1}·K^{-1})",
+            "T": "Absolute temperature (K)"
+        }
+    },
+    {
+        "name": "Gas Volume Released During Fusion",
+        "formula": "V = \\frac{nRT}{P}",
+        "description": "Ideal gas law to estimate CO_{2} or SO_{2} volume released from batch decomposition.",
+        "variables": {
+            "V": "Gas volume (m^{3})",
+            "n": "Moles of gas released (mol)",
+            "R": "Universal gas constant (8.314 J·mol^{-1}·K^{-1})",
+            "T": "Temperature (K)",
+            "P": "Pressure (Pa)"
+        }
+    },
+    {
+        "name": "Heat Required for Melting",
+        "formula": "Q = m c_{p} (T_{\\text{m}} - T_{\\text{0}}) + m L_{\\text{f}}",
+        "description": "Sensible plus latent heat needed to bring a batch to its melting point and fuse it.",
+        "variables": {
+            "Q": "Heat required (J)",
+            "m": "Mass of batch (kg)",
+            "c_{p}": "Specific heat capacity (J·kg^{-1}·K^{-1})",
+            "T_{\\text{m}}": "Melting temperature (K)",
+            "T_{\\text{0}}": "Initial temperature (K)",
+            "L_{\\text{f}}": "Latent heat of fusion (J·kg^{-1})"
+        }
+    },
+    {
+        "name": "Mass Balance for Batch Melting",
+        "formula": "\\sum m_{\\text{raw}} = m_{\\text{glass}} + m_{\\text{gas}}",
+        "description": "Mass balance relating raw batch input to produced glass and evolved gases during melting.",
+        "variables": {
+            "\\sum m_{\\text{raw}}": "Total mass of raw materials fed (kg)",
+            "m_{\\text{glass}}": "Mass of molten glass produced (kg)",
+            "m_{\\text{gas}}": "Mass of gases evolved (kg)"
+        }
+    },
+    {
+        "name": "Energy Requirement for Melting",
+        "formula": "Q = \\sum_{i} m_{i} c_{p,i} (T_{\\text{m}} - T_{0}) + \\sum_{i} m_{i} L_{\\text{f},i}",
+        "description": "Total energy needed to heat each batch component from its initial temperature to the melting temperature and to fuse it.",
+        "variables": {
+            "Q": "Total heat required (J)",
+            "m_{i}": "Mass of component i (kg)",
+            "c_{p,i}": "Specific heat capacity of component i (J·kg^{-1}·K^{-1})",
+            "T_{\\text{m}}": "Melting temperature (K)",
+            "T_{0}": "Initial temperature (K)",
+            "L_{\\text{f},i}": "Latent heat of fusion for component i (J·kg^{-1})"
+        }
+    },
+    {
+        "name": "Heat Loss Through Furnace Walls",
+        "formula": "Q_{\\text{loss}} = U A \\Delta T",
+        "description": "Estimation of heat loss from a glass melting furnace by conduction through its walls.",
+        "variables": {
+            "Q_{\\text{loss}}": "Heat loss rate (W)",
+            "U": "Overall heat transfer coefficient (W·m^{-2}·K^{-1})",
+            "A": "Surface area of the furnace walls (m^{2})",
+            "\\Delta T": "Temperature difference between inside and outside (K)"
+        }
+    },
+    {
+        "name": "CO_{2} Released From Carbonates",
+        "formula": "n_{\\text{CO}_{2}} = \\frac{m_{\\text{carbonate}}}{M_{\\text{carbonate}}} \\cdot \\nu_{\\text{CO}_{2}}",
+        "description": "Moles of CO_{2} released when carbonates decompose during melting.",
+        "variables": {
+            "n_{\\text{CO}_{2}}": "Moles of CO_{2} released (mol)",
+            "m_{\\text{carbonate}}": "Mass of carbonate compound (kg)",
+            "M_{\\text{carbonate}}": "Molar mass of carbonate compound (kg·mol^{-1})",
+            "\\nu_{\\text{CO}_{2}}": "Stoichiometric coefficient of CO_{2} in the decomposition reaction (mol CO_{2}/mol carbonate)"
+        }
+    },
+    {
+        "name": "Residence Time of Melt in Furnace",
+        "formula": "t_{\\text{res}} = \\frac{V_{\\text{melt}}}{Q_{\\text{throughput}}}",
+        "description": "Average residence time of molten glass in the melting furnace.",
+        "variables": {
+            "t_{\\text{res}}": "Residence time (s)",
+            "V_{\\text{melt}}": "Volume of molten glass in the furnace (m^{3})",
+            "Q_{\\text{throughput}}": "Volumetric flow rate of molten glass leaving (m^{3}·s^{-1})"
+        }
+    },
+    {
+        "name": "Refining Bubble Rise Velocity (Stokes' Law Approximation)",
+        "formula": "v_{\\text{b}} = \\frac{2}{9} \\frac{(\\rho_{\\text{melt}} - \\rho_{\\text{gas}}) g r^{2}}{\\eta}",
+        "description": "Estimated rise velocity of gas bubbles in viscous silicate melts during refining.",
+        "variables": {
+            "v_{\\text{b}}": "Bubble rise velocity (m·s^{-1})",
+            "\\rho_{\\text{melt}}": "Density of molten glass (kg·m^{-3})",
+            "\\rho_{\\text{gas}}": "Density of gas in bubble (kg·m^{-3})",
+            "g": "Acceleration due to gravity (9.81 m·s^{-2})",
+            "r": "Bubble radius (m)",
+            "\\eta": "Viscosity of melt (Pa·s)"
+        }
+    },
+    {
+        "name": "Annealing Time",
+        "formula": "t_{a} = k \\left(\\frac{d}{2}\\right)^{2}",
+        "description": "Estimated time required to anneal a glass piece based on its half-thickness and a constant dependent on glass composition.",
+        "variables": {
+            "t_{a}": "Annealing time (s)",
+            "k": "Annealing constant (s·m^{-2})",
+            "d": "Thickness of the glass (m)"
+        }
+    },
+    {
+        "name": "Annealing Stress Relaxation",
+        "formula": "\\sigma(t) = \\sigma_{0} \\exp\\left(-\\frac{t}{\\tau}\\right)",
+        "description": "Residual stress in glass decreases exponentially with time during annealing.",
+        "variables": {
+            "\\sigma(t)": "Residual stress at time t (Pa)",
+            "\\sigma_{0}": "Initial stress before annealing (Pa)",
+            "t": "Time of annealing (s)",
+            "\\tau": "Stress relaxation time constant (s)"
+        }
+    },
+    {
+        "name": "Thermal Stress Due to Temperature Gradient",
+        "formula": "\\sigma = \\frac{E \\alpha (T_{s}-T_{c})}{1-\\nu}",
+        "description": "Stress generated by temperature difference between surface and core during heating or cooling.",
+        "variables": {
+            "\\sigma": "Thermal stress (Pa)",
+            "E": "Young’s modulus of glass (Pa)",
+            "\\alpha": "Coefficient of thermal expansion (K^{-1})",
+            "T_{s}": "Surface temperature (K)",
+            "T_{c}": "Core temperature (K)",
+            "\\nu": "Poisson’s ratio of glass"
+        }
+    },
+    {
+        "name": "Critical Cooling Rate for Tempering",
+        "formula": "R_{\\text{crit}} = \\frac{(T_{g}-T_{a})}{t_{c}}",
+        "description": "Minimum cooling rate needed to develop temper stresses from glass transition temperature to ambient.",
+        "variables": {
+            "R_{\\text{crit}}": "Critical cooling rate (K·s^{-1})",
+            "T_{g}": "Glass transition temperature (K)",
+            "T_{a}": "Annealing temperature (K)",
+            "t_{c}": "Cooling time (s)"
+        }
+    },
+    {
+        "name": "Surface Compressive Stress in Tempered Glass",
+        "formula": "\\sigma_{c} = E \\alpha (T_{q}-T_{c})",
+        "description": "Approximate compressive stress generated at the surface of tempered glass after quenching.",
+        "variables": {
+            "\\sigma_{c}": "Surface compressive stress (Pa)",
+            "E": "Young’s modulus of glass (Pa)",
+            "\\alpha": "Coefficient of thermal expansion (K^{-1})",
+            "T_{q}": "Temperature at start of quench (K)",
+            "T_{c}": "Core temperature after quench (K)"
+        }
+    },
+    {
+        "name": "Fracture Strength of Tempered Glass",
+        "formula": "\\sigma_{f} = \\sigma_{c} + \\sigma_{i}",
+        "description": "Approximate increase in fracture strength of tempered glass by adding induced compressive stress to intrinsic strength.",
+        "variables": {
+            "\\sigma_{f}": "Fracture strength of tempered glass (Pa)",
+            "\\sigma_{c}": "Induced surface compressive stress (Pa)",
+            "\\sigma_{i}": "Intrinsic (untempered) glass strength (Pa)"
+        }
+    },
+    {
+        "name": "Bulk Density of Ceramic Body",
+        "formula": "\\rho_{b} = \\frac{m_{\\text{dry}}}{V_{\\text{total}}}",
+        "description": "Bulk density of a dried or fired ceramic body including its pores.",
+        "variables": {
+            "\\rho_{b}": "Bulk density (kg·m^{-3})",
+            "m_{\\text{dry}}": "Mass of the dried/fired sample (kg)",
+            "V_{\\text{total}}": "Total external volume of the sample (m^{3})"
+        }
+    },
+    {
+        "name": "Porosity of Ceramic Body",
+        "formula": "\\phi = 1 - \\frac{\\rho_{b}}{\\rho_{s}}",
+        "description": "Fractional porosity of a ceramic body from its bulk and skeletal densities.",
+        "variables": {
+            "\\phi": "Porosity (dimensionless or %)",
+            "\\rho_{b}": "Bulk density (kg·m^{-3})",
+            "\\rho_{s}": "Skeletal (true) density of the solid phase (kg·m^{-3})"
+        }
+    },
+    {
+        "name": "Shrinkage on Firing",
+        "formula": "S = \\frac{L_{0} - L_{f}}{L_{0}} \\times 100\\%",
+        "description": "Linear shrinkage of a ceramic specimen during firing.",
+        "variables": {
+            "S": "Shrinkage (%)",
+            "L_{0}": "Initial (green) length (m)",
+            "L_{f}": "Fired length (m)"
+        }
+    },
+    {
+        "name": "Water Absorption",
+        "formula": "A_{w} = \\frac{m_{\\text{wet}} - m_{\\text{dry}}}{m_{\\text{dry}}} \\times 100\\%",
+        "description": "Percentage of water absorbed by a ceramic sample after immersion.",
+        "variables": {
+            "A_{w}": "Water absorption (%)",
+            "m_{\\text{wet}}": "Mass of water-saturated sample (kg)",
+            "m_{\\text{dry}}": "Mass of dried sample (kg)"
+        }
+    },
+    {
+        "name": "Sintering Rate",
+        "formula": "\\frac{d\\rho}{dt} = -k (\\rho - \\rho_{\\infty})",
+        "description": "Rate equation for densification of a ceramic body during sintering.",
+        "variables": {
+            "\\frac{d\\rho}{dt}": "Rate of change of density (kg·m^{-3}·s^{-1})",
+            "k": "Sintering rate constant (s^{-1})",
+            "\\rho": "Instantaneous density (kg·m^{-3})",
+            "\\rho_{\\infty}": "Final (theoretical) density (kg·m^{-3})"
+        }
+    },
+    {
+        "name": "Thermal Shock Resistance",
+        "formula": "R_{t} = \\frac{\\sigma_{f}(1-\\nu)}{E\\alpha}",
+        "description": "Resistance of a ceramic to thermal shock depends on its strength, elasticity, and expansion.",
+        "variables": {
+            "R_{t}": "Thermal shock resistance parameter (K)",
+            "\\sigma_{f}": "Fracture strength (Pa)",
+            "\\nu": "Poisson’s ratio",
+            "E": "Young’s modulus (Pa)",
+            "\\alpha": "Coefficient of thermal expansion (K^{-1})"
+        }
+    },
+    {
+        "name": "Thermal Conductivity from Porosity",
+        "formula": "k_{\\text{eff}} = k_{s}(1-\\phi)",
+        "description": "Approximate effective thermal conductivity of a porous ceramic body.",
+        "variables": {
+            "k_{\\text{eff}}": "Effective thermal conductivity (W·m^{-1}·K^{-1})",
+            "k_{s}": "Thermal conductivity of the solid phase (W·m^{-1}·K^{-1})",
+            "\\phi": "Porosity (dimensionless)"
+        }
+    },
+    {
+        "name": "Refractoriness Under Load (RUL) Stress",
+        "formula": "\\sigma = \\frac{F}{A}",
+        "description": "Stress applied to a refractory specimen during refractoriness-under-load testing.",
+        "variables": {
+            "\\sigma": "Applied stress (Pa)",
+            "F": "Load applied (N)",
+            "A": "Cross-sectional area of specimen (m^{2})"
+        }
+    },
+    {
+        "name": "Creep Rate of Refractory",
+        "formula": "\\frac{\\Delta L}{L_{0} t} = C \\exp\\left(-\\frac{Q}{R T}\\right)",
+        "description": "High-temperature creep rate of a refractory material following an Arrhenius-type dependence.",
+        "variables": {
+            "\\frac{\\Delta L}{L_{0} t}": "Creep rate (s^{-1})",
+            "C": "Pre-exponential constant (s^{-1})",
+            "Q": "Activation energy for creep (J·mol^{-1})",
+            "R": "Gas constant (8.314 J·mol^{-1}·K^{-1})",
+            "T": "Temperature (K)"
+        }
+    },
+    {
+        "name": "Apparent Porosity of Refractory",
+        "formula": "P_{a} = \\frac{W_{s} - W_{d}}{W_{s} - W_{i}} \\times 100\\%",
+        "description": "Apparent porosity of a refractory calculated using dry, saturated, and immersed weights.",
+        "variables": {
+            "P_{a}": "Apparent porosity (%)",
+            "W_{s}": "Weight of saturated sample (kg)",
+            "W_{d}": "Weight of dry sample (kg)",
+            "W_{i}": "Weight of sample immersed in water (kg)"
+        }
+    },
+    {
+        "name": "Cold Crushing Strength",
+        "formula": "\\text{CCS} = \\frac{F}{A}",
+        "description": "Cold crushing strength of a refractory sample — load at failure divided by cross-sectional area.",
+        "variables": {
+            "\\text{CCS}": "Cold crushing strength (Pa)",
+            "F": "Maximum load at failure (N)",
+            "A": "Cross-sectional area (m^{2})"
+        }
+    },
+    {
+        "name": "Thermal Conductivity of Composite",
+        "formula": "k_{c} = k_{m}V_{m} + k_{f}V_{f}",
+        "description": "Rule-of-mixtures estimate for thermal conductivity of a two-phase glass/ceramic composite.",
+        "variables": {
+            "k_{c}": "Effective thermal conductivity of composite (W·m^{-1}·K^{-1})",
+            "k_{m}": "Thermal conductivity of matrix phase (W·m^{-1}·K^{-1})",
+            "V_{m}": "Volume fraction of matrix phase",
+            "k_{f}": "Thermal conductivity of filler/fiber (W·m^{-1}·K^{-1})",
+            "V_{f}": "Volume fraction of filler/fiber"
+        }
+    },
+    {
+        "name": "Elastic Modulus of Composite",
+        "formula": "E_{c} = E_{m}V_{m} + E_{f}V_{f}",
+        "description": "Rule-of-mixtures estimate for elastic modulus of a glass or ceramic composite.",
+        "variables": {
+            "E_{c}": "Elastic modulus of composite (Pa)",
+            "E_{m}": "Elastic modulus of matrix (Pa)",
+            "V_{m}": "Volume fraction of matrix",
+            "E_{f}": "Elastic modulus of filler/fiber (Pa)",
+            "V_{f}": "Volume fraction of filler/fiber"
+        }
+    },
+    {
+        "name": "Thermal Expansion of Composite",
+        "formula": "\\alpha_{c} = \\alpha_{m}V_{m} + \\alpha_{f}V_{f}",
+        "description": "Approximate linear coefficient of thermal expansion of a composite material.",
+        "variables": {
+            "\\alpha_{c}": "Composite coefficient of thermal expansion (K^{-1})",
+            "\\alpha_{m}": "Matrix coefficient of thermal expansion (K^{-1})",
+            "V_{m}": "Volume fraction of matrix",
+            "\\alpha_{f}": "Filler/fiber coefficient of thermal expansion (K^{-1})",
+            "V_{f}": "Volume fraction of filler/fiber"
+        }
+    },
+    {
+        "name": "Water–Cement Ratio",
+        "formula": "w/c = \\frac{m_{\\text{water}}}{m_{\\text{cement}}}",
+        "description": "Mass ratio of water to cement, a key parameter affecting strength and setting time.",
+        "variables": {
+            "w/c": "Water–cement ratio (dimensionless)",
+            "m_{\\text{water}}": "Mass of water added (kg)",
+            "m_{\\text{cement}}": "Mass of cement (kg)"
+        }
+    },
+    {
+        "name": "Setting Time by Vicat Test",
+        "formula": "t_{s} = t_{\\text{final}} - t_{\\text{initial}}",
+        "description": "Difference between final and initial setting time of cement paste as measured by Vicat apparatus.",
+        "variables": {
+            "t_{s}": "Setting interval (min)",
+            "t_{\\text{final}}": "Final setting time (min)",
+            "t_{\\text{initial}}": "Initial setting time (min)"
+        }
+    },
+    {
+        "name": "Compressive Strength of Mortar/Cement Cube",
+        "formula": "\\sigma_{c} = \\frac{F_{\\text{fail}}}{A}",
+        "description": "Compressive strength obtained by dividing maximum load at failure by cross-sectional area of specimen.",
+        "variables": {
+            "\\sigma_{c}": "Compressive strength (Pa)",
+            "F_{\\text{fail}}": "Failure load (N)",
+            "A": "Cross-sectional area of specimen (m^{2})"
+        }
+    },
+    {
+        "name": "Heat of Hydration",
+        "formula": "Q = m_{\\text{cement}} \\cdot \\Delta h",
+        "description": "Total heat evolved during hydration of cement.",
+        "variables": {
+            "Q": "Heat of hydration (J)",
+            "m_{\\text{cement}}": "Mass of cement (kg)",
+            "\\Delta h": "Specific enthalpy of hydration (J·kg^{-1})"
+        }
+    },
+    {
+        "name": "Degree of Hydration",
+        "formula": "\\alpha = \\frac{Q_{t}}{Q_{\\infty}}",
+        "description": "Fraction of hydration achieved at time t compared to total possible heat of hydration.",
+        "variables": {
+            "\\alpha": "Degree of hydration (dimensionless)",
+            "Q_{t}": "Cumulative heat released at time t (J)",
+            "Q_{\\infty}": "Total heat of hydration for complete reaction (J)"
+        }
+    },
+    {
+        "name": "Air Content in Fresh Concrete (Pressure Method)",
+        "formula": "A = \\frac{P_{1}-P_{2}}{P_{1}}\\times 100\\%",
+        "description": "Percentage of air entrained in fresh concrete measured by pressure drop.",
+        "variables": {
+            "A": "Air content (%)",
+            "P_{1}": "Initial pressure (Pa)",
+            "P_{2}": "Final pressure after release (Pa)"
+        }
+    },
+    {
+        "name": "Workability (Slump Test)",
+        "formula": "S = h_{\\text{cone}} - h_{\\text{slump}}",
+        "description": "Slump measured as the difference between original cone height and the height after removal.",
+        "variables": {
+            "S": "Slump (m)",
+            "h_{\\text{cone}}": "Original cone height (m)",
+            "h_{\\text{slump}}": "Height of concrete after cone removed (m)"
+        }
+    },
+    {
+        "name": "Chemical Durability Index",
+        "formula": "D = \\frac{m_{0} - m_{t}}{A t}",
+        "description": "Rate of mass loss per unit surface area per time, used to express chemical durability of glass or ceramic.",
+        "variables": {
+            "D": "Durability index (kg·m^{-2}·s^{-1})",
+            "m_{0}": "Initial mass of specimen (kg)",
+            "m_{t}": "Mass after exposure time t (kg)",
+            "A": "Surface area exposed (m^{2})",
+            "t": "Exposure time (s)"
+        }
+    },
+    {
+        "name": "Leach Rate",
+        "formula": "L = \\frac{C_{i}V}{A t}",
+        "description": "Leaching rate of a particular ion from glass or ceramic into solution.",
+        "variables": {
+            "L": "Leach rate (kg·m^{-2}·s^{-1})",
+            "C_{i}": "Mass concentration of ion in solution (kg·m^{-3})",
+            "V": "Volume of leachant (m^{3})",
+            "A": "Surface area of sample (m^{2})",
+            "t": "Leaching time (s)"
+        }
+    },
+    {
+        "name": "Alkali Resistance",
+        "formula": "R_{\\text{alkali}} = 1 - \\frac{m_{t}}{m_{0}}",
+        "description": "Fraction of mass retained after alkali exposure, used as an index of resistance.",
+        "variables": {
+            "R_{\\text{alkali}}": "Alkali resistance (dimensionless)",
+            "m_{0}": "Initial mass (kg)",
+            "m_{t}": "Mass after alkali test (kg)"
+        }
+    },
+    {
+        "name": "Permeability of Porous Ceramic",
+        "formula": "k = \\frac{Q \\mu L}{A \\Delta P}",
+        "description": "Darcy’s law used to determine gas or liquid permeability of a porous silicate specimen.",
+        "variables": {
+            "k": "Permeability (m^{2})",
+            "Q": "Volumetric flow rate through sample (m^{3}·s^{-1})",
+            "\\mu": "Dynamic viscosity of fluid (Pa·s)",
+            "L": "Length of specimen (m)",
+            "A": "Cross-sectional area of specimen (m^{2})",
+            "\\Delta P": "Pressure difference across specimen (Pa)"
+        }
+    },
+    {
+        "name": "Diffusion Coefficient of Ion in Glass",
+        "formula": "D = D_{0} \\exp\\left(-\\frac{E_{a}}{R T}\\right)",
+        "description": "Temperature dependence of diffusion coefficient of an ion in glass or silicate.",
+        "variables": {
+            "D": "Diffusion coefficient (m^{2}·s^{-1})",
+            "D_{0}": "Pre-exponential factor (m^{2}·s^{-1})",
+            "E_{a}": "Activation energy for diffusion (J·mol^{-1})",
+            "R": "Gas constant (8.314 J·mol^{-1}·K^{-1})",
+            "T": "Temperature (K)"
+        }
+    },
+    {
+        "name": "Stress Corrosion (Subcritical Crack Growth)",
+        "formula": "v = A K_{I}^{n}",
+        "description": "Rate of subcritical crack growth in glass under stress corrosion conditions.",
+        "variables": {
+            "v": "Crack velocity (m·s^{-1})",
+            "A": "Material constant (m·s^{-1}·(Pa·m^{1/2})^{-n})",
+            "K_{I}": "Stress intensity factor (Pa·m^{1/2})",
+            "n": "Stress corrosion susceptibility exponent"
+        }
+    },
+    {
+        "name": "Fracture Toughness",
+        "formula": "K_{IC} = Y \\sigma \\sqrt{\\pi a}",
+        "description": "Critical stress intensity factor at fracture for a flaw of size a.",
+        "variables": {
+            "K_{IC}": "Fracture toughness (Pa·m^{1/2})",
+            "Y": "Geometry factor (dimensionless)",
+            "\\sigma": "Applied stress (Pa)",
+            "a": "Crack length (m)"
+        }
+    },
+    {
+        "name": "Specific Corrosion Rate",
+        "formula": "r_{c} = \\frac{1}{A}\\frac{dm}{dt}",
+        "description": "Mass loss rate per unit area during chemical attack.",
+        "variables": {
+            "r_{c}": "Corrosion rate (kg·m^{-2}·s^{-1})",
+            "A": "Exposed area (m^{2})",
+            "\\frac{dm}{dt}": "Rate of mass loss (kg·s^{-1})"
+        }
+    },
+    {
+        "name": "Thermal Cycling Fatigue Damage Parameter",
+        "formula": "D_{f} = N \\left(\\frac{\\Delta T}{T_{c}}\\right)^{m}",
+        "description": "Damage parameter after N thermal cycles of temperature swing ΔT.",
+        "variables": {
+            "D_{f}": "Fatigue damage parameter (dimensionless)",
+            "N": "Number of thermal cycles",
+            "\\Delta T": "Temperature difference per cycle (K)",
+            "T_{c}": "Critical temperature difference for failure (K)",
+            "m": "Material exponent for fatigue"
+        }
+    },
+    {
+        "name": "Glass Transition Temperature Criterion (Fox Equation)",
+        "formula": "\\frac{1}{T_{g}} = \\frac{w_{1}}{T_{g1}} + \\frac{w_{2}}{T_{g2}}",
+        "description": "Predicts the glass transition temperature of a binary mixture.",
+        "variables": {
+            "T_{g}": "Glass transition temperature of mixture (K)",
+            "w_{1}": "Weight fraction of component 1",
+            "T_{g1}": "Glass transition temperature of component 1 (K)",
+            "w_{2}": "Weight fraction of component 2",
+            "T_{g2}": "Glass transition temperature of component 2 (K)"
+        }
+    },
+    {
+        "name": "Vogel–Fulcher–Tammann (VFT) Equation",
+        "formula": "\\eta = \\eta_{0} \\exp \\left( \\frac{B}{T - T_{0}} \\right)",
+        "description": "Temperature dependence of viscosity near glass transition.",
+        "variables": {
+            "\\eta": "Viscosity (Pa·s)",
+            "\\eta_{0}": "Pre-exponential factor (Pa·s)",
+            "B": "VFT constant (K)",
+            "T": "Temperature (K)",
+            "T_{0}": "Ideal glass transition temperature (K)"
+        }
+    },
+    {
+        "name": "Williams–Landel–Ferry (WLF) Equation",
+        "formula": "\\log a_{T} = -\\frac{C_{1}(T - T_{g})}{C_{2} + (T - T_{g})}",
+        "description": "Shift factor for time-temperature superposition in glassy polymers or silicates.",
+        "variables": {
+            "a_{T}": "Shift factor (dimensionless)",
+            "C_{1}, C_{2}": "Material constants",
+            "T": "Temperature (K)",
+            "T_{g}": "Reference glass transition temperature (K)"
+        }
+    },
+    {
+        "name": "Nucleation Rate",
+        "formula": "I = I_{0} \\exp \\left(-\\frac{\\Delta G^{*}}{k_{B}T}\\right)",
+        "description": "Steady-state nucleation rate for crystal formation in glass.",
+        "variables": {
+            "I": "Nucleation rate (m^{-3}·s^{-1})",
+            "I_{0}": "Pre-exponential factor (m^{-3}·s^{-1})",
+            "\\Delta G^{*}": "Critical free energy barrier for nucleation (J)",
+            "k_{B}": "Boltzmann constant (1.38×10^{-23} J·K^{-1})",
+            "T": "Temperature (K)"
+        }
+    },
+    {
+        "name": "Critical Radius for Nucleus",
+        "formula": "r^{*} = -\\frac{2\\gamma_{sl}}{\\Delta G_{v}}",
+        "description": "Radius of a critical nucleus during crystallisation.",
+        "variables": {
+            "r^{*}": "Critical nucleus radius (m)",
+            "\\gamma_{sl}": "Solid-liquid interfacial energy (J·m^{-2})",
+            "\\Delta G_{v}": "Free energy change per unit volume (J·m^{-3})"
+        }
+    },
+    {
+        "name": "Avrami Equation (Isothermal Crystallization Kinetics)",
+        "formula": "X(t) = 1 - \\exp(-k t^{n})",
+        "description": "Fraction crystallized as a function of time at constant temperature.",
+        "variables": {
+            "X(t)": "Fraction crystallized at time t",
+            "k": "Rate constant (s^{-n})",
+            "t": "Time (s)",
+            "n": "Avrami exponent indicating nucleation and growth mechanism"
+        }
+    },
+    {
+        "name": "Transformation Rate",
+        "formula": "\\frac{dX}{dt} = n k t^{n-1} \\exp(-k t^{n})",
+        "description": "Rate of crystallization from the Avrami equation.",
+        "variables": {
+            "\\frac{dX}{dt}": "Rate of crystallization (s^{-1})",
+            "n": "Avrami exponent",
+            "k": "Rate constant (s^{-n})",
+            "t": "Time (s)"
+        }
+    },
+    {
+        "name": "Time-Temperature-Transformation (TTT) Critical Cooling Rate",
+        "formula": "R_{c} = \\frac{T_{l} - T_{x}}{t_{x}}",
+        "description": "Approximate critical cooling rate to avoid crystallisation.",
+        "variables": {
+            "R_{c}": "Critical cooling rate (K·s^{-1})",
+            "T_{l}": "Liquidus temperature (K)",
+            "T_{x}": "Nose temperature of TTT curve (K)",
+            "t_{x}": "Time at nose of TTT curve (s)"
+        }
+    },
+    {
+        "name": "Activation Energy for Viscous Flow (Arrhenius Form)",
+        "formula": "\\eta = \\eta_{0} \\exp \\left( \\frac{E_{a}}{R T} \\right)",
+        "description": "For some silicate melts, viscosity can be Arrhenius rather than VFT.",
+        "variables": {
+            "\\eta": "Viscosity (Pa·s)",
+            "\\eta_{0}": "Pre-exponential factor (Pa·s)",
+            "E_{a}": "Activation energy for viscous flow (J·mol^{-1})",
+            "R": "Gas constant (8.314 J·mol^{-1}·K^{-1})",
+            "T": "Temperature (K)"
+        }
+    },
+    {
+        "name": "Refractive Index (n)",
+        "formula": "n = \\sqrt{\\varepsilon_{r} \\, \\mu_{r}} \\approx \\sqrt{\\varepsilon_{r}}",
+        "description": "Refractive index in terms of relative permittivity and permeability; for non-magnetic silicates μ_r≈1 so n≈√ε_r.",
+        "variables": {
+            "n": "Refractive index (dimensionless)",
+            "\\varepsilon_{r}": "Relative permittivity (dielectric constant, dimensionless)",
+            "\\mu_{r}": "Relative permeability (dimensionless)"
+        }
+    },
+    {
+        "name": "Snell's Law",
+        "formula": "n_{1} \\sin\\theta_{1} = n_{2} \\sin\\theta_{2}",
+        "description": "Refraction of light at interface between two media with refractive indices n1 and n2.",
+        "variables": {
+            "n_{1}": "Refractive index of medium 1",
+            "n_{2}": "Refractive index of medium 2",
+            "\\theta_{1}": "Angle of incidence (rad or deg)",
+            "\\theta_{2}": "Angle of refraction (rad or deg)"
+        }
+    },
+    {
+        "name": "Beer–Lambert Law (Absorption)",
+        "formula": "I = I_{0} e^{-\\alpha x}",
+        "description": "Exponential attenuation of light intensity through an absorbing medium; α is the absorption coefficient.",
+        "variables": {
+            "I": "Transmitted intensity",
+            "I_{0}": "Incident intensity",
+            "\\alpha": "Absorption coefficient (m^{-1})",
+            "x": "Path length in medium (m)"
+        }
+    },
+    {
+        "name": "Optical Transmittance (Thickness)",
+        "formula": "T = e^{-\\alpha d}",
+        "description": "Fraction of light transmitted through a slab of thickness d with absorption coefficient α.",
+        "variables": {
+            "T": "Transmittance (dimensionless)",
+            "\\alpha": "Absorption coefficient (m^{-1})",
+            "d": "Thickness (m)"
+        }
+    },
+    {
+        "name": "Rayleigh Scattering Intensity (qualitative)",
+        "formula": "I \\propto \\frac{1}{\\lambda^{4}}",
+        "description": "Wavelength dependence of scattering by particles much smaller than wavelength (qualitative relation).",
+        "variables": {
+            "I": "Scattered intensity (arbitrary units)",
+            "\\lambda": "Wavelength of light (m)"
+        }
+    },
+    {
+        "name": "Optical Band Gap from Tauc Plot (Indirect)",
+        "formula": "(\\alpha h\\nu)^{1/2} = B(h\\nu - E_{g})",
+        "description": "Tauc relation used to estimate optical band gap Eg from absorption data for indirect transitions.",
+        "variables": {
+            "\\alpha": "Absorption coefficient (m^{-1})",
+            "h\\nu": "Photon energy (J or eV)",
+            "B": "Constant related to transition probability",
+            "E_{g}": "Optical band gap energy (J or eV)"
+        }
+    },
+    {
+        "name": "Dielectric Constant (Capacitor Parallel-Plate)",
+        "formula": "C = \\varepsilon_{r} \\varepsilon_{0} \\frac{A}{d}",
+        "description": "Capacitance of a parallel plate capacitor filled with a dielectric material.",
+        "variables": {
+            "C": "Capacitance (F)",
+            "\\varepsilon_{r}": "Relative permittivity (dimensionless)",
+            "\\varepsilon_{0}": "Permittivity of free space (8.854×10^{-12} F·m^{-1})",
+            "A": "Plate area (m^{2})",
+            "d": "Separation (dielectric thickness) (m)"
+        }
+    },
+    {
+        "name": "Conductivity (Ohmic)",
+        "formula": "\\sigma = \\frac{1}{\\rho} = \\frac{L}{R A}",
+        "description": "Electrical conductivity as inverse resistivity; relation to measured resistance R of a sample.",
+        "variables": {
+            "\\sigma": "Electrical conductivity (S·m^{-1})",
+            "\\rho": "Electrical resistivity (Ω·m)",
+            "L": "Length between electrodes (m)",
+            "R": "Measured resistance (Ω)",
+            "A": "Cross-sectional area (m^{2})"
+        }
+    },
+    {
+        "name": "Arrhenius Temperature Dependence of Conductivity",
+        "formula": "\\sigma(T) = \\sigma_{0} \\exp\\left(-\\frac{E_{a}}{k_{B} T}\\right)",
+        "description": "Thermally activated conduction (ionic) in glasses/ceramics; k_B is Boltzmann constant.",
+        "variables": {
+            "\\sigma(T)": "Conductivity at temperature T (S·m^{-1})",
+            "\\sigma_{0}": "Pre-exponential conductivity (S·m^{-1})",
+            "E_{a}": "Activation energy for conduction (J)",
+            "k_{B}": "Boltzmann constant (1.38×10^{-23} J·K^{-1})",
+            "T": "Absolute temperature (K)"
+        }
+    },
+    {
+        "name": "Dielectric Loss Tangent (tan δ)",
+        "formula": "\\tan\\delta = \\frac{\\varepsilon''}{\\varepsilon'}",
+        "description": "Ratio of imaginary to real parts of complex permittivity describing dielectric losses.",
+        "variables": {
+            "\\tan\\delta": "Loss tangent (dimensionless)",
+            "\\varepsilon'": "Real part of permittivity (dielectric constant)",
+            "\\varepsilon''": "Imaginary part of permittivity (loss factor)"
+        }
+    },
+    {
+        "name": "Complex Refractive Index",
+        "formula": "\\tilde{n} = n + i\\kappa",
+        "description": "Real part n gives refraction, imaginary part κ (extinction coefficient) gives absorption.",
+        "variables": {
+            "\\tilde{n}": "Complex refractive index",
+            "n": "Real refractive index (dimensionless)",
+            "\\kappa": "Extinction coefficient (dimensionless)"
+        }
+    }
+]

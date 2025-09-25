@@ -1,0 +1,802 @@
+[
+    {
+        "name": "Boyle's Law",
+        "formula": "P \\propto \\frac{1}{V}",
+        "variables": {
+            "P": "Pressure",
+            "V": "Volume"
+        },
+        "description": "Describes the inverse relationship between pressure and volume of a gas at constant moles and temperature.",
+        "example": {
+            "problem": "\\text{A gas occupies } 2.0 \\text{ L at a pressure of } 1.5 \\text{ atm. Calculate the volume if the pressure is increased to } 3.0 \\text{ atm at constant temperature.}",
+            "solution": "\\begin{aligned}\n\\text{Boyle's Law: } P_1 V_1 &= P_2 V_2 \\\\\n1.5 \\cdot 2.0 &= 3.0 \\cdot V_2 \\\\\n3.0 &= 3.0 V_2 \\\\\nV_2 &= \\frac{3.0}{3.0} = 1.0 \\text{ L} \\\\\n\\text{Thus, the new volume is } 1.0 \\text{ L} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Charles' Law",
+        "formula": "V \\propto T",
+        "variables": {
+            "V": "Volume",
+            "T": "Absolute temperature (K)"
+        },
+        "description": "Describes the direct relationship between volume and temperature of a gas at constant moles and pressure.",
+        "example": {
+            "problem": "\\text{A gas has a volume of } 3.0 \\text{ L at } 300 \\text{ K. What is the volume at } 450 \\text{ K if pressure remains constant?}",
+            "solution": "\\begin{aligned}\n\\text{Charles' Law: } \\frac{V_1}{T_1} &= \\frac{V_2}{T_2} \\\\\n\\frac{3.0}{300} &= \\frac{V_2}{450} \\\\\n0.01 &= \\frac{V_2}{450} \\\\\nV_2 &= 0.01 \\cdot 450 = 4.5 \\text{ L} \\\\\n\\text{Thus, the new volume is } 4.5 \\text{ L} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Avogadro's Law",
+        "formula": "V \\propto n",
+        "variables": {
+            "V": "Volume",
+            "n": "Number of moles"
+        },
+        "description": "States that the volume of a gas is directly proportional to the number of moles at constant pressure and temperature.",
+        "example": {
+            "problem": "\\text{A gas occupies } 5.0 \\text{ L with } 0.2 \\text{ mol. What is the volume if } 0.3 \\text{ mol is added at constant } P \\text{ and } T?}",
+            "solution": "\\begin{aligned}\n\\text{Avogadro's Law: } \\frac{V_1}{n_1} &= \\frac{V_2}{n_2} \\\\\n\\text{New moles: } n_2 &= 0.2 + 0.3 = 0.5 \\text{ mol} \\\\\n\\frac{5.0}{0.2} &= \\frac{V_2}{0.5} \\\\\n25 &= \\frac{V_2}{0.5} \\\\\nV_2 &= 25 \\cdot 0.5 = 12.5 \\text{ L} \\\\\n\\text{Thus, the new volume is } 12.5 \\text{ L} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Ideal Gas Law",
+        "formula": "PV = nRT",
+        "variables": {
+            "P": "Pressure (atm)",
+            "V": "Volume (L)",
+            "n": "Number of moles",
+            "R": "Gas constant (0.08206 L·atm/(mol·K))",
+            "T": "Temperature (K)"
+        },
+        "description": "Relates pressure, volume, amount, and temperature of an ideal gas.",
+        "example": {
+            "problem": "\\text{Calculate the pressure of } 0.5 \\text{ mol of an ideal gas in a } 2.0 \\text{ L container at } 300 \\text{ K, given } R = 0.08206 \\text{ L·atm/(mol·K).}",
+            "solution": "\\begin{aligned}\nPV &= nRT \\\\\nP \\cdot 2.0 &= 0.5 \\cdot 0.08206 \\cdot 300 \\\\\nP \\cdot 2.0 &= 12.309 \\\\\nP &= \\frac{12.309}{2.0} \\approx 6.1545 \\text{ atm} \\\\\n\\text{Thus, the pressure is approximately } 6.15 \\text{ atm} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Gas Constant Calculation",
+        "formula": "R = \\frac{PV}{nT}",
+        "variables": {
+            "R": "Gas constant",
+            "P": "Pressure (atm)",
+            "V": "Volume (L)",
+            "n": "Number of moles",
+            "T": "Temperature (K)"
+        },
+        "description": "Calculates the gas constant from standard temperature and pressure (STP) conditions.",
+        "example": {
+            "problem": "\\text{Calculate } R \\text{ for } 1.0 \\text{ mol of gas occupying } 22.414 \\text{ L at } 1.0 \\text{ atm and } 273.15 \\text{ K (STP).}",
+            "solution": "\\begin{aligned}\nR &= \\frac{PV}{nT} \\\\\n&= \\frac{1.0 \\cdot 22.414}{1.0 \\cdot 273.15} \\\\\n&= \\frac{22.414}{273.15} \\approx 0.08206 \\text{ L·atm/(mol·K)} \\\\\n\\text{Thus, } R \\approx 0.08206 \\text{ L·atm/(mol·K)} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Density of Gas",
+        "formula": "\\rho = \\frac{P M}{RT}",
+        "variables": {
+            "\\rho": "Density (g/L)",
+            "P": "Pressure (atm)",
+            "M": "Molar mass (g/mol)",
+            "R": "Gas constant (0.08206 L·atm/(mol·K))",
+            "T": "Temperature (K)"
+        },
+        "description": "Calculates the density of a gas under given conditions.",
+        "example": {
+            "problem": "\\text{Calculate the density of } \\text{O}_2 \\text{ (} M = 32.00 \\text{ g/mol) at } 2.0 \\text{ atm and } 300 \\text{ K, given } R = 0.08206 \\text{ L.atm/(mol.K)}.",
+            "solution": "\\begin{aligned}\n\\rho &= \\frac{P M}{RT} \\\\\n&= \\frac{2.0 \\cdot 32.00}{0.08206 \\cdot 300} \\\\\n&= \\frac{64.00}{24.618} \\approx 2.599 \\text{ g/L} \\\\\n\\text{Thus, the density is approximately } 2.60 \\text{ g/L} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Dalton's Law of Partial Pressures",
+        "formula": "P_T = P_A + P_B + \\dots",
+        "variables": {
+            "P_T": "Total pressure",
+            "P_A": "Partial pressure of gas A",
+            "P_B": "Partial pressure of gas B"
+        },
+        "description": "The total pressure of a gas mixture is the sum of the partial pressures of its components.",
+        "example": {
+            "problem": "\\text{A mixture contains } \\text{N}_2 \\text{ at } 0.8 \\text{ atm and } \\text{O}_2 \\text{ at } 0.6 \\text{ atm. Calculate the total pressure.}",
+            "solution": "\\begin{aligned}\nP_T &= P_{\\text{N}_2} + P_{\\text{O}_2} \\\\\n&= 0.8 + 0.6 = 1.4 \\text{ atm} \\\\\n\\text{Thus, the total pressure is } 1.4 \\text{ atm} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Partial Pressure",
+        "formula": "P_A = X_A P_T",
+        "variables": {
+            "P_A": "Partial pressure of gas A",
+            "X_A": "Mole fraction of gas A",
+            "P_T": "Total pressure"
+        },
+        "description": "Calculates the partial pressure of a gas in a mixture based on its mole fraction.",
+        "example": {
+            "problem": "\\text{Calculate the partial pressure of } \\text{N}_2 \\text{ in a mixture with } X_{\\text{N}_2} = 0.4 \\text{ and } P_T = 2.5 \\text{ atm.}",
+            "solution": "\\begin{aligned}\nP_{\\text{N}_2} &= X_{\\text{N}_2} P_T \\\\\n&= 0.4 \\cdot 2.5 = 1.0 \\text{ atm} \\\\\n\\text{Thus, the partial pressure of } \\text{N}_2 \\text{ is } 1.0 \\text{ atm} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Mole Fraction",
+        "formula": "X_A = \\frac{n_A}{n}",
+        "variables": {
+            "X_A": "Mole fraction of gas A",
+            "n_A": "Moles of gas A",
+            "n": "Total moles"
+        },
+        "description": "Defines the mole fraction of a gas in a mixture.",
+        "example": {
+            "problem": "\\text{Calculate the mole fraction of } \\text{O}_2 \\text{ in a mixture with } 0.5 \\text{ mol } \\text{O}_2 \\text{ and } 1.5 \\text{ mol } \\text{N}_2.",
+            "solution": "\\begin{aligned}\nn &= n_{\\text{O}_2} + n_{\\text{N}_2} = 0.5 + 1.5 = 2.0 \\text{ mol} \\\\\nX_{\\text{O}_2} &= \\frac{n_{\\text{O}_2}}{n} = \\frac{0.5}{2.0} = 0.25 \\\\\n\\text{Thus, the mole fraction of } \\text{O}_2 \\text{ is } 0.25 \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Root-Mean-Square Speed",
+        "formula": "u_{\\text{rms}} = \\sqrt{\\frac{3RT}{M}}",
+        "variables": {
+            "u_{\\text{rms}}": "Root-mean-square speed (m/s)",
+            "R": "Gas constant (8.314 J/(mol K))",
+            "T": "Temperature (K)",
+            "M": "Molar mass (kg/mol)"
+        },
+        "description": "Calculates the root-mean-square speed of gas molecules.",
+        "example": {
+            "problem": "\\text{Calculate } u_{\\text{rms}} \\text{ for } \\text{N}_2 \\text{ (} M = 28.02 \\text{ g/mol) at } 300 \\text{ K, given } R = 8.314 \\text{ J/(mol K).}",
+            "solution": "\\begin{aligned}\nM &= 28.02 \\text{ g/mol} = 0.02802 \\text{ kg/mol} \\\\\nu_{\\text{rms}} &= \\sqrt{\\frac{3RT}{M}} = \\sqrt{\\frac{3 \\cdot 8.314 \\cdot 300}{0.02802}} \\\\\n&= \\sqrt{\\frac{7476.6}{0.02802}} \\approx \\sqrt{266832.3} \\approx 516.6 \\text{ m/s} \\\\\n\\text{Thus, } u_{\\text{rms}} \\approx 516.6 \\text{ m/s} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Kinetic Energy",
+        "formula": "KE = \\frac{1}{2} m u^2",
+        "variables": {
+            "KE": "Kinetic energy (J)",
+            "m": "Mass (kg)",
+            "u": "Speed (m/s)"
+        },
+        "description": "Calculates the kinetic energy of a single molecule.",
+        "example": {
+            "problem": "\\text{Calculate the kinetic energy of an } \\text{O}_2 \\text{ molecule (} m = 5.31 \\times 10^{-26} \\text{ kg) moving at } 500 \\text{ m/s.}",
+            "solution": "\\begin{aligned}\nKE &= \\frac{1}{2} m u^2 \\\\\n&= \\frac{1}{2} \\cdot 5.31 \\times 10^{-26} \\cdot (500)^2 \\\\\n&= \\frac{1}{2} \\cdot 5.31 \\times 10^{-26} \\cdot 250000 \\\\\n&= 6.6375 \\times 10^{-21} \\text{ J} \\\\\n\\text{Thus, the kinetic energy is } 6.64 \\times 10^{-21} \\text{ J} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Average Kinetic Energy",
+        "formula": "\\overline{KE} = \\frac{3}{2} \\frac{RT}{N_A}",
+        "variables": {
+            "\\overline{KE}": "Average kinetic energy per molecule (J)",
+            "R": "Gas constant (8.314 J/(mol K))",
+            "T": "Temperature (K)",
+            "N_A": "Avogadro's number (6.022 \\times 10^{23} mol^{-1})"
+        },
+        "description": "Calculates the average kinetic energy per gas molecule.",
+        "example": {
+            "problem": "\\text{Calculate the average kinetic energy of a gas molecule at } 298 \\text{ K, given } R = 8.314 \\text{ J/(mol K), } N_A = 6.022 \\times 10^{23} \\text{ mol}^{-1}.}",
+            "solution": "\\begin{aligned}\n\\overline{KE} &= \\frac{3}{2} \\frac{RT}{N_A} \\\\\n&= \\frac{3}{2} \\cdot \\frac{8.314 \\cdot 298}{6.022 \\times 10^{23}} \\\\\n&= \\frac{3}{2} \\cdot \\frac{2475.572}{6.022 \\times 10^{23}} \\approx 6.167 \\times 10^{-21} \\text{ J} \\\\\n\\text{Thus, } \\overline{KE} \\approx 6.17 \\times 10^{-21} \\text{ J} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Van der Waals Equation",
+        "formula": "\\left( P + \\frac{a n^2}{V^2} \\right) (V - n b) = n RT",
+        "variables": {
+            "P": "Pressure (atm)",
+            "a": "Van der Waals constant (attraction, L^2·atm/mol^2)",
+            "n": "Number of moles",
+            "V": "Volume (L)",
+            "b": "Van der Waals constant (volume, L/mol)",
+            "R": "Gas constant (0.08206 L·atm/(mol·K))",
+            "T": "Temperature (K)"
+        },
+        "description": "Equation of state for real gases, accounting for molecular attractions and volume.",
+        "example": {
+            "problem": "\\text{Calculate the pressure of } 2.0 \\text{ mol of } \\text{CO}_2 \\text{ in a } 5.0 \\text{ L container at } 300 \\text{ K, given } a = 3.592 \\text{ L}^2\\cdot\\text{atm/mol}^2, b = 0.0427 \\text{ L/mol, } R = 0.08206 \\text{ L·atm/(mol·K).}",
+            "solution": "\\begin{aligned}\n\\left( P + \\frac{a n^2}{V^2} \\right) (V - n b) &= n RT \\\\\n\\frac{a n^2}{V^2} &= \\frac{3.592 \\cdot (2.0)^2}{(5.0)^2} = \\frac{14.368}{25} = 0.57472 \\text{ atm} \\\\\nV - n b &= 5.0 - 2.0 \\cdot 0.0427 = 5.0 - 0.0854 = 4.9146 \\text{ L} \\\\\nn RT &= 2.0 \\cdot 0.08206 \\cdot 300 = 49.236 \\text{ L·atm} \\\\\n\\left( P + 0.57472 \\right) \\cdot 4.9146 &= 49.236 \\\\\nP + 0.57472 &= \\frac{49.236}{4.9146} \\approx 10.018 \\\\\nP &= 10.018 - 0.57472 \\approx 9.443 \\text{ atm} \\\\\n\\text{Thus, the pressure is approximately } 9.44 \\text{ atm} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Van der Waals Equation for One Mole",
+        "formula": "\\left( P + \\frac{a}{V_m^2} \\right) (V_m - b) = RT",
+        "variables": {
+            "P": "Pressure (atm)",
+            "V_m": "Molar volume (L/mol)",
+            "a": "Van der Waals constant (attraction, L^2·atm/mol^2)",
+            "b": "Van der Waals constant (volume, L/mol)",
+            "R": "Gas constant (0.08206 L·atm/(mol·K))",
+            "T": "Temperature (K)"
+        },
+        "description": "Van der Waals equation for one mole of a real gas.",
+        "example": {
+            "problem": "\\text{Calculate the molar volume of } \\text{N}_2 \\text{ at } 10 \\text{ atm and } 300 \\text{ K, given } a = 1.390 \\text{ L}^2\\cdot\\text{atm/mol}^2, b = 0.0391 \\text{ L/mol, } R = 0.08206 \\text{ L·atm/(mol·K).}",
+            "solution": "\\begin{aligned}\n\\left( P + \\frac{a}{V_m^2} \\right) (V_m - b) &= RT \\\\\nRT &= 0.08206 \\cdot 300 = 24.618 \\text{ L·atm/mol} \\\\\nb &= 0.0391 \\text{ L/mol} \\\\\n\\left( 10 + \\frac{1.390}{V_m^2} \\right) (V_m - 0.0391) &= 24.618 \\\\\n\\text{Let } V_m = 2.5 \\text{ (trial value)}, \\ \\frac{1.390}{(2.5)^2} &= \\frac{1.390}{6.25} = 0.2224 \\text{ atm} \\\\\nV_m - b &= 2.5 - 0.0391 = 2.4609 \\text{ L/mol} \\\\\n\\left( 10 + 0.2224 \\right) \\cdot 2.4609 &= 10.2224 \\cdot 2.4609 \\approx 25.166 \\\\\n\\text{Compare: } 25.166 \\neq 24.618 \\text{ (adjust } V_m \\text{ iteratively)} \\\\\n\\text{After solving numerically, } V_m \\approx 2.465 \\text{ L/mol satisfies the equation.} \\\\\n\\text{Thus, } V_m \\approx 2.47 \\text{ L/mol} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Joule-Thomson Coefficient",
+        "formula": "\\mu = \\left( \\frac{\\partial T}{\\partial P} \\right)_H",
+        "variables": {
+            "\\mu": "Joule-Thomson coefficient (K/atm)",
+            "T": "Temperature (K)",
+            "P": "Pressure (atm)",
+            "H": "Enthalpy (constant)"
+        },
+        "description": "Measures the change in temperature with pressure at constant enthalpy for a real gas.",
+        "example": {
+            "problem": "\\text{Calculate } \\mu \\text{ for a gas where } \\left( \\frac{\\partial T}{\\partial P} \\right)_H = 0.25 \\text{ K/atm under given conditions.}",
+            "solution": "\\begin{aligned}\n\\mu &= \\left( \\frac{\\partial T}{\\partial P} \\right)_H \\\\\n&= 0.25 \\text{ K/atm} \\\\\n\\text{Thus, the Joule-Thomson coefficient is } 0.25 \\text{ K/atm} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Enthalpy Change",
+        "formula": "\\Delta H = H_{\\text{products}} - H_{\\text{reactants}}",
+        "variables": {
+            "\\Delta H": "Enthalpy change (kJ)",
+            "H_{\\text{products}}": "Enthalpy of products",
+            "H_{\\text{reactants}}": "Enthalpy of reactants"
+        },
+        "description": "Calculates the enthalpy change of a reaction.",
+        "example": {
+            "problem": "\\text{Calculate } \\Delta H \\text{ for a reaction with } H_{\\text{products}} = 500 \\text{ kJ, } H_{\\text{reactants}} = 600 \\text{ kJ.}",
+            "solution": "\\begin{aligned}\n\\Delta H &= H_{\\text{products}} - H_{\\text{reactants}} \\\\\n&= 500 - 600 = -100 \\text{ kJ} \\\\\n\\text{Thus, } \\Delta H = -100 \\text{ kJ (exothermic)} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Heat Change",
+        "formula": "q = m s \\Delta t",
+        "variables": {
+            "q": "Heat change (J)",
+            "m": "Mass (g)",
+            "s": "Specific heat (J/(g·K))",
+            "\\Delta t": "Temperature change (K)"
+        },
+        "description": "Calculates the heat absorbed or released by a substance.",
+        "example": {
+            "problem": "\\text{Calculate the heat required to raise } 100 \\text{ g of water (} s = 4.18 \\text{ J/(g·K)) from } 25^\\circ\\text{C to } 75^\\circ\\text{C.}",
+            "solution": "\\begin{aligned}\n\\Delta t &= 75 - 25 = 50 \\text{ K} \\\\\nq &= m s \\Delta t = 100 \\cdot 4.18 \\cdot 50 \\\\\n&= 20900 \\text{ J} = 20.9 \\text{ kJ} \\\\\n\\text{Thus, the heat required is } 20.9 \\text{ kJ} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Heat Capacity",
+        "formula": "C = m s",
+        "variables": {
+            "C": "Heat capacity (J/K)",
+            "m": "Mass (g)",
+            "s": "Specific heat (J/(g·K))"
+        },
+        "description": "Defines the heat capacity of a substance.",
+        "example": {
+            "problem": "\\text{Calculate the heat capacity of } 50 \\text{ g of aluminum with } s = 0.897 \\text{ J/(g·K).}",
+            "solution": "\\begin{aligned}\nC &= m s = 50 \\cdot 0.897 \\\\\n&= 44.85 \\text{ J/K} \\\\\n\\text{Thus, the heat capacity is } 44.85 \\text{ J/K} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Heat Change with Heat Capacity",
+        "formula": "q = C \\Delta t",
+        "variables": {
+            "q": "Heat change (J)",
+            "C": "Heat capacity (J/K)",
+            "\\Delta t": "Temperature change (K)"
+        },
+        "description": "Calculates heat change using heat capacity at constant pressure or volume.",
+        "example": {
+            "problem": "\\text{Calculate the heat absorbed by a substance with } C = 100 \\text{ J/K when heated by } 20 \\text{ K.}",
+            "solution": "\\begin{aligned}\nq &= C \\Delta t = 100 \\cdot 20 \\\\\n&= 2000 \\text{ J} = 2.0 \\text{ kJ} \\\\\n\\text{Thus, the heat absorbed is } 2.0 \\text{ kJ} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Reaction Enthalpy at Constant Volume",
+        "formula": "q_{\\text{rxn}} = \\Delta E",
+        "variables": {
+            "q_{\\text{rxn}}": "Heat of reaction (J)",
+            "\\Delta E": "Change in internal energy (J)"
+        },
+        "description": "Relates heat of reaction to internal energy change at constant volume.",
+        "example": {
+            "problem": "\\text{If } \\Delta E = -50 \\text{ kJ for a reaction at constant volume, calculate } q_{\\text{rxn}}.}",
+            "solution": "\\begin{aligned}\nq_{\\text{rxn}} &= \\Delta E = -50 \\text{ kJ} \\\\\n\\text{Thus, } q_{\\text{rxn}} = -50 \\text{ kJ (exothermic)} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Bomb Calorimeter Heat",
+        "formula": "q_{\\text{rxn}} = - (q_{\\text{water}} + q_{\\text{bomb}})",
+        "variables": {
+            "q_{\\text{rxn}}": "Heat of reaction (J)",
+            "q_{\\text{water}}": "Heat absorbed by water (J)",
+            "q_{\\text{bomb}}": "Heat absorbed by bomb (J)"
+        },
+        "description": "Calculates the heat of reaction in a bomb calorimeter.",
+        "example": {
+            "problem": "\\text{A bomb calorimeter has } q_{\\text{water}} = 8000 \\text{ J, } q_{\\text{bomb}} = 2000 \\text{ J. Calculate } q_{\\text{rxn}}.}",
+            "solution": "\\begin{aligned}\nq_{\\text{rxn}} &= - (q_{\\text{water}} + q_{\\text{bomb}}) \\\\\n&= - (8000 + 2000) = -10000 \\text{ J} = -10 \\text{ kJ} \\\\\n\\text{Thus, } q_{\\text{rxn}} = -10 \\text{ kJ} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Standard Enthalpy of Reaction",
+        "formula": "\\Delta H_{\\text{rxn}}^o = \\sum n \\Delta H_f^o (\\text{products}) - \\sum m \\Delta H_f^o (\\text{reactants})",
+        "variables": {
+            "\\Delta H_{\\text{rxn}}^o": "Standard enthalpy of reaction (kJ/mol)",
+            "n": "Stoichiometric coefficient of product",
+            "m": "Stoichiometric coefficient of reactant",
+            "\\Delta H_f^o": "Standard enthalpy of formation (kJ/mol)"
+        },
+        "description": "Calculates the standard enthalpy of reaction from standard enthalpies of formation.",
+        "example": {
+            "problem": "\\text{Calculate } \\Delta H_{\\text{rxn}}^o \\text{ for } \\text{CH}_4(g) + 2 \\text{O}_2(g) \\to \\text{CO}_2(g) + 2 \\text{H}_2\\text{O}(l), \\text{ given } \\Delta H_f^o (\\text{CH}_4) = -74.8 \\text{ kJ/mol}, \\Delta H_f^o (\\text{CO}_2) = -393.5 \\text{ kJ/mol}, \\Delta H_f^o (\\text{H}_2\\text{O}) = -285.8 \\text{ kJ/mol}, \\Delta H_f^o (\\text{O}_2) = 0 \\text{ kJ/mol.}",
+            "solution": "\\begin{aligned}\n\\Delta H_{\\text{rxn}}^o &= \\sum n \\Delta H_f^o (\\text{products}) - \\sum m \\Delta H_f^o (\\text{reactants}) \\\\\n&= [1 \\cdot (-393.5) + 2 \\cdot (-285.8)] - [1 \\cdot (-74.8) + 2 \\cdot 0] \\\\\n&= [-393.5 - 571.6] - [-74.8] \\\\\n&= -965.1 + 74.8 = -890.3 \\text{ kJ/mol} \\\\\n\\text{Thus, } \\Delta H_{\\text{rxn}}^o \\approx -890.3 \\text{ kJ/mol} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Enthalpy of Solution",
+        "formula": "\\Delta H_{\\text{soln}} = \\Delta H_{\\text{hydr}} - U",
+        "variables": {
+            "\\Delta H_{\\text{soln}}": "Enthalpy of solution (kJ/mol)",
+            "\\Delta H_{\\text{hydr}}": "Heat of hydration (kJ/mol)",
+            "U": "Lattice energy (kJ/mol)"
+        },
+        "description": "Calculates the enthalpy change when an ionic compound dissolves.",
+        "example": {
+            "problem": "\\text{Calculate } \\Delta H_{\\text{soln}} \\text{ for } \\text{NaCl, given } \\Delta H_{\\text{hydr}} = -784 \\text{ kJ/mol, } U = 788 \\text{ kJ/mol.}",
+            "solution": "\\begin{aligned}\n\\Delta H_{\\text{soln}} &= \\Delta H_{\\text{hydr}} - U \\\\\n&= -784 - 788 = -4 \\text{ kJ/mol} \\\\\n\\text{Thus, } \\Delta H_{\\text{soln}} = -4 \\text{ kJ/mol} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "First Law of Thermodynamics",
+        "formula": "\\Delta E = q + w",
+        "variables": {
+            "\\Delta E": "Change in internal energy (J)",
+            "q": "Heat (J)",
+            "w": "Work (J)"
+        },
+        "description": "States that the change in internal energy equals heat added plus work done on the system.",
+        "example": {
+            "problem": "\\text{Calculate } \\Delta E \\text{ for a system with } q = 500 \\text{ J and } w = -200 \\text{ J.}",
+            "solution": "\\begin{aligned}\n\\Delta E &= q + w \\\\\n&= 500 + (-200) = 300 \\text{ J} \\\\\n\\text{Thus, } \\Delta E = 300 \\text{ J} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Work in Gas Expansion",
+        "formula": "w = - P \\Delta V",
+        "variables": {
+            "w": "Work (J)",
+            "P": "Pressure (Pa)",
+            "\\Delta V": "Change in volume (m^3)"
+        },
+        "description": "Calculates work done during gas expansion at constant pressure.",
+        "example": {
+            "problem": "\\text{Calculate the work done when a gas expands from } 1.0 \\text{ L to } 2.0 \\text{ L at } 1.013 \\times 10^5 \\text{ Pa.}",
+            "solution": "\\begin{aligned}\n\\Delta V &= (2.0 - 1.0) \\times 10^{-3} = 0.001 \\text{ m}^3 \\\\\nw &= - P \\Delta V = - (1.013 \\times 10^5) \\cdot 0.001 \\\\\n&= -101.3 \\text{ J} \\\\\n\\text{Thus, the work done is } -101.3 \\text{ J} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Enthalpy Definition",
+        "formula": "H = E + PV",
+        "variables": {
+            "H": "Enthalpy (J)",
+            "E": "Internal energy (J)",
+            "P": "Pressure (Pa)",
+            "V": "Volume (m^3)"
+        },
+        "description": "Defines enthalpy as a state function.",
+        "example": {
+            "problem": "\\text{Calculate } H \\text{ for a system with } E = 1000 \\text{ J, } P = 1.013 \\times 10^5 \\text{ Pa, } V = 0.001 \\text{ m}^3.",
+            "solution": "\\begin{aligned}\nH &= E + PV \\\\\n&= 1000 + (1.013 \\times 10^5) \\cdot 0.001 \\\\\n&= 1000 + 101.3 = 1101.3 \\text{ J} \\\\\n\\text{Thus, } H = 1101.3 \\text{ J} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Enthalpy Change",
+        "formula": "\\Delta H = \\Delta E + \\Delta (PV)",
+        "variables": {
+            "\\Delta H": "Enthalpy change (J)",
+            "\\Delta E": "Internal energy change (J)",
+            "\\Delta (PV)": "Change in pressure-volume product (J)"
+        },
+        "description": "General form of enthalpy change.",
+        "example": {
+            "problem": "\\text{Calculate } \\Delta H \\text{ for } \\Delta E = 500 \\text{ J, } \\Delta (PV) = 200 \\text{ J.}",
+            "solution": "\\begin{aligned}\n\\Delta H &= \\Delta E + \\Delta (PV) \\\\\n&= 500 + 200 = 700 \\text{ J} \\\\\n\\text{Thus, } \\Delta H = 700 \\text{ J} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Enthalpy Change for Gases",
+        "formula": "\\Delta H = \\Delta E + \\Delta n_g RT",
+        "variables": {
+            "\\Delta H": "Enthalpy change (J)",
+            "\\Delta E": "Internal energy change (J)",
+            "\\Delta n_g": "Change in moles of gas",
+            "R": "Gas constant (8.314 J/(mol K))",
+            "T": "Temperature (K)"
+        },
+        "description": "Calculates enthalpy change for gaseous reactions.",
+        "example": {
+            "problem": "\\text{Calculate } \\Delta H \\text{ for a reaction with } \\Delta E = -10000 \\text{ J, } \\Delta n_g = 2, T = 298 \\text{ K, } R = 8.314 \\text{ J/(mol K).}",
+            "solution": "\\begin{aligned}\n\\Delta H &= \\Delta E + \\Delta n_g RT \\\\\n&= -10000 + 2 \\cdot 8.314 \\cdot 298 \\\\\n&= -10000 + 4955.624 = -5044.376 \\text{ J} \\\\\n\\text{Thus, } \\Delta H \\approx -5044 \\text{ J} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Rate of Reaction",
+        "formula": "A \\to B \\\\ \\ \\\\ \\text{rate} = - \\frac{\\Delta [A]}{\\Delta t} = \\frac{\\Delta [B]}{\\Delta t}",
+        "variables": {
+            "\\Delta [A]": "Change in concentration of reactant A (mol/L)",
+            "\\Delta t": "Change in time (s)",
+            "\\Delta [B]": "Change in concentration of product B (mol/L)"
+        },
+        "description": "Defines the average rate of reaction based on concentration changes.",
+        "example": {
+            "problem": "\\text{Calculate the rate of disappearance of } \\text{A if } [A] \\text{ decreases from } 0.5 \\text{ M to } 0.3 \\text{ M in } 10 \\text{ s.}",
+            "solution": "\\begin{aligned}\n\\text{rate} &= - \\frac{\\Delta [A]}{\\Delta t} = - \\frac{0.3 - 0.5}{10} \\\\\n&= - \\frac{-0.2}{10} = 0.02 \\text{ M/s} \\\\\n\\text{Thus, the rate is } 0.02 \\text{ M/s} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "General Rate Expression",
+        "formula": "aA + bB \\to cC + dD \\\\ \\ \\\\ \\text{rate} = - \\frac{1}{a} \\frac{\\Delta [A]}{\\Delta t} = - \\frac{1}{b} \\frac{\\Delta [B]}{\\Delta t} = \\frac{1}{c} \\frac{\\Delta [C]}{\\Delta t} = \\frac{1}{d} \\frac{\\Delta [D]}{\\Delta t}",
+        "variables": {
+            "a": "Stoichiometric coefficient of reactant A",
+            "b": "Stoichiometric coefficient of reactant B",
+            "c": "Stoichiometric coefficient of product C",
+            "d": "Stoichiometric coefficient of product D"
+        },
+        "description": "Rate expression for the reaction aA + bB → cC + dD.",
+        "example": {
+            "problem": "\\text{For } 2\\text{A} \\to \\text{B}, \\text{ if } \\frac{\\Delta [A]}{\\Delta t} = -0.04 \\text{ M/s, calculate } \\frac{\\Delta [B]}{\\Delta t}.",
+            "solution": "\\begin{aligned}\n\\text{rate} &= - \\frac{1}{2} \\frac{\\Delta [A]}{\\Delta t} = \\frac{1}{1} \\frac{\\Delta [B]}{\\Delta t} \\\\\n- \\frac{1}{2} \\cdot (-0.04) &= \\frac{\\Delta [B]}{\\Delta t} \\\\\n0.02 &= \\frac{\\Delta [B]}{\\Delta t} \\\\\n\\text{Thus, } \\frac{\\Delta [B]}{\\Delta t} = 0.02 \\text{ M/s} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Rate Law",
+        "formula": "\\text{rate} = k [A]^x [B]^y",
+        "variables": {
+            "k": "Rate constant",
+            "x": "Order with respect to A",
+            "y": "Order with respect to B",
+            "[A]": "Concentration of A (M)",
+            "[B]": "Concentration of B (M)"
+        },
+        "description": "General form of the rate law for a reaction.",
+        "example": {
+            "problem": "\\text{Calculate the rate for } k = 0.1 \\text{ M}^{-2}\\text{s}^{-1}, [A] = 0.2 \\text{ M}, [B] = 0.3 \\text{ M}, x = 1, y = 2.",
+            "solution": "\\begin{aligned}\n\\text{rate} &= k [A]^x [B]^y \\\\\n&= 0.1 \\cdot (0.2)^1 \\cdot (0.3)^2 \\\\\n&= 0.1 \\cdot 0.2 \\cdot 0.09 = 0.0018 \\text{ M/s} \\\\\n\\text{Thus, the rate is } 0.0018 \\text{ M/s} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "First-Order Rate Law",
+        "formula": "\\text{rate} = k [A]",
+        "variables": {
+            "k": "Rate constant (s^{-1})",
+            "[A]": "Concentration of A (M)"
+        },
+        "description": "Rate law for a first-order reaction.",
+        "example": {
+            "problem": "\\text{Calculate the rate for a first-order reaction with } k = 0.05 \\text{ s}^{-1}, [A] = 0.4 \\text{ M.}",
+            "solution": "\\begin{aligned}\n\\text{rate} &= k [A] = 0.05 \\cdot 0.4 \\\\\n&= 0.02 \\text{ M/s} \\\\\n\\text{Thus, the rate is } 0.02 \\text{ M/s} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integrated First-Order Rate Law",
+        "formula": "[A] = [A]_0 e^{-kt}",
+        "variables": {
+            "[A]": "Concentration at time t (M)",
+            "[A]_0": "Initial concentration (M)",
+            "k": "Rate constant (s^{-1})",
+            "t": "Time (s)"
+        },
+        "description": "Describes concentration versus time for a first-order reaction.",
+        "example": {
+            "problem": "\\text{Calculate } [A] \\text{ after } 10 \\text{ s for } [A]_0 = 1.0 \\text{ M, } k = 0.1 \\text{ s}^{-1}.",
+            "solution": "\\begin{aligned}\n[A] &= [A]_0 e^{-kt} \\\\\n&= 1.0 \\cdot e^{-0.1 \\cdot 10} = e^{-1} \\approx 0.3679 \\text{ M} \\\\\n\\text{Thus, } [A] \\approx 0.37 \\text{ M} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Log Form of First-Order",
+        "formula": "\\ln [A] = \\ln [A]_0 - kt",
+        "variables": {
+            "[A]": "Concentration at time t (M)",
+            "[A]_0": "Initial concentration (M)",
+            "k": "Rate constant (s^{-1})",
+            "t": "Time (s)"
+        },
+        "description": "Linear form of the first-order rate law for graphing.",
+        "example": {
+            "problem": "\\text{Calculate } \\ln [A] \\text{ after } 20 \\text{ s for } [A]_0 = 2.0 \\text{ M, } k = 0.03 \\text{ s}^{-1}.",
+            "solution": "\\begin{aligned}\n\\ln [A] &= \\ln [A]_0 - kt \\\\\n&= \\ln 2.0 - 0.03 \\cdot 20 \\\\\n&= 0.693 - 0.6 = 0.093 \\\\\n\\text{Thus, } \\ln [A] \\approx 0.093 \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Half-Life for First-Order",
+        "formula": "t_{1/2} = \\frac{0.693}{k}",
+        "variables": {
+            "t_{1/2}": "Half-life (s)",
+            "k": "Rate constant (s^{-1})"
+        },
+        "description": "Calculates the time for half the reactant to disappear in a first-order reaction.",
+        "example": {
+            "problem": "\\text{Calculate the half-life for a first-order reaction with } k = 0.02 \\text{ s}^{-1}.",
+            "solution": "\\begin{aligned}\nt_{1/2} &= \\frac{0.693}{k} = \\frac{0.693}{0.02} \\\\\n&= 34.65 \\text{ s} \\\\\n\\text{Thus, } t_{1/2} \\approx 34.7 \\text{ s} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Second-Order Rate Law",
+        "formula": "\\text{rate} = k [A]^2",
+        "variables": {
+            "k": "Rate constant (M^{-1}s^{-1})",
+            "[A]": "Concentration of A (M)"
+        },
+        "description": "Rate law for a second-order reaction with respect to A.",
+        "example": {
+            "problem": "\\text{Calculate the rate for } k = 0.5 \\text{ M}^{-1}\\text{s}^{-1}, [A] = 0.1 \\text{ M.}",
+            "solution": "\\begin{aligned}\n\\text{rate} &= k [A]^2 = 0.5 \\cdot (0.1)^2 \\\\\n&= 0.5 \\cdot 0.01 = 0.005 \\text{ M/s} \\\\\n\\text{Thus, the rate is } 0.005 \\text{ M/s} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integrated Second-Order Rate Law",
+        "formula": "\\frac{1}{[A]} = \\frac{1}{[A]_0} + kt",
+        "variables": {
+            "[A]": "Concentration at time t (M)",
+            "[A]_0": "Initial concentration (M)",
+            "k": "Rate constant (M^{-1}s^{-1})",
+            "t": "Time (s)"
+        },
+        "description": "Describes 1/[A] versus time for a second-order reaction.",
+        "example": {
+            "problem": "\\text{Calculate } [A] \\text{ after } 100 \\text{ s for } [A]_0 = 0.2 \\text{ M, } k = 0.01 \\text{ M}^{-1}\\text{s}^{-1}.",
+            "solution": "\\begin{aligned}\n\\frac{1}{[A]} &= \\frac{1}{[A]_0} + kt \\\\\n&= \\frac{1}{0.2} + 0.01 \\cdot 100 \\\\\n&= 5 + 1 = 6 \\text{ M}^{-1} \\\\\n[A] &= \\frac{1}{6} \\approx 0.1667 \\text{ M} \\\\\n\\text{Thus, } [A] \\approx 0.167 \\text{ M} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Half-Life for Second-Order",
+        "formula": "t_{1/2} = \\frac{1}{k [A]_0}",
+        "variables": {
+            "t_{1/2}": "Half-life (s)",
+            "k": "Rate constant (M^{-1}s^{-1})",
+            "[A]_0": "Initial concentration (M)"
+        },
+        "description": "Calculates the half-life for a second-order reaction, dependent on initial concentration.",
+        "example": {
+            "problem": "\\text{Calculate the half-life for } k = 0.05 \\text{ M}^{-1}\\text{s}^{-1}, [A]_0 = 0.4 \\text{ M.}",
+            "solution": "\\begin{aligned}\nt_{1/2} &= \\frac{1}{k [A]_0} = \\frac{1}{0.05 \\cdot 0.4} \\\\\n&= \\frac{1}{0.02} = 50 \\text{ s} \\\\\n\\text{Thus, } t_{1/2} = 50 \\text{ s} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Zero-Order Rate Law",
+        "formula": "\\text{rate} = k",
+        "variables": {
+            "k": "Rate constant (M/s)"
+        },
+        "description": "Describes a constant reaction rate independent of concentration.",
+        "example": {
+            "problem": "\\text{Calculate the rate for a zero-order reaction with } k = 0.01 \\text{ M/s.}",
+            "solution": "\\begin{aligned}\n\\text{rate} &= k = 0.01 \\text{ M/s} \\\\\n\\text{Thus, the rate is } 0.01 \\text{ M/s} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integrated Zero-Order Rate Law",
+        "formula": "[A] = [A]_0 - kt",
+        "variables": {
+            "[A]": "Concentration at time t (M)",
+            "[A]_0": "Initial concentration (M)",
+            "k": "Rate constant (M/s)",
+            "t": "Time (s)"
+        },
+        "description": "Describes concentration versus time for a zero-order reaction.",
+        "example": {
+            "problem": "\\text{Calculate } [A] \\text{ after } 30 \\text{ s for } [A]_0 = 0.5 \\text{ M, } k = 0.01 \\text{ M/s.}",
+            "solution": "\\begin{aligned}\n[A] &= [A]_0 - kt \\\\\n&= 0.5 - 0.01 \\cdot 30 \\\\\n&= 0.5 - 0.3 = 0.2 \\text{ M} \\\\\n\\text{Thus, } [A] = 0.2 \\text{ M} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Arrhenius Equation",
+        "formula": "k = A e^{-E_a / RT}",
+        "variables": {
+            "k": "Rate constant",
+            "A": "Frequency factor",
+            "E_a": "Activation energy (J/mol)",
+            "R": "Gas constant (8.314 J/(mol K))",
+            "T": "Temperature (K)"
+        },
+        "description": "Describes the temperature dependence of the rate constant.",
+        "example": {
+            "problem": "\\text{Calculate } k \\text{ for } A = 2 \\times 10^{10} \\text{ s}^{-1}, E_a = 50 \\text{ kJ/mol}, T = 298 \\text{ K, } R = 8.314 \\text{ J/(mol K).}",
+            "solution": "\\begin{aligned}\nE_a &= 50 \\times 10^3 \\text{ J/mol} \\\\\n\\frac{E_a}{RT} &= \\frac{50000}{8.314 \\cdot 298} \\approx 20.19 \\\\\nk &= A e^{-E_a / RT} = 2 \\times 10^{10} \\cdot e^{-20.19} \\\\\n&= 2 \\times 10^{10} \\cdot 1.75 \\times 10^{-9} \\approx 0.035 \\text{ s}^{-1} \\\\\n\\text{Thus, } k \\approx 0.035 \\text{ s}^{-1} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Log Form of Arrhenius",
+        "formula": "\\ln k = \\ln A - \\frac{E_a}{RT}",
+        "variables": {
+            "k": "Rate constant",
+            "A": "Frequency factor",
+            "E_a": "Activation energy (J/mol)",
+            "R": "Gas constant (8.314 J/(mol K))",
+            "T": "Temperature (K)"
+        },
+        "description": "Linear form of the Arrhenius equation for graphing.",
+        "example": {
+            "problem": "\\text{Calculate } \\ln k \\text{ for } A = 1 \\times 10^{12} \\text{ s}^{-1}, E_a = 60 \\text{ kJ/mol}, T = 300 \\text{ K, } R = 8.314 \\text{ J/(mol K).}",
+            "solution": "\\begin{aligned}\n\\ln A &= \\ln (1 \\times 10^{12}) = 27.63 \\\\\n\\frac{E_a}{RT} &= \\frac{60 \\times 10^3}{8.314 \\cdot 300} \\approx 24.03 \\\\\n\\ln k &= \\ln A - \\frac{E_a}{RT} = 27.63 - 24.03 = 3.60 \\\\\n\\text{Thus, } \\ln k \\approx 3.60 \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Two-Temperature Arrhenius",
+        "formula": "\\ln \\frac{k_2}{k_1} = \\frac{E_a}{R} \\left( \\frac{1}{T_1} - \\frac{1}{T_2} \\right)",
+        "variables": {
+            "k_1": "Rate constant at temperature T_1",
+            "k_2": "Rate constant at temperature T_2",
+            "E_a": "Activation energy (J/mol)",
+            "R": "Gas constant (8.314 J/(mol K))",
+            "T_1": "Temperature 1 (K)",
+            "T_2": "Temperature 2 (K)"
+        },
+        "description": "Calculates activation energy or rate constant at different temperatures.",
+        "example": {
+            "problem": "\\text{Calculate } E_a \\text{ if } k_2 = 0.02 \\text{ s}^{-1}, k_1 = 0.01 \\text{ s}^{-1}, T_1 = 300 \\text{ K}, T_2 = 310 \\text{ K, } R = 8.314 \\text{ J/(mol K).}",
+            "solution": "\\begin{aligned}\n\\ln \\frac{k_2}{k_1} &= \\ln \\frac{0.02}{0.01} = \\ln 2 \\approx 0.693 \\\\\n\\frac{1}{T_1} - \\frac{1}{T_2} &= \\frac{1}{300} - \\frac{1}{310} \\approx 0.003333 - 0.003226 = 0.000107 \\text{ K}^{-1} \\\\\n0.693 &= \\frac{E_a}{8.314} \\cdot 0.000107 \\\\\nE_a &= \\frac{0.693 \\cdot 8.314}{0.000107} \\approx 53850 \\text{ J/mol} = 53.85 \\text{ kJ/mol} \\\\\n\\text{Thus, } E_a \\approx 53.85 \\text{ kJ/mol} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Equilibrium Constant Kc",
+        "formula": "K_c = \\frac{[C]^c [D]^d}{[A]^a [B]^b}",
+        "variables": {
+            "K_c": "Equilibrium constant (concentration)",
+            "[A], [B], [C], [D]": "Concentrations (M)",
+            "a, b, c, d": "Stoichiometric coefficients"
+        },
+        "description": "Equilibrium constant for the reaction aA + bB ⇌ cC + dD.",
+        "example": {
+            "problem": "\\text{Calculate } K_c \\text{ for } 2\\text{A} + \\text{B} \\rightleftharpoons \\text{C}, \\text{ with } [A] = 0.1 \\text{ M}, [B] = 0.2 \\text{ M}, [C] = 0.5 \\text{ M at equilibrium.}",
+            "solution": "\\begin{aligned}\nK_c &= \\frac{[C]^1}{[A]^2 [B]^1} = \\frac{(0.5)^1}{(0.1)^2 \\cdot (0.2)^1} \\\\\n&= \\frac{0.5}{0.01 \\cdot 0.2} = \\frac{0.5}{0.002} = 250 \\\\\n\\text{Thus, } K_c = 250 \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Equilibrium Constant Kp",
+        "formula": "K_p = \\frac{P_C^c P_D^d}{P_A^a P_B^b}",
+        "variables": {
+            "K_p": "Equilibrium constant (pressure)",
+            "P_A, P_B, P_C, P_D": "Partial pressures (atm)",
+            "a, b, c, d": "Stoichiometric coefficients"
+        },
+        "description": "Equilibrium constant for gaseous reactions in terms of partial pressures.",
+        "example": {
+            "problem": "\\text{Calculate } K_p \\text{ for } 2\\text{NO}(g) \\rightleftharpoons \\text{N}_2(g) + \\text{O}_2(g), \\text{ with } P_{\\text{NO}} = 0.1 \\text{ atm}, P_{\\text{N}_2} = 0.4 \\text{ atm}, P_{\\text{O}_2} = 0.3 \\text{ atm.}",
+            "solution": "\\begin{aligned}\nK_p &= \\frac{P_{\\text{N}_2}^1 P_{\\text{O}_2}^1}{P_{\\text{NO}}^2} = \\frac{(0.4)^1 \\cdot (0.3)^1}{(0.1)^2} \\\\\n&= \\frac{0.12}{0.01} = 12 \\\\\n\\text{Thus, } K_p = 12 \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Relation Kp and Kc",
+        "formula": "K_p = K_c (RT)^{\\Delta n}",
+        "variables": {
+            "K_p": "Equilibrium constant (pressure)",
+            "K_c": "Equilibrium constant (concentration)",
+            "R": "Gas constant (0.08206 L·atm/(mol·K))",
+            "T": "Temperature (K)",
+            "\\Delta n": "Change in moles of gas"
+        },
+        "description": "Relates Kp and Kc for gaseous reactions.",
+        "example": {
+            "problem": "\\text{Calculate } K_p \\text{ for } \\text{N}_2(g) + 3\\text{H}_2(g) \\rightleftharpoons 2\\text{NH}_3(g), \\text{ with } K_c = 0.05, T = 298 \\text{ K, } R = 0.08206 \\text{ L·atm/(mol·K).}",
+            "solution": "\\begin{aligned}\n\\Delta n &= 2 - (1 + 3) = -2 \\\\\nRT &= 0.08206 \\cdot 298 \\approx 24.45388 \\\\\nK_p &= K_c (RT)^{\\Delta n} = 0.05 \\cdot (24.45388)^{-2} \\\\\n&= 0.05 \\cdot \\frac{1}{598.391} \\approx 8.36 \\times 10^{-5} \\\\\n\\text{Thus, } K_p \\approx 8.36 \\times 10^{-5} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Multiple Equilibrium K",
+        "formula": "K = K_1 \\times K_2",
+        "variables": {
+            "K": "Overall equilibrium constant",
+            "K_1": "Equilibrium constant for step 1",
+            "K_2": "Equilibrium constant for step 2"
+        },
+        "description": "Calculates the overall equilibrium constant for consecutive equilibria.",
+        "example": {
+            "problem": "\\text{Calculate } K \\text{ for two steps with } K_1 = 2.0, K_2 = 3.0.",
+            "solution": "\\begin{aligned}\nK &= K_1 \\times K_2 = 2.0 \\cdot 3.0 \\\\\n&= 6.0 \\\\\n\\text{Thus, } K = 6.0 \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "pH Definition",
+        "formula": "\\text{pH} = - \\log [H^+]",
+        "variables": {
+            "[H^+]": "Hydrogen ion concentration (M)"
+        },
+        "description": "Measures the acidity of a solution.",
+        "example": {
+            "problem": "\\text{Calculate the pH of a solution with } [H^+] = 1.0 \\times 10^{-3} \\text{ M.}",
+            "solution": "\\begin{aligned}\n\\text{pH} &= - \\log [H^+] = - \\log (1.0 \\times 10^{-3}) \\\\\n&= - (-3) = 3 \\\\\n\\text{Thus, the pH is } 3 \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Solubility Product Ksp",
+        "formula": "K_{\\text{sp}} = [\\text{Ag}^+] [\\text{Cl}^-]",
+        "variables": {
+            "K_{\\text{sp}}": "Solubility product constant",
+            "[\\text{Ag}^+]": "Concentration of Ag^+ (M)",
+            "[\\text{Cl}^-]": "Concentration of Cl^- (M)"
+        },
+        "description": "Solubility product for AgCl(s) ⇌ Ag^+(aq) + Cl^-(aq).",
+        "example": {
+            "problem": "\\text{Calculate } K_{\\text{sp}} \\text{ for } \\text{AgCl if } [\\text{Ag}^+] = [\\text{Cl}^-] = 1.34 \\times 10^{-5} \\text{ M.}",
+            "solution": "\\begin{aligned}\nK_{\\text{sp}} &= [\\text{Ag}^+] [\\text{Cl}^-] = (1.34 \\times 10^{-5}) \\cdot (1.34 \\times 10^{-5}) \\\\\n&= 1.7956 \\times 10^{-10} \\\\\n\\text{Thus, } K_{\\text{sp}} \\approx 1.80 \\times 10^{-10} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Entropy Change",
+        "formula": "\\Delta S = S_f - S_i",
+        "variables": {
+            "\\Delta S": "Entropy change (J/(mol K))",
+            "S_f": "Final entropy (J/(mol K))",
+            "S_i": "Initial entropy (J/(mol K))"
+        },
+        "description": "Calculates the entropy change for a process.",
+        "example": {
+            "problem": "\\text{Calculate } \\Delta S \\text{ if } S_f = 200 \\text{ J/(mol K), } S_i = 150 \\text{ J/(mol K).}",
+            "solution": "\\begin{aligned}\n\\Delta S &= S_f - S_i = 200 - 150 \\\\\n&= 50 \\text{ J/(mol K)} \\\\\n\\text{Thus, } \\Delta S = 50 \\text{ J/(mol K)} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Standard Entropy of Reaction",
+        "formula": "\\Delta S_{\\text{rxn}}^o = \\sum n S^o (\\text{products}) - \\sum m S^o (\\text{reactants})",
+        "variables": {
+            "\\Delta S_{\\text{rxn}}^o": "Standard entropy of reaction (J/(mol K))",
+            "n": "Stoichiometric coefficient of product",
+            "m": "Stoichiometric coefficient of reactant",
+            "S^o": "Standard entropy (J/(mol K))"
+        },
+        "description": "Calculates the standard entropy change from standard entropies.",
+        "example": {
+            "problem": "\\text{Calculate } \\Delta S_{\\text{rxn}}^o \\text{ for } \\text{C}(s) + \\text{O}_2(g) \\to \\text{CO}_2(g), \\text{ with } S^o (\\text{C}) = 5.7 \\text{ J/(mol K)}, S^o (\\text{O}_2) = 205.0 \\text{ J/(mol K)}, S^o (\\text{CO}_2) = 213.6 \\text{ J/(mol K).}",
+            "solution": "\\begin{aligned}\n\\Delta S_{\\text{rxn}}^o &= \\sum n S^o (\\text{products}) - \\sum m S^o (\\text{reactants}) \\\\\n&= [1 \\cdot 213.6] - [1 \\cdot 5.7 + 1 \\cdot 205.0] \\\\\n&= 213.6 - 210.7 = 2.9 \\text{ J/(mol K)} \\\\\n\\text{Thus, } \\Delta S_{\\text{rxn}}^o \\approx 2.9 \\text{ J/(mol K)} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Entropy Change in Surroundings",
+        "formula": "\\Delta S_{\\text{surr}} = - \\frac{\\Delta H_{\\text{sys}}}{T}",
+        "variables": {
+            "\\Delta S_{\\text{surr}}": "Entropy change in surroundings (J/(mol K))",
+            "\\Delta H_{\\text{sys}}": "Enthalpy change in system (J/mol)",
+            "T": "Temperature (K)"
+        },
+        "description": "Calculates the entropy change in the surroundings at constant temperature.",
+        "example": {
+            "problem": "\\text{Calculate } \\Delta S_{\\text{surr}} \\text{ for } \\Delta H_{\\text{sys}} = -40000 \\text{ J/mol, } T = 298 \\text{ K.}",
+            "solution": "\\begin{aligned}\n\\Delta S_{\\text{surr}} &= - \\frac{\\Delta H_{\\text{sys}}}{T} = - \\frac{-40000}{298} \\\\\n&= 134.23 \\text{ J/(mol K)} \\\\\n\\text{Thus, } \\Delta S_{\\text{surr}} \\approx 134.2 \\text{ J/(mol K)} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Gibbs Free Energy",
+        "formula": "G = H - T S",
+        "variables": {
+            "G": "Gibbs free energy (J/mol)",
+            "H": "Enthalpy (J/mol)",
+            "T": "Temperature (K)",
+            "S": "Entropy (J/(mol K))"
+        },
+        "description": "Defines Gibbs free energy as a state function.",
+        "example": {
+            "problem": "\\text{Calculate } G \\text{ for } H = 100 \\text{ kJ/mol}, S = 200 \\text{ J/(mol K)}, T = 298 \\text{ K.}",
+            "solution": "\\begin{aligned}\nG &= H - T S \\\\\n&= 100000 - 298 \\cdot 200 \\\\\n&= 100000 - 59600 = 40400 \\text{ J/mol} = 40.4 \\text{ kJ/mol} \\\\\n\\text{Thus, } G = 40.4 \\text{ kJ/mol} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Gibbs Free Energy Change",
+        "formula": "\\Delta G = \\Delta H - T \\Delta S",
+        "variables": {
+            "\\Delta G": "Gibbs free energy change (J/mol)",
+            "\\Delta H": "Enthalpy change (J/mol)",
+            "T": "Temperature (K)",
+            "\\Delta S": "Entropy change (J/(mol K))"
+        },
+        "description": "Calculates Gibbs free energy change at constant temperature.",
+        "example": {
+            "problem": "\\text{Calculate } \\Delta G \\text{ for } \\Delta H = -50 \\text{ kJ/mol}, \\Delta S = 100 \\text{ J/(mol K)}, T = 298 \\text{ K.}",
+            "solution": "\\begin{aligned}\n\\Delta G &= \\Delta H - T \\Delta S \\\\\n&= -50000 - 298 \\cdot 100 \\\\\n&= -50000 - 29800 = -79800 \\text{ J/mol} = -79.8 \\text{ kJ/mol} \\\\\n\\text{Thus, } \\Delta G = -79.8 \\text{ kJ/mol} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Standard Free Energy Change",
+        "formula": "\\Delta G^o = \\sum n \\Delta G_f^o (\\text{products}) - \\sum m \\Delta G_f^o (\\text{reactants})",
+        "variables": {
+            "\\Delta G^o": "Standard free energy change (kJ/mol)",
+            "n": "Stoichiometric coefficient of product",
+            "m": "Stoichiometric coefficient of reactant",
+            "\\Delta G_f^o": "Standard free energy of formation (kJ/mol)"
+        },
+        "description": "Calculates the standard free energy change from standard free energies of formation.",
+        "example": {
+            "problem": "\\text{Calculate } \\Delta G^o \\text{ for } \\text{CH}_4(g) + 2 \\text{O}_2(g) \\to \\text{CO}_2(g) + 2 \\text{H}_2\\text{O}(l), \\text{ given } \\Delta G_f^o (\\text{CH}_4) = -50.8 \\text{ kJ/mol}, \\Delta G_f^o (\\text{O}_2) = 0 \\text{ kJ/mol}, \\Delta G_f^o (\\text{CO}_2) = -394.4 \\text{ kJ/mol}, \\Delta G_f^o (\\text{H}_2\\text{O}) = -237.2 \\text{ kJ/mol}.",
+            "solution": "\\begin{aligned}\n\\Delta G^o &= \\sum n \\Delta G_f^o (\\text{products}) - \\sum m \\Delta G_f^o (\\text{reactants}) \\\\\n&= [1 \\cdot (-394.4) + 2 \\cdot (-237.2)] - [1 \\cdot (-50.8) + 2 \\cdot 0] \\\\\n&= [-394.4 - 474.4] - [-50.8] \\\\\n&= -868.8 + 50.8 = -818 \\text{ kJ/mol} \\\\\n\\text{Thus, } \\Delta G^o = -818 \\text{ kJ/mol} \\ \\checkmark\n\\end{aligned}"
+        }
+    }
+]

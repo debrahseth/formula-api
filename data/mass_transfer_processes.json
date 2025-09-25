@@ -1,0 +1,296 @@
+[
+    {
+        "name": "Molar Flux of Species",
+        "formula": "N_i = c_i v_i",
+        "variables": {
+            "N_{i}": "Molar flux of species(moles of species per unit area per unit time)",
+            "c_{i}": "Molar concentration of species(moles of species per unit volume",
+            "v_{i}": "Velocity of species relative to a fixed reference frame(length per unit time"
+        },
+        "description": "Used to quantify the rate at which moles pf a species flow through a surface,essential for describing transport in multicomponent systems."
+    },
+    {
+        "name": "Mass flux of species",
+        "formula": "n_i = \\rho_i v_i ",
+        "variables": {
+            "n_{i}": "Mass flux of species(mass of species per unit area per unit time",
+            "\\rho_i": "Mass concentration(density) of species(mass of species per unit volume)",
+            "v_{i}": "Velocity of species(length per unit time)"
+        },
+        "description": "Calculates the mass transport rate of a species across a surface,parallel to molar flux but in mass terms,usefull in systems where density variations matter."
+    },
+    {
+        "name": "Molar concentration relation",
+        "formula": "c_i = x_i c",
+        "variables": {
+            "c_{i}": "Molar concentration of species(moles per unit volume)",
+            "x_{i}": "Mole fraction of species(dimensionless)",
+            "c": "Total molar concentration of the mixture"
+        },
+        "description": "Relates a species' concentration to it mole fraction in a mixture,foundational for multicomponent analysis in gases or solutions."
+    },
+    {
+        "name": "Mass concentration relation",
+        "formula": "\\rho_i = \\omega_i \\rho",
+        "variables": {
+            "\\rho_i": "Mass concentration of species",
+            "w_{i}": "Mass fraction of species",
+            "\\rho": "Total density of the mixture"
+        },
+        "description": "Connects a species' mass density to its mass fraction used in mass-based calculations for mixtures."
+    },
+    {
+        "name": "Fick's first law of diffusion (Diffusive Molar Flux)",
+        "formula": "J_{Az} = -D_{AB} \\frac{dc_A}{dz}",
+        "variables": {
+            "J_{Az}": "Diffusive molar flux of species in the z direction",
+            "D_{AB}": "Diffusion coefficient of A in B",
+            "\\frac{dc_A}{dz}": "Concentration gradient of species in the z direction"
+        },
+        "description": "Describes the diffusive transport of a species due to a concentration gradient,fundamental for a molecular diffusion in binary systems."
+    },
+    {
+        "name": "Total molar flux of species",
+        "formula": "N_A = x_A.N - c.D_AB \\frac{dx_A}{dz}",
+        "variables": {
+            "N_{A}": "Total molar flux of species A",
+            "x_{A}": "Mole fraction of species A",
+            "N": "Total molar flux of the mixture",
+            "c": "Total molar concentration",
+            "D_{AB}": "Diffusion coefficient",
+            "\\frac{dx_A}{dz}": "Mole fraction gradient in the z direction"
+        },
+        "description": "Combines convective and diffusive contriubtions to the total flux used in systems with bulk flow and diffusion."
+    },
+    {
+        "name": "Reynold's number for falling liquid film",
+        "formula": "\\mathrm{Re} = \\frac{\\rho \\bar{u}_y 4 r_H}{\\mu} = \\frac{4 \\Gamma}{\\mu}",
+        "variables": {
+            "\\mathrm{Re}": "Reynold's number(dimensionless)",
+            "\\rho": "Liquid density",
+            "\\bar{u}_{y}": "Average velocity in y-direction",
+            "r_{H}": "Hydraulic radius",
+            "\\Gamma": "Mass flow rate per unit width"
+        },
+        "description": "Characterizes flow regimes(eg.la,imar or turbulent) in thin liquid films,important for mass transfer in absorption or evaporation processes."
+    },
+    {
+        "name": "Molar flow rate in falling film (Concentration Difference)",
+        "formula": "n_A = \\bar{u}_y \\delta W \\left(\\bar{c}_{AL} - c_{A0} \\right)",
+        "variables": {
+            "n_{A}": "Molar flow rate of species A",
+            "\\bar{u}_{y}": "Average velocity",
+            "\\delta": "Film thickness",
+            "W": "Film width",
+            "\\bar{c}_{AL}": "Average concentration at position L",
+            "c_{A0}": "Inlet concentration"
+        },
+        "description": "Calculates the rate of species transfer in a falling film based on concentration changes,applied in gas-liquid contactors."
+    },
+    {
+        "name": "Mass transfer rate using coefficient",
+        "formula": "n_A = k_c A \\Delta C_A",
+        "variables": {
+            "n_{A}": "Molar flow rate of species A",
+            "k_{c}": "Mass transfer coefficient",
+            "A": "Area for mass transfer(area)",
+            "\\Delta C_{A}": "Concentration driving force"
+        },
+        "description": "Quantifies the overall rate of mass transfer across an i terface using an empirircal coefficient,widely used in deign of separation equipment like absorbers and distillers."
+    },
+    {
+        "name": "Fick's second Law of Diffusion",
+        "formula": "\\frac{\\partial c_A}{\\partial t} = D_{AB} \\frac{\\partial^2 C_A}{\\partial z^2}",
+        "variables": {
+            "c_{A}": "Concentration of species of A",
+            "t": "Time(seconds)",
+            "D_{AB}": "Diffusion coefficient of species A in B",
+            "z": "Spatial cordinate"
+        },
+        "description": "Describes the time-dependent diffusuion of species in a medium,used to model unsteady-state diffusion processes,such as gas diffusion into a liquid or transient concentration profiles."
+    },
+    {
+        "name": "Sherwood number",
+        "formula": "Sh = \\frac{k_c L}{D_{AB}}",
+        "variables": {
+            "Sh": "Sherwood number(Dimensionless)",
+            "k_{c}": "Mass transfer coefficient",
+            "L": "Characteristic Length",
+            "D_{AB}": "Diffusion coefficient"
+        },
+        "description": "A dimensionless number representing the ratio of convective to diffusive mass transfer,used to correlate mass transfer coefficints in systems like packed beds or boundary layers."
+    },
+    {
+        "name": "Schmidt number",
+        "formula": "Sc = \\frac{\\mu}{\\rho D_{AB}}",
+        "variables": {
+            "Sc": "Schmidt number(dimensionless)",
+            "\\mu": "Dynamic viscosity of the fluid",
+            "\\rho": "Density of the fluid",
+            "D_{AB}": "Diffusion coefficient"
+        },
+        "description": "Represents the ratio of momentum diffusivity to mass diffusivity used in analyzing the relative thickness of momentum and concentration boundary layers in convective mass transfer."
+    },
+    {
+        "name": "Mass transfer coefficients for Gas Phase (Two Film Theory)",
+        "formula": "N_A = k_G \\left(P_{Ag} - P_{Ai} \\right)",
+        "variables": {
+            "N_{A}": "Molar flux of species A",
+            "k_{G}": "Gas-phase mass transfer coefficient",
+            "P_{Ag}": "Partial pressure of A in the bulk gas phase",
+            "P_{Ai}": "Partial pressure at the gas-liquid interphase"
+        },
+        "description": "used in gas-liquid mass transfer(eg.absorption) to describe the rate of transfer across the gas film based on the partial pressure driving force."
+    },
+    {
+        "name": "Mass transfer coefficient for liquid phase (Two Film Theory)",
+        "formula": "K_L \\left(c_A - c_{A0} \\right)",
+        "variables": {
+            "N_{A}": "Molar flux of species A",
+            "K_{L}": "Overall liquid-phase mass transfer coefficient",
+            "c_{A}": "Equilibrium concentration of A corresponding to the bulk gas partial pressure",
+            "c_{A0}": "Concentration of A in the bulk liquid"
+        },
+        "description": "Used in liquid-phase controlled systems to calculate the overall mass transfer rate,incorporating both phase resistances."
+    },
+    {
+        "name": "Height of a transfer unit (HTU)",
+        "formula": "HTU_G = \\frac{G}{\\alpha K_G P}",
+        "variables": {
+            "HTU_{G}": "Height of a transfer unit for the gas phase",
+            "G": "Molar flow rate of gas per unit cross-sectional area",
+            "K_{G}": "Overall gas-hase mass transfer coefficient",
+            "\\alpha": "interfacial area per unit volume",
+            "P": "Total Pressure"
+        },
+        "description": "Used in packed column design(eg.absorption towers) to estimate the height required for a unit of mass transfer."
+    },
+    {
+        "name": "Overall Mass Transfer Coefficient",
+        "formula": "\\frac{1}{K} = \\frac{1}{k_A} + \\frac{1}{k_B} \\frac{D_A}{D_B}",
+        "variables": {
+            "K": "Overall mass transfer coefficient",
+            "k_A": "Mass transfer coefficient in phase A",
+            "k_B": "Mass transfer coefficient in phase B",
+            "D_A": "Diffusion coefficient in phase A",
+            "D_B": "Diffusion coefficient in phase B"
+        },
+        "description": "Relates individual phase mass transfer resistances to the overall resistance in a two-phase system."
+    },
+    {
+        "name": "Mass Transfer in Packed Column (Kremser Equation)",
+        "formula": "y = y^* + (y_0 - y^*) e^{-K_L a t / v}",
+        "variables": {
+            "y": "Concentration of solute in the outlet",
+            "y^*": "Equilibrium concentration",
+            "y_0": "Inlet concentration",
+            "K_L": "Liquid-phase mass transfer coefficient",
+            "a": "Interfacial area per unit volume",
+            "t": "Residence time",
+            "v": "Superficial velocity"
+        },
+        "description": "Used to calculate the solute concentration profile along a packed column under steady flow."
+    },
+    {
+        "name": "Interfacial Area in Packed Column",
+        "formula": "a = \\frac{6 (1 - \\epsilon)}{d_p}",
+        "variables": {
+            "a": "Interfacial area per unit volume",
+            "\\epsilon": "Void fraction of the packing",
+            "d_p": "Diameter of packing particle"
+        },
+        "description": "Estimates the gas-liquid contact area in packed beds."
+    },
+    {
+        "name": "Two-film Theory Mass Transfer Flux",
+        "formula": "N_A = K_G (P_A - P_A^*) = K_L (C_A^* - C_A)",
+        "variables": {
+            "N_A": "Molar flux of species A",
+            "K_G": "Gas-phase mass transfer coefficient",
+            "P_A": "Bulk gas partial pressure",
+            "P_A^*": "Gas equilibrium partial pressure at interface",
+            "K_L": "Liquid-phase mass transfer coefficient",
+            "C_A^*": "Concentration of A in liquid at interface",
+            "C_A": "Bulk liquid concentration"
+        },
+        "description": "Relates flux to concentration difference across the interface for gas-liquid systems."
+    },
+    {
+        "name": "Mass Transfer Coefficient from Sherwood Number",
+        "formula": "k_c = \\frac{Sh D_{AB}}{L}",
+        "variables": {
+            "k_c": "Mass transfer coefficient",
+            "Sh": "Sherwood number",
+            "D_{AB}": "Diffusion coefficient",
+            "L": "Characteristic length"
+        },
+        "description": "Converts dimensionless Sherwood number to mass transfer coefficient."
+    },
+    {
+        "name": "Diffusion Coefficient from Chapman-Enskog Equation",
+        "formula": "D_{AB} = 0.001858 \\frac{T^{3/2}}{P \\sqrt{M_A + M_B} \\sigma_{AB}^2 \\Omega_D}",
+        "variables": {
+            "D_{AB}": "Diffusion coefficient of A in B",
+            "T": "Temperature (K)",
+            "P": "Pressure (atm)",
+            "M_A": "Molar mass of A",
+            "M_B": "Molar mass of B",
+            "\\sigma_{AB}": "Collision diameter",
+            "\\Omega_D": "Collision integral"
+        },
+        "description": "Predicts binary gas diffusion coefficients using molecular properties and temperature."
+    },
+    {
+        "name": "Mass Transfer in Laminar Flow",
+        "formula": "Sh = 1.86 \\left(Re\\ Sc\\ \\frac{d}{L} \\right)^{1/3}",
+        "variables": {
+            "Sh": "Sherwood number",
+            "Re": "Reynolds number",
+            "Sc": "Schmidt number",
+            "d": "Pipe diameter",
+            "L": "Pipe length"
+        },
+        "description": "Correlation for mass transfer in laminar flow inside tubes."
+    },
+    {
+        "name": "Mass Transfer in Turbulent Flow",
+        "formula": "Sh = 0.023 Re^{0.8} Sc^{0.33}",
+        "variables": {
+            "Sh": "Sherwood number",
+            "Re": "Reynolds number",
+            "Sc": "Schmidt number"
+        },
+        "description": "Correlation for mass transfer in turbulent flow inside pipes and ducts."
+    },
+    {
+        "name": "Plate Height in Packed Column (HTU)",
+        "formula": "HTU = \\frac{H}{N_TU}",
+        "variables": {
+            "HTU": "Height of transfer unit",
+            "H": "Height of the packed section",
+            "N_TU": "Number of transfer units"
+        },
+        "description": "Relates packed bed height to transfer units for design purposes."
+    },
+    {
+        "name": "Number of Transfer Units (NTU)",
+        "formula": "N_TU = \\int_0^1 \\frac{dY}{Y - Y^*}",
+        "variables": {
+            "N_TU": "Number of transfer units",
+            "Y": "Mole fraction or concentration at any point",
+            "Y^*": "Equilibrium mole fraction or concentration"
+        },
+        "description": "Used to quantify the difficulty of achieving desired separation in absorption or stripping."
+    },
+    {
+        "name": "Colburn Analogy for Mass Transfer",
+        "formula": "j_M = \\frac{Sh}{\\left(Re\\ Sc^\\frac{1}{3} \\right)}",
+        "variables": {
+            "j_M": "Colburn mass transfer factor",
+            "Sh": "Sherwood number",
+            "Re": "Reynolds number",
+            "Sc": "Schmidt number"
+        },
+        "description": "Relates convective mass transfer to heat transfer analogies in turbulent flow."
+    }
+]

@@ -1,0 +1,301 @@
+[
+    {
+        "name": "Atomic Packing Factor",
+        "formula": "APF = \\frac{N \\cdot \\frac{4}{3} \\pi R^3}{a^3} = \\frac{V_s}{V_c}",
+        "variables": {
+            "N": "Number of atoms per unit cell",
+            "R": "Atomic radius",
+            "a": "Lattice parameter",
+            "V_s": "Volume of spheres (atoms)",
+            "V_c": "Volume of unit cell"
+        },
+        "description": "The atomic packing factor (APF) measures the efficiency of atom packing in a crystal structure, indicating how densely atoms are arranged in different lattice types.",
+        "example": {
+            "problem": "\\text{Calculate the APF for a body-centered cubic (BCC) lattice with lattice parameter } a = 2.87 \\times 10^{-10} \\text{ m and atomic radius } R = 1.24 \\times 10^{-10} \\text{ m.}",
+            "solution": "\\begin{aligned}\n\\text{In a BCC lattice, } N = 2 \\text{ (atoms per unit cell)} \\\\\n\\text{Volume of atoms: } V_s &= N \\cdot \\frac{4}{3} \\pi R^3 = 2 \\cdot \\frac{4}{3} \\pi (1.24 \\times 10^{-10})^3 \\\\\n&= 2 \\cdot \\frac{4}{3} \\pi (1.9066 \\times 10^{-30}) \\approx 8.013 \\times 10^{-30} \\text{ m}^3 \\\\\n\\text{Volume of unit cell: } V_c &= a^3 = (2.87 \\times 10^{-10})^3 \\approx 2.363 \\times 10^{-29} \\text{ m}^3 \\\\\nAPF &= \\frac{V_s}{V_c} = \\frac{8.013 \\times 10^{-30}}{2.363 \\times 10^{-29}} \\approx 0.339 \\text{ or } 33.9\\% \\\\\n\\text{Thus, the APF is approximately } 0.339 \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Number of Vacancies",
+        "formula": "N_v = N \\exp \\left( -\\frac{Q_v}{k T} \\right)",
+        "variables": {
+            "N_v": "Number of vacancies",
+            "N": "Total number of atomic sites",
+            "Q_v": "Activation energy required to form a vacancy",
+            "k": "Boltzmann's constant",
+            "T": "Absolute temperature (in Kelvin)"
+        },
+        "description": "This formula determines the equilibrium concentration of point defects (vacancies) in a crystal at a given temperature, crucial for understanding material properties like diffusion and conductivity.",
+        "example": {
+            "problem": "\\text{Calculate the number of vacancies in a metal with } N = 10^{28} \\text{ sites/m}^3, Q_v = 1.2 \\text{ eV, at } T = 1000 \\text{ K, given } k = 8.617 \\times 10^{-5} \\text{ eV/K.}",
+            "solution": "\\begin{aligned}\n\\text{Given: } N = 10^{28}, \\ Q_v = 1.2 \\text{ eV}, \\ k = 8.617 \\times 10^{-5} \\text{ eV/K}, \\ T = 1000 \\text{ K} \\\\\n\\text{Calculate exponent: } \\frac{Q_v}{k T} &= \\frac{1.2}{8.617 \\times 10^{-5} \\cdot 1000} = \\frac{1.2}{0.08617} \\approx 13.928 \\\\\n\\exp \\left( -\\frac{Q_v}{k T} \\right) &= \\exp(-13.928) \\approx 1.177 \\times 10^{-6} \\\\\nN_v &= N \\exp \\left( -\\frac{Q_v}{k T} \\right) = 10^{28} \\cdot 1.177 \\times 10^{-6} \\\\\n&= 1.177 \\times 10^{22} \\text{ vacancies/m}^3 \\\\\n\\text{Thus, } N_v \\approx 1.177 \\times 10^{22} \\text{ vacancies/m}^3 \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Attractive Force (Coulomb's Law for Ions)",
+        "formula": "F_A = \\frac{1}{4 \\pi \\epsilon_0} \\frac{q_1 q_2}{r^2}",
+        "variables": {
+            "F_A": "Attractive force",
+            "\\epsilon_0": "Permittivity of free space",
+            "q_1, q_2": "Charges of ions",
+            "r": "Distance between ions"
+        },
+        "description": "This formula computes the electrostatic attractive force between oppositely charged ions in ionic bonds, fundamental for understanding ionic crystal stability.",
+        "example": {
+            "problem": "\\text{Calculate the attractive force between } \\text{Na}^+ \\text{ and } \\text{Cl}^- \\text{ ions separated by } r = 2.8 \\times 10^{-10} \\text{ m, given } q_1 = +1.602 \\times 10^{-19} \\text{ C}, q_2 = -1.602 \\times 10^{-19} \\text{ C}, \\epsilon_0 = 8.854 \\times 10^{-12} \\text{ C}^2 / (\\text{N} \\cdot \\text{m}^2).",
+            "solution": "\\begin{aligned}\nq_1 = +1.602 \\times 10^{-19} \\text{ C}, \\ q_2 = -1.602 \\times 10^{-19} \\text{ C} \\\\\n\\frac{1}{4 \\pi \\epsilon_0} = \\frac{1}{4 \\pi \\cdot 8.854 \\times 10^{-12}} \\approx 8.987 \\times 10^9 \\text{ N} \\cdot \\text{m}^2/\\text{C}^2 \\\\\n\\frac{q_1 q_2}{r^2} &= \\frac{(1.602 \\times 10^{-19}) \\cdot (-1.602 \\times 10^{-19})}{(2.8 \\times 10^{-10})^2} \\\\\n&= \\frac{-2.566 \\times 10^{-38}}{7.84 \\times 10^{-20}} \\approx -3.273 \\times 10^{-19} \\text{ C}^2/\\text{m}^2 \\\\\nF_A &= 8.987 \\times 10^9 \\cdot (-3.273 \\times 10^{-19}) \\approx -2.94 \\times 10^{-9} \\text{ N} \\\\\n\\text{Thus, the attractive force is } 2.94 \\times 10^{-9} \\text{ N (attractive).} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Repulsive Force",
+        "formula": "F_R = -\\frac{b^n}{r^{n+1}}",
+        "variables": {
+            "F_R": "Repulsive force",
+            "b": "Repulsive constant",
+            "n": "Repulsive exponent",
+            "r": "Distance between atoms/ions"
+        },
+        "description": "This formula models the short-range repulsive force due to overlapping electron clouds in atomic bonding, balancing attraction in potential energy curves.",
+        "example": {
+            "problem": "\\text{Calculate the repulsive force for } b = 10^{-70} \\text{ N} \\cdot \\text{m}^{10}, n = 9, \\text{ and } r = 2.5 \\times 10^{-10} \\text{ m.}",
+            "solution": "\\begin{aligned}\nF_R &= -\\frac{b n}{r^{n+1}} = -\\frac{10^{-70} \\cdot 9}{(2.5 \\times 10^{-10})^{10}} \\\\\n(2.5 \\times 10^{-10})^{10} &= (2.5)^{10} \\times 10^{-100} \\approx 9.766 \\times 10^{-94} \\\\\nF_R &= -\\frac{9 \\times 10^{-70}}{9.766 \\times 10^{-94}} \\approx -9.216 \\times 10^{22} \\text{ N} \\\\\n\\text{Thus, the repulsive force is approximately } 9.216 \\times 10^{22} \\text{ N.} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Net Bonding Energy",
+        "formula": "E_{\\text{net}} = \\int F_A \\, dr + \\int F_R \\, dr = -\\frac{A}{r} + \\frac{B}{r^n}",
+        "variables": {
+            "E_{\\text{net}}": "Net bonding energy",
+            "F_A": "Attractive force",
+            "F_R": "Repulsive force",
+            "r": "Interatomic distance",
+            "A": "Attractive constant",
+            "B": "Repulsive constant",
+            "n": "Repulsive exponent"
+        },
+        "description": "This formula finds the total potential energy between atoms as a function of distance, identifying equilibrium spacing and bond strength.",
+        "example": {
+            "problem": "\\text{Calculate the net bonding energy for } A = 1.436 \\times 10^{-19} \\text{ J} \\cdot \\text{m}, B = 7.32 \\times 10^{-78} \\text{ J} \\cdot \\text{m}^9, n = 9, \\text{ at } r = 2.8 \\times 10^{-10} \\text{ m.}",
+            "solution": "\\begin{aligned}\nE_{\\text{net}} &= -\\frac{A}{r} + \\frac{B}{r^n} \\\\\n\\text{Attractive term: } -\\frac{A}{r} &= -\\frac{1.436 \\times 10^{-19}}{2.8 \\times 10^{-10}} \\approx -5.129 \\times 10^{-10} \\text{ J} \\\\\n\\text{Repulsive term: } \\frac{B}{r^n} &= \\frac{7.32 \\times 10^{-78}}{(2.8 \\times 10^{-10})^9} \\\\\n(2.8 \\times 10^{-10})^9 &= (2.8)^9 \\times 10^{-90} \\approx 1.345 \\times 10^{-87} \\\\\n\\frac{B}{r^n} &= \\frac{7.32 \\times 10^{-78}}{1.345 \\times 10^{-87}} \\approx 5.442 \\times 10^{-10} \\text{ J} \\\\\nE_{\\text{net}} &= -5.129 \\times 10^{-10} + 5.442 \\times 10^{-10} \\approx 3.13 \\times 10^{-11} \\text{ J} \\\\\n\\text{Thus, } E_{\\text{net}} \\approx 3.13 \\times 10^{-11} \\text{ J} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Density of Metal",
+        "formula": "\\rho = \\frac{n M}{V_c N_A}",
+        "variables": {
+            "\\rho": "Density",
+            "n": "Number of atoms per unit cell",
+            "M": "Atomic mass (molar mass)",
+            "V_c": "Volume of unit cell",
+            "N_A": "Avogadro's number"
+        },
+        "description": "This formula calculates the theoretical density of metallic crystals from crystal structure parameters.",
+        "example": {
+            "problem": "\\text{Calculate the density of copper (FCC, } n = 4, M = 63.55 \\text{ g/mol, } a = 3.615 \\times 10^{-10} \\text{ m, } N_A = 6.022 \\times 10^{23} \\text{ mol}^{-1}).",
+            "solution": "\\begin{aligned}\nV_c &= a^3 = (3.615 \\times 10^{-10})^3 \\approx 4.723 \\times 10^{-29} \\text{ m}^3 \\\\\n\\rho &= \\frac{n M}{V_c N_A} = \\frac{4 \\cdot 63.55}{4.723 \\times 10^{-29} \\cdot 6.022 \\times 10^{23}} \\\\\n&= \\frac{254.2}{2.845 \\times 10^{-5}} \\approx 8.936 \\times 10^6 \\text{ g/m}^3 \\\\\n&= 8.936 \\text{ g/cm}^3 \\\\\n\\text{Thus, the density is approximately } 8.94 \\text{ g/cm}^3 \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Density of Ceramic",
+        "formula": "\\rho = \\frac{n (\\sum A_C + \\sum A_A)}{V_c N_A}",
+        "variables": {
+            "\\rho": "Density",
+            "n": "Number of formula units per unit cell",
+            "\\sum A_C": "Sum of atomic masses of cations",
+            "\\sum A_A": "Sum of atomic masses of anions",
+            "V_c": "Volume of unit cell",
+            "N_A": "Avogadro's number"
+        },
+        "description": "This formula computes the density of ionic ceramics like oxides or halides from their unit cell composition.",
+        "example": {
+            "problem": "\\text{Calculate the density of NaCl (FCC, } n = 4, A_{\\text{Na}} = 22.99 \\text{ g/mol, } A_{\\text{Cl}} = 35.45 \\text{ g/mol, } a = 5.64 \\times 10^{-10} \\text{ m, } N_A = 6.022 \\times 10^{23} \\text{ mol}^{-1}).",
+            "solution": "\\begin{aligned}\n\\sum A_C + \\sum A_A &= 22.99 + 35.45 = 58.44 \\text{ g/mol} \\\\\nV_c &= a^3 = (5.64 \\times 10^{-10})^3 \\approx 1.794 \\times 10^{-28} \\text{ m}^3 \\\\\n\\rho &= \\frac{n (\\sum A_C + \\sum A_A)}{V_c N_A} = \\frac{4 \\cdot 58.44}{1.794 \\times 10^{-28} \\cdot 6.022 \\times 10^{23}} \\\\\n&= \\frac{233.76}{1.080 \\times 10^{-4}} \\approx 2.164 \\times 10^6 \\text{ g/m}^3 \\\\\n&= 2.164 \\text{ g/cm}^3 \\\\\n\\text{Thus, the density is approximately } 2.16 \\text{ g/cm}^3 \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Degree of Polymerization",
+        "formula": "DP = \\frac{\\bar{M}_n}{\\bar{m}}",
+        "variables": {
+            "DP": "Degree of polymerization",
+            "\\bar{M}_n": "Number-average molar mass of polymer",
+            "\\bar{m}": "Molar mass of repeat unit"
+        },
+        "description": "The degree of polymerization indicates the average number of repeat units in polymer chains, relating to molecular weight and properties like viscosity.",
+        "example": {
+            "problem": "\\text{Calculate the degree of polymerization for a polymer with } \\bar{M}_n = 100,000 \\text{ g/mol and } \\bar{m} = 104 \\text{ g/mol (repeat unit).}",
+            "solution": "\\begin{aligned}\nDP &= \\frac{\\bar{M}_n}{\\bar{m}} = \\frac{100,000}{104} \\\\\n&\\approx 961.54 \\\\\n\\text{Thus, the degree of polymerization is approximately } 962 \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Number-Average Molar Mass",
+        "formula": "\\bar{M}_n = \\sum x_i M_i",
+        "variables": {
+            "\\bar{M}_n": "Number-average molar mass",
+            "x_i": "Mole fraction of chains with molar mass } M_i",
+            "M_i": "Molar mass of chain species } i"
+        },
+        "description": "This formula calculates the average molecular weight based on the number of molecules, important for polymer characterization.",
+        "example": {
+            "problem": "\\text{Calculate } \\bar{M}_n \\text{ for a polymer with } x_1 = 0.4, M_1 = 50,000 \\text{ g/mol, } x_2 = 0.6, M_2 = 80,000 \\text{ g/mol.}",
+            "solution": "\\begin{aligned}\n\\bar{M}_n &= \\sum x_i M_i = x_1 M_1 + x_2 M_2 \\\\\n&= 0.4 \\cdot 50,000 + 0.6 \\cdot 80,000 \\\\\n&= 20,000 + 48,000 = 68,000 \\text{ g/mol} \\\\\n\\text{Thus, } \\bar{M}_n = 68,000 \\text{ g/mol} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Weight-Average Molar Mass",
+        "formula": "\\bar{M}_w = \\sum w_i M_i",
+        "variables": {
+            "\\bar{M}_w": "Weight-average molar mass",
+            "w_i": "Weight fraction of chains with molar mass } M_i",
+            "M_i": "Molar mass of chain species } i"
+        },
+        "description": "This formula determines the average molecular weight weighted by mass, affecting mechanical properties like strength.",
+        "example": {
+            "problem": "\\text{Calculate } \\bar{M}_w \\text{ for a polymer with } w_1 = 0.3, M_1 = 50,000 \\text{ g/mol, } w_2 = 0.7, M_2 = 80,000 \\text{ g/mol.}",
+            "solution": "\\begin{aligned}\n\\bar{M}_w &= \\sum w_i M_i = w_1 M_1 + w_2 M_2 \\\\\n&= 0.3 \\cdot 50,000 + 0.7 \\cdot 80,000 \\\\\n&= 15,000 + 56,000 = 71,000 \\text{ g/mol} \\\\\n\\text{Thus, } \\bar{M}_w = 71,000 \\text{ g/mol} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Number of Repeat Units per Unit Cell",
+        "formula": "n = \\frac{\\rho V_c N_A}{A}",
+        "variables": {
+            "n": "Number of repeat units per unit cell",
+            "\\rho": "Density",
+            "V_c": "Volume of unit cell",
+            "N_A": "Avogadro's number",
+            "A": "Atomic or formula weight"
+        },
+        "description": "This formula calculates how many polymer repeat units fit in a crystalline unit cell.",
+        "example": {
+            "problem": "\\text{Calculate } n \\text{ for a polymer with } \\rho = 1.2 \\text{ g/cm}^3, V_c = 1.0 \\times 10^{-22} \\text{ cm}^3, A = 104 \\text{ g/mol, } N_A = 6.022 \\times 10^{23} \\text{ mol}^{-1}.",
+            "solution": "\\begin{aligned}\nn &= \\frac{\\rho V_c N_A}{A} \\\\\n&= \\frac{1.2 \\cdot 1.0 \\times 10^{-22} \\cdot 6.022 \\times 10^{23}}{104} \\\\\n&= \\frac{7.2264 \\times 10^1}{104} \\approx 0.695 \\\\\n\\text{Thus, } n \\approx 0.7 \\text{ repeat units (rounded for crystalline cell).} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Percentage Crystallinity",
+        "formula": "\\% \\text{ Crystallinity} = \\frac{\\rho_c (\\rho_s - \\rho_a)}{\\rho_s (\\rho_c - \\rho_a)} \\times 100",
+        "variables": {
+            "\\rho_c": "Density of fully crystalline polymer",
+            "\\rho_s": "Density of sample",
+            "\\rho_a": "Density of fully amorphous polymer"
+        },
+        "description": "This formula quantifies the crystalline fraction in semicrystalline polymers, influencing properties like opacity and strength.",
+        "example": {
+            "problem": "\\text{Calculate the percentage crystallinity for a polymer with } \\rho_c = 1.5 \\text{ g/cm}^3, \\rho_s = 1.3 \\text{ g/cm}^3, \\rho_a = 1.1 \\text{ g/cm}^3.",
+            "solution": "\\begin{aligned}\n\\% \\text{ Crystallinity} &= \\frac{\\rho_c (\\rho_s - \\rho_a)}{\\rho_s (\\rho_c - \\rho_a)} \\times 100 \\\\\n&= \\frac{1.5 (1.3 - 1.1)}{1.3 (1.5 - 1.1)} \\times 100 \\\\\n&= \\frac{1.5 \\cdot 0.2}{1.3 \\cdot 0.4} \\times 100 = \\frac{0.3}{0.52} \\times 100 \\\\\n&\\approx 57.69 \\% \\\\\n\\text{Thus, the crystallinity is approximately } 57.7\\% \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Average Bearing Stress",
+        "formula": "\\sigma_b = \\frac{F_b}{A}",
+        "variables": {
+            "\\sigma_b": "Bearing stress",
+            "F_b": "Bearing force",
+            "A": "Bearing area"
+        },
+        "description": "This formula assesses the compressive stress between contacting surfaces, such as in joints or supports.",
+        "example": {
+            "problem": "\\text{Calculate the bearing stress for } F_b = 5000 \\text{ N, } A = 0.02 \\text{ m}^2.",
+            "solution": "\\begin{aligned}\n\\sigma_b &= \\frac{F_b}{A} = \\frac{5000}{0.02} \\\\\n&= 250,000 \\text{ N/m}^2 = 250 \\text{ kPa} \\\\\n\\text{Thus, the bearing stress is } 250 \\text{ kPa} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Average Normal Strain",
+        "formula": "\\epsilon_{\\text{avg}} = \\frac{\\Delta L}{L}",
+        "variables": {
+            "\\epsilon_{\\text{avg}}": "Average normal strain",
+            "\\Delta L": "Change in length",
+            "L": "Original length"
+        },
+        "description": "This formula measures deformation per unit length in materials under load.",
+        "example": {
+            "problem": "\\text{Calculate the average normal strain for a bar with } L = 1.5 \\text{ m, } \\Delta L = 0.003 \\text{ m.}",
+            "solution": "\\begin{aligned}\n\\epsilon_{\\text{avg}} &= \\frac{\\Delta L}{L} = \\frac{0.003}{1.5} \\\\\n&= 0.002 \\text{ or } 2000 \\mu\\text{strain} \\\\\n\\text{Thus, the strain is } 0.002 \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Thermal Strain",
+        "formula": "\\epsilon_T = \\alpha \\Delta T",
+        "variables": {
+            "\\epsilon_T": "Thermal strain",
+            "\\alpha": "Coefficient of thermal expansion",
+            "\\Delta T": "Temperature change"
+        },
+        "description": "This formula predicts dimensional changes due to temperature variations in materials.",
+        "example": {
+            "problem": "\\text{Calculate the thermal strain for a material with } \\alpha = 12 \\times 10^{-6} \\text{ /K, } \\Delta T = 50 \\text{ K.}",
+            "solution": "\\begin{aligned}\n\\epsilon_T &= \\alpha \\Delta T = 12 \\times 10^{-6} \\cdot 50 \\\\\n&= 6 \\times 10^{-4} \\text{ or } 600 \\mu\\text{strain} \\\\\n\\text{Thus, the thermal strain is } 600 \\mu\\text{strain} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Hooke's Law (Uniaxial)",
+        "formula": "\\sigma = E \\epsilon",
+        "variables": {
+            "\\sigma": "Normal stress",
+            "E": "Modulus of elasticity (Young's modulus)",
+            "\\epsilon": "Normal strain"
+        },
+        "description": "Hooke's Law relates stress and strain in the elastic region of materials, foundational for linear elastic behavior.",
+        "example": {
+            "problem": "\\text{Calculate the stress for a material with } E = 200 \\text{ GPa, } \\epsilon = 0.001.",
+            "solution": "\\begin{aligned}\n\\sigma &= E \\epsilon = 200 \\times 10^9 \\cdot 0.001 \\\\\n&= 200 \\times 10^6 \\text{ Pa} = 200 \\text{ MPa} \\\\\n\\text{Thus, the stress is } 200 \\text{ MPa} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Shear Modulus Relation",
+        "formula": "G = \\frac{E}{2 (1 + \\nu)}",
+        "variables": {
+            "G": "Shear modulus of elasticity",
+            "E": "Young's modulus",
+            "\\nu": "Poisson's ratio"
+        },
+        "description": "This formula connects shear stiffness to tensile stiffness and lateral contraction in isotropic materials.",
+        "example": {
+            "problem": "\\text{Calculate the shear modulus for a material with } E = 70 \\text{ GPa, } \\nu = 0.3.",
+            "solution": "\\begin{aligned}\nG &= \\frac{E}{2 (1 + \\nu)} = \\frac{70 \\times 10^9}{2 (1 + 0.3)} \\\\\n&= \\frac{70 \\times 10^9}{2 \\cdot 1.3} = \\frac{70 \\times 10^9}{2.6} \\\\\n&\\approx 26.92 \\times 10^9 \\text{ Pa} = 26.92 \\text{ GPa} \\\\\n\\text{Thus, the shear modulus is approximately } 26.92 \\text{ GPa} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Allowable Stress",
+        "formula": "\\sigma_{\\text{allow}} = \\frac{\\sigma_{\\text{failure}}}{FS}",
+        "variables": {
+            "\\sigma_{\\text{allow}}": "Allowable stress",
+            "\\sigma_{\\text{failure}}": "Failure stress (yield or ultimate stress)",
+            "FS": "Factor of safety"
+        },
+        "description": "This formula ensures that materials operate below failure limits with a safety margin in design.",
+        "example": {
+            "problem": "\\text{Calculate the allowable stress for } \\sigma_{\\text{failure}} = 400 \\text{ MPa, } FS = 2.",
+            "solution": "\\begin{aligned}\n\\sigma_{\\text{allow}} &= \\frac{\\sigma_{\\text{failure}}}{FS} = \\frac{400}{2} \\\\\n&= 200 \\text{ MPa} \\\\\n\\text{Thus, the allowable stress is } 200 \\text{ MPa} \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Factor of Safety",
+        "formula": "FS = \\frac{\\sigma_{\\text{failure}}}{\\sigma_{\\text{actual}}}",
+        "variables": {
+            "FS": "Factor of safety",
+            "\\sigma_{\\text{failure}}": "Failure stress (yield or ultimate stress)",
+            "\\sigma_{\\text{actual}}": "Actual applied stress"
+        },
+        "description": "This formula evaluates how much stronger a material is compared to the loads it experiences.",
+        "example": {
+            "problem": "\\text{Calculate the factor of safety for } \\sigma_{\\text{failure}} = 500 \\text{ MPa, } \\sigma_{\\text{actual}} = 125 \\text{ MPa.}",
+            "solution": "\\begin{aligned}\nFS &= \\frac{\\sigma_{\\text{failure}}}{\\sigma_{\\text{actual}}} = \\frac{500}{125} \\\\\n&= 4 \\\\\n\\text{Thus, the factor of safety is } 4 \\ \\checkmark\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Axial Deformation",
+        "formula": "\\delta = \\sum \\frac{F L}{A E}",
+        "variables": {
+            "\\delta": "Deformation (elongation or shortening)",
+            "F": "Force or load",
+            "L": "Length",
+            "A": "Cross-sectional area",
+            "E": "Young's modulus"
+        },
+        "description": "This formula calculates the total elastic deformation in axially loaded bars, applicable to varying sections.",
+        "example": {
+            "problem": "\\text{Calculate the deformation of a steel bar with } F = 10,000 \\text{ N, } L = 2 \\text{ m, } A = 0.0005 \\text{ m}^2, E = 200 \\text{ GPa.}",
+            "solution": "\\begin{aligned}\n\\delta &= \\frac{F L}{A E} = \\frac{10,000 \\cdot 2}{0.0005 \\cdot 200 \\times 10^9} \\\\\n&= \\frac{20,000}{0.0005 \\cdot 2 \\times 10^{11}} = \\frac{20,000}{10^8} \\\\\n&= 2 \\times 10^{-4} \\text{ m} = 0.2 \\text{ mm} \\\\\n\\text{Thus, the deformation is } 0.2 \\text{ mm} \\ \\checkmark\n\\end{aligned}"
+        }
+    }
+]

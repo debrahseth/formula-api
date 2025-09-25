@@ -1,0 +1,710 @@
+[
+    {
+        "name": "Derivative of Sine Function",
+        "formula": "\\frac{d}{dx} \\sin x = \\cos x",
+        "variables": {
+            "x": "Real variable (angle in radians)"
+        },
+        "description": "The derivative of the sine function is the cosine function, reflecting the rate of change of sine.",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx} (\\sin x).",
+            "solution": "\\begin{aligned}\n\\text{Using the standard derivative formula: } \\\\\n\\frac{d}{dx} (\\sin x) &= \\cos x\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Derivative of Cosine Function",
+        "formula": "\\frac{d}{dx} \\cos x = -\\sin x",
+        "variables": {
+            "x": "Real variable (angle in radians)"
+        },
+        "description": "The derivative of the cosine function is the negative sine function.",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx} (\\cos 3x).",
+            "solution": "\\begin{aligned}\n\\text{Using the chain rule: Let } u = 3x, \\ \\frac{du}{dx} = 3 \\\\\n\\frac{d}{dx} (\\cos u) &= -\\sin u \\cdot \\frac{du}{dx} \\\\\n&= -\\sin(3x) \\cdot 3 = -3 \\sin(3x)\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Derivative of Tangent Function",
+        "formula": "\\frac{d}{dx} \\tan x = \\sec^2 x",
+        "variables": {
+            "x": "Real variable (angle in radians)"
+        },
+        "description": "The derivative of the tangent function is the square of the secant function.",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx} (\\tan 2x).",
+            "solution": "\\begin{aligned}\n\\text{Using the chain rule: Let } u = 2x, \\ \\frac{du}{dx} = 2 \\\\\n\\frac{d}{dx} (\\tan u) &= \\sec^2 u \\cdot \\frac{du}{dx} \\\\\n&= \\sec^2(2x) \\cdot 2 = 2 \\sec^2(2x)\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Derivative of Cotangent Function",
+        "formula": "\\frac{d}{dx} \\cot x = -\\csc^2 x",
+        "variables": {
+            "x": "Real variable (angle in radians)"
+        },
+        "description": "The derivative of the cotangent function is the negative square of the cosecant function.",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx} (\\cot x).",
+            "solution": "\\begin{aligned}\n\\text{Using the standard derivative formula: } \\\\\n\\frac{d}{dx} (\\cot x) &= -\\csc^2 x\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Derivative of Secant Function",
+        "formula": "\\frac{d}{dx} \\sec x = \\sec x \\tan x",
+        "variables": {
+            "x": "Real variable (angle in radians)"
+        },
+        "description": "The derivative of the secant function is the product of secant and tangent.",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx} (\\sec 4x).",
+            "solution": "\\begin{aligned}\n\\text{Using the chain rule: Let } u = 4x, \\ \\frac{du}{dx} = 4 \\\\\n\\frac{d}{dx} (\\sec u) &= \\sec u \\tan u \\cdot \\frac{du}{dx} \\\\\n&= \\sec(4x) \\tan(4x) \\cdot 4 = 4 \\sec(4x) \\tan(4x)\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Derivative of Cosecant Function",
+        "formula": "\\frac{d}{dx} \\csc x = -\\csc x \\cot x",
+        "variables": {
+            "x": "Real variable (angle in radians)"
+        },
+        "description": "The derivative of the cosecant function is the negative product of cosecant and cotangent.",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx} (\\csc x).",
+            "solution": "\\begin{aligned}\n\\text{Using the standard derivative formula: } \\\\\n\\frac{d}{dx} (\\csc x) &= -\\csc x \\cot x\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Product Rule with Trigonometric Functions",
+        "formula": "\\frac{d}{dx} [f(x) g(x)] = f'(x) g(x) + f(x) g'(x)",
+        "variables": {
+            "f(x), g(x)": "Trigonometric functions"
+        },
+        "description": "Applies the product rule to differentiate products involving trigonometric functions.",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx} (\\sin x \\cos x).",
+            "solution": "\\begin{aligned}\n\\text{Let } f(x) = \\sin x, \\ g(x) = \\cos x \\\\\nf'(x) = \\cos x, \\ g'(x) = -\\sin x \\\\\n\\frac{d}{dx} (\\sin x \\cos x) &= \\cos x \\cdot \\cos x + \\sin x \\cdot (-\\sin x) \\\\\n&= \\cos^2 x - \\sin^2 x = \\cos 2x\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Chain Rule with Trigonometric Functions",
+        "formula": "\\frac{d}{dx} [\\sin (g(x))] = \\cos (g(x)) \\cdot g'(x)",
+        "variables": {
+            "g(x)": "Inner function"
+        },
+        "description": "The chain rule for composite trigonometric functions.",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx} (\\sin (x^2 + 1)).",
+            "solution": "\\begin{aligned}\n\\text{Let } u = x^2 + 1, \\ \\frac{du}{dx} = 2x \\\\\n\\frac{d}{dx} (\\sin u) &= \\cos u \\cdot \\frac{du}{dx} \\\\\n&= \\cos(x^2 + 1) \\cdot 2x = 2x \\cos(x^2 + 1)\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Indefinite Integral of Sine",
+        "formula": "\\int \\sin x \\, dx = -\\cos x + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "The antiderivative of the sine function is the negative cosine.",
+        "example": {
+            "problem": "\\text{Find } \\int 3 \\sin 2x \\, dx.",
+            "solution": "\\begin{aligned}\n\\int 3 \\sin 2x \\, dx &= 3 \\int \\sin 2x \\, dx \\\\\n\\text{Let } u = 2x, \\ du = 2 \\, dx, \\ dx = \\frac{du}{2} \\\\\n&= 3 \\cdot \\frac{1}{2} \\int \\sin u \\, du = \\frac{3}{2} (-\\cos u) + C \\\\\n&= -\\frac{3}{2} \\cos 2x + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Indefinite Integral of Cosine",
+        "formula": "\\int \\cos x \\, dx = \\sin x + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "The antiderivative of the cosine function is the sine function.",
+        "example": {
+            "problem": "\\text{Find } \\int \\cos (5x) \\, dx.",
+            "solution": "\\begin{aligned}\n\\text{Let } u = 5x, \\ du = 5 \\, dx, \\ dx = \\frac{du}{5} \\\\\n\\int \\cos (5x) \\, dx &= \\int \\cos u \\cdot \\frac{du}{5} = \\frac{1}{5} \\int \\cos u \\, du \\\\\n&= \\frac{1}{5} \\sin u + C = \\frac{1}{5} \\sin 5x + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Indefinite Integral of Tangent",
+        "formula": "\\int \\tan x \\, dx = -\\ln |\\cos x| + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "The integral of tangent is the negative natural log of the absolute value of cosine.",
+        "example": {
+            "problem": "\\text{Find } \\int \\tan 3x \\, dx.",
+            "solution": "\\begin{aligned}\n\\int \\tan 3x \\, dx &= \\int \\frac{\\sin 3x}{\\cos 3x} \\, dx \\\\\n\\text{Let } u = \\cos 3x, \\ du = -3 \\sin 3x \\, dx, \\ dx = \\frac{du}{-3 \\sin 3x} \\\\\n&= \\int \\frac{1}{u} \\cdot \\left( -\\frac{1}{3} \\right) du = -\\frac{1}{3} \\int \\frac{1}{u} \\, du \\\\\n&= -\\frac{1}{3} \\ln |u| + C = -\\frac{1}{3} \\ln |\\cos 3x| + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Indefinite Integral of Secant",
+        "formula": "\\int \\sec x \\, dx = \\ln |\\sec x + \\tan x| + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "The integral of secant involves the natural log of secant plus tangent.",
+        "example": {
+            "problem": "\\text{Find } \\int \\sec 2x \\, dx.",
+            "solution": "\\begin{aligned}\n\\int \\sec 2x \\, dx &= \\int \\sec 2x \\, dx \\\\\n\\text{Let } u = 2x, \\ du = 2 \\, dx, \\ dx = \\frac{du}{2} \\\\\n&= \\frac{1}{2} \\int \\sec u \\, du = \\frac{1}{2} \\ln |\\sec u + \\tan u| + C \\\\\n&= \\frac{1}{2} \\ln |\\sec 2x + \\tan 2x| + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Indefinite Integral of Cosecant",
+        "formula": "\\int \\csc x \\, dx = -\\ln |\\csc x + \\cot x| + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "The integral of cosecant is the negative natural log of cosecant plus cotangent.",
+        "example": {
+            "problem": "\\text{Find } \\int \\csc x \\, dx.",
+            "solution": "\\begin{aligned}\n\\text{Using the standard integral formula: } \\\\\n\\int \\csc x \\, dx &= -\\ln |\\csc x + \\cot x| + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Indefinite Integral of Cotangent",
+        "formula": "\\int \\cot x \\, dx = \\ln |\\sin x| + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "The integral of cotangent is the natural log of the absolute value of sine.",
+        "example": {
+            "problem": "\\text{Find } \\int \\cot 4x \\, dx.",
+            "solution": "\\begin{aligned}\n\\int \\cot 4x \\, dx &= \\int \\frac{\\cos 4x}{\\sin 4x} \\, dx \\\\\n\\text{Let } u = \\sin 4x, \\ du = 4 \\cos 4x \\, dx, \\ dx = \\frac{du}{4 \\cos 4x} \\\\\n&= \\int \\frac{1}{u} \\cdot \\frac{du}{4} = \\frac{1}{4} \\int \\frac{1}{u} \\, du \\\\\n&= \\frac{1}{4} \\ln |u| + C = \\frac{1}{4} \\ln |\\sin 4x| + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integration by Parts for Trigonometric Product",
+        "formula": "\\int u \\, dv = uv - \\int v \\, du",
+        "variables": {
+            "u, dv": "Parts for trigonometric integrals"
+        },
+        "description": "Integration by parts is useful for products involving trigonometric functions.",
+        "example": {
+            "problem": "\\text{Find } \\int x \\sin x \\, dx.",
+            "solution": "\\begin{aligned}\n\\text{Let } u = x, \\ dv = \\sin x \\, dx \\\\\n\\text{Then } du = dx, \\ v = \\int \\sin x \\, dx = -\\cos x \\\\\n\\int x \\sin x \\, dx &= uv - \\int v \\, du \\\\\n&= x (-\\cos x) - \\int (-\\cos x) \\, dx \\\\\n&= -x \\cos x + \\int \\cos x \\, dx \\\\\n&= -x \\cos x + \\sin x + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Reduction Formula for Sine Powers",
+        "formula": "\\int \\sin^n x \\, dx = -\\frac{\\sin^{n-1} x \\cos x}{n} + \\frac{n-1}{n} \\int \\sin^{n-2} x \\, dx",
+        "variables": {
+            "n": "Positive integer greater than 1"
+        },
+        "description": "Reduction formula to simplify integrals of powers of sine.",
+        "example": {
+            "problem": "\\text{Find } \\int \\sin^3 x \\, dx.",
+            "solution": "\\begin{aligned}\n\\text{Using reduction with } n=3: \\\\\n\\int \\sin^3 x \\, dx &= -\\frac{\\sin^{2} x \\cos x}{3} + \\frac{2}{3} \\int \\sin x \\, dx \\\\\n&= -\\frac{\\sin^{2} x \\cos x}{3} + \\frac{2}{3} (-\\cos x) + C \\\\\n&= -\\frac{\\sin^{2} x \\cos x}{3} - \\frac{2}{3} \\cos x + C \\\\\n&= -\\frac{\\cos x (\\sin^2 x + 2)}{3} + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Second Derivative of Sine Function",
+        "formula": "\\frac{d^2}{dx^2} \\sin x = -\\sin x",
+        "variables": {
+            "x": "Real variable (angle in radians)"
+        },
+        "description": "The second derivative of sine brings it back to negative sine, showing periodic differentiation.",
+        "example": {
+            "problem": "\\text{Find } \\frac{d^2}{dx^2} (\\sin 5x).",
+            "solution": "\\begin{aligned}\n\\frac{d}{dx}(\\sin 5x) &= 5 \\cos 5x \\\\\n\\frac{d^2}{dx^2}(\\sin 5x) &= \\frac{d}{dx}(5 \\cos 5x) \\\\\n&= -25 \\sin 5x\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Second Derivative of Cosine Function",
+        "formula": "\\frac{d^2}{dx^2} \\cos x = -\\cos x",
+        "variables": {
+            "x": "Real variable (angle in radians)"
+        },
+        "description": "The second derivative of cosine returns negative cosine, showing periodic differentiation.",
+        "example": {
+            "problem": "\\text{Find } \\frac{d^2}{dx^2} (\\cos 3x).",
+            "solution": "\\begin{aligned}\n\\frac{d}{dx}(\\cos 3x) &= -3 \\sin 3x \\\\\n\\frac{d^2}{dx^2}(\\cos 3x) &= \\frac{d}{dx}(-3 \\sin 3x) \\\\\n&= -9 \\cos 3x\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Definite Integral of Sine",
+        "formula": "\\int_0^{\\pi} \\sin x \\, dx = 2",
+        "variables": {
+            "limits": "From 0 to \\pi"
+        },
+        "description": "The area under the sine curve from 0 to \\pi equals 2.",
+        "example": {
+            "problem": "\\text{Evaluate } \\int_0^{\\pi} \\sin x \\, dx.",
+            "solution": "\\begin{aligned}\n\\int_0^{\\pi} \\sin x \\, dx &= [-\\cos x]_0^{\\pi} \\\\\n&= (-\\cos \\pi) - (-\\cos 0) \\\\\n&= (1) - (-1) = 2\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Definite Integral of Cosine",
+        "formula": "\\int_0^{\\pi/2} \\cos x \\, dx = 1",
+        "variables": {
+            "limits": "From 0 to \\pi/2"
+        },
+        "description": "The area under the cosine curve from 0 to \\pi/2 equals 1.",
+        "example": {
+            "problem": "\\text{Evaluate } \\int_0^{\\pi/2} \\cos x \\, dx.",
+            "solution": "\\begin{aligned}\n\\int_0^{\\pi/2} \\cos x \\, dx &= [\\sin x]_0^{\\pi/2} \\\\\n&= \\sin(\\pi/2) - \\sin(0) \\\\\n&= 1 - 0 = 1\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integral of Product of Sine and Cosine",
+        "formula": "\\int \\sin x \\cos x \\, dx = \\tfrac{1}{2} \\sin^2 x + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "Using the substitution method, the product of sine and cosine integrates to half sine squared.",
+        "example": {
+            "problem": "\\text{Find } \\int \\sin x \\cos x \\, dx.",
+            "solution": "\\begin{aligned}\n\\text{Let } u = \\sin x, \\ du = \\cos x \\, dx \\\\\n\\int \\sin x \\cos x \\, dx &= \\int u \\, du = \\frac{u^2}{2} + C \\\\\n&= \\frac{1}{2} \\sin^2 x + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integral of Sine Squared",
+        "formula": "\\int \\sin^2 x \\, dx = \\frac{x}{2} - \\frac{1}{4} \\sin(2x) + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "Using the power-reduction identity, the integral of sine squared is expressed in terms of linear and trigonometric functions.",
+        "example": {
+            "problem": "\\text{Find } \\int \\sin^2 x \\, dx.",
+            "solution": "\\begin{aligned}\n\\sin^2 x &= \\tfrac{1}{2} (1 - \\cos 2x) \\\\\n\\int \\sin^2 x \\, dx &= \\tfrac{1}{2} \\int (1 - \\cos 2x) \\, dx \\\\\n&= \\tfrac{x}{2} - \\tfrac{1}{4} \\sin(2x) + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integral of Cosine Squared",
+        "formula": "\\int \\cos^2 x \\, dx = \\frac{x}{2} + \\frac{1}{4} \\sin(2x) + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "Using the power-reduction identity, the integral of cosine squared is expressed in terms of linear and trigonometric functions.",
+        "example": {
+            "problem": "\\text{Find } \\int \\cos^2 x \\, dx.",
+            "solution": "\\begin{aligned}\n\\cos^2 x &= \\tfrac{1}{2} (1 + \\cos 2x) \\\\\n\\int \\cos^2 x \\, dx &= \\tfrac{1}{2} \\int (1 + \\cos 2x) \\, dx \\\\\n&= \\tfrac{x}{2} + \\tfrac{1}{4} \\sin(2x) + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Derivative of Hyperbolic Sine",
+        "formula": "\\frac{d}{dx} \\sinh x = \\cosh x",
+        "variables": {
+            "x": "Real variable"
+        },
+        "description": "The derivative of hyperbolic sine is hyperbolic cosine.",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx}(\\sinh 3x).",
+            "solution": "\\begin{aligned}\n\\frac{d}{dx}(\\sinh 3x) &= 3 \\cosh 3x\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Derivative of Hyperbolic Cosine",
+        "formula": "\\frac{d}{dx} \\cosh x = \\sinh x",
+        "variables": {
+            "x": "Real variable"
+        },
+        "description": "The derivative of hyperbolic cosine is hyperbolic sine.",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx}(\\cosh 2x).",
+            "solution": "\\begin{aligned}\n\\frac{d}{dx}(\\cosh 2x) &= 2 \\sinh 2x\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Derivative of Hyperbolic Tangent",
+        "formula": "\\frac{d}{dx} \\tanh x = \\operatorname{sech}^2 x",
+        "variables": {
+            "x": "Real variable"
+        },
+        "description": "The derivative of hyperbolic tangent is hyperbolic secant squared.",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx}(\\tanh x).",
+            "solution": "\\begin{aligned}\n\\frac{d}{dx}(\\tanh x) &= \\operatorname{sech}^2 x\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Derivative of Hyperbolic Cotangent",
+        "formula": "\\frac{d}{dx} \\coth x = -\\operatorname{csch}^2 x",
+        "variables": {
+            "x": "Real variable (x ≠ 0)"
+        },
+        "description": "The derivative of hyperbolic cotangent is negative hyperbolic cosecant squared.",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx}(\\coth x).",
+            "solution": "\\begin{aligned}\n\\frac{d}{dx}(\\coth x) &= -\\operatorname{csch}^2 x\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Derivative of Hyperbolic Secant",
+        "formula": "\\frac{d}{dx} \\operatorname{sech} x = -\\operatorname{sech} x \\, \\tanh x",
+        "variables": {
+            "x": "Real variable"
+        },
+        "description": "The derivative of hyperbolic secant is negative sech times tanh.",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx}(\\operatorname{sech} x).",
+            "solution": "\\begin{aligned}\n\\frac{d}{dx}(\\operatorname{sech} x) &= -\\operatorname{sech} x \\, \\tanh x\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Derivative of Hyperbolic Cosecant",
+        "formula": "\\frac{d}{dx} \\operatorname{csch} x = -\\operatorname{csch} x \\, \\coth x",
+        "variables": {
+            "x": "Real variable (x ≠ 0)"
+        },
+        "description": "The derivative of hyperbolic cosecant is negative csch times coth.",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx}(\\operatorname{csch} x).",
+            "solution": "\\begin{aligned}\n\\frac{d}{dx}(\\operatorname{csch} x) &= -\\operatorname{csch} x \\, \\coth x\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integral of Hyperbolic Sine",
+        "formula": "\\int \\sinh x \\, dx = \\cosh x + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "The antiderivative of hyperbolic sine is hyperbolic cosine.",
+        "example": {
+            "problem": "\\text{Find } \\int \\sinh(4x) \\, dx.",
+            "solution": "\\begin{aligned}\n\\int \\sinh(4x) \\, dx &= \\frac{1}{4} \\cosh(4x) + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integral of Hyperbolic Cosine",
+        "formula": "\\int \\cosh x \\, dx = \\sinh x + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "The antiderivative of hyperbolic cosine is hyperbolic sine.",
+        "example": {
+            "problem": "\\text{Find } \\int \\cosh(5x) \\, dx.",
+            "solution": "\\begin{aligned}\n\\int \\cosh(5x) \\, dx &= \\frac{1}{5} \\sinh(5x) + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integral of Hyperbolic Tangent",
+        "formula": "\\int \\tanh x \\, dx = \\ln(\\cosh x) + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "The integral of hyperbolic tangent is the natural log of hyperbolic cosine.",
+        "example": {
+            "problem": "\\text{Find } \\int \\tanh x \\, dx.",
+            "solution": "\\begin{aligned}\n\\int \\tanh x \\, dx &= \\ln(\\cosh x) + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integral of Hyperbolic Cotangent",
+        "formula": "\\int \\coth x \\, dx = \\ln|\\sinh x| + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "The integral of hyperbolic cotangent is the natural log of hyperbolic sine.",
+        "example": {
+            "problem": "\\text{Find } \\int \\coth x \\, dx.",
+            "solution": "\\begin{aligned}\n\\int \\coth x \\, dx &= \\ln|\\sinh x| + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integral of Hyperbolic Secant",
+        "formula": "\\int \\operatorname{sech} x \\, dx = \\arctan(\\sinh x) + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "The integral of hyperbolic secant is the arctangent of hyperbolic sine.",
+        "example": {
+            "problem": "\\text{Find } \\int \\operatorname{sech} x \\, dx.",
+            "solution": "\\begin{aligned}\n\\int \\operatorname{sech} x \\, dx &= \\arctan(\\sinh x) + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integral of Hyperbolic Cosecant",
+        "formula": "\\int \\operatorname{csch} x \\, dx = \\ln \\left| \\tanh \\frac{x}{2} \\right| + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "The integral of hyperbolic cosecant is expressed in terms of natural log of hyperbolic tangent half-angle.",
+        "example": {
+            "problem": "\\text{Find } \\int \\operatorname{csch} x \\, dx.",
+            "solution": "\\begin{aligned}\n\\int \\operatorname{csch} x \\, dx &= \\ln \\left| \\tanh \\frac{x}{2} \\right| + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Derivative of Inverse Sine",
+        "formula": "\\frac{d}{dx} \\arcsin x = \\frac{1}{\\sqrt{1 - x^2}}",
+        "variables": {
+            "x": "Real variable, |x| < 1"
+        },
+        "description": "The derivative of arcsin is the reciprocal of the square root of (1 - x^2).",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx}(\\arcsin(2x)).",
+            "solution": "\\begin{aligned}\n\\frac{d}{dx}(\\arcsin(2x)) &= \\frac{1}{\\sqrt{1-(2x)^2}} \\cdot 2 \\\\\n&= \\frac{2}{\\sqrt{1-4x^2}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Derivative of Inverse Cosine",
+        "formula": "\\frac{d}{dx} \\arccos x = -\\frac{1}{\\sqrt{1 - x^2}}",
+        "variables": {
+            "x": "Real variable, |x| < 1"
+        },
+        "description": "The derivative of arccos is the negative reciprocal of the square root of (1 - x^2).",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx}(\\arccos(3x)).",
+            "solution": "\\begin{aligned}\n\\frac{d}{dx}(\\arccos(3x)) &= -\\frac{1}{\\sqrt{1-(3x)^2}} \\cdot 3 \\\\\n&= -\\frac{3}{\\sqrt{1-9x^2}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Derivative of Inverse Tangent",
+        "formula": "\\frac{d}{dx} \\arctan x = \\frac{1}{1 + x^2}",
+        "variables": {
+            "x": "Real variable"
+        },
+        "description": "The derivative of arctan is the reciprocal of (1 + x^2).",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx}(\\arctan(5x)).",
+            "solution": "\\begin{aligned}\n\\frac{d}{dx}(\\arctan(5x)) &= \\frac{1}{1+(5x)^2} \\cdot 5 \\\\\n&= \\frac{5}{1+25x^2}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Derivative of Inverse Cotangent",
+        "formula": "\\frac{d}{dx} \\arccot x = -\\frac{1}{1 + x^2}",
+        "variables": {
+            "x": "Real variable"
+        },
+        "description": "The derivative of arccot is the negative reciprocal of (1 + x^2).",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx}(\\arccot x).",
+            "solution": "\\begin{aligned}\n\\frac{d}{dx}(\\arccot x) &= -\\frac{1}{1+x^2}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Derivative of Inverse Secant",
+        "formula": "\\frac{d}{dx} \\arcsec x = \\frac{1}{|x|\\sqrt{x^2 - 1}}",
+        "variables": {
+            "x": "Real variable, |x| > 1"
+        },
+        "description": "The derivative of arcsec involves both |x| and the square root of (x^2 - 1).",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx}(\\arcsec(2x)).",
+            "solution": "\\begin{aligned}\n\\frac{d}{dx}(\\arcsec(2x)) &= \\frac{1}{|(2x)| \\sqrt{(2x)^2 - 1}} \\cdot 2 \\\\\n&= \\frac{2}{|2x| \\sqrt{4x^2 - 1}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Derivative of Inverse Cosecant",
+        "formula": "\\frac{d}{dx} \\arccsc x = -\\frac{1}{|x|\\sqrt{x^2 - 1}}",
+        "variables": {
+            "x": "Real variable, |x| > 1"
+        },
+        "description": "The derivative of arccsc is negative and involves both |x| and the square root of (x^2 - 1).",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx}(\\arccsc x).",
+            "solution": "\\begin{aligned}\n\\frac{d}{dx}(\\arccsc x) &= -\\frac{1}{|x|\\sqrt{x^2 - 1}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Derivative of Inverse Hyperbolic Sine",
+        "formula": "\\frac{d}{dx} \\operatorname{arsinh} x = \\frac{1}{\\sqrt{1+x^2}}",
+        "variables": {
+            "x": "Real variable"
+        },
+        "description": "The derivative of arsinh is the reciprocal of the square root of (1 + x^2).",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx}(\\operatorname{arsinh}(x^2)).",
+            "solution": "\\begin{aligned}\n\\frac{d}{dx}(\\operatorname{arsinh}(x^2)) &= \\frac{1}{\\sqrt{1+(x^2)^2}} \\cdot 2x \\\\\n&= \\frac{2x}{\\sqrt{1+x^4}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Derivative of Inverse Hyperbolic Cosine",
+        "formula": "\\frac{d}{dx} \\operatorname{arcosh} x = \\frac{1}{\\sqrt{x^2-1}}",
+        "variables": {
+            "x": "Real variable, x > 1"
+        },
+        "description": "The derivative of arcosh is the reciprocal of the square root of (x^2 - 1).",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx}(\\operatorname{arcosh}(2x)).",
+            "solution": "\\begin{aligned}\n\\frac{d}{dx}(\\operatorname{arcosh}(2x)) &= \\frac{1}{\\sqrt{(2x)^2 - 1}} \\cdot 2 \\\\\n&= \\frac{2}{\\sqrt{4x^2 - 1}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Derivative of Inverse Hyperbolic Tangent",
+        "formula": "\\frac{d}{dx} \\operatorname{artanh} x = \\frac{1}{1-x^2}",
+        "variables": {
+            "x": "Real variable, |x| < 1"
+        },
+        "description": "The derivative of artanh is the reciprocal of (1 - x^2).",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx}(\\operatorname{artanh}(3x)).",
+            "solution": "\\begin{aligned}\n\\frac{d}{dx}(\\operatorname{artanh}(3x)) &= \\frac{1}{1-(3x)^2} \\cdot 3 \\\\\n&= \\frac{3}{1-9x^2}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Derivative of Inverse Hyperbolic Cotangent",
+        "formula": "\\frac{d}{dx} \\operatorname{arcoth} x = \\frac{1}{1-x^2}",
+        "variables": {
+            "x": "Real variable, |x| > 1"
+        },
+        "description": "The derivative of arcoth is the reciprocal of (1 - x^2).",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx}(\\operatorname{arcoth}(x)).",
+            "solution": "\\begin{aligned}\n\\frac{d}{dx}(\\operatorname{arcoth}(x)) &= \\frac{1}{1-x^2}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Derivative of Inverse Hyperbolic Secant",
+        "formula": "\\frac{d}{dx} \\operatorname{arsech} x = -\\frac{1}{x\\sqrt{1-x^2}}",
+        "variables": {
+            "x": "Real variable, 0 < x ≤ 1"
+        },
+        "description": "The derivative of arsech involves x in the denominator and the square root of (1-x^2).",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx}(\\operatorname{arsech}(x)).",
+            "solution": "\\begin{aligned}\n\\frac{d}{dx}(\\operatorname{arsech}(x)) &= -\\frac{1}{x\\sqrt{1-x^2}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Derivative of Inverse Hyperbolic Cosecant",
+        "formula": "\\frac{d}{dx} \\operatorname{arcsch} x = -\\frac{1}{|x|\\sqrt{1+x^2}}",
+        "variables": {
+            "x": "Real variable, x ≠ 0"
+        },
+        "description": "The derivative of arcsch involves both |x| and the square root of (1 + x^2).",
+        "example": {
+            "problem": "\\text{Find } \\frac{d}{dx}(\\operatorname{arcsch}(x)).",
+            "solution": "\\begin{aligned}\n\\frac{d}{dx}(\\operatorname{arcsch}(x)) &= -\\frac{1}{|x|\\sqrt{1+x^2}}\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integral of Inverse Sine",
+        "formula": "\\int \\arcsin x \\, dx = x \\, \\arcsin x + \\sqrt{1-x^2} + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "The integral of arcsin is computed using integration by parts.",
+        "example": {
+            "problem": "\\text{Find } \\int \\arcsin x \\, dx.",
+            "solution": "\\begin{aligned}\n\\int \\arcsin x \\, dx &= x \\, \\arcsin x + \\sqrt{1-x^2} + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integral of Inverse Cosine",
+        "formula": "\\int \\arccos x \\, dx = x \\, \\arccos x - \\sqrt{1-x^2} + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "The integral of arccos is found by applying integration by parts.",
+        "example": {
+            "problem": "\\text{Find } \\int \\arccos x \\, dx.",
+            "solution": "\\begin{aligned}\n\\int \\arccos x \\, dx &= x \\, \\arccos x - \\sqrt{1-x^2} + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integral of Inverse Tangent",
+        "formula": "\\int \\arctan x \\, dx = x \\, \\arctan x - \\tfrac{1}{2} \\ln(1+x^2) + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "The integral of arctan is computed by parts, involving ln(1+x^2).",
+        "example": {
+            "problem": "\\text{Find } \\int \\arctan x \\, dx.",
+            "solution": "\\begin{aligned}\n\\int \\arctan x \\, dx &= x \\, \\arctan x - \\tfrac{1}{2} \\ln(1+x^2) + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integral of Inverse Cotangent",
+        "formula": "\\int \\arccot x \\, dx = x \\, \\arccot x + \\tfrac{1}{2} \\ln(1+x^2) + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "The integral of arccot involves ln(1+x^2) but with a positive sign compared to arctan.",
+        "example": {
+            "problem": "\\text{Find } \\int \\arccot x \\, dx.",
+            "solution": "\\begin{aligned}\n\\int \\arccot x \\, dx &= x \\, \\arccot x + \\tfrac{1}{2} \\ln(1+x^2) + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integral of Inverse Secant",
+        "formula": "\\int \\arcsec x \\, dx = x \\, \\arcsec x - \\ln |x + \\sqrt{x^2-1}| + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "The integral of arcsec involves a logarithmic term with square roots.",
+        "example": {
+            "problem": "\\text{Find } \\int \\arcsec x \\, dx.",
+            "solution": "\\begin{aligned}\n\\int \\arcsec x \\, dx &= x \\, \\arcsec x - \\ln |x + \\sqrt{x^2-1}| + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integral of Inverse Cosecant",
+        "formula": "\\int \\arccsc x \\, dx = x \\, \\arccsc x + \\ln |x + \\sqrt{x^2-1}| + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "The integral of arccsc involves a logarithmic term similar to arcsec.",
+        "example": {
+            "problem": "\\text{Find } \\int \\arccsc x \\, dx.",
+            "solution": "\\begin{aligned}\n\\int \\arccsc x \\, dx &= x \\, \\arccsc x + \\ln |x + \\sqrt{x^2-1}| + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integral of Inverse Hyperbolic Sine",
+        "formula": "\\int \\operatorname{arsinh} x \\, dx = x \\, \\operatorname{arsinh} x - \\sqrt{1+x^2} + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "The integral of arsinh is obtained using integration by parts.",
+        "example": {
+            "problem": "\\text{Find } \\int \\operatorname{arsinh} x \\, dx.",
+            "solution": "\\begin{aligned}\n\\int \\operatorname{arsinh} x \\, dx &= x \\, \\operatorname{arsinh} x - \\sqrt{1+x^2} + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integral of Inverse Hyperbolic Cosine",
+        "formula": "\\int \\operatorname{arcosh} x \\, dx = x \\, \\operatorname{arcosh} x - \\sqrt{x^2-1} + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "The integral of arcosh involves the square root of (x^2 - 1).",
+        "example": {
+            "problem": "\\text{Find } \\int \\operatorname{arcosh} x \\, dx.",
+            "solution": "\\begin{aligned}\n\\int \\operatorname{arcosh} x \\, dx &= x \\, \\operatorname{arcosh} x - \\sqrt{x^2-1} + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integral of Inverse Hyperbolic Tangent",
+        "formula": "\\int \\operatorname{artanh} x \\, dx = x \\, \\operatorname{artanh} x + \\tfrac{1}{2} \\ln(1-x^2) + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "The integral of artanh introduces a logarithmic term with (1-x^2).",
+        "example": {
+            "problem": "\\text{Find } \\int \\operatorname{artanh} x \\, dx.",
+            "solution": "\\begin{aligned}\n\\int \\operatorname{artanh} x \\, dx &= x \\, \\operatorname{artanh} x + \\tfrac{1}{2} \\ln(1-x^2) + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integral of Inverse Hyperbolic Cotangent",
+        "formula": "\\int \\operatorname{arcoth} x \\, dx = x \\, \\operatorname{arcoth} x + \\tfrac{1}{2} \\ln(x^2-1) + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "The integral of arcoth involves ln(x^2 - 1).",
+        "example": {
+            "problem": "\\text{Find } \\int \\operatorname{arcoth} x \\, dx.",
+            "solution": "\\begin{aligned}\n\\int \\operatorname{arcoth} x \\, dx &= x \\, \\operatorname{arcoth} x + \\tfrac{1}{2} \\ln(x^2-1) + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integral of Inverse Hyperbolic Secant",
+        "formula": "\\int \\operatorname{arsech} x \\, dx = x \\, \\operatorname{arsech} x + \\arcsin(x) + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "The integral of arsech can be expressed with arcsin.",
+        "example": {
+            "problem": "\\text{Find } \\int \\operatorname{arsech} x \\, dx.",
+            "solution": "\\begin{aligned}\n\\int \\operatorname{arsech} x \\, dx &= x \\, \\operatorname{arsech} x + \\arcsin(x) + C\n\\end{aligned}"
+        }
+    },
+    {
+        "name": "Integral of Inverse Hyperbolic Cosecant",
+        "formula": "\\int \\operatorname{arcsch} x \\, dx = x \\, \\operatorname{arcsch} x + \\ln \\left| x + \\sqrt{1+x^2} \\right| + C",
+        "variables": {
+            "C": "Constant of integration"
+        },
+        "description": "The integral of arcsch involves both arcsch and a logarithmic expression.",
+        "example": {
+            "problem": "\\text{Find } \\int \\operatorname{arcsch} x \\, dx.",
+            "solution": "\\begin{aligned}\n\\int \\operatorname{arcsch} x \\, dx &= x \\, \\operatorname{arcsch} x + \\ln \\left| x + \\sqrt{1+x^2} \\right| + C\n\\end{aligned}"
+        }
+    }
+]

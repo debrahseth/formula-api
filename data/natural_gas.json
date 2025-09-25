@@ -1,0 +1,709 @@
+[
+    {
+        "name": "Number of Moles",
+        "formula": "n = \\frac{m}{MW}",
+        "variables": {
+            "n": "Number of moles (lbmol)",
+            "m": "Mass (lbm)",
+            "MW": "Molecular weight (lbm/lbmol)"
+        },
+        "description": "Calculates the number of moles from mass and molecular weight."
+    },
+    {
+        "name": "Z-Factor",
+        "formula": "Z = \\frac{PV}{nRT}",
+        "variables": {
+            "Z": "Compressibility factor",
+            "P": "Pressure (psia)",
+            "V": "Volume (cu ft)",
+            "n": "Number of moles (lbmol)",
+            "R": "Gas constant (10.73 psia ft³ / °R lbmol)",
+            "T": "Temperature (°R)"
+        },
+        "description": "Compressibility factor relating real gas volume to ideal gas volume."
+    },
+    {
+        "name": "Specific Gravity of Ideal Gas",
+        "formula": "G_i^{id} = \\frac{MW_i}{MW_a}",
+        "variables": {
+            "G_i^{id}": "Specific gravity of ideal gas component i",
+            "MW_i": "Molecular weight of component i (lbm/lbmol)",
+            "MW_a": "Molecular weight of air (lbm/lbmol)"
+        },
+        "description": "Molecular weight ratio for component i relative to air."
+    },
+    {
+        "name": "Ideal Gas Specific Gravity",
+        "formula": "G^{id} = \\frac{MW}{MW_a}",
+        "variables": {
+            "G^{id}": "Ideal gas specific gravity",
+            "MW": "Molecular weight of gas (lbm/lbmol)",
+            "MW_a": "Molecular weight of air (lbm/lbmol)"
+        },
+        "description": "Ratio of gas molecular weight to air molecular weight."
+    },
+    {
+        "name": "Pitzer Acentric Factor",
+        "formula": "\\omega = -\\log_{10}\\left(\\frac{P}{P_c}\\right)_{T_r=0.7} - 1",
+        "variables": {
+            "\\omega": "Acentric factor",
+            "P": "Pressure at reduced temperature 0.7 (psia)",
+            "P_c": "Critical pressure (psia)"
+        },
+        "description": "Dimensionless parameter used in corresponding states correlations."
+    },
+    {
+        "name": "Summation Factor",
+        "formula": "H = \\left(-\\frac{B}{RT}\\right)^{0.5}",
+        "variables": {
+            "H": "Summation factor",
+            "B": "Second virial coefficient",
+            "R": "Gas constant",
+            "T": "Temperature (°R)"
+        },
+        "description": "Factor used in virial equation calculations."
+    },
+    {
+        "name": "Density of Ideal Gas Relative to Air",
+        "formula": "I = \\frac{MW \\cdot P}{10.73 \\cdot T}",
+        "variables": {
+            "I": "Density of ideal gas relative to air",
+            "MW": "Molecular weight (lbm/lbmol)",
+            "P": "Pressure (psia)",
+            "T": "Temperature (°R)"
+        },
+        "description": "Calculated by dividing molar mass by average molar mass of air."
+    },
+    {
+        "name": "Heat of Vaporization",
+        "formula": "L = H_{vap} - H_{liq}",
+        "variables": {
+            "L": "Heat of vaporization",
+            "H_{vap}": "Enthalpy of saturated vapor",
+            "H_{liq}": "Enthalpy of saturated liquid"
+        },
+        "description": "At the boiling temperature."
+    },
+    {
+        "name": "Air Required for Combustion",
+        "formula": "M = \\frac{V_{air}}{V_{gas}} = \\frac{n + \\frac{m}{4} - \\frac{h}{2} + j}{0.2096}",
+        "variables": {
+            "M": "Air required for combustion",
+            "V_{air}": "Volume of air",
+            "V_{gas}": "Volume of gas",
+            "n": "Number of carbon atoms",
+            "m": "Number of hydrogen atoms",
+            "h": "Number of oxygen atoms",
+            "j": "Number of sulfur atoms"
+        },
+        "description": "For compounds of formula C_n H_m O_h S_j N_k."
+    },
+    {
+        "name": "Ideal Gas Law",
+        "formula": "PV = ZnRT = \\frac{Z m RT}{MW}",
+        "variables": {
+            "P": "Pressure (psia)",
+            "V": "Volume (cu ft)",
+            "Z": "Compressibility factor",
+            "n": "Number of moles (lbmol)",
+            "R": "Gas constant (10.73 psia ft³ / °R lbmol)",
+            "T": "Temperature (°R)",
+            "m": "Mass (lbm)",
+            "MW": "Molecular weight (lbm/lbmol)"
+        },
+        "description": "Relates pressure, volume, temperature for real gases."
+    },
+    {
+        "name": "Gas Density",
+        "formula": "\\rho = \\frac{MW \\cdot P}{10.73 \\cdot RT \\cdot Z}",
+        "variables": {
+            "\\rho": "Density (lbm/ft³)",
+            "MW": "Molecular weight (lbm/lbmol)",
+            "P": "Pressure (psia)",
+            "R": "Gas constant (10.73 psia ft³ / °R lbmol)",
+            "T": "Temperature (°R)",
+            "Z": "Compressibility factor"
+        },
+        "description": "Density of real gas."
+    },
+    {
+        "name": "Reduced Temperature",
+        "formula": "T_r = \\frac{T}{T_c}",
+        "variables": {
+            "T_r": "Reduced temperature",
+            "T": "Temperature (°R)",
+            "T_c": "Critical temperature (°R)"
+        },
+        "description": "Ratio of temperature to critical temperature."
+    },
+    {
+        "name": "Reduced Pressure",
+        "formula": "P_r = \\frac{P}{P_c}",
+        "variables": {
+            "P_r": "Reduced pressure",
+            "P": "Pressure (psia)",
+            "P_c": "Critical pressure (psia)"
+        },
+        "description": "Ratio of pressure to critical pressure."
+    },
+    {
+        "name": "Pseudo-Reduced Temperature",
+        "formula": "T_r = \\frac{T}{\\sum y_i T_{c_i}} = \\frac{T}{T_{pc}}",
+        "variables": {
+            "T_r": "Pseudo-reduced temperature",
+            "T": "Temperature (°R)",
+            "y_i": "Mole fraction of component i",
+            "T_{c_i}": "Critical temperature of component i (°R)",
+            "T_{pc}": "Pseudo-critical temperature (°R)"
+        },
+        "description": "For gas mixtures."
+    },
+    {
+        "name": "Pseudo-Reduced Pressure",
+        "formula": "P_r = \\frac{P}{\\sum y_i P_{c_i}} = \\frac{P}{P_{pc}}",
+        "variables": {
+            "P_r": "Pseudo-reduced pressure",
+            "P": "Pressure (psia)",
+            "y_i": "Mole fraction of component i",
+            "P_{c_i}": "Critical pressure of component i (psia)",
+            "P_{pc}": "Pseudo-critical pressure (psia)"
+        },
+        "description": "For gas mixtures."
+    },
+    {
+        "name": "Average Molecular Weight",
+        "formula": "MW_{avg} = \\sum y_i MW_i",
+        "variables": {
+            "MW_{avg}": "Average molecular weight (lbm/lbmol)",
+            "y_i": "Mole fraction of component i",
+            "MW_i": "Molecular weight of component i (lbm/lbmol)"
+        },
+        "description": "Molar average molecular weight for mixtures."
+    },
+    {
+        "name": "Density of Propane and Heavier Components",
+        "formula": "\\rho_{C3+} = \\frac{Wt_{C3+}}{Vol_{C3+}}",
+        "variables": {
+            "\\rho_{C3+}": "Density of C3+ components",
+            "Wt_{C3+}": "Weight of C3+ components",
+            "Vol_{C3+}": "Volume of C3+ components"
+        },
+        "description": "Assuming additive volumes."
+    },
+    {
+        "name": "Weight Percent of N2 and C2",
+        "formula": "Wt\\% (N_2 + C_2) = 100 \\cdot \\frac{Wt (N_2 + C_2)}{Wt (N_2 + C_2 +)}",
+        "variables": {
+            "Wt\\% (N_2 + C_2)": "Weight percent of N2 and C2",
+            "Wt (N_2 + C_2)": "Weight of N2 and C2",
+            "Wt (N_2 + C_2 +)": "Weight of N2, C2 and heavier"
+        },
+        "description": "In the N2 + C2+ fraction."
+    },
+    {
+        "name": "Density of CO2 and N2 + C2 +",
+        "formula": "\\rho_{CO2 + (N2 + C2 +)} = \\frac{Wt_{CO2} + Wt_{(N2 + C2 +)}}{Vol_{CO2} + Vol_{(N2 + C2 +)}}",
+        "variables": {
+            "\\rho_{CO2 + (N2 + C2 +)}": "Density of CO2 and N2 + C2 +",
+            "Wt_{CO2}": "Weight of CO2",
+            "Wt_{(N2 + C2 +)}": "Weight of N2 + C2 +",
+            "Vol_{CO2}": "Volume of CO2",
+            "Vol_{(N2 + C2 +)}": "Volume of N2 + C2 +"
+        },
+        "description": "On an additive volume basis."
+    },
+    {
+        "name": "Weight Percent Methane",
+        "formula": "Wt\\%_{methane} = 100 \\cdot \\frac{Wt_{methane}}{total Wt}",
+        "variables": {
+            "Wt\\%_{methane}": "Weight percent methane",
+            "Wt_{methane}": "Weight of methane",
+            "total Wt": "Total weight"
+        },
+        "description": "In the mixture."
+    },
+    {
+        "name": "Liquid Viscosity",
+        "formula": "\\eta = A e^{1.8 B / T}",
+        "variables": {
+            "\\eta": "Kinematic viscosity (centistokes)",
+            "A": "Constant from equation",
+            "B": "Constant from equation",
+            "T": "Temperature (°R)"
+        },
+        "description": "For crude oil or fraction."
+    },
+    {
+        "name": "Constant A for Viscosity",
+        "formula": "A = (101.78 T_b^{-0.175} - 29.263) K_W / B",
+        "variables": {
+            "A": "Constant",
+            "T_b": "Boiling point (°F)",
+            "K_W": "Watson characterization factor",
+            "B": "Constant"
+        },
+        "description": "Used in viscosity calculation."
+    },
+    {
+        "name": "Natural Log of B for Viscosity",
+        "formula": "\\ln B = 4.717 + 0.00292 T_b",
+        "variables": {
+            "B": "Constant",
+            "T_b": "Boiling point (°F)"
+        },
+        "description": "Used in viscosity calculation."
+    },
+    {
+        "name": "Acentric Factor Alternative",
+        "formula": "\\omega = \\frac{3}{7} \\frac{\\log (P_c / 14.7)}{T_c / T_b - 1} - 1",
+        "variables": {
+            "\\omega": "Acentric factor",
+            "P_c": "Critical pressure (psia)",
+            "T_c": "Critical temperature (°R)",
+            "T_b": "Boiling temperature (°R)"
+        },
+        "description": "When vapor pressure is not known."
+    },
+    {
+        "name": "Pseudo-Critical Pressure for Petroleum Fractions",
+        "formula": "P_{pc} = 3.12281 \\times 10^9 T^{-2.3125} S^{2.3201}",
+        "variables": {
+            "P_{pc}": "Pseudo-critical pressure (psia)",
+            "T": "Mean average boiling point (°R)",
+            "S": "Specific gravity at 60°F"
+        },
+        "description": "For petroleum fractions."
+    },
+    {
+        "name": "Pseudo-Critical Temperature for Petroleum Fractions",
+        "formula": "T_{pc} = 24.2787 T^{0.58848} S^{0.3596}",
+        "variables": {
+            "T_{pc}": "Pseudo-critical temperature (°R)",
+            "T": "Mean average boiling point (°R)",
+            "S": "Specific gravity at 60°F"
+        },
+        "description": "For petroleum fractions."
+    },
+    {
+        "name": "Molecular Weight from MeABP and S",
+        "formula": "MW = 204.38 T^{0.118} S^{1.88} e^{0.00218 T - 3.075 S}",
+        "variables": {
+            "MW": "Molecular weight (lbm/lbmol)",
+            "T": "Mean average boiling point (°R)",
+            "S": "Specific gravity at 60°F"
+        },
+        "description": "For petroleum fractions."
+    },
+    {
+        "name": "Critical Volume Mixing Rule",
+        "formula": "V_{cm} = \\sum y_i V_{c_i}",
+        "variables": {
+            "V_{cm}": "Mixture critical volume",
+            "y_i": "Mole fraction of component i",
+            "V_{c_i}": "Critical volume of component i"
+        },
+        "description": "Prausnitz and Gunn mixing rule."
+    },
+    {
+        "name": "Critical Compressibility Mixing Rule",
+        "formula": "Z_{cm} = \\sum y_i Z_{c_i}",
+        "variables": {
+            "Z_{cm}": "Mixture critical compressibility",
+            "y_i": "Mole fraction of component i",
+            "Z_{c_i}": "Critical compressibility of component i"
+        },
+        "description": "Prausnitz and Gunn mixing rule."
+    },
+    {
+        "name": "Critical Temperature Mixing Rule",
+        "formula": "T_{cm} = \\sum y_i T_{c_i}",
+        "variables": {
+            "T_{cm}": "Mixture critical temperature (°R)",
+            "y_i": "Mole fraction of component i",
+            "T_{c_i}": "Critical temperature of component i (°R)"
+        },
+        "description": "Prausnitz and Gunn mixing rule."
+    },
+    {
+        "name": "Critical Pressure Mixing Rule",
+        "formula": "P_{cm} = \\frac{Z_{cm} R T_{cm}}{V_{cm}}",
+        "variables": {
+            "P_{cm}": "Mixture critical pressure (psia)",
+            "Z_{cm}": "Mixture critical compressibility",
+            "R": "Gas constant",
+            "T_{cm}": "Mixture critical temperature (°R)",
+            "V_{cm}": "Mixture critical volume"
+        },
+        "description": "Prausnitz and Gunn mixing rule."
+    },
+    {
+        "name": "Dean and Stiel Viscosity Factor",
+        "formula": "\\xi = 5.4402 \\frac{T^{1/6}}{MW^{1/2} P^{2/3}}",
+        "variables": {
+            "\\xi": "Factor for viscosity calculation",
+            "T": "Temperature (°R)",
+            "MW": "Molecular weight (lbm/lbmol)",
+            "P": "Pressure (psia)"
+        },
+        "description": "Used in Dean and Stiel method for gas viscosity."
+    },
+    {
+        "name": "Dean and Stiel Viscosity for Tr < 1.5",
+        "formula": "\\xi \\mu_A = 166.8 \\times 10^{-5} (0.1338 T_r - 0.0932)^{5/9}",
+        "variables": {
+            "\\xi": "Factor",
+            "\\mu_A": "Viscosity at 1 atm",
+            "T_r": "Reduced temperature"
+        },
+        "description": "For reduced temperatures less than 1.5."
+    },
+    {
+        "name": "Dean and Stiel Viscosity for Tr >= 1.5",
+        "formula": "\\xi \\mu_A = 34 \\times 10^{-5} T_r^{8/9}",
+        "variables": {
+            "\\xi": "Factor",
+            "\\mu_A": "Viscosity at 1 atm",
+            "T_r": "Reduced temperature"
+        },
+        "description": "For reduced temperatures greater than or equal to 1.5."
+    },
+    {
+        "name": "Surface Tension for Binaries",
+        "formula": "\\sigma_m = \\frac{\\sigma_1 \\sigma_2}{\\sigma_1 x_2 + \\sigma_2 x_1}",
+        "variables": {
+            "\\sigma_m": "Surface tension of mixture (dynes/cm)",
+            "\\sigma_1": "Surface tension of component 1 (dynes/cm)",
+            "\\sigma_2": "Surface tension of component 2 (dynes/cm)",
+            "x_1": "Mole fraction of component 1",
+            "x_2": "Mole fraction of component 2"
+        },
+        "description": "For binary mixtures at or near atmospheric pressure."
+    },
+    {
+        "name": "Gross Heating Value",
+        "formula": "H_v^{id} = \\sum y_i H_{v_i}^{id}",
+        "variables": {
+            "H_v^{id}": "Gross heating value per unit volume of ideal gas (Btu/cu ft)",
+            "y_i": "Mole fraction of component i",
+            "H_{v_i}^{id}": "Ideal gross heating value of component i"
+        },
+        "description": "For mixtures."
+    },
+    {
+        "name": "Specific Gravity",
+        "formula": "G = \\frac{\\rho}{\\rho_a} = \\frac{P T_a Z_a}{P_a T Z} \\cdot \\frac{MW}{MW_a}",
+        "variables": {
+            "G": "Specific gravity",
+            "\\rho": "Gas density",
+            "\\rho_a": "Air density",
+            "P": "Pressure (psia)",
+            "T_a": "Air temperature (°R)",
+            "Z_a": "Air compressibility factor",
+            "P_a": "Air pressure (psia)",
+            "T": "Temperature (°R)",
+            "Z": "Compressibility factor",
+            "MW": "Molecular weight (lbm/lbmol)",
+            "MW_a": "Air molecular weight (lbm/lbmol)"
+        },
+        "description": "Ratio of gas density to air density."
+    },
+    {
+        "name": "Ideal Specific Gravity",
+        "formula": "G^{id} = \\sum y_i G_i^{id}",
+        "variables": {
+            "G^{id}": "Ideal specific gravity",
+            "y_i": "Mole fraction of component i",
+            "G_i^{id}": "Ideal specific gravity of component i"
+        },
+        "description": "Molar average for mixtures."
+    },
+    {
+        "name": "Mole Fraction of Water",
+        "formula": "y_w = h_g \\frac{P_w}{P} = \\frac{n_w}{1 + n_w}",
+        "variables": {
+            "y_w": "Mole fraction of water",
+            "h_g": "Relative humidity",
+            "P_w": "Vapor pressure of water (psia)",
+            "P": "Pressure (psia)",
+            "n_w": "Moles of water"
+        },
+        "description": "For wet gas."
+    },
+    {
+        "name": "Moles of Water",
+        "formula": "n_w = \\frac{y_w}{1 - y_w}",
+        "variables": {
+            "n_w": "Moles of water",
+            "y_w": "Mole fraction of water"
+        },
+        "description": "Rearranged from relative humidity definition."
+    },
+    {
+        "name": "Corrected Mole Fraction",
+        "formula": "y_{i(cor)} = (1 - y_w) y_i",
+        "variables": {
+            "y_{i(cor)}": "Corrected mole fraction of component i",
+            "y_w": "Mole fraction of water",
+            "y_i": "Mole fraction of component i (dry basis)"
+        },
+        "description": "Adjusted for water content."
+    },
+    {
+        "name": "Gross Heating Value with Water Correction",
+        "formula": "H_v^{id} = (1 - y_w) \\sum y_i H_{v_i}^{id}",
+        "variables": {
+            "H_v^{id}": "Gross heating value (Btu/cu ft)",
+            "y_w": "Mole fraction of water",
+            "y_i": "Mole fraction of component i",
+            "H_{v_i}^{id}": "Ideal gross heating value of component i"
+        },
+        "description": "When analysis is on dry basis."
+    },
+    {
+        "name": "Gross Heating Value Including Water",
+        "formula": "H_v^{id} = \\sum y_i H_{v_i}^{id} - y_w H_{v_w}^{id}",
+        "variables": {
+            "H_v^{id}": "Gross heating value (Btu/cu ft)",
+            "y_i": "Mole fraction of component i",
+            "H_{v_i}^{id}": "Ideal gross heating value of component i",
+            "y_w": "Mole fraction of water",
+            "H_{v_w}^{id}": "Ideal gross heating value of water"
+        },
+        "description": "When water is included in summation."
+    },
+    {
+        "name": "Cost of Gas",
+        "formula": "c = p \\cdot \\frac{V}{\\Delta t}",
+        "variables": {
+            "c": "Cost of gas",
+            "p": "Price of real gas",
+            "\\Delta t": "Accounting period"
+        },
+        "description": "Simple accounting equation."
+    },
+    {
+        "name": "Ideal Gas Volumetric Flow Rate",
+        "formula": "\\dot{V}^{id} = \\frac{\\dot{V}}{Z}",
+        "variables": {
+            "\\dot{V}^{id}": "Ideal gas volumetric flow rate",
+            "\\dot{V}": "Real gas volumetric flow rate",
+            "Z": "Compressibility factor"
+        },
+        "description": "Conversion from real to ideal gas flow."
+    },
+    {
+        "name": "Z-Factor at Low Pressure",
+        "formula": "Z = 1 + B \\frac{P}{RT}",
+        "variables": {
+            "Z": "Compressibility factor",
+            "B": "Second virial coefficient",
+            "P": "Pressure (psia)",
+            "R": "Gas constant",
+            "T": "Temperature (°R)"
+        },
+        "description": "Virial equation approximation."
+    },
+    {
+        "name": "-B/RT for Mixtures",
+        "formula": "-\\frac{B}{RT} = \\left( \\sum x_i b_i^{1/2} \\right)^2",
+        "variables": {
+            "B": "Second virial coefficient",
+            "R": "Gas constant",
+            "T": "Temperature (°R)",
+            "x_i": "Mole fraction of component i",
+            "b_i": "Summation factor for component i"
+        },
+        "description": "For mixtures."
+    },
+    {
+        "name": "Summation Factor b_i",
+        "formula": "b_i = \\left( -\\frac{B}{RT} \\right)^{1/2}",
+        "variables": {
+            "b_i": "Summation factor for component i",
+            "B": "Second virial coefficient",
+            "R": "Gas constant",
+            "T": "Temperature (°R)"
+        },
+        "description": "Individual component factor."
+    },
+    {
+        "name": "Volumetric Average Boiling Point",
+        "formula": "VABP = \\frac{t_{10} + t_{30} + t_{50} + t_{70} + t_{90}}{5}",
+        "variables": {
+            "VABP": "Volumetric average boiling point (°F)",
+            "t_{10}": "Temperature at 10% volume fraction (°F)",
+            "t_{30}": "Temperature at 30% volume fraction (°F)",
+            "t_{50}": "Temperature at 50% volume fraction (°F)",
+            "t_{70}": "Temperature at 70% volume fraction (°F)",
+            "t_{90}": "Temperature at 90% volume fraction (°F)"
+        },
+        "description": "From ASTM D-86 distillation data."
+    },
+    {
+        "name": "Slope of ASTM Distillation",
+        "formula": "slope = \\frac{t_{90} - t_{10}}{80}",
+        "variables": {
+            "slope": "10% to 90% slope",
+            "t_{90}": "Temperature at 90% volume fraction (°F)",
+            "t_{10}": "Temperature at 10% volume fraction (°F)"
+        },
+        "description": "For ASTM D-86 distillation."
+    },
+    {
+        "name": "Pseudo-Critical Temperature Adjustment",
+        "formula": "T_c' = T_c - \\epsilon",
+        "variables": {
+            "T_c'": "Adjusted pseudo-critical temperature (°R)",
+            "T_c": "Pseudo-critical temperature (°R)",
+            "\\epsilon": "Pseudo-critical temperature adjustment factor (°R)"
+        },
+        "description": "For sour gases."
+    },
+    {
+        "name": "Adjusted Pseudo-Critical Pressure",
+        "formula": "P_c' = \\frac{P_c T_c'}{T_c + B' (1 - B') \\epsilon}",
+        "variables": {
+            "P_c'": "Adjusted pseudo-critical pressure (psia)",
+            "P_c": "Pseudo-critical pressure (psia)",
+            "T_c'": "Adjusted pseudo-critical temperature (°R)",
+            "T_c": "Pseudo-critical temperature (°R)",
+            "B'": "Mole fraction of H2S",
+            "\\epsilon": "Adjustment factor (°R)"
+        },
+        "description": "For sour gases."
+    },
+    {
+        "name": "Adjusted Pseudo-Reduced Temperature",
+        "formula": "T_r' = \\frac{T}{T_c'}",
+        "variables": {
+            "T_r'": "Adjusted pseudo-reduced temperature",
+            "T": "Temperature (°R)",
+            "T_c'": "Adjusted pseudo-critical temperature (°R)"
+        },
+        "description": "For sour gases."
+    },
+    {
+        "name": "Adjusted Pseudo-Reduced Pressure",
+        "formula": "P_r' = \\frac{P}{P_c'}",
+        "variables": {
+            "P_r'": "Adjusted pseudo-reduced pressure",
+            "P": "Pressure (psia)",
+            "P_c'": "Adjusted pseudo-critical pressure (psia)"
+        },
+        "description": "For sour gases."
+    },
+    {
+        "name": "Temperature Coefficient of Density",
+        "formula": "F = \\frac{(\\partial \\rho / \\partial T)_p}{\\rho} = - \\frac{(\\partial V / \\partial T)_p}{V}",
+        "variables": {
+            "F": "Temperature coefficient of density (1/°F)",
+            "\\rho": "Density",
+            "T": "Temperature (°F)",
+            "p": "Pressure (constant)",
+            "V": "Volume"
+        },
+        "description": "Relates to expansion coefficient."
+    },
+    {
+        "name": "Combustion Reaction Air Requirement",
+        "formula": "M = \\frac{V_{air}}{V_{gas}} = \\frac{n + m/4 - h/2 + j}{0.2096}",
+        "variables": {
+            "M": "Air required for combustion (vol air / vol gas)",
+            "n": "Carbon atoms",
+            "m": "Hydrogen atoms",
+            "h": "Oxygen atoms",
+            "j": "Sulfur atoms"
+        },
+        "description": "For organic compound C_n H_m O_h S_j N_k."
+    },
+    {
+        "name": "Dean and Stiel Factor ξ μ_A for Tr > 1.5",
+        "formula": "\\xi \\mu_A = 34 \\times 10^{-5} (T_r)^{8/9}",
+        "variables": {
+            "\\xi": "Factor",
+            "\\mu_A": "Viscosity at 1 atm (centipoise)",
+            "T_r": "Reduced temperature"
+        },
+        "description": "For reduced temperatures greater than 1.5."
+    },
+    {
+        "name": "Cube Root Rule for Thermal Conductivity",
+        "formula": "k_m = \\frac{\\sum y_i k_i (MW_i)^{1/3}}{\\sum y_i (MW_i)^{1/3}}",
+        "variables": {
+            "k_m": "Mixture thermal conductivity",
+            "y_i": "Mole fraction of component i",
+            "k_i": "Thermal conductivity of component i",
+            "MW_i": "Molecular weight of component i"
+        },
+        "description": "For gaseous mixtures."
+    },
+    {
+        "name": "Cost of Gas Accounting",
+        "formula": "c = p \\cdot \\dot{V} / \\Delta t",
+        "variables": {
+            "c": "Cost of gas",
+            "p": "Price of real gas",
+            "\\dot{V}": "Real gas volumetric flow rate",
+            "\\Delta t": "Accounting period"
+        },
+        "description": "Accounting for gas cost."
+    },
+    {
+        "name": "Ideal Specific Gravity from Measured G",
+        "formula": "G^{id} = G \\frac{P_a T Z}{P T_a Z_a}",
+        "variables": {
+            "G^{id}": "Ideal specific gravity",
+            "G": "Measured specific gravity",
+            "P_a": "Air pressure",
+            "T": "Temperature (°R)",
+            "Z": "Compressibility factor",
+            "P": "Pressure",
+            "T_a": "Air temperature (°R)",
+            "Z_a": "Air compressibility factor"
+        },
+        "description": "When composition is not available."
+    },
+    {
+        "name": "Gross Heating Value Adjusted Pseudo-Critical Temperature",
+        "formula": "T_c' = T_c - \\epsilon",
+        "variables": {
+            "T_c'": "Adjusted pseudo-critical temperature (°R)",
+            "T_c": "Pseudo-critical temperature (°R)",
+            "\\epsilon": "Adjustment factor from Fig. 23-8 (°R)"
+        },
+        "description": "Wichert and Aziz method for sour gases."
+    },
+    {
+        "name": "Gas Density",
+        "formula": "\\rho = \\frac{P MW}{Z R T}",
+        "variables": {
+            "\\rho": "Density (lb/ft³ or kg/m³)",
+            "P": "System pressure (psia or kPa)",
+            "MW": "Molecular weight",
+            "Z": "Compressibility of gas",
+            "R": "Gas constant (10.73 psia ft³/(lbmol °R) or 8.3145 kPa m³/(kmol K))",
+            "T": "System temperature in °R or K"
+        },
+        "description": "Calculates the density of a gas based on pressure, molecular weight, compressibility, gas constant, and temperature."
+    },
+    {
+        "name": "Vapour-Solid Equilibrium Calculation",
+        "formula": "\\sum \\left(\\frac{y_n}{K_n}\\right) = 1.0",
+        "variables": {
+            "y_n": "Mole fraction of hydrocarbon component n in gas on a water-free basis",
+            "K_n": "Vapor-solid equilibrium constant for hydrocarbon component n"
+        },
+        "description": "Equilibrium condition for vapor-solid systems."
+    },
+    {
+        "name": "Hammerschmidt Equation for Hydrate Formation",
+        "formula": "\\Delta T = \\frac{K W}{100 (MW) - (MW) W}",
+        "variables": {
+            "\\Delta T": "Depression of hydrate formation temperature (°F)",
+            "K": "Molecular weight of inhibitor constant",
+            "W": "Weight percent of inhibitor in final water phase",
+            "MW": "Molecular weight"
+        },
+        "description": "Predicts the temperature depression due to hydrate inhibitors."
+    }
+]

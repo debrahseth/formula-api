@@ -1,0 +1,1336 @@
+[
+    {
+        "name": "Magnetic Force on a Moving Charge",
+        "formula": "F = q v B \\sin\\theta",
+        "description": "Magnitude of the magnetic force on a charged particle moving with velocity v in a magnetic field B.",
+        "variables": {
+            "F": "magnetic force (N)",
+            "q": "charge of the particle (C)",
+            "v": "velocity of the particle (m/s)",
+            "B": "magnetic field strength (T)",
+            "\\theta": "angle between v and B (rad)"
+        }
+    },
+    {
+        "name": "Magnetic Force on a Current-Carrying Wire",
+        "formula": "F = I L B \\sin\\theta",
+        "description": "Force on a straight segment of wire carrying current I in a uniform magnetic field B.",
+        "variables": {
+            "F": "magnetic force (N)",
+            "I": "current in the wire (A)",
+            "L": "length of the wire segment in the field (m)",
+            "B": "magnetic field strength (T)",
+            "\\theta": "angle between wire and field (rad)"
+        }
+    },
+    {
+        "name": "Torque on a Current Loop",
+        "formula": "\\tau = n I A B \\sin\\theta",
+        "description": "Torque on a planar loop of area A carrying current I in a uniform magnetic field.",
+        "variables": {
+            "\\tau": "torque (N·m)",
+            "n": "number of turns in the loop",
+            "I": "current in the loop (A)",
+            "A": "area of the loop (m^2)",
+            "B": "magnetic field strength (T)",
+            "\\theta": "angle between the normal to the loop and B (rad)"
+        }
+    },
+    {
+        "name": "Magnetic Dipole Moment",
+        "formula": "\\vec{\\mu} = n I \\vec{A}",
+        "description": "Magnetic dipole moment of a coil of n turns, area A, current I.",
+        "variables": {
+            "\\vec{\\mu}": "magnetic dipole moment (A·m^2)",
+            "n": "number of turns",
+            "I": "current (A)",
+            "\\vec{A}": "area vector of the loop (m^2)"
+        }
+    },
+    {
+        "name": "Magnetic Flux",
+        "formula": "\\Phi_B = \\int \\vec{B} \\cdot d\\vec{A} = B A \\cos\\theta",
+        "description": "Magnetic flux through an area A in a uniform magnetic field B.",
+        "variables": {
+            "\\Phi_B": "magnetic flux (Wb)",
+            "\\vec{B}": "magnetic field vector (T)",
+            "A": "area (m^2)",
+            "\\theta": "angle between B and area normal (rad)"
+        }
+    },
+    {
+        "name": "Gauss’s Law for Magnetism",
+        "formula": "\\oint \\vec{B} \\cdot d\\vec{A} = 0",
+        "description": "The net magnetic flux through any closed surface is zero; there are no magnetic monopoles.",
+        "variables": {
+            "\\oint \\vec{B} \\cdot d\\vec{A}": "surface integral of magnetic field (Wb)"
+        }
+    },
+    {
+        "name": "Magnetic Field of a Long Straight Current-Carrying Wire",
+        "formula": "B = \\frac{\\mu_0 I}{2\\pi r}",
+        "description": "Magnetic field at distance r from a very long straight wire carrying current I.",
+        "variables": {
+            "B": "magnetic field (T)",
+            "\\mu_0": "permeability of free space (4\\pi×10^{-7} T·m/A)",
+            "I": "current (A)",
+            "r": "radial distance from wire (m)"
+        }
+    },
+    {
+        "name": "Magnetic Field Inside a Solenoid",
+        "formula": "B = \\mu_0 n I",
+        "description": "Magnetic field inside a long solenoid with n turns per unit length carrying current I.",
+        "variables": {
+            "B": "magnetic field (T)",
+            "\\mu_0": "permeability of free space (4\\pi×10^{-7} T·m/A)",
+            "n": "number of turns per unit length (1/m)",
+            "I": "current (A)"
+        }
+    },
+    {
+        "name": "Magnetic Field at Center of a Circular Loop",
+        "formula": "B = \\frac{\\mu_0 I}{2R}",
+        "description": "Magnetic field at the center of a circular loop of radius R carrying current I.",
+        "variables": {
+            "B": "magnetic field (T)",
+            "\\mu_0": "permeability of free space (4\\pi×10^{-7} T·m/A)",
+            "I": "current (A)",
+            "R": "radius of loop (m)"
+        }
+    },
+    {
+        "name": "Force Between Two Parallel Currents",
+        "formula": "\\frac{F}{L} = \\frac{\\mu_0 I_1 I_2}{2\\pi d}",
+        "description": "Force per unit length between two long parallel conductors separated by distance d carrying currents I1 and I2.",
+        "variables": {
+            "\\frac{F}{L}": "force per unit length (N/m)",
+            "\\mu_0": "permeability of free space (4\\pi×10^{-7} T·m/A)",
+            "I_1": "current in first wire (A)",
+            "I_2": "current in second wire (A)",
+            "d": "separation distance (m)"
+        }
+    },
+    {
+        "name": "Radius of Charged Particle’s Path in Magnetic Field",
+        "formula": "r = \\frac{m v}{q B}",
+        "description": "Radius of circular motion of a charged particle moving perpendicular to a uniform magnetic field.",
+        "variables": {
+            "r": "radius of path (m)",
+            "m": "mass of particle (kg)",
+            "v": "speed of particle (m/s)",
+            "q": "charge (C)",
+            "B": "magnetic field (T)"
+        }
+    },
+    {
+        "name": "Cyclotron Frequency",
+        "formula": "\\omega_c = \\frac{q B}{m}",
+        "description": "Angular frequency of circular motion of a charged particle in a magnetic field.",
+        "variables": {
+            "\\omega_c": "angular (cyclotron) frequency (rad/s)",
+            "q": "charge (C)",
+            "B": "magnetic field (T)",
+            "m": "mass of particle (kg)"
+        }
+    },
+    {
+        "name": "Energy Density of Magnetic Field",
+        "formula": "u_B = \\frac{B^2}{2\\mu_0}",
+        "description": "Energy per unit volume stored in a magnetic field.",
+        "variables": {
+            "u_B": "magnetic energy density (J/m^3)",
+            "B": "magnetic field (T)",
+            "\\mu_0": "permeability of free space (4\\pi×10^{-7} T·m/A)"
+        }
+    },
+    {
+        "name": "Biot–Savart Law (Differential Form)",
+        "formula": "d\\vec{B} = \\frac{\\mu_0}{4\\pi} \\frac{I d\\vec{\\ell} \\times \\hat{r}}{r^2}",
+        "description": "Differential contribution to the magnetic field from a current element I dℓ.",
+        "variables": {
+            "d\\vec{B}": "differential magnetic field (T)",
+            "\\mu_0": "permeability of free space (4\\pi×10^{-7} T·m/A)",
+            "I": "current (A)",
+            "d\\vec{\\ell}": "current element vector (m)",
+            "\\hat{r}": "unit vector from element to field point",
+            "r": "distance from element to field point (m)"
+        }
+    },
+    {
+        "name": "Ampère’s Law (Integral Form)",
+        "formula": "\\oint \\vec{B}\\cdot d\\vec{\\ell} = \\mu_0 I_{enc}",
+        "description": "The line integral of the magnetic field around a closed loop equals μ₀ times the enclosed current.",
+        "variables": {
+            "\\oint \\vec{B}\\cdot d\\vec{\\ell}": "line integral of B around loop (T·m)",
+            "\\mu_0": "permeability of free space (4\\pi×10^{-7} T·m/A)",
+            "I_{enc}": "net current enclosed by the loop (A)"
+        }
+    },
+    {
+        "name": "Faraday’s Law of Induction",
+        "formula": "\\mathcal{E} = - \\frac{d\\Phi_B}{dt}",
+        "description": "Induced emf equals the negative time rate of change of magnetic flux.",
+        "variables": {
+            "\\mathcal{E}": "induced electromotive force (V)",
+            "\\Phi_B": "magnetic flux through the circuit (Wb)",
+            "t": "time (s)"
+        }
+    },
+    {
+        "name": "Faraday’s Law for N Turns",
+        "formula": "\\mathcal{E} = -N \\frac{d\\Phi_B}{dt}",
+        "description": "Induced emf in a coil of N turns equals negative N times the time rate of change of flux.",
+        "variables": {
+            "N": "number of turns",
+            "\\mathcal{E}": "induced emf (V)",
+            "\\Phi_B": "flux per turn (Wb)",
+            "t": "time (s)"
+        }
+    },
+    {
+        "name": "Lenz’s Law (Qualitative)",
+        "formula": "\\text{Induced current produces a field opposing the change in flux}",
+        "description": "The direction of the induced current opposes the change causing it.",
+        "variables": {}
+    },
+    {
+        "name": "Motional EMF",
+        "formula": "\\mathcal{E} = B L v \\sin\\theta",
+        "description": "Emf induced in a straight conductor of length L moving with velocity v through a magnetic field B.",
+        "variables": {
+            "\\mathcal{E}": "emf (V)",
+            "B": "magnetic field (T)",
+            "L": "length of conductor (m)",
+            "v": "velocity of conductor (m/s)",
+            "\\theta": "angle between v and B (rad)"
+        }
+    },
+    {
+        "name": "Induced Electric Field (Nonconservative)",
+        "formula": "\\oint \\vec{E}\\cdot d\\vec{\\ell} = -\\frac{d\\Phi_B}{dt}",
+        "description": "Integral form of Faraday’s law relating the induced electric field to the changing magnetic flux.",
+        "variables": {
+            "\\vec{E}": "induced electric field (V/m)",
+            "d\\vec{\\ell}": "line element along path (m)",
+            "\\Phi_B": "magnetic flux (Wb)"
+        }
+    },
+    {
+        "name": "Self-Inductance Definition",
+        "formula": "L = \\frac{N \\Phi_B}{I}",
+        "description": "Self-inductance of a coil: ratio of flux linkage to current.",
+        "variables": {
+            "L": "inductance (H)",
+            "N": "number of turns",
+            "\\Phi_B": "flux per turn (Wb)",
+            "I": "current (A)"
+        }
+    },
+    {
+        "name": "Induced EMF in Inductor",
+        "formula": "\\mathcal{E}_L = -L \\frac{dI}{dt}",
+        "description": "Voltage across an inductor is proportional to the rate of change of current.",
+        "variables": {
+            "\\mathcal{E}_L": "induced emf (V)",
+            "L": "inductance (H)",
+            "I": "current (A)",
+            "t": "time (s)"
+        }
+    },
+    {
+        "name": "Energy Stored in an Inductor",
+        "formula": "U_L = \\frac{1}{2} L I^2",
+        "description": "Energy stored in the magnetic field of an inductor.",
+        "variables": {
+            "U_L": "energy (J)",
+            "L": "inductance (H)",
+            "I": "current (A)"
+        }
+    },
+    {
+        "name": "Mutual Inductance",
+        "formula": "M = \\frac{N_2 \\Phi_{21}}{I_1}",
+        "description": "Mutual inductance relating flux in coil 2 produced by current in coil 1.",
+        "variables": {
+            "M": "mutual inductance (H)",
+            "N_2": "turns of coil 2",
+            "\\Phi_{21}": "flux per turn in coil 2 due to coil 1 (Wb)",
+            "I_1": "current in coil 1 (A)"
+        }
+    },
+    {
+        "name": "Transformer Equation",
+        "formula": "\\frac{V_s}{V_p} = \\frac{N_s}{N_p}",
+        "description": "Voltage ratio in an ideal transformer equals the turns ratio.",
+        "variables": {
+            "V_s": "secondary voltage (V)",
+            "V_p": "primary voltage (V)",
+            "N_s": "secondary turns",
+            "N_p": "primary turns"
+        }
+    },
+    {
+        "name": "Current Ratio in Transformer",
+        "formula": "\\frac{I_s}{I_p} = \\frac{N_p}{N_s}",
+        "description": "In an ideal transformer, current ratio is inverse of turns ratio.",
+        "variables": {
+            "I_s": "secondary current (A)",
+            "I_p": "primary current (A)",
+            "N_s": "secondary turns",
+            "N_p": "primary turns"
+        }
+    },
+    {
+        "name": "AC Voltage (Instantaneous)",
+        "formula": "v(t) = V_{0}\\sin(\\omega t + \\phi)",
+        "description": "Instantaneous voltage in an AC circuit.",
+        "variables": {
+            "v(t)": "instantaneous voltage (V)",
+            "V_{0}": "peak voltage (V)",
+            "\\omega": "angular frequency (rad/s)",
+            "t": "time (s)",
+            "\\phi": "phase angle (rad)"
+        }
+    },
+    {
+        "name": "Root Mean Square Voltage",
+        "formula": "V_{\\text{rms}} = \\frac{V_{0}}{\\sqrt{2}}",
+        "description": "RMS voltage of a sinusoidal source.",
+        "variables": {
+            "V_{\\text{rms}}": "rms voltage (V)",
+            "V_{0}": "peak voltage (V)"
+        }
+    },
+    {
+        "name": "Root Mean Square Current",
+        "formula": "I_{\\text{rms}} = \\frac{I_{0}}{\\sqrt{2}}",
+        "description": "RMS current of a sinusoidal source.",
+        "variables": {
+            "I_{\\text{rms}}": "rms current (A)",
+            "I_{0}": "peak current (A)"
+        }
+    },
+    {
+        "name": "Impedance of a Resistor",
+        "formula": "Z_R = R",
+        "description": "Impedance of a pure resistor in an AC circuit.",
+        "variables": {
+            "Z_R": "impedance (Ω)",
+            "R": "resistance (Ω)"
+        }
+    },
+    {
+        "name": "Impedance of an Inductor",
+        "formula": "Z_L = j \\omega L",
+        "description": "Impedance of a pure inductor in an AC circuit.",
+        "variables": {
+            "Z_L": "inductive impedance (Ω)",
+            "\\omega": "angular frequency (rad/s)",
+            "L": "inductance (H)"
+        }
+    },
+    {
+        "name": "Impedance of a Capacitor",
+        "formula": "Z_C = \\frac{1}{j \\omega C}",
+        "description": "Impedance of a pure capacitor in an AC circuit.",
+        "variables": {
+            "Z_C": "capacitive impedance (Ω)",
+            "\\omega": "angular frequency (rad/s)",
+            "C": "capacitance (F)"
+        }
+    },
+    {
+        "name": "Total Impedance in Series RLC Circuit",
+        "formula": "Z = \\sqrt{R^2 + (\\omega L - \\frac{1}{\\omega C})^2}",
+        "description": "Magnitude of impedance of a series RLC circuit.",
+        "variables": {
+            "Z": "impedance (Ω)",
+            "R": "resistance (Ω)",
+            "L": "inductance (H)",
+            "C": "capacitance (F)",
+            "\\omega": "angular frequency (rad/s)"
+        }
+    },
+    {
+        "name": "Resonant Frequency of Series RLC Circuit",
+        "formula": "\\omega_0 = \\frac{1}{\\sqrt{LC}}",
+        "description": "Angular frequency at which series RLC circuit resonates.",
+        "variables": {
+            "\\omega_0": "resonant angular frequency (rad/s)",
+            "L": "inductance (H)",
+            "C": "capacitance (F)"
+        }
+    },
+    {
+        "name": "Average Power in AC Circuit",
+        "formula": "P_{\\text{avg}} = V_{\\text{rms}} I_{\\text{rms}} \\cos\\phi",
+        "description": "Average power delivered to an AC circuit.",
+        "variables": {
+            "P_{\\text{avg}}": "average power (W)",
+            "V_{\\text{rms}}": "rms voltage (V)",
+            "I_{\\text{rms}}": "rms current (A)",
+            "\\phi": "phase angle between voltage and current (rad)"
+        }
+    },
+    {
+        "name": "Reactive Power",
+        "formula": "Q = V_{\\text{rms}} I_{\\text{rms}} \\sin\\phi",
+        "description": "Reactive power in an AC circuit.",
+        "variables": {
+            "Q": "reactive power (VAR)",
+            "V_{\\text{rms}}": "rms voltage (V)",
+            "I_{\\text{rms}}": "rms current (A)",
+            "\\phi": "phase angle (rad)"
+        }
+    },
+    {
+        "name": "Apparent Power",
+        "formula": "S = V_{\\text{rms}} I_{\\text{rms}}",
+        "description": "Apparent power in an AC circuit.",
+        "variables": {
+            "S": "apparent power (VA)",
+            "V_{\\text{rms}}": "rms voltage (V)",
+            "I_{\\text{rms}}": "rms current (A)"
+        }
+    },
+    {
+        "name": "Speed of Electromagnetic Waves in Vacuum",
+        "formula": "c = \\frac{1}{\\sqrt{\\mu_0 \\varepsilon_0}}",
+        "description": "Speed of light in vacuum as determined by permittivity and permeability of free space.",
+        "variables": {
+            "c": "speed of light in vacuum (m/s)",
+            "\\mu_0": "permeability of free space (H/m)",
+            "\\varepsilon_0": "permittivity of free space (F/m)"
+        }
+    },
+    {
+        "name": "Relation Between Electric and Magnetic Fields",
+        "formula": "B_0 = \\frac{E_0}{c}",
+        "description": "Amplitude of the magnetic field is related to the electric field amplitude for an EM wave.",
+        "variables": {
+            "B_0": "magnetic field amplitude (T)",
+            "E_0": "electric field amplitude (V/m)",
+            "c": "speed of light (m/s)"
+        }
+    },
+    {
+        "name": "Wave Equations for Electric and Magnetic Fields",
+        "formula": "\\begin{cases}E(x,t) = E_0 \\sin(kx - \\omega t + \\phi_E) \\\\ B(x,t) = B_0 \\sin(kx - \\omega t + \\phi_B)\\end{cases}",
+        "description": "Space and time dependence of electric and magnetic fields in a plane EM wave.",
+        "variables": {
+            "E(x,t)": "electric field (V/m)",
+            "B(x,t)": "magnetic field (T)",
+            "E_0, B_0": "field amplitudes",
+            "k": "wave number (rad/m)",
+            "\\omega": "angular frequency (rad/s)",
+            "t": "time (s)",
+            "x": "position (m)",
+            "\\phi_E, \\phi_B": "phase constants (rad)"
+        }
+    },
+    {
+        "name": "Wave Number",
+        "formula": "k = \\frac{2\\pi}{\\lambda}",
+        "description": "Wave number of an electromagnetic wave.",
+        "variables": {
+            "k": "wave number (rad/m)",
+            "\\lambda": "wavelength (m)"
+        }
+    },
+    {
+        "name": "Angular Frequency",
+        "formula": "\\omega = 2\\pi f",
+        "description": "Angular frequency in terms of frequency.",
+        "variables": {
+            "\\omega": "angular frequency (rad/s)",
+            "f": "frequency (Hz)"
+        }
+    },
+    {
+        "name": "Frequency–Wavelength Relation",
+        "formula": "c = f \\lambda",
+        "description": "Relation between frequency and wavelength for electromagnetic waves.",
+        "variables": {
+            "c": "speed of light (m/s)",
+            "f": "frequency (Hz)",
+            "\\lambda": "wavelength (m)"
+        }
+    },
+    {
+        "name": "Energy Density of Electric Field",
+        "formula": "u_E = \\frac{1}{2} \\varepsilon_0 E^2",
+        "description": "Energy per unit volume stored in the electric field of an EM wave.",
+        "variables": {
+            "u_E": "electric energy density (J/m^3)",
+            "\\varepsilon_0": "permittivity of free space (F/m)",
+            "E": "instantaneous electric field (V/m)"
+        }
+    },
+    {
+        "name": "Energy Density of Magnetic Field",
+        "formula": "u_B = \\frac{B^2}{2\\mu_0}",
+        "description": "Energy per unit volume stored in the magnetic field of an EM wave.",
+        "variables": {
+            "u_B": "magnetic energy density (J/m^3)",
+            "B": "instantaneous magnetic field (T)",
+            "\\mu_0": "permeability of free space (H/m)"
+        }
+    },
+    {
+        "name": "Total Energy Density of EM Wave",
+        "formula": "u = u_E + u_B = \\varepsilon_0 E^2 = \\frac{B^2}{\\mu_0}",
+        "description": "Total energy density of an electromagnetic wave.",
+        "variables": {
+            "u": "total energy density (J/m^3)",
+            "E": "electric field (V/m)",
+            "B": "magnetic field (T)"
+        }
+    },
+    {
+        "name": "Poynting Vector",
+        "formula": "\\vec{S} = \\frac{1}{\\mu_0} (\\vec{E} \\times \\vec{B})",
+        "description": "Instantaneous rate of energy transfer per unit area carried by the EM wave.",
+        "variables": {
+            "\\vec{S}": "Poynting vector (W/m^2)",
+            "\\vec{E}": "electric field vector (V/m)",
+            "\\vec{B}": "magnetic field vector (T)",
+            "\\mu_0": "permeability of free space (H/m)"
+        }
+    },
+    {
+        "name": "Average Intensity of EM Wave",
+        "formula": "I = \\langle S \\rangle = \\frac{1}{2} c \\varepsilon_0 E_0^2 = \\frac{c B_0^2}{2\\mu_0}",
+        "description": "Time-averaged magnitude of the Poynting vector, intensity of the wave.",
+        "variables": {
+            "I": "intensity (W/m^2)",
+            "c": "speed of light (m/s)",
+            "\\varepsilon_0": "permittivity of free space (F/m)",
+            "E_0": "electric field amplitude (V/m)",
+            "B_0": "magnetic field amplitude (T)",
+            "\\mu_0": "permeability of free space (H/m)"
+        }
+    },
+    {
+        "name": "Radiation Pressure (Absorbing Surface)",
+        "formula": "p = \\frac{I}{c}",
+        "description": "Radiation pressure on a perfectly absorbing surface.",
+        "variables": {
+            "p": "pressure (Pa)",
+            "I": "intensity (W/m^2)",
+            "c": "speed of light (m/s)"
+        }
+    },
+    {
+        "name": "Radiation Pressure (Perfect Reflection)",
+        "formula": "p = \\frac{2I}{c}",
+        "description": "Radiation pressure on a perfectly reflecting surface.",
+        "variables": {
+            "p": "pressure (Pa)",
+            "I": "intensity (W/m^2)",
+            "c": "speed of light (m/s)"
+        }
+    },
+    {
+        "name": "Malus’s Law (Polarization Intensity)",
+        "formula": "I = I_0 \\cos^2\\theta",
+        "description": "Intensity of polarized light after passing through a polarizer at angle θ.",
+        "variables": {
+            "I": "transmitted intensity (W/m^2)",
+            "I_0": "initial intensity (W/m^2)",
+            "\\theta": "angle between light’s polarization direction and polarizer axis (rad)"
+        }
+    },
+    {
+        "name": "Index of Refraction",
+        "formula": "n = \\frac{c}{v}",
+        "description": "Index of refraction in terms of speed of light in medium.",
+        "variables": {
+            "n": "index of refraction (dimensionless)",
+            "c": "speed of light in vacuum (m/s)",
+            "v": "speed of light in medium (m/s)"
+        }
+    },
+    {
+        "name": "Reflection Coefficient (Normal Incidence)",
+        "formula": "R = \\left(\\frac{n_1 - n_2}{n_1 + n_2}\\right)^2",
+        "description": "Fraction of incident intensity reflected at normal incidence.",
+        "variables": {
+            "R": "reflection coefficient",
+            "n_1": "refractive index of medium 1",
+            "n_2": "refractive index of medium 2"
+        }
+    },
+    {
+        "name": "Transmission Coefficient (Normal Incidence)",
+        "formula": "T = 1 - R",
+        "description": "Fraction of incident intensity transmitted at normal incidence.",
+        "variables": {
+            "T": "transmission coefficient",
+            "R": "reflection coefficient"
+        }
+    },
+    {
+        "name": "Double Slit Interference Maxima",
+        "formula": "d \\sin\\theta = m \\lambda",
+        "description": "Condition for constructive interference (bright fringes) in double-slit experiment.",
+        "variables": {
+            "d": "distance between slits (m)",
+            "\\theta": "angle to the m-th bright fringe (rad)",
+            "m": "order of the fringe (integer)",
+            "\\lambda": "wavelength of light (m)"
+        }
+    },
+    {
+        "name": "Double Slit Interference Minima",
+        "formula": "d \\sin\\theta = (m + \\frac{1}{2}) \\lambda",
+        "description": "Condition for destructive interference (dark fringes) in double-slit experiment.",
+        "variables": {
+            "d": "distance between slits (m)",
+            "\\theta": "angle to the dark fringe (rad)",
+            "m": "integer order",
+            "\\lambda": "wavelength (m)"
+        }
+    },
+    {
+        "name": "Fringe Spacing on Screen",
+        "formula": "\\Delta y = \\frac{\\lambda L}{d}",
+        "description": "Linear spacing between adjacent fringes on a screen at distance L.",
+        "variables": {
+            "\\Delta y": "fringe separation (m)",
+            "\\lambda": "wavelength (m)",
+            "L": "distance from slits to screen (m)",
+            "d": "slit separation (m)"
+        }
+    },
+    {
+        "name": "Phase Difference Between Two Waves",
+        "formula": "\\Delta \\phi = \\frac{2\\pi}{\\lambda} \\Delta r",
+        "description": "Phase difference due to path difference between two coherent waves.",
+        "variables": {
+            "\\Delta \\phi": "phase difference (rad)",
+            "\\Delta r": "path difference (m)",
+            "\\lambda": "wavelength (m)"
+        }
+    },
+    {
+        "name": "Single Slit Diffraction Minima",
+        "formula": "a \\sin\\theta = m \\lambda",
+        "description": "Condition for minima in single-slit diffraction pattern.",
+        "variables": {
+            "a": "slit width (m)",
+            "\\theta": "angle of minima (rad)",
+            "m": "order of minima (integer, m=±1,±2...)",
+            "\\lambda": "wavelength (m)"
+        }
+    },
+    {
+        "name": "Angular Width of Central Maximum",
+        "formula": "\\Delta \\theta \\approx 2 \\frac{\\lambda}{a}",
+        "description": "Approximate angular width of the central diffraction maximum for a<<distance.",
+        "variables": {
+            "\\Delta \\theta": "angular width (rad)",
+            "\\lambda": "wavelength (m)",
+            "a": "slit width (m)"
+        }
+    },
+    {
+        "name": "Diffraction Grating Maxima",
+        "formula": "d \\sin\\theta = m \\lambda",
+        "description": "Condition for constructive interference in a diffraction grating with spacing d.",
+        "variables": {
+            "d": "grating spacing (m)",
+            "\\theta": "angle to the m-th order maximum (rad)",
+            "m": "order number",
+            "\\lambda": "wavelength (m)"
+        }
+    },
+    {
+        "name": "Resolving Power of a Grating",
+        "formula": "R = \\frac{\\lambda}{\\Delta \\lambda} = mN",
+        "description": "Resolving power of a diffraction grating in m-th order with N illuminated slits.",
+        "variables": {
+            "R": "resolving power",
+            "\\lambda": "wavelength (m)",
+            "\\Delta \\lambda": "smallest difference in wavelength resolved (m)",
+            "m": "diffraction order",
+            "N": "number of slits illuminated"
+        }
+    },
+    {
+        "name": "Thin Film Interference (Reflected Light, Constructive)",
+        "formula": "2 n t = (m + \\frac{1}{2}) \\lambda",
+        "description": "Constructive interference for light reflected from a thin film (with phase shift).",
+        "variables": {
+            "n": "refractive index of the film",
+            "t": "film thickness (m)",
+            "m": "integer order",
+            "\\lambda": "wavelength in vacuum (m)"
+        }
+    },
+    {
+        "name": "Thin Film Interference (Reflected Light, Destructive)",
+        "formula": "2 n t = m \\lambda",
+        "description": "Destructive interference for light reflected from a thin film (with phase shift).",
+        "variables": {
+            "n": "refractive index of the film",
+            "t": "film thickness (m)",
+            "m": "integer order",
+            "\\lambda": "wavelength in vacuum (m)"
+        }
+    },
+    {
+        "name": "Brewster’s Angle",
+        "formula": "\\tan\\theta_B = \\frac{n_2}{n_1}",
+        "description": "Angle of incidence for which reflected light is perfectly polarized.",
+        "variables": {
+            "\\theta_B": "Brewster's angle (rad)",
+            "n_1": "index of refraction of incident medium",
+            "n_2": "index of refraction of transmitted medium"
+        }
+    },
+    {
+        "name": "Malus’s Law",
+        "formula": "I = I_0 \\cos^2\\theta",
+        "description": "Intensity of polarized light after passing through a polarizer at angle θ.",
+        "variables": {
+            "I": "transmitted intensity (W/m^2)",
+            "I_0": "initial intensity (W/m^2)",
+            "\\theta": "angle between polarization direction and axis of polarizer (rad)"
+        }
+    },
+    {
+        "name": "Optical Path Length",
+        "formula": "OPL = n L",
+        "description": "Effective path length for light traveling through a medium.",
+        "variables": {
+            "OPL": "optical path length (m)",
+            "n": "index of refraction",
+            "L": "physical path length (m)"
+        }
+    },
+    {
+        "name": "Coherence Length",
+        "formula": "L_c = c \\tau_c",
+        "description": "Length over which a wave train remains coherent.",
+        "variables": {
+            "L_c": "coherence length (m)",
+            "c": "speed of light (m/s)",
+            "\\tau_c": "coherence time (s)"
+        }
+    },
+    {
+        "name": "Lorentz Factor",
+        "formula": "\\gamma = \\frac{1}{\\sqrt{1 - \\frac{v^2}{c^2}}}",
+        "description": "Factor by which time, length and relativistic mass change for objects moving at velocity v.",
+        "variables": {
+            "\\gamma": "Lorentz factor (dimensionless)",
+            "v": "velocity of moving frame relative to observer (m/s)",
+            "c": "speed of light in vacuum (m/s)"
+        }
+    },
+    {
+        "name": "Time Dilation",
+        "formula": "\\Delta t = \\gamma \\Delta t_0",
+        "description": "Moving clocks run slow by a factor γ.",
+        "variables": {
+            "\\Delta t": "time interval measured by stationary observer (s)",
+            "\\Delta t_0": "proper time interval (s)",
+            "\\gamma": "Lorentz factor"
+        }
+    },
+    {
+        "name": "Length Contraction",
+        "formula": "L = \\frac{L_0}{\\gamma}",
+        "description": "Objects contract along the direction of motion.",
+        "variables": {
+            "L": "length measured by stationary observer (m)",
+            "L_0": "proper length (m)",
+            "\\gamma": "Lorentz factor"
+        }
+    },
+    {
+        "name": "Relativistic Velocity Addition",
+        "formula": "u' = \\frac{u - v}{1 - \\frac{uv}{c^2}}",
+        "description": "Velocity transformation between two inertial frames.",
+        "variables": {
+            "u'": "velocity measured in moving frame (m/s)",
+            "u": "velocity measured in stationary frame (m/s)",
+            "v": "relative velocity between frames (m/s)",
+            "c": "speed of light (m/s)"
+        }
+    },
+    {
+        "name": "Relativistic Momentum",
+        "formula": "p = \\gamma m v",
+        "description": "Momentum of a particle moving at relativistic speed.",
+        "variables": {
+            "p": "relativistic momentum (kg·m/s)",
+            "m": "rest mass (kg)",
+            "v": "velocity (m/s)",
+            "\\gamma": "Lorentz factor"
+        }
+    },
+    {
+        "name": "Total Energy of a Particle",
+        "formula": "E = \\gamma m c^2",
+        "description": "Total relativistic energy including rest energy and kinetic energy.",
+        "variables": {
+            "E": "total energy (J)",
+            "m": "rest mass (kg)",
+            "c": "speed of light (m/s)",
+            "\\gamma": "Lorentz factor"
+        }
+    },
+    {
+        "name": "Rest Energy",
+        "formula": "E_0 = m c^2",
+        "description": "Energy of a particle at rest.",
+        "variables": {
+            "E_0": "rest energy (J)",
+            "m": "rest mass (kg)",
+            "c": "speed of light (m/s)"
+        }
+    },
+    {
+        "name": "Relativistic Kinetic Energy",
+        "formula": "K = (\\gamma - 1) m c^2",
+        "description": "Kinetic energy of a particle moving at relativistic speed.",
+        "variables": {
+            "K": "kinetic energy (J)",
+            "\\gamma": "Lorentz factor",
+            "m": "rest mass (kg)",
+            "c": "speed of light (m/s)"
+        }
+    },
+    {
+        "name": "Energy–Momentum Relation",
+        "formula": "E^2 = (pc)^2 + (m c^2)^2",
+        "description": "Relates total energy, momentum and rest mass of a particle.",
+        "variables": {
+            "E": "total energy (J)",
+            "p": "relativistic momentum (kg·m/s)",
+            "c": "speed of light (m/s)",
+            "m": "rest mass (kg)"
+        }
+    },
+    {
+        "name": "Photon Energy",
+        "formula": "E = h f = \\frac{h c}{\\lambda}",
+        "description": "Energy of a photon in terms of its frequency or wavelength.",
+        "variables": {
+            "E": "photon energy (J)",
+            "h": "Planck's constant (6.626×10^-34 J·s)",
+            "f": "frequency (Hz)",
+            "\\lambda": "wavelength (m)",
+            "c": "speed of light (m/s)"
+        }
+    },
+    {
+        "name": "Photon Momentum",
+        "formula": "p = \\frac{E}{c} = \\frac{h}{\\lambda}",
+        "description": "Momentum carried by a photon.",
+        "variables": {
+            "p": "photon momentum (kg·m/s)",
+            "E": "photon energy (J)",
+            "c": "speed of light (m/s)",
+            "h": "Planck's constant (J·s)",
+            "\\lambda": "wavelength (m)"
+        }
+    },
+    {
+        "name": "Relativistic Doppler Effect (Approaching Source)",
+        "formula": "f = f_0 \\sqrt{\\frac{1 + \\beta}{1 - \\beta}}",
+        "description": "Observed frequency of light from a moving source (approaching observer).",
+        "variables": {
+            "f": "observed frequency (Hz)",
+            "f_0": "emitted frequency (Hz)",
+            "\\beta": "v/c, source velocity fraction of c"
+        }
+    },
+    {
+        "name": "Relativistic Doppler Effect (Receding Source)",
+        "formula": "f = f_0 \\sqrt{\\frac{1 - \\beta}{1 + \\beta}}",
+        "description": "Observed frequency of light from a moving source (receding from observer).",
+        "variables": {
+            "f": "observed frequency (Hz)",
+            "f_0": "emitted frequency (Hz)",
+            "\\beta": "v/c, source velocity fraction of c"
+        }
+    },
+    {
+        "name": "Planck's Relation",
+        "formula": "E = h f = \\frac{h c}{\\lambda}",
+        "description": "Energy of a quantum (photon) related to its frequency or wavelength.",
+        "variables": {
+            "E": "energy of photon (J)",
+            "h": "Planck's constant (6.626×10^-34 J·s)",
+            "f": "frequency (Hz)",
+            "\\lambda": "wavelength (m)",
+            "c": "speed of light (m/s)"
+        }
+    },
+    {
+        "name": "Photon Momentum",
+        "formula": "p = \\frac{h}{\\lambda} = \\frac{E}{c}",
+        "description": "Momentum of a photon.",
+        "variables": {
+            "p": "momentum (kg·m/s)",
+            "h": "Planck's constant",
+            "\\lambda": "wavelength (m)",
+            "E": "energy (J)",
+            "c": "speed of light (m/s)"
+        }
+    },
+    {
+        "name": "de Broglie Wavelength",
+        "formula": "\\lambda = \\frac{h}{p} = \\frac{h}{m v}",
+        "description": "Wavelength associated with a moving particle.",
+        "variables": {
+            "\\lambda": "wavelength (m)",
+            "h": "Planck's constant",
+            "p": "momentum of particle (kg·m/s)",
+            "m": "mass (kg)",
+            "v": "velocity (m/s)"
+        }
+    },
+    {
+        "name": "Heisenberg Uncertainty Principle (Position–Momentum)",
+        "formula": "\\Delta x \\Delta p \\ge \\frac{\\hbar}{2}",
+        "description": "Lower bound on simultaneous measurement of position and momentum.",
+        "variables": {
+            "\\Delta x": "uncertainty in position (m)",
+            "\\Delta p": "uncertainty in momentum (kg·m/s)",
+            "\\hbar": "reduced Planck's constant (h/2π)"
+        }
+    },
+    {
+        "name": "Heisenberg Uncertainty (Energy–Time)",
+        "formula": "\\Delta E \\Delta t \\ge \\frac{\\hbar}{2}",
+        "description": "Lower bound on simultaneous measurement of energy and time.",
+        "variables": {
+            "\\Delta E": "uncertainty in energy (J)",
+            "\\Delta t": "uncertainty in time (s)",
+            "\\hbar": "reduced Planck's constant"
+        }
+    },
+    {
+        "name": "Photoelectric Effect (Maximum Kinetic Energy)",
+        "formula": "K_{max} = h f - \\phi",
+        "description": "Energy of ejected electrons from a metal surface.",
+        "variables": {
+            "K_{max}": "maximum kinetic energy of photoelectrons (J)",
+            "h": "Planck's constant",
+            "f": "incident photon frequency (Hz)",
+            "\\phi": "work function of material (J)"
+        }
+    },
+    {
+        "name": "Work Function",
+        "formula": "\\phi = h f_{threshold}",
+        "description": "Minimum energy required to remove an electron.",
+        "variables": {
+            "\\phi": "work function (J)",
+            "f_{threshold}": "threshold frequency (Hz)"
+        }
+    },
+    {
+        "name": "Compton Wavelength Shift",
+        "formula": "\\Delta \\lambda = \\lambda' - \\lambda = \\frac{h}{m_e c}(1 - \\cos \\theta)",
+        "description": "Increase in wavelength of scattered photon due to Compton scattering.",
+        "variables": {
+            "\\Delta \\lambda": "change in wavelength (m)",
+            "\\lambda": "initial wavelength (m)",
+            "\\lambda'": "scattered wavelength (m)",
+            "h": "Planck's constant",
+            "m_e": "electron rest mass (kg)",
+            "c": "speed of light (m/s)",
+            "\\theta": "scattering angle (rad)"
+        }
+    },
+    {
+        "name": "Bohr Quantization of Angular Momentum",
+        "formula": "m v r = n \\hbar",
+        "description": "Angular momentum of electron in Bohr model is quantized.",
+        "variables": {
+            "m": "electron mass (kg)",
+            "v": "electron velocity (m/s)",
+            "r": "orbit radius (m)",
+            "n": "principal quantum number (1,2,3,...)",
+            "\\hbar": "reduced Planck's constant"
+        }
+    },
+    {
+        "name": "Bohr Model Energy Levels (Hydrogen-like Atom)",
+        "formula": "E_n = - \\frac{13.6\\,\\text{eV} Z^2}{n^2}",
+        "description": "Energy of the nth level in a hydrogen-like atom.",
+        "variables": {
+            "E_n": "energy of level n (eV)",
+            "Z": "atomic number",
+            "n": "principal quantum number"
+        }
+    },
+    {
+        "name": "Bohr Radius",
+        "formula": "a_0 = \\frac{4\\pi \\varepsilon_0 \\hbar^2}{m_e e^2} = 5.29\\times10^{-11}\\,\\text{m}",
+        "description": "Radius of the ground state orbit in hydrogen.",
+        "variables": {
+            "a_0": "Bohr radius (m)",
+            "\\varepsilon_0": "vacuum permittivity (F/m)",
+            "\\hbar": "reduced Planck's constant",
+            "m_e": "electron mass (kg)",
+            "e": "elementary charge (C)"
+        }
+    },
+    {
+        "name": "Rydberg Formula for Spectral Lines",
+        "formula": "\\frac{1}{\\lambda} = R Z^2 \\left(\\frac{1}{n_1^2} - \\frac{1}{n_2^2}\\right)",
+        "description": "Predicts wavelengths of spectral lines in hydrogen-like atoms.",
+        "variables": {
+            "\\lambda": "wavelength of emitted/absorbed light (m)",
+            "R": "Rydberg constant (1.097×10^7 m^-1)",
+            "Z": "atomic number",
+            "n_1": "lower energy level",
+            "n_2": "higher energy level"
+        }
+    },
+    {
+        "name": "Particle in a Box (Energy Levels)",
+        "formula": "E_n = \\frac{n^2 h^2}{8 m L^2}",
+        "description": "Energy levels of a particle confined in a 1-D infinite potential well.",
+        "variables": {
+            "E_n": "energy of nth state (J)",
+            "n": "quantum number (1,2,3,...)",
+            "h": "Planck's constant",
+            "m": "particle mass (kg)",
+            "L": "length of box (m)"
+        }
+    },
+    {
+        "name": "Schrödinger Equation (Time-Independent)",
+        "formula": "-\\frac{\\hbar^2}{2m}\\frac{d^2\\psi}{dx^2} + V(x)\\psi = E\\psi",
+        "description": "Fundamental equation governing quantum states.",
+        "variables": {
+            "\\psi": "wavefunction",
+            "m": "particle mass (kg)",
+            "V(x)": "potential energy (J)",
+            "E": "total energy (J)"
+        }
+    },
+    {
+        "name": "Probability Density",
+        "formula": "P(x) = |\\psi(x)|^2",
+        "description": "Probability per unit length of finding a particle at position x.",
+        "variables": {
+            "P(x)": "probability density (1/m)",
+            "\\psi(x)": "wavefunction"
+        }
+    },
+    {
+        "name": "Hydrogen-like Atom Energy Levels",
+        "formula": "E_n = - \\frac{13.6\\,\\text{eV} Z^2}{n^2}",
+        "description": "Energy of the nth electron level in a hydrogen-like atom.",
+        "variables": {
+            "E_n": "energy of level n (eV)",
+            "Z": "atomic number",
+            "n": "principal quantum number"
+        }
+    },
+    {
+        "name": "Bohr Orbit Radius",
+        "formula": "r_n = \\frac{n^2 a_0}{Z}",
+        "description": "Radius of the nth orbit for a hydrogen-like atom.",
+        "variables": {
+            "r_n": "radius of nth orbit (m)",
+            "n": "principal quantum number",
+            "a_0": "Bohr radius (5.29×10^-11 m)",
+            "Z": "atomic number"
+        }
+    },
+    {
+        "name": "Rydberg Formula for Spectral Lines",
+        "formula": "\\frac{1}{\\lambda} = R Z^2 \\left(\\frac{1}{n_1^2} - \\frac{1}{n_2^2}\\right)",
+        "description": "Predicts wavelengths of spectral lines for hydrogen-like atoms.",
+        "variables": {
+            "\\lambda": "wavelength of emitted/absorbed light (m)",
+            "R": "Rydberg constant (1.097×10^7 m^-1)",
+            "Z": "atomic number",
+            "n_1": "lower energy level",
+            "n_2": "higher energy level"
+        }
+    },
+    {
+        "name": "Photon Energy in Transition",
+        "formula": "E_{photon} = |E_{n_2} - E_{n_1}| = h f = \\frac{h c}{\\lambda}",
+        "description": "Energy of the photon emitted or absorbed in an electron transition.",
+        "variables": {
+            "E_{photon}": "photon energy (J)",
+            "E_{n_1}": "initial level energy (J or eV)",
+            "E_{n_2}": "final level energy (J or eV)",
+            "h": "Planck's constant",
+            "f": "frequency (Hz)",
+            "\\lambda": "wavelength (m)",
+            "c": "speed of light (m/s)"
+        }
+    },
+    {
+        "name": "Zeeman Effect Energy Splitting",
+        "formula": "\\Delta E = m_l \\mu_B B",
+        "description": "Energy shift of atomic levels in a magnetic field (normal Zeeman effect).",
+        "variables": {
+            "\\Delta E": "energy shift (J)",
+            "m_l": "magnetic quantum number",
+            "\\mu_B": "Bohr magneton (9.274×10^-24 J/T)",
+            "B": "magnetic field (T)"
+        }
+    },
+    {
+        "name": "Bohr Magneton",
+        "formula": "\\mu_B = \\frac{e\\hbar}{2m_e}",
+        "description": "Natural unit for electron magnetic moment.",
+        "variables": {
+            "\\mu_B": "Bohr magneton (J/T)",
+            "e": "elementary charge (C)",
+            "\\hbar": "reduced Planck's constant (J·s)",
+            "m_e": "electron mass (kg)"
+        }
+    },
+    {
+        "name": "Fine Structure Energy Correction (Hydrogen)",
+        "formula": "E_{fs} \\propto \\frac{Z^4}{n^3} \\left(\\frac{1}{j+1/2} - \\frac{3}{4n}\\right)",
+        "description": "Approximate fine-structure splitting of energy levels (for completeness at intro level).",
+        "variables": {
+            "E_{fs}": "fine-structure energy correction (J)",
+            "Z": "atomic number",
+            "n": "principal quantum number",
+            "j": "total angular momentum quantum number"
+        }
+    },
+    {
+        "name": "Characteristic X-ray Energy (Moseley's Law)",
+        "formula": "\\sqrt{f} = A(Z - B)",
+        "description": "Frequency of characteristic X-ray lines relates to atomic number.",
+        "variables": {
+            "f": "frequency of X-ray line (Hz)",
+            "A": "proportionality constant",
+            "Z": "atomic number",
+            "B": "screening constant"
+        }
+    },
+    {
+        "name": "Magnetic Quantum Number Values",
+        "formula": "m_l = -l, -l+1, ..., l-1, l",
+        "description": "Allowed values of the magnetic quantum number for a given l.",
+        "variables": {
+            "m_l": "magnetic quantum number",
+            "l": "orbital quantum number"
+        }
+    },
+    {
+        "name": "Spin Magnetic Moment",
+        "formula": "\\mu_s = -g_s \\frac{e}{2m_e} S",
+        "description": "Magnetic moment associated with electron spin.",
+        "variables": {
+            "\\mu_s": "spin magnetic moment (J/T)",
+            "g_s": "electron g-factor (~2)",
+            "e": "elementary charge (C)",
+            "m_e": "electron mass (kg)",
+            "S": "spin angular momentum (J·s)"
+        }
+    },
+    {
+        "name": "Mass–Energy Equivalence",
+        "formula": "E = m c^2",
+        "description": "Energy equivalent of a given mass.",
+        "variables": {
+            "E": "energy (J)",
+            "m": "mass (kg)",
+            "c": "speed of light (3.00×10^8 m/s)"
+        }
+    },
+    {
+        "name": "Mass Defect",
+        "formula": "\\Delta m = Z m_p + N m_n - m_{nucleus}",
+        "description": "Difference between the sum of individual nucleon masses and the actual nuclear mass.",
+        "variables": {
+            "\\Delta m": "mass defect (kg or u)",
+            "Z": "number of protons",
+            "m_p": "mass of proton (kg or u)",
+            "N": "number of neutrons",
+            "m_n": "mass of neutron (kg or u)",
+            "m_{nucleus}": "mass of the nucleus (kg or u)"
+        }
+    },
+    {
+        "name": "Binding Energy",
+        "formula": "E_b = \\Delta m c^2",
+        "description": "Energy required to separate a nucleus into its individual nucleons.",
+        "variables": {
+            "E_b": "binding energy (J or MeV)",
+            "\\Delta m": "mass defect (kg or u)",
+            "c": "speed of light (m/s)"
+        }
+    },
+    {
+        "name": "Binding Energy per Nucleon",
+        "formula": "\\frac{E_b}{A}",
+        "description": "Average energy per nucleon of a nucleus.",
+        "variables": {
+            "E_b": "total binding energy (J or MeV)",
+            "A": "mass number (total nucleons)"
+        }
+    },
+    {
+        "name": "Radioactive Decay Law",
+        "formula": "N(t) = N_0 e^{-\\lambda t}",
+        "description": "Number of undecayed nuclei at time t.",
+        "variables": {
+            "N(t)": "number of nuclei remaining at time t",
+            "N_0": "initial number of nuclei",
+            "\\lambda": "decay constant (s^-1)",
+            "t": "time (s)"
+        }
+    },
+    {
+        "name": "Half-Life",
+        "formula": "t_{1/2} = \\frac{\\ln 2}{\\lambda}",
+        "description": "Time required for half of a radioactive sample to decay.",
+        "variables": {
+            "t_{1/2}": "half-life (s)",
+            "\\lambda": "decay constant (s^-1)"
+        }
+    },
+    {
+        "name": "Activity",
+        "formula": "A = \\lambda N",
+        "description": "Rate of decay (disintegrations per second).",
+        "variables": {
+            "A": "activity (Bq = decays per second)",
+            "\\lambda": "decay constant (s^-1)",
+            "N": "number of undecayed nuclei"
+        }
+    },
+    {
+        "name": "Decay Constant from Half-Life",
+        "formula": "\\lambda = \\frac{\\ln 2}{t_{1/2}}",
+        "description": "Relationship between decay constant and half-life.",
+        "variables": {
+            "\\lambda": "decay constant (s^-1)",
+            "t_{1/2}": "half-life (s)"
+        }
+    },
+    {
+        "name": "Exponential Form of Activity",
+        "formula": "A(t) = A_0 e^{-\\lambda t}",
+        "description": "Activity of a sample at time t.",
+        "variables": {
+            "A(t)": "activity at time t (Bq)",
+            "A_0": "initial activity (Bq)",
+            "\\lambda": "decay constant (s^-1)",
+            "t": "time (s)"
+        }
+    },
+    {
+        "name": "Decay Chain Formula",
+        "formula": "N_2(t)=\\frac{\\lambda_1 N_{1,0}}{\\lambda_2 - \\lambda_1}\\left(e^{-\\lambda_1 t}-e^{-\\lambda_2 t}\\right)+N_{2,0}e^{-\\lambda_2 t}",
+        "description": "Number of nuclei of a daughter isotope in a decay chain (two-step decay).",
+        "variables": {
+            "N_2(t)": "number of daughter nuclei at time t",
+            "N_{1,0}": "initial number of parent nuclei",
+            "N_{2,0}": "initial number of daughter nuclei",
+            "\\lambda_1": "decay constant of parent (s^-1)",
+            "\\lambda_2": "decay constant of daughter (s^-1)",
+            "t": "time (s)"
+        }
+    },
+    {
+        "name": "Q-value of Nuclear Reaction",
+        "formula": "Q = \\left[ m_{initial} - m_{final} \\right] c^2",
+        "description": "Energy released (Q>0) or absorbed (Q<0) in a nuclear reaction.",
+        "variables": {
+            "Q": "reaction energy (J or MeV)",
+            "m_{initial}": "sum of reactant masses (kg or u)",
+            "m_{final}": "sum of product masses (kg or u)",
+            "c": "speed of light (m/s)"
+        }
+    },
+    {
+        "name": "Nuclear Reaction Cross Section",
+        "formula": "\\sigma = \\frac{R}{\\Phi N}",
+        "description": "Effective target area for a nuclear reaction.",
+        "variables": {
+            "\\sigma": "cross section (m^2 or barns)",
+            "R": "reaction rate (reactions/s)",
+            "\\Phi": "incident particle flux (particles/m^2·s)",
+            "N": "number of target nuclei"
+        }
+    },
+    {
+        "name": "Mean Lifetime",
+        "formula": "\\tau = \\frac{1}{\\lambda}",
+        "description": "Average lifetime of a radioactive nucleus before decay.",
+        "variables": {
+            "\\tau": "mean lifetime (s)",
+            "\\lambda": "decay constant (s^-1)"
+        }
+    },
+    {
+        "name": "Number of Decays in Time Interval",
+        "formula": "\\Delta N = N_0 \\left(1 - e^{-\\lambda t}\\right)",
+        "description": "Number of decayed nuclei after time t.",
+        "variables": {
+            "\\Delta N": "number of decayed nuclei",
+            "N_0": "initial number of nuclei",
+            "\\lambda": "decay constant (s^-1)",
+            "t": "time (s)"
+        }
+    },
+    {
+        "name": "Gravitational Time Dilation (Weak Field)",
+        "formula": "\\Delta t_{far} = \\Delta t_{near} \\sqrt{1 - \\frac{2GM}{r c^2}}",
+        "description": "Time interval measured far from a massive body vs. near its surface (approximation for a non-rotating spherical mass).",
+        "variables": {
+            "\\Delta t_{far}": "time interval measured by observer far from the mass (s)",
+            "\\Delta t_{near}": "time interval measured near the mass (s)",
+            "G": "gravitational constant (6.674×10⁻¹¹ m³·kg⁻¹·s⁻²)",
+            "M": "mass of the body (kg)",
+            "r": "radial distance from center of the mass (m)",
+            "c": "speed of light in vacuum (m/s)"
+        }
+    },
+    {
+        "name": "Gravitational Redshift",
+        "formula": "\\frac{f_{observed}}{f_{emitted}} = \\sqrt{1 - \\frac{2GM}{r c^2}}",
+        "description": "Frequency of light or clock rate decreases when escaping a gravitational well.",
+        "variables": {
+            "f_{observed}": "frequency measured far from the mass (Hz)",
+            "f_{emitted}": "frequency at emission near the mass (Hz)",
+            "G": "gravitational constant",
+            "M": "mass of the body (kg)",
+            "r": "distance from the center of the mass (m)",
+            "c": "speed of light (m/s)"
+        }
+    },
+    {
+        "name": "Schwarzschild Radius",
+        "formula": "r_s = \\frac{2GM}{c^2}",
+        "description": "Radius of the event horizon of a non-rotating black hole.",
+        "variables": {
+            "r_s": "Schwarzschild radius (m)",
+            "G": "gravitational constant",
+            "M": "mass of the body (kg)",
+            "c": "speed of light (m/s)"
+        }
+    },
+    {
+        "name": "Escape Velocity (from GR at large r)",
+        "formula": "v_{esc} = \\sqrt{\\frac{2GM}{r}}",
+        "description": "Minimum velocity needed to escape the gravitational field at radius r (Newtonian limit, consistent with weak-field GR).",
+        "variables": {
+            "v_{esc}": "escape velocity (m/s)",
+            "G": "gravitational constant",
+            "M": "mass of the body (kg)",
+            "r": "radial distance from the center of the mass (m)"
+        }
+    }
+]

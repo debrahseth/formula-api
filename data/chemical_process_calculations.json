@@ -114,18 +114,6 @@
         "description": "Accounts for accumulation, flow, and chemical reaction of a component in a system."
     },
     {
-        "name": "The Open-System Energy Balance",
-        "formula": "\\Delta \\dot{H} + \\Delta \\dot{E_p} + \\Delta \\dot{E_k} = \\dot{Q} - \\dot{W_s} \\\\ , \\\\ \\Delta \\dot{H} = \\dot{m} (\\hat{H}_{out} - \\hat{H}_{in}) = \\dot{m} \\Delta \\hat{H}",
-        "variables": {
-            "\\Delta \\dot{H}": "Change in the specific rate of enthalpy",
-            "\\Delta \\dot{E_k}": "Change in the rate of Kinetic Energy",
-            "\\Delta \\dot{E_p}": "Change in the rate of Potential Energy",
-            "\\dot{Q}": "Rate of heat in/out of the system",
-            "\\dot{W_s}": "Rate of shaft work in/out of the system"
-        },
-        "description": "The net rate at which energy is transferred to a system as heat and/or shaft work equals the difference between the rates at which the quantity (enthalpy + kinetic energy + potential energy) is transported into and out of the system."
-    },
-    {
         "name": "Closed-System Energy Balance",
         "formula": "\\Delta E_{sys} = Q - W",
         "variables": {
